@@ -1,0 +1,3480 @@
+Program.Sub.ScreenSU.Start
+Gui.F_JobJacket..Create
+Gui.F_JobJacket..Caption("Job Jacket")
+Gui.F_JobJacket..Size(13575,10320)
+Gui.F_JobJacket..MinX(0)
+Gui.F_JobJacket..MinY(0)
+Gui.F_JobJacket..Position(0,0)
+Gui.F_JobJacket..BackColor(-2147483633)
+Gui.F_JobJacket..MousePointer(0)
+Gui.F_JobJacket..Event(UnLoad,Unload)
+Gui.F_JobJacket..ContextMenuCreate("ctxTooling")
+Gui.F_JobJacket..ContextMenuAddItem("ctxTooling","NEW",0,"New Tool")
+Gui.F_JobJacket..ContextMenuAddItem("ctxTooling","DELETE",0,"Delete Tool")
+Gui.F_JobJacket..ContextMenuSetItemEventHandler("ctxTooling","NEW","ToolClick")
+Gui.F_JobJacket..ContextMenuSetItemEventHandler("ctxTooling","DELETE","ToolClick")
+Gui.F_JobJacket..ContextMenuCreate("ctxMaterial")
+Gui.F_JobJacket..ContextMenuAddItem("ctxMaterial","NEW",0,"New Material")
+Gui.F_JobJacket..ContextMenuAddItem("ctxMaterial","DELETE",0,"Delete Material")
+Gui.F_JobJacket..ContextMenuSetItemEventHandler("ctxMaterial","NEW","MaterialClick")
+Gui.F_JobJacket..ContextMenuSetItemEventHandler("ctxMaterial","DELETE","MaterialClick")
+Gui.F_JobJacket..ContextMenuCreate("ctxInks")
+Gui.F_JobJacket..ContextMenuAddItem("ctxInks","NEW",0,"New Ink")
+Gui.F_JobJacket..ContextMenuAddItem("ctxInks","CUSTOM",0,"Custom Ink")
+Gui.F_JobJacket..ContextMenuAddItem("ctxInks","DELETE",0,"Delete Ink")
+Gui.F_JobJacket..ContextMenuSetItemEventHandler("ctxInks","NEW","InkClick")
+Gui.F_JobJacket..ContextMenuSetItemEventHandler("ctxInks","CUSTOM","InkClick")
+Gui.F_JobJacket..ContextMenuSetItemEventHandler("ctxInks","DELETE","InkClick")
+Gui.F_JobJacket.tMain.Create(Tab)
+Gui.F_JobJacket.tMain.Size(12975,9120)
+Gui.F_JobJacket.tMain.Position(210,525)
+Gui.F_JobJacket.tMain.Tabs(4)
+Gui.F_JobJacket.tMain.SetTab(0)
+Gui.F_JobJacket.tMain.Caption("Header")
+Gui.F_JobJacket.tMain.SetTab(1)
+Gui.F_JobJacket.tMain.Caption("Press")
+Gui.F_JobJacket.tMain.SetTab(2)
+Gui.F_JobJacket.tMain.Caption("Finishing")
+Gui.F_JobJacket.tMain.SetTab(3)
+Gui.F_JobJacket.tMain.Caption("Variable")
+Gui.F_JobJacket.txtCustNo.Create(TextBox,"",True,1215,300,0,210,510,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtCustNo.Parent("tMain",0)
+Gui.F_JobJacket.txtCustNo.TabStop(True)
+Gui.F_JobJacket.txtCustNo.TabIndex(1)
+Gui.F_JobJacket.txtCustNo.Event(LostFocus,PopCust)
+Gui.F_JobJacket.txtDICENo.Create(TextBox,"",True,1215,300,0,210,1200,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtDICENo.Parent("tMain",0)
+Gui.F_JobJacket.txtDICENo.TabStop(True)
+Gui.F_JobJacket.txtDICENo.TabIndex(4)
+Gui.F_JobJacket.txtDICENo.Event(LostFocus,BrowDiceNO)
+Gui.F_JobJacket.txtItemNo.Create(TextBox,"",True,2430,300,0,210,1905,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtItemNo.Parent("tMain",0)
+Gui.F_JobJacket.txtItemNo.TabStop(True)
+Gui.F_JobJacket.txtItemNo.TabIndex(9)
+Gui.F_JobJacket.txtItemNo.Event(LostFocus,TabItem)
+Gui.F_JobJacket.txtCustName.Create(TextBox,"",True,4785,300,0,2115,510,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtCustName.Parent("tMain",0)
+Gui.F_JobJacket.txtCustName.Locked(True)
+Gui.F_JobJacket.txtRouter.Create(TextBox,"",True,2235,300,0,3300,1905,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtRouter.Parent("tMain",0)
+Gui.F_JobJacket.txtRouter.TabStop(True)
+Gui.F_JobJacket.txtRouter.TabIndex(11)
+Gui.F_JobJacket.txtRouter.Event(LostFocus,TabRouter)
+Gui.F_JobJacket.txtRouterRev.Create(TextBox,"",True,720,300,0,6195,1905,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtRouterRev.Parent("tMain",0)
+Gui.F_JobJacket.txtRouterRev.TabStop(True)
+Gui.F_JobJacket.txtRouterRev.TabIndex(13)
+Gui.F_JobJacket.txtRouterRev.Event(LostFocus,TabRouter)
+Gui.F_JobJacket.txtLocation.Create(TextBox,"",True,690,300,0,2115,1200,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtLocation.Parent("tMain",0)
+Gui.F_JobJacket.txtLocation.TabStop(True)
+Gui.F_JobJacket.txtLocation.TabIndex(6)
+Gui.F_JobJacket.txtLocation.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtLocation.MaxLength(2)
+Gui.F_JobJacket.txtJacketRev.Create(TextBox,"",False,930,300,0,4875,1200,False,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtJacketRev.Parent("tMain",0)
+Gui.F_JobJacket.txtJacketRev.TabStop(True)
+Gui.F_JobJacket.txtJacketRev.TabIndex(8)
+Gui.F_JobJacket.txtJacketRev.MaxLength(9)
+Gui.F_JobJacket.txtJacketRev.NumericOnly(2)
+Gui.F_JobJacket.txtItemDesc1.Create(TextBox,"",True,4785,300,0,210,2835,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtItemDesc1.Parent("tMain",0)
+Gui.F_JobJacket.txtItemDesc1.TabStop(True)
+Gui.F_JobJacket.txtItemDesc1.TabIndex(14)
+Gui.F_JobJacket.txtItemDesc1.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtItemDesc2.Create(TextBox,"",True,4785,300,0,210,3255,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtItemDesc2.Parent("tMain",0)
+Gui.F_JobJacket.txtItemDesc2.TabStop(True)
+Gui.F_JobJacket.txtItemDesc2.TabIndex(15)
+Gui.F_JobJacket.txtItemDesc2.Event(LostFocus,FormatField)
+Gui.F_JobJacket.chkFaceCut.Create(CheckBox)
+Gui.F_JobJacket.chkFaceCut.Size(3300,270)
+Gui.F_JobJacket.chkFaceCut.Position(7395,4590)
+Gui.F_JobJacket.chkFaceCut.Parent("tMain",0)
+Gui.F_JobJacket.chkFaceCut.Caption("Face Cut")
+Gui.F_JobJacket.chkFaceCut.TabStop(True)
+Gui.F_JobJacket.chkFaceCut.TabIndex(17)
+Gui.F_JobJacket.chkBackCut.Create(CheckBox)
+Gui.F_JobJacket.chkBackCut.Size(3300,270)
+Gui.F_JobJacket.chkBackCut.Position(7395,5235)
+Gui.F_JobJacket.chkBackCut.Parent("tMain",0)
+Gui.F_JobJacket.chkBackCut.Caption("Back Cut")
+Gui.F_JobJacket.chkBackCut.TabStop(True)
+Gui.F_JobJacket.chkBackCut.TabIndex(19)
+Gui.F_JobJacket.txtFaceCut.Create(TextBox,"",True,4785,300,0,7335,4890,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFaceCut.Parent("tMain",0)
+Gui.F_JobJacket.txtFaceCut.TabStop(True)
+Gui.F_JobJacket.txtFaceCut.TabIndex(18)
+Gui.F_JobJacket.txtFaceCut.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtBackCut.Create(TextBox,"",True,4785,300,0,7335,5520,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtBackCut.Parent("tMain",0)
+Gui.F_JobJacket.txtBackCut.TabStop(True)
+Gui.F_JobJacket.txtBackCut.TabIndex(20)
+Gui.F_JobJacket.txtBackCut.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtWidth.Create(TextBox,"",True,885,300,0,210,6585,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtWidth.Parent("tMain",0)
+Gui.F_JobJacket.txtWidth.NumericOnly(1)
+Gui.F_JobJacket.txtWidth.TabStop(True)
+Gui.F_JobJacket.txtWidth.TabIndex(21)
+Gui.F_JobJacket.txtWidth.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtLength.Create(TextBox,"",True,885,300,0,210,7320,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtLength.Parent("tMain",0)
+Gui.F_JobJacket.txtLength.NumericOnly(1)
+Gui.F_JobJacket.txtLength.TabStop(True)
+Gui.F_JobJacket.txtLength.TabIndex(24)
+Gui.F_JobJacket.txtLength.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinAcr.Create(TextBox,"",True,885,300,0,210,8055,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinAcr.Parent("tMain",0)
+Gui.F_JobJacket.txtFinAcr.NumericOnly(1)
+Gui.F_JobJacket.txtFinAcr.TabStop(True)
+Gui.F_JobJacket.txtFinAcr.TabIndex(27)
+Gui.F_JobJacket.txtFinAcr.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtGapAcr.Create(TextBox,"",True,885,300,0,1725,6585,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtGapAcr.Parent("tMain",0)
+Gui.F_JobJacket.txtGapAcr.NumericOnly(1)
+Gui.F_JobJacket.txtGapAcr.TabStop(True)
+Gui.F_JobJacket.txtGapAcr.TabIndex(22)
+Gui.F_JobJacket.txtGapAcr.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtGapDown.Create(TextBox,"",True,885,300,0,1725,7320,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtGapDown.Parent("tMain",0)
+Gui.F_JobJacket.txtGapDown.NumericOnly(1)
+Gui.F_JobJacket.txtGapDown.TabStop(True)
+Gui.F_JobJacket.txtGapDown.TabIndex(25)
+Gui.F_JobJacket.txtGapDown.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtRepeat.Create(TextBox,"",True,885,300,0,1725,8055,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtRepeat.Parent("tMain",0)
+Gui.F_JobJacket.txtRepeat.NumericOnly(1)
+Gui.F_JobJacket.txtRepeat.TabStop(True)
+Gui.F_JobJacket.txtRepeat.TabIndex(28)
+Gui.F_JobJacket.txtRepeat.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtAcrDie.Create(TextBox,"",True,885,300,0,3450,6585,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtAcrDie.Parent("tMain",0)
+Gui.F_JobJacket.txtAcrDie.NumericOnly(1)
+Gui.F_JobJacket.txtAcrDie.TabStop(True)
+Gui.F_JobJacket.txtAcrDie.TabIndex(23)
+Gui.F_JobJacket.txtAcrDie.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtAcrPress.Create(TextBox,"",True,885,300,0,3450,7320,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtAcrPress.Parent("tMain",0)
+Gui.F_JobJacket.txtAcrPress.NumericOnly(1)
+Gui.F_JobJacket.txtAcrPress.TabStop(True)
+Gui.F_JobJacket.txtAcrPress.TabIndex(26)
+Gui.F_JobJacket.txtAcrPress.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtCarrierWdt.Create(TextBox,"",True,885,300,0,3420,8055,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtCarrierWdt.Parent("tMain",0)
+Gui.F_JobJacket.txtCarrierWdt.NumericOnly(1)
+Gui.F_JobJacket.txtCarrierWdt.TabStop(True)
+Gui.F_JobJacket.txtCarrierWdt.TabIndex(29)
+Gui.F_JobJacket.txtCarrierWdt.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtShape.Create(TextBox,"",True,885,300,0,5280,6585,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtShape.Parent("tMain",0)
+Gui.F_JobJacket.txtShape.TabStop(True)
+Gui.F_JobJacket.txtShape.TabIndex(30)
+Gui.F_JobJacket.txtShape.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtPerfed.Create(TextBox,"",True,885,300,0,6960,7110,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtPerfed.Parent("tMain",0)
+Gui.F_JobJacket.txtPerfed.TabStop(True)
+Gui.F_JobJacket.txtPerfed.TabIndex(33)
+Gui.F_JobJacket.txtPerfed.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtSheeted.Create(TextBox,"",True,885,300,0,6960,7590,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtSheeted.Parent("tMain",0)
+Gui.F_JobJacket.txtSheeted.TabStop(True)
+Gui.F_JobJacket.txtSheeted.TabIndex(35)
+Gui.F_JobJacket.txtSheeted.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFanfold.Create(TextBox,"",True,885,300,0,6960,8070,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFanfold.Parent("tMain",0)
+Gui.F_JobJacket.txtFanfold.TabStop(True)
+Gui.F_JobJacket.txtFanfold.TabIndex(37)
+Gui.F_JobJacket.txtFanfold.Event(LostFocus,FormatField)
+Gui.F_JobJacket.chkPerfed.Create(CheckBox)
+Gui.F_JobJacket.chkPerfed.Size(1380,270)
+Gui.F_JobJacket.chkPerfed.Position(5385,7140)
+Gui.F_JobJacket.chkPerfed.Parent("tMain",0)
+Gui.F_JobJacket.chkPerfed.Caption("Perfed @")
+Gui.F_JobJacket.chkPerfed.TabStop(True)
+Gui.F_JobJacket.chkPerfed.TabIndex(32)
+Gui.F_JobJacket.chkSheeted.Create(CheckBox)
+Gui.F_JobJacket.chkSheeted.Size(1455,270)
+Gui.F_JobJacket.chkSheeted.Position(5385,7620)
+Gui.F_JobJacket.chkSheeted.Parent("tMain",0)
+Gui.F_JobJacket.chkSheeted.Caption("Sheeted @")
+Gui.F_JobJacket.chkSheeted.TabStop(True)
+Gui.F_JobJacket.chkSheeted.TabIndex(34)
+Gui.F_JobJacket.chkFanfold.Create(CheckBox)
+Gui.F_JobJacket.chkFanfold.Size(1530,270)
+Gui.F_JobJacket.chkFanfold.Position(5385,8100)
+Gui.F_JobJacket.chkFanfold.Parent("tMain",0)
+Gui.F_JobJacket.chkFanfold.Caption("Fanfold - Gear")
+Gui.F_JobJacket.chkFanfold.TabStop(True)
+Gui.F_JobJacket.chkFanfold.TabIndex(36)
+Gui.F_JobJacket.cmdDiceBrow.Create(Button)
+Gui.F_JobJacket.cmdDiceBrow.Size(375,375)
+Gui.F_JobJacket.cmdDiceBrow.Position(1500,1155)
+Gui.F_JobJacket.cmdDiceBrow.Parent("tMain",0)
+Gui.F_JobJacket.cmdDiceBrow.Caption("^")
+Gui.F_JobJacket.cmdDiceBrow.Event(Click,BrowDiceNO)
+Gui.F_JobJacket.cmdDiceBrow.TabStop(True)
+Gui.F_JobJacket.cmdDiceBrow.TabIndex(5)
+Gui.F_JobJacket.cmdCustBrow.Create(Button)
+Gui.F_JobJacket.cmdCustBrow.Size(375,375)
+Gui.F_JobJacket.cmdCustBrow.Position(1515,465)
+Gui.F_JobJacket.cmdCustBrow.Parent("tMain",0)
+Gui.F_JobJacket.cmdCustBrow.Caption("^")
+Gui.F_JobJacket.cmdCustBrow.Event(Click,BrowCust)
+Gui.F_JobJacket.cmdCustBrow.TabStop(True)
+Gui.F_JobJacket.cmdCustBrow.TabIndex(2)
+Gui.F_JobJacket.cmdLocBrow.Create(Button)
+Gui.F_JobJacket.cmdLocBrow.Size(375,375)
+Gui.F_JobJacket.cmdLocBrow.Position(2865,1155)
+Gui.F_JobJacket.cmdLocBrow.Parent("tMain",0)
+Gui.F_JobJacket.cmdLocBrow.Caption("^")
+Gui.F_JobJacket.cmdLocBrow.Event(Click,BrowLoc)
+Gui.F_JobJacket.cmdLocBrow.TabStop(True)
+Gui.F_JobJacket.cmdLocBrow.TabIndex(7)
+Gui.F_JobJacket.cmdItemBrow.Create(Button)
+Gui.F_JobJacket.cmdItemBrow.Size(375,375)
+Gui.F_JobJacket.cmdItemBrow.Position(2760,1860)
+Gui.F_JobJacket.cmdItemBrow.Parent("tMain",0)
+Gui.F_JobJacket.cmdItemBrow.Caption("^")
+Gui.F_JobJacket.cmdItemBrow.Event(Click,BrowItem)
+Gui.F_JobJacket.cmdItemBrow.TabStop(True)
+Gui.F_JobJacket.cmdItemBrow.TabIndex(10)
+Gui.F_JobJacket.cmdRoutBrow.Create(Button)
+Gui.F_JobJacket.cmdRoutBrow.Size(375,375)
+Gui.F_JobJacket.cmdRoutBrow.Position(5595,1860)
+Gui.F_JobJacket.cmdRoutBrow.Parent("tMain",0)
+Gui.F_JobJacket.cmdRoutBrow.Caption("^")
+Gui.F_JobJacket.cmdRoutBrow.Event(Click,BrowRout)
+Gui.F_JobJacket.cmdRoutBrow.TabStop(True)
+Gui.F_JobJacket.cmdRoutBrow.TabIndex(12)
+Gui.F_JobJacket.cmdShape.Create(Button)
+Gui.F_JobJacket.cmdShape.Size(375,375)
+Gui.F_JobJacket.cmdShape.Position(6225,6555)
+Gui.F_JobJacket.cmdShape.Parent("tMain",0)
+Gui.F_JobJacket.cmdShape.Caption("^")
+Gui.F_JobJacket.cmdShape.TabStop(True)
+Gui.F_JobJacket.cmdShape.TabIndex(31)
+Gui.F_JobJacket.cmdShape.Visible(False)
+Gui.F_JobJacket.mltxEstNotes.Create(TextboxM)
+Gui.F_JobJacket.mltxEstNotes.Size(5370,3075)
+Gui.F_JobJacket.mltxEstNotes.Position(7305,510)
+Gui.F_JobJacket.mltxEstNotes.Parent("tMain",0)
+Gui.F_JobJacket.mltxEstNotes.Event(LostFocus,FormatField)
+Gui.F_JobJacket.lbl1.Create(Label,"Customer",True,1005,255,0,225,285,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl1.Parent("tMain",0)
+Gui.F_JobJacket.lbl2.Create(Label,"Quote #",True,1005,255,0,225,990,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl2.Parent("tMain",0)
+Gui.F_JobJacket.lbl3.Create(Label,"Location",True,750,255,0,2115,990,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl3.Parent("tMain",0)
+Gui.F_JobJacket.lbl4.Create(Label,"Jacket Rev",True,915,255,0,6015,975,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl4.Parent("tMain",0)
+Gui.F_JobJacket.lbl5.Create(Label,"Item #",True,1005,255,0,225,1680,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl5.Parent("tMain",0)
+Gui.F_JobJacket.lbl6.Create(Label,"Router",True,1005,255,0,3315,1680,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl6.Parent("tMain",0)
+Gui.F_JobJacket.lbl7.Create(Label,"Router Rev",True,1005,255,0,6210,1680,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl7.Parent("tMain",0)
+Gui.F_JobJacket.lbl8.Create(Label,"Item Description",True,1695,255,0,225,2610,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl8.Parent("tMain",0)
+Gui.F_JobJacket.lbl9.Create(Label,"Tooling",True,1005,255,0,225,3885,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl9.Parent("tMain",0)
+Gui.F_JobJacket.lbl10.Create(Label,"Width",True,1005,255,0,225,6375,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl10.Parent("tMain",0)
+Gui.F_JobJacket.lbl11.Create(Label,"Length",True,1005,255,0,225,7110,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl11.Parent("tMain",0)
+Gui.F_JobJacket.lbl12.Create(Label,"Finish Acr",True,1005,255,0,225,7845,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl12.Parent("tMain",0)
+Gui.F_JobJacket.lbl13.Create(Label,"Gap Acr",True,1005,255,0,1740,6375,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl13.Parent("tMain",0)
+Gui.F_JobJacket.lbl14.Create(Label,"Gap Down",True,1005,255,0,1740,7110,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl14.Parent("tMain",0)
+Gui.F_JobJacket.lbl15.Create(Label,"Repeat",True,1005,255,0,1740,7845,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl15.Parent("tMain",0)
+Gui.F_JobJacket.lbl16.Create(Label,"#Acr Die",True,1005,255,0,3405,6375,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl16.Parent("tMain",0)
+Gui.F_JobJacket.lbl17.Create(Label,"#Acr Press",True,1005,255,0,3405,7110,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl17.Parent("tMain",0)
+Gui.F_JobJacket.lbl18.Create(Label,"Carrier Width",True,1335,255,0,3405,7845,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl18.Parent("tMain",0)
+Gui.F_JobJacket.lbl19.Create(Label,"Shape",True,1005,255,0,5265,6375,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl19.Parent("tMain",0)
+Gui.F_JobJacket.lbl20.Create(Label,"Estimate Notes",True,1755,255,0,7305,285,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl20.Parent("tMain",0)
+Gui.F_JobJacket.lbl20.Event(DblClick,lbl20_DblClick)
+Gui.F_JobJacket.txtPress.Create(TextBox,"",True,1995,300,0,210,510,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtPress.Parent("tMain",1)
+Gui.F_JobJacket.txtPress.TabStop(True)
+Gui.F_JobJacket.txtPress.TabIndex(40)
+Gui.F_JobJacket.txtPress.Event(LostFocus,FormatField)
+Gui.F_JobJacket.mltxPressNotes.Create(TextboxM)
+Gui.F_JobJacket.mltxPressNotes.Size(12435,1980)
+Gui.F_JobJacket.mltxPressNotes.Position(210,6390)
+Gui.F_JobJacket.mltxPressNotes.Parent("tMain",1)
+Gui.F_JobJacket.mltxPressNotes.TabStop(True)
+Gui.F_JobJacket.mltxPressNotes.TabIndex(44)
+Gui.F_JobJacket.mltxPressNotes.Event(LostFocus,FormatField)
+Gui.F_JobJacket.chkPressPinFeed.Create(CheckBox)
+Gui.F_JobJacket.chkPressPinFeed.Size(285,345)
+Gui.F_JobJacket.chkPressPinFeed.Position(12405,2295)
+Gui.F_JobJacket.chkPressPinFeed.Parent("tMain",1)
+Gui.F_JobJacket.chkPressPinFeed.TabStop(True)
+Gui.F_JobJacket.chkPressPinFeed.TabIndex(50)
+Gui.F_JobJacket.chkPressDeReLam.Create(CheckBox)
+Gui.F_JobJacket.chkPressDeReLam.Size(285,345)
+Gui.F_JobJacket.chkPressDeReLam.Position(12405,1890)
+Gui.F_JobJacket.chkPressDeReLam.Parent("tMain",1)
+Gui.F_JobJacket.chkPressDeReLam.TabStop(True)
+Gui.F_JobJacket.chkPressDeReLam.TabIndex(49)
+Gui.F_JobJacket.chkPressTurnBar.Create(CheckBox)
+Gui.F_JobJacket.chkPressTurnBar.Size(285,345)
+Gui.F_JobJacket.chkPressTurnBar.Position(12405,1485)
+Gui.F_JobJacket.chkPressTurnBar.Parent("tMain",1)
+Gui.F_JobJacket.chkPressTurnBar.TabStop(True)
+Gui.F_JobJacket.chkPressTurnBar.TabIndex(48)
+Gui.F_JobJacket.chkPressAirEject.Create(CheckBox)
+Gui.F_JobJacket.chkPressAirEject.Size(285,345)
+Gui.F_JobJacket.chkPressAirEject.Position(12405,1080)
+Gui.F_JobJacket.chkPressAirEject.Parent("tMain",1)
+Gui.F_JobJacket.chkPressAirEject.TabStop(True)
+Gui.F_JobJacket.chkPressAirEject.TabIndex(47)
+Gui.F_JobJacket.chkPressVacuum.Create(CheckBox)
+Gui.F_JobJacket.chkPressVacuum.Size(285,345)
+Gui.F_JobJacket.chkPressVacuum.Position(12405,675)
+Gui.F_JobJacket.chkPressVacuum.Parent("tMain",1)
+Gui.F_JobJacket.chkPressVacuum.TabStop(True)
+Gui.F_JobJacket.chkPressVacuum.TabIndex(46)
+Gui.F_JobJacket.chkPressAutoApply.Create(CheckBox)
+Gui.F_JobJacket.chkPressAutoApply.Size(315,345)
+Gui.F_JobJacket.chkPressAutoApply.Position(12405,270)
+Gui.F_JobJacket.chkPressAutoApply.Parent("tMain",1)
+Gui.F_JobJacket.chkPressAutoApply.TabStop(True)
+Gui.F_JobJacket.chkPressAutoApply.TabIndex(45)
+Gui.F_JobJacket.chkPressTurret.Create(CheckBox)
+Gui.F_JobJacket.chkPressTurret.Size(285,345)
+Gui.F_JobJacket.chkPressTurret.Position(12405,2700)
+Gui.F_JobJacket.chkPressTurret.Parent("tMain",1)
+Gui.F_JobJacket.chkPressTurret.TabStop(True)
+Gui.F_JobJacket.chkPressTurret.TabIndex(51)
+Gui.F_JobJacket.chkPressTurret.Enabled(False)
+Gui.F_JobJacket.chkPressTurret.Visible(False)
+Gui.F_JobJacket.lbl22.Create(Label,"Workcenter",True,1650,255,0,225,285,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl22.Parent("tMain",1)
+Gui.F_JobJacket.lbl25.Create(Label,"Material",True,1545,255,0,225,1080,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl25.Parent("tMain",1)
+Gui.F_JobJacket.lbl33.Create(Label,"Auto Apply",True,1260,255,0,10995,360,True,1,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl33.Parent("tMain",1)
+Gui.F_JobJacket.lbl34.Create(Label,"Vacuum",True,1260,255,0,10995,765,True,1,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl34.Parent("tMain",1)
+Gui.F_JobJacket.lbl35.Create(Label,"Air Eject",True,1260,255,0,10995,1170,True,1,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl35.Parent("tMain",1)
+Gui.F_JobJacket.lbl36.Create(Label,"Turnbar",True,1260,255,0,10995,1575,True,1,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl36.Parent("tMain",1)
+Gui.F_JobJacket.lbl37.Create(Label,"De/Relam",True,1260,255,0,10995,1980,True,1,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl37.Parent("tMain",1)
+Gui.F_JobJacket.lbl38.Create(Label,"Pinfeed",True,1260,255,0,10995,2385,True,1,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl38.Parent("tMain",1)
+Gui.F_JobJacket.lbl39.Create(Label,"Turret",False,1260,255,0,10995,2790,False,1,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl39.Parent("tMain",1)
+Gui.F_JobJacket.lbl40.Create(Label,"Press Notes",True,1935,255,0,225,6150,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl40.Parent("tMain",1)
+Gui.F_JobJacket.txtFinTableTop.Create(TextBox,"",True,1995,300,0,210,510,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinTableTop.Parent("tMain",2)
+Gui.F_JobJacket.txtFinTableTop.TabStop(True)
+Gui.F_JobJacket.txtFinTableTop.TabIndex(52)
+Gui.F_JobJacket.txtFinTableTop.Event(LostFocus,FormatField)
+Gui.F_JobJacket.cmdFinTableT.Create(Button)
+Gui.F_JobJacket.cmdFinTableT.Size(375,375)
+Gui.F_JobJacket.cmdFinTableT.Position(2280,450)
+Gui.F_JobJacket.cmdFinTableT.Parent("tMain",2)
+Gui.F_JobJacket.cmdFinTableT.Caption("^")
+Gui.F_JobJacket.cmdFinTableT.TabStop(True)
+Gui.F_JobJacket.cmdFinTableT.TabIndex(53)
+Gui.F_JobJacket.cmdFinTableT.Event(Click,BrowWC)
+Gui.F_JobJacket.cmdFinBoxBrow2.Create(Button)
+Gui.F_JobJacket.cmdFinBoxBrow2.Size(375,375)
+Gui.F_JobJacket.cmdFinBoxBrow2.Position(1995,2475)
+Gui.F_JobJacket.cmdFinBoxBrow2.Parent("tMain",2)
+Gui.F_JobJacket.cmdFinBoxBrow2.Caption("^")
+Gui.F_JobJacket.cmdFinBoxBrow2.Event(Click,BrowBox)
+Gui.F_JobJacket.cmdFinBoxBrow2.TabStop(True)
+Gui.F_JobJacket.cmdFinBoxBrow2.TabIndex(61)
+Gui.F_JobJacket.txtFinBox2.Create(TextBox,"",True,1710,300,0,210,2505,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinBox2.Parent("tMain",2)
+Gui.F_JobJacket.txtFinBox2.TabStop(True)
+Gui.F_JobJacket.txtFinBox2.TabIndex(60)
+Gui.F_JobJacket.txtFinBox2.Event(LostFocus,PopBox)
+Gui.F_JobJacket.cmdFinBoxBrow1.Create(Button)
+Gui.F_JobJacket.cmdFinBoxBrow1.Size(375,375)
+Gui.F_JobJacket.cmdFinBoxBrow1.Position(1995,2040)
+Gui.F_JobJacket.cmdFinBoxBrow1.Parent("tMain",2)
+Gui.F_JobJacket.cmdFinBoxBrow1.Caption("^")
+Gui.F_JobJacket.cmdFinBoxBrow1.Event(Click,BrowBox)
+Gui.F_JobJacket.cmdFinBoxBrow1.TabStop(True)
+Gui.F_JobJacket.cmdFinBoxBrow1.TabIndex(58)
+Gui.F_JobJacket.txtFinBox1.Create(TextBox,"",True,1710,300,0,210,2070,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinBox1.Parent("tMain",2)
+Gui.F_JobJacket.txtFinBox1.TabStop(True)
+Gui.F_JobJacket.txtFinBox1.TabIndex(57)
+Gui.F_JobJacket.txtFinBox1.Event(LostFocus,PopBox)
+Gui.F_JobJacket.cmdFinCoreBrow.Create(Button)
+Gui.F_JobJacket.cmdFinCoreBrow.Size(375,375)
+Gui.F_JobJacket.cmdFinCoreBrow.Position(1995,1245)
+Gui.F_JobJacket.cmdFinCoreBrow.Parent("tMain",2)
+Gui.F_JobJacket.cmdFinCoreBrow.Caption("^")
+Gui.F_JobJacket.cmdFinCoreBrow.Event(Click,BrowCore)
+Gui.F_JobJacket.cmdFinCoreBrow.TabStop(True)
+Gui.F_JobJacket.cmdFinCoreBrow.TabIndex(55)
+Gui.F_JobJacket.txtFinCore.Create(TextBox,"",True,1710,300,0,210,1275,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinCore.Parent("tMain",2)
+Gui.F_JobJacket.txtFinCore.TabStop(True)
+Gui.F_JobJacket.txtFinCore.TabIndex(54)
+Gui.F_JobJacket.txtFinCore.Event(LostFocus,PopCore)
+Gui.F_JobJacket.chkFinRew.Create(CheckBox)
+Gui.F_JobJacket.chkFinRew.Size(1560,360)
+Gui.F_JobJacket.chkFinRew.Position(240,3150)
+Gui.F_JobJacket.chkFinRew.Parent("tMain",2)
+Gui.F_JobJacket.chkFinRew.Caption("Rewind")
+Gui.F_JobJacket.chkFinRew.TabStop(True)
+Gui.F_JobJacket.chkFinRew.TabIndex(64)
+Gui.F_JobJacket.chkFinFanfold.Create(CheckBox)
+Gui.F_JobJacket.chkFinFanfold.Size(1560,360)
+Gui.F_JobJacket.chkFinFanfold.Position(5760,3150)
+Gui.F_JobJacket.chkFinFanfold.Parent("tMain",2)
+Gui.F_JobJacket.chkFinFanfold.Caption("Fanfold")
+Gui.F_JobJacket.chkFinFanfold.TabStop(True)
+Gui.F_JobJacket.chkFinFanfold.TabIndex(74)
+Gui.F_JobJacket.chkFinSheeted.Create(CheckBox)
+Gui.F_JobJacket.chkFinSheeted.Size(1560,360)
+Gui.F_JobJacket.chkFinSheeted.Position(9675,3150)
+Gui.F_JobJacket.chkFinSheeted.Parent("tMain",2)
+Gui.F_JobJacket.chkFinSheeted.Caption("Sheeted")
+Gui.F_JobJacket.chkFinSheeted.TabStop(True)
+Gui.F_JobJacket.chkFinSheeted.TabIndex(81)
+Gui.F_JobJacket.txtFinCoreID.Create(TextBox,"",True,1215,300,0,210,3885,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinCoreID.Parent("tMain",2)
+Gui.F_JobJacket.txtFinCoreID.NumericOnly(1)
+Gui.F_JobJacket.txtFinCoreID.TabStop(True)
+Gui.F_JobJacket.txtFinCoreID.TabIndex(65)
+Gui.F_JobJacket.txtFinCoreID.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinMaxOD.Create(TextBox,"",True,1215,300,0,210,4590,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinMaxOD.Parent("tMain",2)
+Gui.F_JobJacket.txtFinMaxOD.NumericOnly(1)
+Gui.F_JobJacket.txtFinMaxOD.TabStop(True)
+Gui.F_JobJacket.txtFinMaxOD.TabIndex(68)
+Gui.F_JobJacket.txtFinMaxOD.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinWound.Create(TextBox,"",True,1215,300,0,210,5280,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinWound.Parent("tMain",2)
+Gui.F_JobJacket.txtFinWound.TabStop(True)
+Gui.F_JobJacket.txtFinWound.TabIndex(71)
+Gui.F_JobJacket.txtFinWound.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinLabelroll.Create(TextBox,"",True,1215,300,0,1815,3885,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinLabelroll.Parent("tMain",2)
+Gui.F_JobJacket.txtFinLabelroll.NumericOnly(1)
+Gui.F_JobJacket.txtFinLabelroll.TabStop(True)
+Gui.F_JobJacket.txtFinLabelroll.TabIndex(66)
+Gui.F_JobJacket.txtFinLabelroll.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinRollsCase.Create(TextBox,"",True,1215,300,0,1815,4590,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinRollsCase.Parent("tMain",2)
+Gui.F_JobJacket.txtFinRollsCase.NumericOnly(1)
+Gui.F_JobJacket.txtFinRollsCase.TabStop(True)
+Gui.F_JobJacket.txtFinRollsCase.TabIndex(69)
+Gui.F_JobJacket.txtFinRollsCase.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinCounter.Create(TextBox,"",True,1215,300,0,1815,5280,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinCounter.Parent("tMain",2)
+Gui.F_JobJacket.txtFinCounter.NumericOnly(1)
+Gui.F_JobJacket.txtFinCounter.TabStop(True)
+Gui.F_JobJacket.txtFinCounter.TabIndex(72)
+Gui.F_JobJacket.txtFinCounter.Event(LostFocus,CounterCalc)
+Gui.F_JobJacket.txtFinFinAcr.Create(TextBox,"",True,1215,300,0,3420,3885,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinFinAcr.Parent("tMain",2)
+Gui.F_JobJacket.txtFinFinAcr.NumericOnly(1)
+Gui.F_JobJacket.txtFinFinAcr.TabStop(True)
+Gui.F_JobJacket.txtFinFinAcr.TabIndex(67)
+Gui.F_JobJacket.txtFinFinAcr.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinCoreWidth.Create(TextBox,"",True,1215,300,0,3420,4590,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinCoreWidth.Parent("tMain",2)
+Gui.F_JobJacket.txtFinCoreWidth.NumericOnly(1)
+Gui.F_JobJacket.txtFinCoreWidth.TabStop(True)
+Gui.F_JobJacket.txtFinCoreWidth.TabIndex(70)
+Gui.F_JobJacket.txtFinCoreWidth.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinCoreThick.Create(TextBox,"",True,1215,300,0,3420,5280,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinCoreThick.Parent("tMain",2)
+Gui.F_JobJacket.txtFinCoreThick.NumericOnly(1)
+Gui.F_JobJacket.txtFinCoreThick.TabStop(True)
+Gui.F_JobJacket.txtFinCoreThick.TabIndex(73)
+Gui.F_JobJacket.txtFinCoreThick.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinlbsfold.Create(TextBox,"",True,1215,300,0,5730,3885,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinlbsfold.Parent("tMain",2)
+Gui.F_JobJacket.txtFinlbsfold.NumericOnly(1)
+Gui.F_JobJacket.txtFinlbsfold.TabStop(True)
+Gui.F_JobJacket.txtFinlbsfold.TabIndex(75)
+Gui.F_JobJacket.txtFinlbsfold.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinlbsStack.Create(TextBox,"",True,1215,300,0,5730,4590,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinlbsStack.Parent("tMain",2)
+Gui.F_JobJacket.txtFinlbsStack.NumericOnly(1)
+Gui.F_JobJacket.txtFinlbsStack.TabStop(True)
+Gui.F_JobJacket.txtFinlbsStack.TabIndex(77)
+Gui.F_JobJacket.txtFinlbsStack.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinStacksBox.Create(TextBox,"",True,1215,300,0,5730,5280,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinStacksBox.Parent("tMain",2)
+Gui.F_JobJacket.txtFinStacksBox.NumericOnly(1)
+Gui.F_JobJacket.txtFinStacksBox.TabStop(True)
+Gui.F_JobJacket.txtFinStacksBox.TabIndex(79)
+Gui.F_JobJacket.txtFinStacksBox.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinFanFinAcr.Create(TextBox,"",True,1215,300,0,7335,3885,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinFanFinAcr.Parent("tMain",2)
+Gui.F_JobJacket.txtFinFanFinAcr.NumericOnly(1)
+Gui.F_JobJacket.txtFinFanFinAcr.TabStop(True)
+Gui.F_JobJacket.txtFinFanFinAcr.TabIndex(76)
+Gui.F_JobJacket.txtFinFanFinAcr.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinRepeatFold.Create(TextBox,"",True,1215,300,0,7335,4590,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinRepeatFold.Parent("tMain",2)
+Gui.F_JobJacket.txtFinRepeatFold.NumericOnly(1)
+Gui.F_JobJacket.txtFinRepeatFold.TabStop(True)
+Gui.F_JobJacket.txtFinRepeatFold.TabIndex(78)
+Gui.F_JobJacket.txtFinRepeatFold.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinFanCounter.Create(TextBox,"",True,1215,300,0,7335,5280,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinFanCounter.Parent("tMain",2)
+Gui.F_JobJacket.txtFinFanCounter.NumericOnly(1)
+Gui.F_JobJacket.txtFinFanCounter.TabStop(True)
+Gui.F_JobJacket.txtFinFanCounter.TabIndex(80)
+Gui.F_JobJacket.txtFinFanCounter.Event(LostFocus,CounterCalc)
+Gui.F_JobJacket.txtFinShtStack.Create(TextBox,"",True,1215,300,0,9645,3885,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinShtStack.Parent("tMain",2)
+Gui.F_JobJacket.txtFinShtStack.NumericOnly(1)
+Gui.F_JobJacket.txtFinShtStack.TabStop(True)
+Gui.F_JobJacket.txtFinShtStack.TabIndex(82)
+Gui.F_JobJacket.txtFinShtStack.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinStackCase.Create(TextBox,"",True,1215,300,0,9645,4590,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinStackCase.Parent("tMain",2)
+Gui.F_JobJacket.txtFinStackCase.NumericOnly(1)
+Gui.F_JobJacket.txtFinStackCase.TabStop(True)
+Gui.F_JobJacket.txtFinStackCase.TabIndex(85)
+Gui.F_JobJacket.txtFinStackCase.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinShtCase.Create(TextBox,"",True,1215,300,0,9645,5280,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinShtCase.Parent("tMain",2)
+Gui.F_JobJacket.txtFinShtCase.NumericOnly(1)
+Gui.F_JobJacket.txtFinShtCase.TabStop(True)
+Gui.F_JobJacket.txtFinShtCase.TabIndex(87)
+Gui.F_JobJacket.txtFinShtCase.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinShinkwrap.Create(TextBox,"",True,1215,300,0,11250,3885,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinShinkwrap.Parent("tMain",2)
+Gui.F_JobJacket.txtFinShinkwrap.NumericOnly(1)
+Gui.F_JobJacket.txtFinShinkwrap.TabStop(True)
+Gui.F_JobJacket.txtFinShinkwrap.TabIndex(84)
+Gui.F_JobJacket.txtFinShinkwrap.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinShetCounter.Create(TextBox,"",False,1215,300,0,11250,4590,False,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinShetCounter.Parent("tMain",2)
+Gui.F_JobJacket.txtFinShetCounter.NumericOnly(1)
+Gui.F_JobJacket.txtFinShetCounter.TabStop(True)
+Gui.F_JobJacket.txtFinShetCounter.TabIndex(86)
+Gui.F_JobJacket.txtFinLabel1.Create(TextBox,"",True,2955,300,0,210,6225,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinLabel1.Parent("tMain",2)
+Gui.F_JobJacket.txtFinLabel1.TabStop(True)
+Gui.F_JobJacket.txtFinLabel1.TabIndex(88)
+Gui.F_JobJacket.txtFinLabel1.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinLocation1.Create(TextBox,"",True,2955,300,0,3315,6210,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinLocation1.Parent("tMain",2)
+Gui.F_JobJacket.txtFinLocation1.TabStop(True)
+Gui.F_JobJacket.txtFinLocation1.TabIndex(89)
+Gui.F_JobJacket.txtFinLocation1.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinLabel2.Create(TextBox,"",True,2955,300,0,210,6675,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinLabel2.Parent("tMain",2)
+Gui.F_JobJacket.txtFinLabel2.TabStop(True)
+Gui.F_JobJacket.txtFinLabel2.TabIndex(90)
+Gui.F_JobJacket.txtFinLabel2.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinLocation2.Create(TextBox,"",True,2955,300,0,3315,6660,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinLocation2.Parent("tMain",2)
+Gui.F_JobJacket.txtFinLocation2.TabStop(True)
+Gui.F_JobJacket.txtFinLocation2.TabIndex(91)
+Gui.F_JobJacket.txtFinLocation2.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinLabel3.Create(TextBox,"",True,2955,300,0,210,7170,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinLabel3.Parent("tMain",2)
+Gui.F_JobJacket.txtFinLabel3.TabStop(True)
+Gui.F_JobJacket.txtFinLabel3.TabIndex(92)
+Gui.F_JobJacket.txtFinLabel3.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinLocation3.Create(TextBox,"",True,2955,300,0,3315,7155,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinLocation3.Parent("tMain",2)
+Gui.F_JobJacket.txtFinLocation3.TabStop(True)
+Gui.F_JobJacket.txtFinLocation3.TabIndex(93)
+Gui.F_JobJacket.txtFinLocation3.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinLabel4.Create(TextBox,"",True,2955,300,0,210,7620,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinLabel4.Parent("tMain",2)
+Gui.F_JobJacket.txtFinLabel4.TabStop(True)
+Gui.F_JobJacket.txtFinLabel4.TabIndex(94)
+Gui.F_JobJacket.txtFinLabel4.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinLocation4.Create(TextBox,"",True,2955,300,0,3315,7620,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinLocation4.Parent("tMain",2)
+Gui.F_JobJacket.txtFinLocation4.TabStop(True)
+Gui.F_JobJacket.txtFinLocation4.TabIndex(95)
+Gui.F_JobJacket.txtFinLocation4.Event(LostFocus,FormatField)
+Gui.F_JobJacket.mltxFinNotes.Create(TextboxM)
+Gui.F_JobJacket.mltxFinNotes.Size(5865,2295)
+Gui.F_JobJacket.mltxFinNotes.Position(6765,510)
+Gui.F_JobJacket.mltxFinNotes.Parent("tMain",2)
+Gui.F_JobJacket.mltxFinNotes.TabStop(True)
+Gui.F_JobJacket.mltxFinNotes.TabIndex(63)
+Gui.F_JobJacket.mltxFinNotes.Event(LostFocus,FormatField)
+Gui.F_JobJacket.mltxPackNotes.Create(TextboxM)
+Gui.F_JobJacket.mltxPackNotes.Size(5865,2295)
+Gui.F_JobJacket.mltxPackNotes.Position(6765,6225)
+Gui.F_JobJacket.mltxPackNotes.Parent("tMain",2)
+Gui.F_JobJacket.mltxPackNotes.TabStop(True)
+Gui.F_JobJacket.mltxPackNotes.TabIndex(96)
+Gui.F_JobJacket.mltxPackNotes.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinCoreDesc.Create(TextBox,"",True,3825,300,0,2640,1275,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinCoreDesc.Parent("tMain",2)
+Gui.F_JobJacket.txtFinCoreDesc.TabStop(True)
+Gui.F_JobJacket.txtFinCoreDesc.TabIndex(56)
+Gui.F_JobJacket.txtFinCoreDesc.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinBoxDesc1.Create(TextBox,"",True,3825,300,0,2640,2070,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinBoxDesc1.Parent("tMain",2)
+Gui.F_JobJacket.txtFinBoxDesc1.TabStop(True)
+Gui.F_JobJacket.txtFinBoxDesc1.TabIndex(59)
+Gui.F_JobJacket.txtFinBoxDesc1.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtFinBoxDesc2.Create(TextBox,"",True,3825,300,0,2640,2505,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtFinBoxDesc2.Parent("tMain",2)
+Gui.F_JobJacket.txtFinBoxDesc2.TabStop(True)
+Gui.F_JobJacket.txtFinBoxDesc2.TabIndex(62)
+Gui.F_JobJacket.txtFinBoxDesc2.Event(LostFocus,FormatField)
+Gui.F_JobJacket.lbl41.Create(Label,"Workcenter",True,1935,255,0,225,285,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl41.Parent("tMain",2)
+Gui.F_JobJacket.lbl42.Create(Label,"Packaging Notes",True,1935,255,0,6795,5985,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl42.Parent("tMain",2)
+Gui.F_JobJacket.lbl43.Create(Label,"Location",True,1935,255,0,3330,5985,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl43.Parent("tMain",2)
+Gui.F_JobJacket.lbl44.Create(Label,"Labels",True,1935,255,0,225,5985,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl44.Parent("tMain",2)
+Gui.F_JobJacket.lbl45.Create(Label,"Sheets / Case",True,1230,255,0,9660,5055,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl45.Parent("tMain",2)
+Gui.F_JobJacket.lbl46.Create(Label,"Counter",True,1095,255,0,7350,5055,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl46.Parent("tMain",2)
+Gui.F_JobJacket.lbl47.Create(Label,"Stacks/Box",True,1230,255,0,5745,5055,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl47.Parent("tMain",2)
+Gui.F_JobJacket.lbl48.Create(Label,"Core Thickness",True,1305,255,0,3435,5055,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl48.Parent("tMain",2)
+Gui.F_JobJacket.lbl49.Create(Label,"Counter",True,1200,255,0,1830,5055,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl49.Parent("tMain",2)
+Gui.F_JobJacket.lbl50.Create(Label,"Wound",True,1455,255,0,225,5055,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl50.Parent("tMain",2)
+Gui.F_JobJacket.lbl51.Create(Label,"Counter",False,1095,255,0,11265,4365,False,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl51.Parent("tMain",2)
+Gui.F_JobJacket.lbl52.Create(Label,"Stacks / Case",True,1290,255,0,9660,4365,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl52.Parent("tMain",2)
+Gui.F_JobJacket.lbl53.Create(Label,"Sheets / Stack",True,1200,255,0,9660,3660,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl53.Parent("tMain",2)
+Gui.F_JobJacket.lbl54.Create(Label,"Repeat / Fold",True,1080,255,0,7350,4365,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl54.Parent("tMain",2)
+Gui.F_JobJacket.lbl55.Create(Label,"Labels / Stack",True,1155,255,0,5745,4365,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl55.Parent("tMain",2)
+Gui.F_JobJacket.lbl56.Create(Label,"Core Width",True,1260,255,0,3435,4365,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl56.Parent("tMain",2)
+Gui.F_JobJacket.lbl57.Create(Label,"Rolls / Case",True,1170,255,0,1830,4365,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl57.Parent("tMain",2)
+Gui.F_JobJacket.lbl59.Create(Label,"Max OD",True,1110,255,0,225,4365,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl59.Parent("tMain",2)
+Gui.F_JobJacket.lbl60.Create(Label,"Finish Across",True,1245,255,0,7350,3660,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl60.Parent("tMain",2)
+Gui.F_JobJacket.lbl61.Create(Label,"Labels / Fold",True,1350,255,0,5745,3660,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl61.Parent("tMain",2)
+Gui.F_JobJacket.lbl62.Create(Label,"Finished Across",True,1290,255,0,3435,3660,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl62.Parent("tMain",2)
+Gui.F_JobJacket.lbl63.Create(Label,"Labels / Roll",True,990,255,0,1830,3660,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl63.Parent("tMain",2)
+Gui.F_JobJacket.lbl64.Create(Label,"Description",True,1935,255,0,2670,1830,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl64.Parent("tMain",2)
+Gui.F_JobJacket.lbl65.Create(Label,"Core ID",True,765,255,0,225,3660,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl65.Parent("tMain",2)
+Gui.F_JobJacket.lbl66.Create(Label,"Box",True,1305,255,0,225,1830,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl66.Parent("tMain",2)
+Gui.F_JobJacket.lbl67.Create(Label,"Finishing Notes",True,1935,255,0,6795,285,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl67.Parent("tMain",2)
+Gui.F_JobJacket.lbl68.Create(Label,"Core",True,1275,255,0,225,1050,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl68.Parent("tMain",2)
+Gui.F_JobJacket.lbl69.Create(Label,"Description",True,1935,255,0,2670,1050,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl69.Parent("tMain",2)
+Gui.F_JobJacket.chkFinShinkwrap.Create(CheckBox)
+Gui.F_JobJacket.chkFinShinkwrap.Size(1560,360)
+Gui.F_JobJacket.chkFinShinkwrap.Position(11265,3495)
+Gui.F_JobJacket.chkFinShinkwrap.Parent("tMain",2)
+Gui.F_JobJacket.chkFinShinkwrap.Caption("Shinkwrap")
+Gui.F_JobJacket.chkFinShinkwrap.TabStop(True)
+Gui.F_JobJacket.chkFinShinkwrap.TabIndex(83)
+Gui.F_JobJacket.cmdPressPress.Create(Button)
+Gui.F_JobJacket.cmdPressPress.Size(375,375)
+Gui.F_JobJacket.cmdPressPress.Position(2280,465)
+Gui.F_JobJacket.cmdPressPress.Parent("tMain",1)
+Gui.F_JobJacket.cmdPressPress.Caption("^")
+Gui.F_JobJacket.cmdPressPress.TabStop(True)
+Gui.F_JobJacket.cmdPressPress.TabIndex(39)
+Gui.F_JobJacket.cmdPressPress.Event(Click,BrowWC)
+Gui.F_JobJacket.chkOffline.Create(CheckBox)
+Gui.F_JobJacket.chkOffline.Size(1560,360)
+Gui.F_JobJacket.chkOffline.Position(240,300)
+Gui.F_JobJacket.chkOffline.Parent("tMain",3)
+Gui.F_JobJacket.chkOffline.Caption("Offline")
+Gui.F_JobJacket.chkOffline.TabStop(True)
+Gui.F_JobJacket.chkOffline.TabIndex(97)
+Gui.F_JobJacket.chkOnPress.Create(CheckBox)
+Gui.F_JobJacket.chkOnPress.Size(1560,360)
+Gui.F_JobJacket.chkOnPress.Position(240,825)
+Gui.F_JobJacket.chkOnPress.Parent("tMain",3)
+Gui.F_JobJacket.chkOnPress.Caption("On Press")
+Gui.F_JobJacket.chkOnPress.TabStop(True)
+Gui.F_JobJacket.chkOnPress.TabIndex(98)
+Gui.F_JobJacket.chkVarMustProof.Create(CheckBox)
+Gui.F_JobJacket.chkVarMustProof.Size(1560,360)
+Gui.F_JobJacket.chkVarMustProof.Position(240,1560)
+Gui.F_JobJacket.chkVarMustProof.Parent("tMain",3)
+Gui.F_JobJacket.chkVarMustProof.Caption("Must Proof")
+Gui.F_JobJacket.chkVarMustProof.TabStop(True)
+Gui.F_JobJacket.chkVarMustProof.TabIndex(99)
+Gui.F_JobJacket.chkVarLabRoll.Create(CheckBox)
+Gui.F_JobJacket.chkVarLabRoll.Size(1410,360)
+Gui.F_JobJacket.chkVarLabRoll.Position(240,5730)
+Gui.F_JobJacket.chkVarLabRoll.Parent("tMain",3)
+Gui.F_JobJacket.chkVarLabRoll.Caption("Labels / Roll")
+Gui.F_JobJacket.chkVarLabRoll.TabStop(True)
+Gui.F_JobJacket.chkVarLabRoll.TabIndex(108)
+Gui.F_JobJacket.chkVarLabFold.Create(CheckBox)
+Gui.F_JobJacket.chkVarLabFold.Size(1410,360)
+Gui.F_JobJacket.chkVarLabFold.Position(240,6465)
+Gui.F_JobJacket.chkVarLabFold.Parent("tMain",3)
+Gui.F_JobJacket.chkVarLabFold.Caption("Labels / Fold")
+Gui.F_JobJacket.chkVarLabFold.TabStop(True)
+Gui.F_JobJacket.chkVarLabFold.TabIndex(110)
+Gui.F_JobJacket.chkVarLabStack.Create(CheckBox)
+Gui.F_JobJacket.chkVarLabStack.Size(1410,360)
+Gui.F_JobJacket.chkVarLabStack.Position(240,7200)
+Gui.F_JobJacket.chkVarLabStack.Parent("tMain",3)
+Gui.F_JobJacket.chkVarLabStack.Caption("Labels / Stack")
+Gui.F_JobJacket.chkVarLabStack.TabStop(True)
+Gui.F_JobJacket.chkVarLabStack.TabIndex(112)
+Gui.F_JobJacket.chkVarLabPad.Create(CheckBox)
+Gui.F_JobJacket.chkVarLabPad.Size(1410,360)
+Gui.F_JobJacket.chkVarLabPad.Position(240,7935)
+Gui.F_JobJacket.chkVarLabPad.Parent("tMain",3)
+Gui.F_JobJacket.chkVarLabPad.Caption("Labels / Pad")
+Gui.F_JobJacket.chkVarLabPad.TabStop(True)
+Gui.F_JobJacket.chkVarLabPad.TabIndex(114)
+Gui.F_JobJacket.txtVarLabPerNo.Create(TextBox,"",True,1800,300,0,210,2805,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtVarLabPerNo.Parent("tMain",3)
+Gui.F_JobJacket.txtVarLabPerNo.TabStop(True)
+Gui.F_JobJacket.txtVarLabPerNo.TabIndex(101)
+Gui.F_JobJacket.txtVarLabPerNo.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtVarHumRead.Create(TextBox,"",True,1800,300,0,210,3540,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtVarHumRead.Parent("tMain",3)
+Gui.F_JobJacket.txtVarHumRead.TabStop(True)
+Gui.F_JobJacket.txtVarHumRead.TabIndex(102)
+Gui.F_JobJacket.txtVarHumRead.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtVarRibbon.Create(TextBox,"",True,1800,300,0,210,4275,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtVarRibbon.Parent("tMain",3)
+Gui.F_JobJacket.txtVarRibbon.TabStop(True)
+Gui.F_JobJacket.txtVarRibbon.TabIndex(103)
+Gui.F_JobJacket.txtVarRibbon.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtVarFileName.Create(TextBox,"",True,1800,300,0,210,5010,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtVarFileName.Parent("tMain",3)
+Gui.F_JobJacket.txtVarFileName.TabStop(True)
+Gui.F_JobJacket.txtVarFileName.TabIndex(104)
+Gui.F_JobJacket.txtVarFileName.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtVarBarSpec.Create(TextBox,"",True,1800,300,0,3090,2805,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtVarBarSpec.Parent("tMain",3)
+Gui.F_JobJacket.txtVarBarSpec.TabStop(True)
+Gui.F_JobJacket.txtVarBarSpec.TabIndex(105)
+Gui.F_JobJacket.txtVarBarSpec.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtVarBarRatio.Create(TextBox,"",True,1800,300,0,3090,3540,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtVarBarRatio.Parent("tMain",3)
+Gui.F_JobJacket.txtVarBarRatio.TabStop(True)
+Gui.F_JobJacket.txtVarBarRatio.TabIndex(106)
+Gui.F_JobJacket.txtVarBarRatio.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtVarBarHeight.Create(TextBox,"",True,1800,300,0,3090,4275,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtVarBarHeight.Parent("tMain",3)
+Gui.F_JobJacket.txtVarBarHeight.TabStop(True)
+Gui.F_JobJacket.txtVarBarHeight.TabIndex(107)
+Gui.F_JobJacket.txtVarBarHeight.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtVarLabRolls.Create(TextBox,"",True,1800,300,0,1770,5715,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtVarLabRolls.Parent("tMain",3)
+Gui.F_JobJacket.txtVarLabRolls.TabStop(True)
+Gui.F_JobJacket.txtVarLabRolls.TabIndex(109)
+Gui.F_JobJacket.txtVarLabRolls.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtVarLabFold.Create(TextBox,"",True,1800,300,0,1770,6450,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtVarLabFold.Parent("tMain",3)
+Gui.F_JobJacket.txtVarLabFold.TabStop(True)
+Gui.F_JobJacket.txtVarLabFold.TabIndex(111)
+Gui.F_JobJacket.txtVarLabFold.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtVarLabStack.Create(TextBox,"",True,1800,300,0,1770,7185,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtVarLabStack.Parent("tMain",3)
+Gui.F_JobJacket.txtVarLabStack.TabStop(True)
+Gui.F_JobJacket.txtVarLabStack.TabIndex(113)
+Gui.F_JobJacket.txtVarLabStack.Event(LostFocus,FormatField)
+Gui.F_JobJacket.txtVarLabPad.Create(TextBox,"",True,1800,300,0,1770,7920,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtVarLabPad.Parent("tMain",3)
+Gui.F_JobJacket.txtVarLabPad.TabStop(True)
+Gui.F_JobJacket.txtVarLabPad.TabIndex(115)
+Gui.F_JobJacket.txtVarLabPad.Event(LostFocus,FormatField)
+Gui.F_JobJacket.mltxVarNotes.Create(TextboxM)
+Gui.F_JobJacket.mltxVarNotes.Size(7665,1725)
+Gui.F_JobJacket.mltxVarNotes.Position(5040,510)
+Gui.F_JobJacket.mltxVarNotes.Parent("tMain",3)
+Gui.F_JobJacket.mltxVarNotes.TabStop(True)
+Gui.F_JobJacket.mltxVarNotes.TabIndex(100)
+Gui.F_JobJacket.mltxVarNotes.Event(LostFocus,FormatField)
+Gui.F_JobJacket.lbl58.Create(Label,"Variable Notes",True,1935,255,0,5055,285,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl58.Parent("tMain",3)
+Gui.F_JobJacket.lbl74.Create(Label,"Label / Seq #",True,1935,255,0,225,2565,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl74.Parent("tMain",3)
+Gui.F_JobJacket.lbl75.Create(Label,"Human Readable",True,1935,255,0,225,3300,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl75.Parent("tMain",3)
+Gui.F_JobJacket.lbl76.Create(Label,"Ribbon",True,1935,255,0,225,4035,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl76.Parent("tMain",3)
+Gui.F_JobJacket.lbl77.Create(Label,"File Name",True,1935,255,0,225,4770,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl77.Parent("tMain",3)
+Gui.F_JobJacket.lbl79.Create(Label,"Barcode Spec",True,1935,255,0,3105,2565,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl79.Parent("tMain",3)
+Gui.F_JobJacket.lbl80.Create(Label,"Barcode Ratio",True,1935,255,0,3105,3300,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl80.Parent("tMain",3)
+Gui.F_JobJacket.lbl81.Create(Label,"Barcode Height",True,1935,255,0,3105,4035,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl81.Parent("tMain",3)
+Gui.F_JobJacket.gsgcTooling.Create(GsGridControl)
+Gui.F_JobJacket.gsgcTooling.Size(6945,1695)
+Gui.F_JobJacket.gsgcTooling.Position(210,4110)
+Gui.F_JobJacket.gsgcTooling.Parent("tMain",0)
+Gui.F_JobJacket.gsgcTooling.ContextMenuAttach("ctxTooling")
+Gui.F_JobJacket.gsgcTooling.TabStop(True)
+Gui.F_JobJacket.gsgcTooling.TabIndex(16)
+Gui.F_JobJacket.gsgcInks.Create(GsGridControl)
+Gui.F_JobJacket.gsgcInks.Size(11160,2430)
+Gui.F_JobJacket.gsgcInks.Position(210,3405)
+Gui.F_JobJacket.gsgcInks.Parent("tMain",1)
+Gui.F_JobJacket.gsgcInks.ContextMenuAttach("ctxInks")
+Gui.F_JobJacket.gsgcInks.TabStop(True)
+Gui.F_JobJacket.gsgcInks.TabIndex(43)
+Gui.F_JobJacket.lbl26.Create(Label,"Ink",True,1545,255,0,225,3180,True,0,"Arial",8,-2147483633,0)
+Gui.F_JobJacket.lbl26.Parent("tMain",1)
+Gui.F_JobJacket.gsgcMats.Create(GsGridControl)
+Gui.F_JobJacket.gsgcMats.Size(8115,1620)
+Gui.F_JobJacket.gsgcMats.Position(210,1290)
+Gui.F_JobJacket.gsgcMats.Parent("tMain",1)
+Gui.F_JobJacket.gsgcMats.ContextMenuAttach("ctxMaterial")
+Gui.F_JobJacket.gsgcMats.TabStop(True)
+Gui.F_JobJacket.gsgcMats.TabIndex(42)
+Gui.F_JobJacket.cmdNext.Create(Button)
+Gui.F_JobJacket.cmdNext.Size(300,375)
+Gui.F_JobJacket.cmdNext.Position(12450,8220)
+Gui.F_JobJacket.cmdNext.Parent("tMain",0)
+Gui.F_JobJacket.cmdNext.Caption(">")
+Gui.F_JobJacket.cmdNext.Event(Click,NavigateButtons)
+Gui.F_JobJacket.cmdPrevious.Create(Button)
+Gui.F_JobJacket.cmdPrevious.Size(300,375)
+Gui.F_JobJacket.cmdPrevious.Position(11055,8220)
+Gui.F_JobJacket.cmdPrevious.Parent("tMain",0)
+Gui.F_JobJacket.cmdPrevious.Caption("<")
+Gui.F_JobJacket.cmdPrevious.Event(Click,NavigateButtons)
+Gui.F_JobJacket.cmdSave.Create(Button)
+Gui.F_JobJacket.cmdSave.Size(1005,375)
+Gui.F_JobJacket.cmdSave.Position(11400,8220)
+Gui.F_JobJacket.cmdSave.Parent("tMain",0)
+Gui.F_JobJacket.cmdSave.Caption("Save")
+Gui.F_JobJacket.cmdSave.Event(Click,SaveFullJacket)
+Gui.F_JobJacket.txtRevTest.Create(TextBox,"",True,930,300,0,5955,1200,True,0,"Arial",8,-2147483643,1)
+Gui.F_JobJacket.txtRevTest.Parent("tMain",0)
+Gui.F_JobJacket.txtRevTest.NumericOnly(2)
+Gui.F_JobJacket.txtRevTest.Locked(True)
+Gui.F_JobJacket.cmdRefresh.Create(Button)
+Gui.F_JobJacket.cmdRefresh.Size(1005,375)
+Gui.F_JobJacket.cmdRefresh.Position(9945,8220)
+Gui.F_JobJacket.cmdRefresh.Parent("tMain",0)
+Gui.F_JobJacket.cmdRefresh.Caption("Refresh")
+Gui.F_JobJacket.cmdRefresh.Event(Click,RefreshRouter)
+Gui.F_JobJacket.cmdPrint.Create(Button)
+Gui.F_JobJacket.cmdPrint.Size(1005,375)
+Gui.F_JobJacket.cmdPrint.Position(8820,8220)
+Gui.F_JobJacket.cmdPrint.Parent("tMain",0)
+Gui.F_JobJacket.cmdPrint.Caption("Print")
+Gui.F_JobJacket.cmdPrint.Event(Click,PrintJob)
+Gui.F_JobJacket.lblUdateDate.Create(Label,"Date Last Updated :",True,3105,255,0,435,240,True,0,"Arial",7,-2147483633,0)
+Gui.F_JobJacket.lblUpdateBy.Create(Label,"Last Updated by : ",True,3105,255,0,3555,240,True,0,"Arial",7,-2147483633,0)
+Gui.F_JobJacket.lblCreateDate.Create(Label,"Date Created : ",True,3105,255,0,6660,240,True,0,"Arial",7,-2147483633,0)
+Gui.F_JobJacket.lblCreateBy.Create(Label,"Created by :",True,3105,255,0,9765,240,True,0,"Arial",7,-2147483633,0)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+V.Global.sJJNo.Declare(String, "")
+V.Global.bSave.Declare(Boolean, 0)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+
+'This project was created for DLS, as part of the estimating project that was created for them.
+'This script was created to create and modify a job jacket. A job jacket is a set of documentation that defines a job. It is composed of an estimate, a part number and a router. Estimates are created through the DICE.
+'This will be attached to three different places:
+F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+	'This will be the screen load hook on the Router. We are only overriding the Script 1 label of the script button.
+	F.Intrinsic.Control.Case(11010)
+		V.Passed.000201.Set("New Job Jacket")
+		F.Intrinsic.Variable.SetProperty(V.Passed.000201, "LOCK", 1)
+	
+	'This will fire from the populate hooks. The router information populates from three different hooks, the router tab-out (11020), the router rev tab-out (11030), and the broswer selection (11110). 
+	'In either case we do the check and unlock the button if the job jacket doesnt exist for the router being loaded.
+	F.Intrinsic.Control.Case(11020)
+		F.Intrinsic.Control.CallSub(ExistingCheck)
+	F.Intrinsic.Control.Case(11030)
+		F.Intrinsic.Control.CallSub(ExistingCheck)
+	F.Intrinsic.Control.Case(11110)
+		F.Intrinsic.Control.CallSub(ExistingCheck)
+		
+	'This is the hook that fires when the user clicks on the Script 1 button from the Router Entry screen. 
+	'We will check to make sure that a Job Jacket has not been created for the router populated on the screen, since the user is only able to create NEW job jackets from this screen.
+	F.Intrinsic.Control.Case(11120)
+		F.Intrinsic.Control.CallSub(ExistingCheck)
+		F.Intrinsic.Control.CallSub(Initialization)
+		F.Intrinsic.Control.CallSub(FromRouterScreen)
+		Gui.F_JobJacket.tMain.SetTab(0)
+		Gui.F_JobJacket..Show
+		
+	'This is for the rest of the cases, which will just be for when it is opened directly from a custom menu on the GS menu. In this mode, the user will be able to both create a brand new Job Jacket, or a new revision of an existing one. 
+	F.Intrinsic.Control.CaseElse
+		'We will have to check the flag, if the flag is N for New, we are going to load all the initialization tables and just open a blank screen. All other flags, O for Open, C for Copy, D for Delete, will involve opening a job jacket browser.
+		F.Intrinsic.Control.CallSub(Initialization)
+		
+		F.Intrinsic.Control.SelectCase(V.Caller.Switches)
+			F.Intrinsic.Control.Case("N")
+				'If they are creating a new job jacket, we are just going to open the screen,
+				V.Global.sJJNo.Set(-1)
+				V.Global.bSave.Set(False)
+				F.Intrinsic.Control.CallSub(OpenConnection)
+				F.Intrinsic.Control.CallSub(PopulateFullJacket)
+				F.Intrinsic.Control.CallSub(CloseConnection)
+				
+			F.Intrinsic.Control.CaseElse
+				F.Intrinsic.Control.CallSub(BrowJobJacket)
+				
+		F.Intrinsic.Control.EndSelect
+		
+		Gui.F_JobJacket.tMain.SetTab(0)
+		Gui.F_JobJacket..Show
+		
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.Unload.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+
+F.Intrinsic.Control.If(V.Args.Connection, =, "YES")
+	F.ODBC.Connection!conx.Close
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.Unload.End
+
+Program.Sub.ExistingCheck.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+V.Local.sConnection.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+
+F.Intrinsic.Control.CallSub(OpenConnection)
+V.Local.sConnection.Set("YES")
+
+'We do a check on the Router to see if a job jacket for that router already exists in the system. If it does, we are not allowing them to access the job jacket from the Router Header screen (script 1 button)
+F.Intrinsic.String.Build("Select Top 1 JJ_NO from GCG_3623_JJ_Head where Router = '{0}' and Router_Rev = '{1}' ", V.Passed.000014, V.Passed.000015, V.Local.sSql)
+F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql, V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet.Trim, <>, "")
+	'If they want message box that populates whenever a job jacket has been found, we can place it in here
+	F.Intrinsic.Variable.SetProperty(V.Passed.000201, "LOCK", 1)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", V.Local.sConnection)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Variable.SetProperty(V.Passed.000201, "LOCK", 0)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", V.Local.sConnection)
+F.Intrinsic.Control.EndTry
+Program.Sub.ExistingCheck.End
+
+Program.Sub.OpenConnection.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+
+'Damn state variable dont work
+'F.Intrinsic.Control.If(V.ODBC.con.State, =, 0)
+F.ODBC.Connection!conx.OpenCompanyConnection
+'F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+'	F.Intrinsic.UI.Msgbox(V.Local.sError)
+'	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.OpenConnection.End
+
+Program.Sub.CloseConnection.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+
+F.ODBC.Connection!conx.Close
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.CloseConnection.End
+
+Program.Sub.FromRouterScreen.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sRouter.Declare(String, "")
+V.Local.sRev.Declare(String, "")
+
+F.Intrinsic.Control.CallSub(OpenConnection)
+
+'If we are opening it from the Router screen, we are only going to populate the router number and letting the user populate everything else
+
+'On my test server, it appears that the router/rev is passed on a single variable, 000014, but on their system, it is actually split into 000014 and 000015.. so we will have to add a check I suppose
+F.Intrinsic.Control.If(V.Passed.000015.Trim, =, "")
+	V.Local.sRouter.Set(V.Passed.000014)
+F.Intrinsic.Control.Else
+	
+	V.Local.sRouter.Set(V.Passed.000014)
+	V.Local.sRev.Set(V.Passed.000015)
+	
+	F.Intrinsic.String.Left(V.Passed.000014, 17, V.Local.sRouter)
+	F.Intrinsic.String.RPad(V.Local.sRouter, " ", 17, V.Local.sRouter)
+	
+	F.Intrinsic.String.Left(V.Passed.000015, 3, V.Local.sRev)
+	F.Intrinsic.String.RPad(V.Local.sRev, " ", 3, V.Local.sRev)
+	
+	F.Intrinsic.String.Build("{0}{1}", V.Local.sRouter, V.Local.sRev, V.Local.sRouter)
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(PopulateRTFields, "RouterRev", V.Local.sRouter)
+Gui.F_JobJacket.cmdRoutBrow.Enabled(False)
+
+F.Intrinsic.Control.CallSub(CloseConnection)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.FromRouterScreen.End
+
+Program.Sub.BrowCust.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+
+'For the most part on the browsers, we are goign to be copying the methodology of gathering the information in the same manner that it is gathered in the DICE estimator.
+F.Intrinsic.UI.Browser(225,"",v.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+	V.Local.sRet.RedimPreserve(0,8)	
+	Gui.F_JobJacket.txtCustNo.Text(V.Local.sRet(0).Trim)
+	Gui.F_JobJacket.txtCustName.Text(V.Local.sRet(3).UCase.Trim)
+F.Intrinsic.Control.Else
+	'We clear the customer and exit subroutine
+	Gui.F_JobJacket.txtCustNo.Text("")
+	Gui.F_JobJacket.txtCustName.Text("")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.BrowCust.End
+
+Program.Sub.BrowDiceNO.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sTitles.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+V.Local.sForm.Declare(String, "")
+V.Local.sQuote.Declare(String, "")
+V.Local.sRouter.Declare(String, "")
+V.Local.sRouterRev.Declare(String, "")
+V.Local.iWidths.Declare(Long, 0)
+V.Local.iCounter.Declare(Long, 0)
+V.Local.fSht.Declare(Float, 0.0)
+V.Local.fCounter.Declare(Float, 0.0)
+V.Local.fNumerator.Declare(Float, 0.00)
+V.Local.fDenominator.Declare(Float, 0.00)
+
+F.Intrinsic.Control.CallSub(OpenConnection)
+
+F.Intrinsic.Control.SelectCase(V.Args.ControlName.UCase)
+	F.Intrinsic.Control.Case("TXTDICENO")
+		V.Local.sQuote.Set(V.Screen.F_JobJacket!txtDICENo.Text.Trim)
+		
+	F.Intrinsic.Control.Case("CMDDICEBROW")
+	
+		'This will be a custom browser. We are going to pull it from the Custom Table
+		F.Intrinsic.String.Split("Quote*!*Item #*!*Item Description*!*Router*!*Dice #*!*Customer", "*!*", V.Local.sTitles)
+		F.Intrinsic.String.Split("650*!*1000*!*2000*!*750*!*500*!*1500", "*!*", V.Local.iWidths)
+		F.Intrinsic.String.Split("*!**!**!**!**!*", "*!*", V.Local.sForm)
+		'item#/jj rev, 
+		'location, 
+		'quote # (not est #), 
+		'router/rev, 
+		'width/length, 
+		'creator (initials), 
+		'created date.
+		
+		'We may need to restrict them on the Dice numbers they see with the Router number
+		'F.Intrinsic.UI.Browser("Select a DICE Number","conx","SELECT EST_NO, ROUTER_NO, FINISH_PART, FINISH_DESC, NAME_CUSTOMER FROM GCG_3623_EST ORDER BY EST_NO DESC",Variable.Local.sTitles,Variable.Local.iWidths,V.Local.sRet)
+		F.Intrinsic.UI.Browser("Select a Quote Number","conx","SELECT QUOTE_NO, FINISH_PART, FINISH_DESC, ROUTER_NO, EST_NO, NAME_CUSTOMER FROM GCG_3623_EST ORDER BY EST_NO DESC",Variable.Local.sTitles,Variable.Local.iWidths, 15000, 10000, V.Local.sForm, V.Local.sForm, V.Local.sRet)
+		
+		F.Intrinsic.Control.If(V.Local.sRet, <>, "***CANCEL***")
+		
+			F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+			V.Local.sRet.RedimPreserve(0,5)
+			
+			V.Local.sQuote.Set(V.Local.sRet(0))
+			
+		F.Intrinsic.Control.Else
+			V.Local.sQuote.Set("")
+			
+		F.Intrinsic.Control.Endif
+			
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.String.LPad(V.Local.sQuote, "0", 7, V.Local.sQuote)
+
+Gui.F_JobJacket.txtDICENo.Text(V.Local.sQuote)
+
+F.Intrinsic.Control.If(V.Global.bSave)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+V.Local.sSql.Set("Select EST_NO, QUOTE_NO, CUSTOMER, FINISH_PART, FINISH_DESC, ROUTER_NO, NAME_CUSTOMER, OFACECUT, OBACKCUT, LBL_WIDTH, LBL_DEPTH, LINER_WIDTH, FIN_LBL_ACROSS, GAPACROSS, GAPDOWN, REPEAT_LENGTH, HACRDIE, HACRPRESS, OSHAPE, OPERFED, SHEETS, FANFOLD, OAUTOAPPLIED, OVACDIE, OAIREJECT, ODEADENED, OPINFEED, ROLLS, CORE_SIZE, ROLL_OD, WIND_DIR, LABELS_ROLL, ROLLS_BOX, LABELS_FOLD, LABELS_STACK, STACK_BOX, SHEETS_STACK, STACKS_BOX, PSHRINKWRAP, H_EST_NOTES") 
+F.Intrinsic.String.Build("{0} FROM GCG_3623_EST where QUOTE_NO = '{1}'", V.Local.sSql, V.Local.sQuote, V.Local.sSql)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstDICE", V.Local.sSql)
+
+F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.EOF, <>, True)
+
+	'We have to populate a ton of things if they selected something
+	F.Intrinsic.String.RPad(V.ODBC.conx!rstDICE.FieldValUCTrim!ROUTER_NO, " ", 20, V.Local.sRet)
+	F.Intrinsic.String.Left(V.Local.sRet, 17, V.Local.sRouter)	
+	F.Intrinsic.String.Right(V.Local.sRet, 3, V.Local.sRouterRev)
+	Gui.F_JobJacket.txtRouter.Text(V.Local.sRouter)
+	Gui.F_JobJacket.txtRouterRev.Text(V.Local.sRouterRev)
+	F.Intrinsic.Control.If(V.Local.sRouter.Trim, <>, "")
+		'Fixed
+'		F.Intrinsic.String.Build("{0}*!*{1}", V.Local.sRouter, V.Local.sRouterRev, V.Local.sRet)
+		F.Intrinsic.Control.CallSub(PopulateRTFields, "RouterRev", V.Local.sRet)
+		
+	F.Intrinsic.Control.EndIf
+	
+	Gui.F_JobJacket.txtItemNo.Text(V.ODBC.conx!rstDICE.FieldValUCTrim!FINISH_PART)
+	Gui.F_JobJacket.txtItemDesc1.Text(V.ODBC.conx!rstDICE.FieldValUCTrim!FINISH_DESC)
+	Gui.F_JobJacket.txtCustName.Text(V.ODBC.conx!rstDICE.FieldValUCTrim!NAME_CUSTOMER)
+	
+	Gui.F_JobJacket.txtDICENo.Text(V.ODBC.conx!rstDICE.FieldValUCTrim!QUOTE_NO)
+	Gui.F_JobJacket.txtCustNo.Text(V.ODBC.conx!rstDICE.FieldValUCTrim!CUSTOMER)
+	Gui.F_JobJacket.mltxEstNotes.Text(V.ODBC.conx!rstDICE.FieldValUCTrim!H_EST_NOTES)
+	
+	F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.FieldValUCTrim!OFACECUT, "<>", "")
+		Gui.F_JobJacket.chkFaceCut.Value(1)
+		Gui.F_JobJacket.txtFaceCut.Text(V.ODBC.conx!rstDICE.FieldValUCTrim!OFACECUT)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.chkFaceCut.Value(0)
+		Gui.F_JobJacket.txtFaceCut.Text("")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.FieldValUCTrim!OBACKCUT, "<>", "")
+		Gui.F_JobJacket.chkBackCut.Value(1)
+		Gui.F_JobJacket.txtBackCut.Text(V.ODBC.conx!rstDICE.FieldValUCTrim!OBACKCUT)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.chkBackCut.Value(0)
+		Gui.F_JobJacket.txtBackCut.Text("")
+	F.Intrinsic.Control.EndIf
+	
+	Gui.F_JobJacket.txtWidth.Text(V.ODBC.conx!rstDICE.FieldValFloat!LBL_WIDTH)
+	Gui.F_JobJacket.txtLength.Text(V.ODBC.conx!rstDICE.FieldValFloat!LBL_DEPTH)  
+	Gui.F_JobJacket.txtFinAcr.Text(V.ODBC.conx!rstDICE.FieldValFloat!FIN_LBL_ACROSS)
+	Gui.F_JobJacket.txtGapAcr.Text(V.ODBC.conx!rstDICE.FieldValFloat!GAPACROSS)
+	Gui.F_JobJacket.txtGapDown.Text(V.ODBC.conx!rstDICE.FieldValFloat!GAPDOWN)
+	Gui.F_JobJacket.txtRepeat.Text(V.ODBC.conx!rstDICE.FieldValFloat!REPEAT_LENGTH)
+	Gui.F_JobJacket.txtAcrDie.Text(V.ODBC.conx!rstDICE.FieldValFloat!HACRDIE)
+	Gui.F_JobJacket.txtAcrPress.Text(V.ODBC.conx!rstDICE.FieldValFloat!HACRPRESS)
+	Gui.F_JobJacket.txtCarrierWdt.Text(V.ODBC.conx!rstDICE.FieldValFloat!LINER_WIDTH)
+	Gui.F_JobJacket.txtShape.Text(V.ODBC.conx!rstDICE.FieldValUCTrim!OSHAPE)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.FieldVal!OPERFED, "=", True)
+		Gui.F_JobJacket.chkPerfed.Value(1)
+		Gui.F_JobJacket.txtPerfed.Text(V.ODBC.conx!rstDICE.FieldValFloat!REPEAT_LENGTH)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.chkPerfed.Value(0)
+		Gui.F_JobJacket.txtPerfed.Text("")
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.FieldVal!SHEETS, "=", True)
+		Gui.F_JobJacket.chkSheeted.Value(1)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.chkSheeted.Value(0)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.FieldVal!FANFOLD, "=", True)
+		Gui.F_JobJacket.chkFanfold.Value(1)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.chkFanfold.Value(0)
+	F.Intrinsic.Control.EndIf
+	
+	'The Press tab
+	F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.FieldVal!OAUTOAPPLIED, "=", True)
+		Gui.F_JobJacket.chkPressAutoApply.Value(1)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.chkPressAutoApply.Value(0)	
+	F.Intrinsic.Control.EndIf	
+	F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.FieldVal!OVACDIE, "=", True)
+		Gui.F_JobJacket.chkPressVacuum.Value(1)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.chkPressVacuum.Value(0)
+	F.Intrinsic.Control.EndIf	
+	F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.FieldVal!OAIREJECT, "=", True)
+		Gui.F_JobJacket.chkPressAirEject.Value(1)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.chkPressAirEject.Value(0)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.FieldVal!ODEADENED, "=", True)
+		Gui.F_JobJacket.chkPressDeReLam.Value(1)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.chkPressDeReLam.Value(0)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.FieldVal!OPINFEED, "=", True)
+		Gui.F_JobJacket.chkPressPinFeed.Value(1)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.chkPressPinFeed.Value(0)
+	F.Intrinsic.Control.EndIf
+	
+	'Finishing stuff:
+	'Then rewind section
+	F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.FieldVal!ROLLS, "=", True)
+		Gui.F_JobJacket.chkFinRew.Value(1)
+		Gui.F_JobJacket.txtFinCoreID.Text(V.ODBC.conx!rstDICE.FieldValFloat!CORE_SIZE)
+		Gui.F_JobJacket.txtFinMaxOD.Text(V.ODBC.conx!rstDICE.FieldValFloat!ROLL_OD)
+		Gui.F_JobJacket.txtFinWound.Text(V.ODBC.conx!rstDICE.FieldValUCTrim!WIND_DIR)
+		Gui.F_JobJacket.txtFinLabelroll.Text(V.ODBC.conx!rstDICE.FieldValFloat!LABELS_ROLL)
+		Gui.F_JobJacket.txtFinRollsCase.Text(V.ODBC.conx!rstDICE.FieldValFloat!ROLLS_BOX)
+		Gui.F_JobJacket.txtFinFinAcr.Text(V.ODBC.conx!rstDICE.FieldValFloat!FIN_LBL_ACROSS)
+		Gui.F_JobJacket.txtFinCoreWidth.Text(V.ODBC.conx!rstDICE.FieldValFloat!LINER_WIDTH)
+		'The Counter textbox needs to be calculated. For the Finishing, itll be Repeat (from header) * Labels/roll (Finishing/rewind)
+		'Header>Repeat (multiplied by) Finishing>Rewind>Labels/Roll (divided by) Finishing>Finished/Acr (divided by) 10 ? round off result to nearest whole number.
+		F.Intrinsic.Math.Mult(V.ODBC.conx!rstDICE.FieldValFloat!REPEAT_LENGTH, V.ODBC.conx!rstDICE.FieldValFloat!LABELS_ROLL, V.Local.fNumerator)
+		F.Intrinsic.Math.Mult(V.ODBC.conx!rstDICE.FieldValFloat!FIN_LBL_ACROSS, 10, V.Local.fDenominator)
+		F.Intrinsic.Math.Div(V.Local.fNumerator, V.Local.fDenominator, V.Local.fCounter)
+		F.Intrinsic.Math.Ceiling(V.Local.fCounter, V.Local.iCounter)
+		Gui.F_JobJacket.txtFinCounter.Text(V.Local.iCounter)
+		Gui.F_JobJacket.txtFinCoreThick.Text("0.125")
+		
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.chkFinRew.Value(0)
+		Gui.F_JobJacket.txtFinCoreID.Text("")
+		Gui.F_JobJacket.txtFinMaxOD.Text("")
+		Gui.F_JobJacket.txtFinWound.Text("")
+		Gui.F_JobJacket.txtFinLabelroll.Text("")
+		Gui.F_JobJacket.txtFinRollsCase.Text("")
+		Gui.F_JobJacket.txtFinFinAcr.Text("")
+		Gui.F_JobJacket.txtFinCoreWidth.Text("")
+		Gui.F_JobJacket.txtFinCounter.Text("")
+		Gui.F_JobJacket.txtFinCoreThick.Text("")
+		
+	F.Intrinsic.Control.EndIf
+	
+	'The Fanfold section	
+	F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.FieldVal!FANFOLD, "=", True)
+		Gui.F_JobJacket.chkFinFanfold.Value(1)
+		Gui.F_JobJacket.txtFinlbsfold.Text(V.ODBC.conx!rstDICE.FieldValFloat!LABELS_FOLD)
+		Gui.F_JobJacket.txtFinlbsStack.Text(V.ODBC.conx!rstDICE.FieldValFloat!LABELS_STACK)
+		Gui.F_JobJacket.txtFinStacksBox.Text(V.ODBC.conx!rstDICE.FieldValFloat!STACK_BOX)
+		Gui.F_JobJacket.txtFinFanFinAcr.Text(V.ODBC.conx!rstDICE.FieldValFloat!FIN_LBL_ACROSS)
+		
+		
+		F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.FieldValFloat!FIN_LBL_ACROSS, <>, 0)
+			'The Repeat/fold textbox needs to be calculated. Itll be (Repeat (Header) * Labels/Fold (Finishing/Fanfold)) / Finish Across (Fanfold)
+			F.Intrinsic.Math.Mult(V.ODBC.conx!rstDICE.FieldValFloat!REPEAT_LENGTH, V.ODBC.conx!rstDICE.FieldValFloat!LABELS_FOLD, V.Local.fCounter)
+			F.Intrinsic.Math.Div(V.Local.fCounter, V.ODBC.conx!rstDICE.FieldValFloat!FIN_LBL_ACROSS, V.Local.fCounter)
+			Gui.F_JobJacket.txtFinRepeatFold.Text(V.Local.fCounter)
+			'The Counter textbox needs to be calculated. For the Fanfold section, itll be Lbls/Stack (Finishing/fanfold) / Finished/ACR (Finish)
+			'Header>Repeat (multiplied by) Finishing>Fanfold>Lbls/Stack (divided by) Fanfold > Finish Across (divided by) 10 ? round off result to nearest whole number.
+			F.Intrinsic.Math.Mult(V.ODBC.conx!rstDICE.FieldValFloat!REPEAT_LENGTH, V.ODBC.conx!rstDICE.FieldValFloat!LABELS_STACK, V.Local.fNumerator)
+			F.Intrinsic.Math.Mult(V.ODBC.conx!rstDICE.FieldValFloat!FIN_LBL_ACROSS, 10, V.Local.fDenominator)
+			F.Intrinsic.Math.Div(V.Local.fNumerator, V.Local.fDenominator, V.Local.fCounter)
+			F.Intrinsic.Math.Ceiling(V.Local.fCounter, V.Local.iCounter)
+			Gui.F_JobJacket.txtFinFanCounter.Text(V.Local.iCounter)
+		F.Intrinsic.Control.Else
+			Gui.F_JobJacket.txtFinFanCounter.Text(0)
+			Gui.F_JobJacket.txtFinRepeatFold.Text(0)
+		F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.chkFinFanfold.Value(0)
+		Gui.F_JobJacket.txtFinlbsfold.Text("")
+		Gui.F_JobJacket.txtFinlbsStack.Text("")
+		Gui.F_JobJacket.txtFinStacksBox.Text("")
+		Gui.F_JobJacket.txtFinFanFinAcr.Text("")
+		Gui.F_JobJacket.txtFinRepeatFold.Text("")
+		Gui.F_JobJacket.txtFinFanCounter.Text("")
+		
+	F.Intrinsic.Control.EndIf
+	
+	'The Sheeted section	
+	F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.FieldVal!SHEETS, "=", True)
+		Gui.F_JobJacket.chkFinSheeted.Value(1)
+		Gui.F_JobJacket.txtFinShtStack.Text(V.ODBC.conx!rstDICE.FieldValFloat!SHEETS_STACK)
+		Gui.F_JobJacket.txtFinStackCase.Text(V.ODBC.conx!rstDICE.FieldValFloat!STACKS_BOX)
+		F.Intrinsic.Math.Mult(V.ODBC.conx!rstDICE.FieldValFloat!SHEETS_STACK, V.ODBC.conx!rstDICE.FieldValFloat!STACKS_BOX, V.Local.fSht)
+		Gui.F_JobJacket.txtFinShtCase.Text(V.Local.fSht)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstDICE.FieldVal!PSHRINKWRAP, "=", True)
+			Gui.F_JobJacket.chkFinShinkwrap.Value(1)
+		F.Intrinsic.Control.Else
+			Gui.F_JobJacket.chkFinShinkwrap.Value(0)
+		F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.chkFinSheeted.Value(0)
+		Gui.F_JobJacket.txtFinShtStack.Text("")
+		Gui.F_JobJacket.txtFinStackCase.Text("")
+		Gui.F_JobJacket.txtFinShtCase.Text("")
+		Gui.F_JobJacket.chkFinShinkwrap.Value(0)
+	
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.BlockEvents
+	
+	Gui.F_JobJacket.txtDICENo.Text("")
+	Gui.F_JobJacket.txtRouter.Text("")
+	Gui.F_JobJacket.txtRouterRev.Text("")
+	Gui.F_JobJacket.txtItemNo.Text("")
+	Gui.F_JobJacket.txtItemDesc1.Text("")
+	Gui.F_JobJacket.txtCustName.Text("")
+	Gui.F_JobJacket.txtCustNo.Text("")
+	Gui.F_JobJacket.chkFaceCut.Value(0)
+	Gui.F_JobJacket.txtFaceCut.Text("")
+	Gui.F_JobJacket.chkBackCut.Value(0)
+	Gui.F_JobJacket.txtBackCut.Text("")	
+	Gui.F_JobJacket.txtWidth.Text("")
+	Gui.F_JobJacket.txtLength.Text("")  
+	Gui.F_JobJacket.txtFinAcr.Text("")
+	Gui.F_JobJacket.txtGapAcr.Text("")
+	Gui.F_JobJacket.txtGapDown.Text("")
+	Gui.F_JobJacket.txtRepeat.Text("")
+	Gui.F_JobJacket.txtAcrDie.Text("")
+	Gui.F_JobJacket.txtAcrPress.Text("")
+	Gui.F_JobJacket.txtShape.Text("")
+	Gui.F_JobJacket.chkPerfed.Value(0)
+	Gui.F_JobJacket.chkSheeted.Value(0)
+	Gui.F_JobJacket.chkFanfold.Value(0)
+	Gui.F_JobJacket.chkPressAutoApply.Value(0)	
+	Gui.F_JobJacket.chkPressVacuum.Value(0)
+	Gui.F_JobJacket.chkPressAirEject.Value(0)	
+	Gui.F_JobJacket.chkPressDeReLam.Value(0)
+	Gui.F_JobJacket.chkPressPinFeed.Value(0)
+	
+	'Finishing stuff:
+	'Then rewind section
+	Gui.F_JobJacket.chkFinRew.Value(0)
+	Gui.F_JobJacket.txtFinCoreID.Text("")
+	Gui.F_JobJacket.txtFinMaxOD.Text("")
+	Gui.F_JobJacket.txtFinWound.Text("")
+	Gui.F_JobJacket.txtFinLabelroll.Text("")
+	Gui.F_JobJacket.txtFinRollsCase.Text("")
+	Gui.F_JobJacket.txtFinFinAcr.Text("")
+	Gui.F_JobJacket.chkFinFanfold.Value(0)
+	Gui.F_JobJacket.txtFinlbsfold.Text("")
+	Gui.F_JobJacket.txtFinlbsStack.Text("")
+	Gui.F_JobJacket.txtFinStacksBox.Text("")
+	Gui.F_JobJacket.txtFinFanFinAcr.Text("")
+	Gui.F_JobJacket.chkFinSheeted.Value(0)
+	Gui.F_JobJacket.txtFinShtStack.Text("")
+	Gui.F_JobJacket.txtFinStackCase.Text("")
+	Gui.F_JobJacket.txtFinShtCase.Text("")
+	Gui.F_JobJacket.chkFinShinkwrap.Value(0)
+	F.Intrinsic.Control.UnblockEvents
+F.Intrinsic.Control.EndIf
+
+F.ODBC.conx!rstDICE.Close
+
+F.Intrinsic.Control.CallSub(CloseConnection)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.BrowDiceNO.End
+
+Program.Sub.BrowLoc.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sTitles.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.iWidths.Declare(Long, 0)
+
+F.Intrinsic.Control.CallSub(OpenConnection)
+
+F.Intrinsic.String.Split("Loc*!*Description", "*!*", V.Local.sTitles)
+F.Intrinsic.String.Split("500*!*2500", "*!*", V.Local.iWidths)
+
+F.Intrinsic.UI.Browser("Select a Location","conx","SELECT LOCATION, LOCATION_DESC FROM V_LOCATIONS ORDER BY LOCATION ASC",Variable.Local.sTitles,Variable.Local.iWidths,Variable.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet, <>, "***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+	V.Local.sRet.RedimPreserve(0,1)
+	Gui.F_JobJacket.txtLocation.Text(V.Local.sRet(0))
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.txtLocation.Text("")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(CloseConnection)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "YES")
+F.Intrinsic.Control.EndTry
+Program.Sub.BrowLoc.End
+
+Program.Sub.BrowRout.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.sTitles.Declare(String, "")
+V.Local.sForm.Declare(String, "")
+V.Local.sRouter.Declare(String, "")
+V.Local.iWidths.Declare(Long, 0)
+
+F.Intrinsic.Control.CallSub(OpenConnection)
+
+F.Intrinsic.String.Split("Router Number*!*Description", "*!*", V.Local.sTitles)
+F.Intrinsic.String.Split("1000*!*3000", "*!*", V.Local.iWidths)
+F.Intrinsic.String.Split("*!*", "*!*", V.Local.sForm)
+
+'For the most part on the browsers, we are goign to be copying the methodology of gathering the information in the same manner that it is gathered in the DICE estimator.
+'F.Intrinsic.UI.Browser(2700,"",V.Local.sRet)
+'Customer wanted to have the columns be wider, so we have to create a browser from SQL instead
+F.Intrinsic.UI.Browser("Select Router","conx","SELECT ROUTER, DESCRIPTION_ROUTER from V_ROUTER_HEADER ORDER BY ROUTER ASC",Variable.Local.sTitles,Variable.Local.iWidths, 10000, 8000, V.Local.sForm, V.Local.sForm, V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.Control.If(V.Global.bSave)
+	
+		F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+		V.Local.sRouter.Redim(0,2)
+		F.Intrinsic.String.RPad(V.Local.sRet(0), " ", 20, V.Local.sRet(0))
+		F.Intrinsic.String.Right(V.Local.sRet(0), 3, V.Local.sRouter(2))
+		F.Intrinsic.String.Left(V.Local.sRet(0), 17, V.Local.sRouter(1))
+		
+		Gui.F_JobJacket.txtRouter.Text(V.Local.sRouter(1).Trim)
+		Gui.F_JobJacket.txtRouterRev.Text(V.Local.sRouter(2).Trim)
+		F.Intrinsic.Control.ExitSub
+		
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.CallSub(PopulateRTFields, "RouterRev", V.Local.sRet)
+
+F.Intrinsic.Control.Else
+	'We clear the router and exit subroutine
+'	Gui.F_JobJacket.txtRouter.Text("")
+'	Gui.F_JobJacket.txtRouterRev.Text("")
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(CloseConnection)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.BrowRout.End
+
+Program.Sub.BrowItem.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+V.Local.sDesc.Declare(String, "")
+V.Local.sItem.Declare(String, "")
+V.Local.sLoc.Declare(String, "")
+
+'Browser from inventory
+F.Intrinsic.UI.Browser(100, "", V.Local.sRet)
+
+F.Intrinsic.Control.BlockEvents
+
+F.Intrinsic.Control.If(V.Local.sRet, <>, "***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+	Gui.F_JobJacket.txtItemNo.Text(V.Local.sRet(0).Trim.UCase)
+	Gui.F_JobJacket.txtLocation.Text(V.Local.sRet(2).Trim.UCase)
+	
+	F.Intrinsic.Control.If(V.Global.bSave)
+		F.Intrinsic.Control.UnBlockEvents
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	Gui.F_JobJacket.txtItemDesc1.Text(V.Local.sRet(3).Trim.UCase)
+	F.Intrinsic.Control.CallSub(OpenConnection)
+	F.Global.Inventory.GetGSSPart(V.Local.sRet(0), V.Local.sRet(1), V.Local.sSql)
+	F.Intrinsic.String.Build("Select TOP 1 DESCRIPTION_2 from V_INVENTORY_MST2 where PART = '{0}' and LOCATION = '{1}'", V.Local.sSql, V.Local.sRet(2), V.Local.sSql)
+	F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql, V.Local.sDesc)
+	Gui.F_JobJacket.txtItemDesc2.Text(V.Local.sDesc.UCase)
+	V.Local.sItem.Set(V.Screen.F_JobJacket!txtItemNo.Text)
+	V.Local.sLoc.Set(V.Screen.F_JobJacket!txtLocation.Text)
+	'There is a posibility that if they change the Item number, we are going to need to change the JobJacket number, since the key for the job jacket is item number and jacket revision.	
+	F.Intrinsic.String.Build("Select TOP 1 JJ_NO, JACKET_REV from GCG_3623_JJ_HEAD where FINISH_PART = '{0}' and FINISH_LOC = '{1}' order by JACKET_REV DESC", V.Local.sItem, V.Local.sLoc, V.Local.sSql)
+	F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql, V.Local.sDesc)
+	
+	F.Intrinsic.Control.If(V.Local.sDesc.Trim, <>, "")
+		F.Intrinsic.String.Split(V.Local.sDesc, "*!*", V.Local.sDesc)
+		'recording new info
+		Gui.F_JobJacket.txtRevTest.Text(V.Local.sDesc(1))
+		V.Global.sJJNo.Set(V.Local.sDesc(0).Long)
+	F.Intrinsic.Control.Else
+		'New Job Jacket
+		Gui.F_JobJacket.txtRevTest.Text(1)
+		V.Global.sJJNo.Set(-1)
+	F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.CallSub(CloseConnection)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.UnBlockEvents
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.BrowItem.End
+
+Program.Sub.BrowPress.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+
+F.Intrinsic.UI.Browser(400, "", V.Local.sError)
+
+F.Intrinsic.Control.If(V.Local.sRet, <>, "***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+	V.Local.sRet.RedimPreserve(0,1)
+	Gui.F_JobJacket.txtPress.Text(V.Local.sRet(1).Ucase)
+F.Intrinsic.Control.Else
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.BrowPress.End
+
+Program.Sub.BrowCore.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sTitles.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.sBrowser.Declare(String, "")
+V.Local.iWidths.Declare(Long, 0)
+
+F.Data.DataView.ToString("dtMtlforTools", "dvCoreBrowser", "PART*!*Location*!*DESCRIPTION*!*UM_INVENTORY", "*!*", "@$@", V.Local.sBrowser)
+
+F.Intrinsic.String.Split("Core*!*Location*!*Description*!*UM", "*!*", V.Local.sTitles)
+F.Intrinsic.String.Split("150*!*75*!*350*!*75", "*!*", V.Local.iWidths)
+
+F.Intrinsic.UI.BrowserFromString("Please select a Core", V.Local.sBrowser, "*!*", "@$@", V.Local.sTitles, V.Local.iWidths, V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet, <>, "***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+	V.Local.sRet.RedimPreserve(0, 3)
+	Gui.F_JobJacket.txtFinCore.Text(V.Local.sRet(0).Trim)
+	Gui.F_JobJacket.txtFinCoreDesc.Text(V.Local.sRet(2).Trim)
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.BrowCore.End
+
+Program.Sub.BrowBox.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sTitles.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.sBrowser.Declare(String, "")
+V.Local.iWidths.Declare(Long, 0)
+
+F.Data.DataView.ToString("dtMtlforTools", "dvBoxBrowser", "PART*!*Location*!*DESCRIPTION*!*UM_INVENTORY", "*!*", "@$@", V.Local.sBrowser)
+
+F.Intrinsic.String.Split("Box*!*Location*!*Description*!*UM", "*!*", V.Local.sTitles)
+F.Intrinsic.String.Split("150*!*75*!*350*!*75", "*!*", V.Local.iWidths)
+
+F.Intrinsic.UI.BrowserFromString("Please select a Box", V.Local.sBrowser, "*!*", "@$@", V.Local.sTitles, V.Local.iWidths, V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet, <>, "***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+	V.Local.sRet.RedimPreserve(0, 3)
+	
+	F.Intrinsic.Control.SelectCase(V.Args.ControlName.UCase)
+		F.Intrinsic.Control.Case("CMDFINBOXBROW1")
+			Gui.F_JobJacket.txtFinBox1.Text(V.Local.sRet(0).Trim)
+			Gui.F_JobJacket.txtFinBoxDesc1.Text(V.Local.sRet(2).Trim)
+		F.Intrinsic.Control.Case("CMDFINBOXBROW2")
+			Gui.F_JobJacket.txtFinBox2.Text(V.Local.sRet(0).Trim)
+			Gui.F_JobJacket.txtFinBoxDesc2.Text(V.Local.sRet(2).Trim)
+	F.Intrinsic.Control.EndSelect
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.BrowBox.End
+
+Program.Sub.PopulateFullJacket.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+V.Local.sJJNO.Declare(String, "1")
+V.Local.sDesc.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.sLabel.Declare(String, "")
+V.Local.sUName.Declare(String, "")
+
+V.Local.sJJNO.Set(V.Global.sJJNo.Long)
+'If we have a job jacket that we are populating, we pull everything from the tables
+'F.Intrinsic.Control.CallSub(OpenConnection)
+
+F.Intrinsic.Control.CallSub(CloseTables)
+
+F.Intrinsic.Control.BlockEvents
+
+F.Intrinsic.String.Build("Select TOP 1 JJ_NO, FINISH_PART, FINISH_DESCRIPTION, ROUTER, ROUTER_REV, DICE_NO, CUSTOMER, JACKET_REV, FINISH_LOC, EST_NOTES, FACE_CUT, FACE_CUT_DESC, BACK_CUT, BACK_CUT_DESC, H_WIDTH, H_LENGTH, FINISH_ACROSS, GAP_ACROSS, GAP_DOWN, REPEAT_HD, ACR_DIE, ACR_PRESS, CARRIER_WIDTH, SHAPE, PERF, PERF_AT, SHEETED, SHEETED_AT, FANFOLD, FANFOLD_GEAR, QUOTE_NO, CREATOR, CREATE_DATE, UPDATED_BY, UPDATE_DATE From GCG_3623_JJ_HEAD where JJ_NO = '{0}'", V.Local.sJJNO.Long, V.Local.sSql)
+F.Data.DataTable.CreateFromSQL("dtHead", "conx", V.local.sSql, True)
+
+F.Intrinsic.Control.If(V.Datatable.dtHead.RowCount, =, 0)
+	F.Data.DataTable.AddRow("dtHead", "CREATOR", V.Caller.User, "CREATE_DATE", V.Ambient.Date, "JJ_NO", V.Local.sJJNO)
+	
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("Date Last Updated : {0}", V.DataTable.dtHead(0).UPDATE_DATE!FieldValTrim, V.Local.sLabel)
+	Gui.F_JobJacket.lblUdateDate.Text(V.Local.sLabel)
+	
+	F.Global.Security.GetFullName(V.DataTable.dtHead(0).UPDATED_BY!FieldValUCRTrim, V.Local.sUName)
+	F.Intrinsic.String.Build("Last Updated by : {0}", V.Local.sUName, V.Local.sLabel)
+	Gui.F_JobJacket.lblUpdateBy.Text(V.Local.sLabel)
+	
+	F.Intrinsic.String.Build("Date Created : {0}", V.DataTable.dtHead(0).CREATE_DATE!FieldValTrim, V.Local.sLabel)
+	Gui.F_JobJacket.lblCreateDate.Text(V.Local.sLabel)
+	
+	F.Global.Security.GetFullName(V.DataTable.dtHead(0).CREATOR!FieldValUCRTrim, V.Local.sUName)
+	F.Intrinsic.String.Build("Created by : {0}", V.Local.sUName, V.Local.sLabel)
+	Gui.F_JobJacket.lblCreateBy.Text(V.Local.sLabel)
+		
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Caller.Switches, =, "C")
+	'When they copy, they want to blank out the part no, part description and jacket rev
+	F.Data.DataTable.SetValue("dtHead", 0, "FINISH_PART", "", "FINISH_DESCRIPTION", "*!*", "JACKET_REV", "")
+	
+F.Intrinsic.Control.EndIf
+
+'***HEADER***
+Gui.F_JobJacket.txtItemNo.Text(V.DataTable.dtHead(0).FINISH_PART!FieldValUCRTrim)
+F.Intrinsic.String.Split(V.DataTable.dtHead(0).FINISH_DESCRIPTION!FieldValUCRTrim, "*!*", V.Local.sDesc)
+V.Local.sDesc.RedimPreserve(0,1)
+Gui.F_JobJacket.txtItemDesc1.Text(V.Local.sDesc(0))
+Gui.F_JobJacket.txtItemDesc2.Text(V.Local.sDesc(1))
+Gui.F_JobJacket.txtRouter.Text(V.DataTable.dtHead(0).ROUTER!FieldValUCRTrim)
+Gui.F_JobJacket.txtRouterRev.Text(V.DataTable.dtHead(0).ROUTER_REV!FieldValUCRTrim)
+Gui.F_JobJacket.txtDICENo.Text(V.DataTable.dtHead(0).DICE_NO!FieldValUCRTrim)
+Gui.F_JobJacket.txtCustNo.Text(V.DataTable.dtHead(0).CUSTOMER!FieldValUCRTrim)
+'need to get the customer name
+F.Intrinsic.String.Build("Select Top 1 NAME_CUSTOMER from V_CUSTOMER_MASTER where CUSTOMER = '{0}'", V.DataTable.dtHead(0).CUSTOMER!FieldValUCRTrim, V.Local.sSql)
+F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql, V.Local.sRet)
+Gui.F_JobJacket.txtCustName.Text(V.Local.sRet.UCase.Trim)
+
+Gui.F_JobJacket.txtRevTest.Text(V.DataTable.dtHead(0).JACKET_REV!FieldValUCRTrim)
+Gui.F_JobJacket.txtLocation.Text(V.DataTable.dtHead(0).FINISH_LOC!FieldValUCRTrim)
+
+'If they decide to keep the location description, we will need to go hunting for it
+gui.F_JobJacket.mltxEstNotes.Text(V.DataTable.dtHead(0).EST_NOTES!FieldValUCRTrim)
+
+F.Intrinsic.Control.If(V.DataTable.dtHead(0).FACE_CUT!FieldVal, =, "True")		
+	Gui.F_JobJacket.chkFaceCut.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkFaceCut.Value(0)
+F.Intrinsic.Control.EndIf
+Gui.F_JobJacket.txtFaceCut.Text(V.DataTable.dtHead(0).FACE_CUT_DESC!FieldValUCRTrim)
+
+F.Intrinsic.Control.If(V.DataTable.dtHead(0).BACK_CUT!FieldVal, =, "True")
+	Gui.F_JobJacket.chkBackCut.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkBackCut.Value(0)
+F.Intrinsic.Control.EndIf
+Gui.F_JobJacket.txtBackCut.Text(V.DataTable.dtHead(0).BACK_CUT_DESC!FieldValUCRTrim)
+Gui.F_JobJacket.txtWidth.Text(V.DataTable.dtHead(0).H_WIDTH!FieldValUCRTrim)
+Gui.F_JobJacket.txtLength.Text(V.DataTable.dtHead(0).H_LENGTH!FieldValUCRTrim)
+Gui.F_JobJacket.txtFinAcr.Text(V.DataTable.dtHead(0).FINISH_ACROSS!FieldValUCRTrim)
+Gui.F_JobJacket.txtGapAcr.Text(V.DataTable.dtHead(0).GAP_ACROSS!FieldValUCRTrim)
+Gui.F_JobJacket.txtGapDown.Text(V.DataTable.dtHead(0).GAP_DOWN!FieldValUCRTrim)
+Gui.F_JobJacket.txtRepeat.Text(V.DataTable.dtHead(0).REPEAT_HD!FieldValUCRTrim)
+Gui.F_JobJacket.txtAcrDie.Text(V.DataTable.dtHead(0).ACR_DIE!FieldValUCRTrim)
+Gui.F_JobJacket.txtAcrPress.Text(V.DataTable.dtHead(0).ACR_PRESS!FieldValUCRTrim)
+Gui.F_JobJacket.txtCarrierWdt.Text(V.DataTable.dtHead(0).CARRIER_WIDTH!FieldValUCRTrim)
+Gui.F_JobJacket.txtShape.Text(V.DataTable.dtHead(0).SHAPE!FieldValUCRTrim)
+
+F.Intrinsic.Control.If(V.DataTable.dtHead(0).PERF!FieldVal, =, "True")		
+	Gui.F_JobJacket.chkPerfed.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkPerfed.Value(0)
+F.Intrinsic.Control.EndIf
+Gui.F_JobJacket.txtPerfed.Text(V.DataTable.dtHead(0).PERF_AT!FieldValUCRTrim)
+
+F.Intrinsic.Control.If(V.DataTable.dtHead(0).SHEETED!FieldVal, =, "True")		
+	Gui.F_JobJacket.chkSheeted.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkSheeted.Value(0)
+F.Intrinsic.Control.EndIf
+Gui.F_JobJacket.txtSheeted.Text(V.DataTable.dtHead(0).SHEETED_AT!FieldValUCRTrim)
+
+F.Intrinsic.Control.If(V.DataTable.dtHead(0).FANFOLD!FieldVal, =, "True")		
+	Gui.F_JobJacket.chkFanfold.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkFanfold.Value(0)
+F.Intrinsic.Control.EndIf
+Gui.F_JobJacket.txtFanfold.Text(V.DataTable.dtHead(0).FANFOLD_GEAR!FieldValUCRTrim)
+'***HEADER***
+
+'***TOOL***
+'This is for the tooling on the Header screen
+F.Intrinsic.String.Build("Select JJ_NO, TOOL_NO, TOOL_DESC, ROW_NUM, TOOL_JJ_ID from GCG_3623_JJ_TOOLING where JJ_NO = '{0}'", V.Local.sJJNO, V.Local.sSql)
+F.Data.DataTable.CreateFromSQL("dtTooling", "conx", V.Local.sSql, True)
+F.Data.DataTable.AddColumn("dtTooling", "Deleted", "String", "NO")
+F.Data.DataView.Create("dtTooling", "dvTooling", 22, "[Deleted] = 'NO'", "ROW_NUM ASC")
+Gui.F_JobJacket.gsgcTooling.AddGridviewFromDataview("gridTooling", "dtTooling", "dvTooling")
+
+Gui.F_JobJacket.gsgcTooling.SetColumnProperty("gridTooling", "JJ_NO", "Visible", False)
+Gui.F_JobJacket.gsgcTooling.SetColumnProperty("gridTooling", "ROW_NUM", "Visible", False)
+Gui.F_JobJacket.gsgcTooling.SetColumnProperty("gridTooling", "TOOL_JJ_ID", "Visible", False)
+Gui.F_JobJacket.gsgcTooling.SetColumnProperty("gridTooling", "Deleted", "Visible", False)
+
+Gui.F_JobJacket.gsgcTooling.SetColumnProperty("gridTooling", "TOOL_NO", "AllowEdit", False)
+Gui.F_JobJacket.gsgcTooling.SetColumnProperty("gridTooling", "TOOL_DESC", "AllowEdit", False)
+
+Gui.F_JobJacket.gsgcTooling.SetColumnProperty("gridTooling", "TOOL_NO", "AllowSort", False)
+Gui.F_JobJacket.gsgcTooling.SetColumnProperty("gridTooling", "TOOL_DESC", "AllowSort", False)
+
+Gui.F_JobJacket.gsgcTooling.SetColumnProperty("gridTooling", "TOOL_NO", "ReadOnly", True)
+Gui.F_JobJacket.gsgcTooling.SetColumnProperty("gridTooling", "TOOL_DESC", "ReadOnly", True)
+
+Gui.F_JobJacket.gsgcTooling.SetColumnProperty("gridTooling", "TOOL_NO", "Caption", "Tool")
+Gui.F_JobJacket.gsgcTooling.SetColumnProperty("gridTooling", "TOOL_DESC", "Caption", "Description")
+
+Gui.F_JobJacket.gsgcTooling.SetColumnProperty("gridTooling", "TOOL_NO", "Width", 150)
+Gui.F_JobJacket.gsgcTooling.SetColumnProperty("gridTooling", "TOOL_DESC", "Width", 750)
+
+Gui.F_JobJacket.gsgcTooling.MainView("gridTooling")
+'***TOOL***
+
+'***PRESS***
+'The Press screen and info
+F.Intrinsic.String.Build("Select TOP 1 JJ_NO, PRESS, AUTO_APPLY, VAC, AIR_EJECT, TURNBAR, DE_RELAM, PINFEED, TURRET, PRESS_NOTES from GCG_3623_JJ_PRESS where JJ_NO = '{0}'", V.Local.sJJNO, V.Local.sSql)
+F.Data.DataTable.CreateFromSQL("dtPress", "conx", V.Local.sSql, True)
+F.Intrinsic.Control.If(V.DataTable.dtPress.RowCount, =, 0)
+	'Maybe we can set a flag that records that this is a new record?
+	F.Data.DataTable.AddRow("dtPress", "JJ_NO", V.Local.sJJNO)
+F.Intrinsic.Control.EndIf
+
+Gui.F_JobJacket.txtPress.Text(V.DataTable.dtPress(0).Press!FieldVal)
+F.Intrinsic.Control.If(V.DataTable.dtPress(0).Auto_apply!FieldVal, =, "True")
+	Gui.F_JobJacket.chkPressAutoApply.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkPressAutoApply.Value(0)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtPress(0).Vac!FieldVal, =, "True")
+	Gui.F_JobJacket.chkPressVacuum.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkPressVacuum.Value(0)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtPress(0).Air_Eject!FieldVal, =, "True")
+	Gui.F_JobJacket.chkPressAirEject.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkPressAirEject.Value(0)
+F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.If(V.DataTable.dtPress(0).Turnbar!FieldVal, =, "True")
+	Gui.F_JobJacket.chkPressTurnBar.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkPressTurnBar.Value(0)
+F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.If(V.DataTable.dtPress(0).De_Relam!FieldVal, =, "True")
+	Gui.F_JobJacket.chkPressDeReLam.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkPressDeReLam.Value(0)
+F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.If(V.DataTable.dtPress(0).Pinfeed!FieldVal, =, "True")
+	Gui.F_JobJacket.chkPressPinFeed.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkPressPinFeed.Value(0)
+F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.If(V.DataTable.dtPress(0).Turret!FieldVal, =, "True")
+	Gui.F_JobJacket.chkPressTurret.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkPressTurret.Value(0)
+F.Intrinsic.Control.EndIf
+
+'Customer requested that we only change the Press Notes on the screen if there were no previous Finishing notes when populating new information
+F.Intrinsic.Control.If(V.Screen.F_JobJacket!mltxPressNotes.Text.Trim, =, "")
+	Gui.F_JobJacket.mltxPressNotes.Text(V.DataTable.dtPress(0).Press_Notes!FieldVal)
+F.Intrinsic.Control.EndIf
+'***PRESS***
+
+'***INK***
+'This is for the inks on the Press screen
+F.Intrinsic.String.Build("Select JJ_NO, ROW_NUM, INK, FACE_LINER, INKCOV, FPS, CYLSIZE, ANILOX, BCM, WEB_DIREC, INK_JJ_ID from GCG_3623_JJ_INKS where JJ_NO = '{0}'", V.Local.sJJNO, V.Local.sSql)	
+F.Data.DataTable.CreateFromSQL("dtInks", "conx", V.Local.sSql, True)
+F.Data.DataTable.AddColumn("dtInks", "Deleted", "String", "NO")
+F.Data.DataView.Create("dtInks", "dvInks", 22, "[Deleted] = 'NO'", "ROW_NUM ASC")
+Gui.F_JobJacket.gsgcInks.AddGridviewFromDataview("gridInks", "dtInks", "dvInks")
+
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "JJ_NO", "Visible", False)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "ROW_NUM", "Visible", False)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "INK_JJ_ID", "Visible", False)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "Deleted", "Visible", False)
+
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "INK", "AllowSort", True)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "FACE_LINER", "AllowSort", True)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "INKCOV", "AllowSort", True)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "FPS", "AllowSort", True)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "CYLSIZE", "AllowSort", True)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "ANILOX", "AllowSort", True)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "BCM", "AllowSort", True)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "WEB_DIREC", "AllowSort", True)	
+
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "INK", "AllowEdit", True)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "FACE_LINER", "AllowEdit", True)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "INKCOV", "AllowEdit", True)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "FPS", "AllowEdit", True)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "CYLSIZE", "AllowEdit", True)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "ANILOX", "AllowEdit", True)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "BCM", "AllowEdit", True)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "WEB_DIREC", "AllowEdit", True)
+
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "INK", "ReadOnly", False)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "FACE_LINER", "ReadOnly", False)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "INKCOV", "ReadOnly", False)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "FPS", "ReadOnly", False)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "CYLSIZE", "ReadOnly", False) 
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "ANILOX", "ReadOnly", False)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "BCM", "ReadOnly", False)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "WEB_DIREC", "ReadOnly", False)
+
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "INK", "Width", 250)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "FACE_LINER", "Width", 150)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "INKCOV", "Width", 75)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "FPS", "Width", 150)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "CYLSIZE", "Width", 50)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "ANILOX", "Width", 150)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "BCM", "Width", 150)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "WEB_DIREC", "Width", 75)
+
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "INK", "Caption", "Ink")
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "FACE_LINER", "Caption", "Face/Back")
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "INKCOV", "Caption", "Cov %")
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "FPS", "Caption", "Print/Flood")
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "CYLSIZE", "Caption", "Cyl")
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "ANILOX", "Caption", "Anilox")
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "BCM", "Caption", "BCM")
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "WEB_DIREC", "Caption", "Web #")
+
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "INK", "VisibleIndex", 1)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "FACE_LINER", "VisibleIndex", 2)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "INKCOV", "VisibleIndex", 3)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "FPS", "VisibleIndex", 4)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "CYLSIZE", "VisibleIndex", 5)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "ANILOX", "VisibleIndex", 6)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "BCM", "VisibleIndex", 7)
+Gui.F_JobJacket.gsgcInks.SetColumnProperty("gridInks", "WEB_DIREC", "VisibleIndex", 8)
+
+Gui.F_JobJacket.gsgcInks.MainView("gridInks")
+'***INK***
+
+'***MATERIAL***
+'This is for the material grid on the Press screen
+F.Intrinsic.String.Build("Select JJ_NO, ROW_NUM, MATERIAL, ITEM_NO, ITEM_DESC, MATERIAL_JJ_ID from GCG_3623_JJ_MATERIAL where JJ_NO = '{0}'", V.Local.sJJNO, V.Local.sSql)	
+F.Data.DataTable.CreateFromSQL("dtMats", "conx", V.Local.sSql, True)
+F.Data.DataTable.AddColumn("dtMats", "Deleted", "String", "NO")
+F.Data.DataView.Create("dtMats", "dvMats", 22, "[Deleted] = 'NO'", "ROW_NUM ASC")
+Gui.F_JobJacket.gsgcMats.AddGridviewFromDataview("gridMats", "dtMats", "dvMats")
+
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "JJ_NO", "Visible", False)
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "ROW_NUM", "Visible", False)
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "MATERIAL_JJ_ID", "Visible", False)
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "Deleted", "Visible", False)
+
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "MATERIAL", "AllowEdit", False)
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "ITEM_NO", "AllowEdit", False)
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "ITEM_DESC", "AllowEdit", False)
+
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "MATERIAL", "AllowSort", False)
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "ITEM_NO", "AllowSort", False)
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "ITEM_DESC", "AllowSort", False)
+
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "MATERIAL", "ReadOnly", True)
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "ITEM_NO", "ReadOnly", True)
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "ITEM_DESC", "ReadOnly", True)
+
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "MATERIAL", "Width", 50)
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "ITEM_NO", "Width", 100)
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "ITEM_DESC", "Width", 250)
+
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "MATERIAL", "Caption", "Material")
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "ITEM_NO", "Caption", "Item #")
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "ITEM_DESC", "Caption", "Item Description")
+
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "MATERIAL", "VisibleIndex", 1)
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "ITEM_NO", "VisibleIndex", 2)
+Gui.F_JobJacket.gsgcMats.SetColumnProperty("gridMats", "ITEM_DESC", "VisibleIndex", 3)
+
+Gui.F_JobJacket.gsgcMats.MainView("gridMats")
+'***MATERIAL***
+
+'***FINISH***
+F.Intrinsic.String.Build("Select TOP 1 JJ_NO, TT_REW_FIN, CORE_NO, BOX_1, BOX_2, LABEL_1, LAB_LOC_1, LABEL_2, LAB_LOC_2, LABEL_3, LAB_LOC_3, LABEL_4, LAB_LOC_4, FINISH_NOTES, PACKING_NOTES, REWIND, FANFOLD, SHEETED, SHRINKWRAP, R_CORE_ID, R_MAX_OD, R_WOUND, R_LABS_ROLL, R_ROLLS_CASE, R_COUNTER, R_FINISH_ACR, R_CORE_WIDTH, R_CORE_THICK, F_LABS_FOLD, F_LABS_STACK, F_STACKS_BOX, F_FINISH_ACR, F_REPEAT_FOLD, F_COUNTER, S_SHT_STACK, S_STCK_CASE, S_SHT_CASE, S_SHRINKWRAP, S_COUNTER, CORE_DESC, BOX_1_DESC, BOX_2_DESC from GCG_3623_JJ_FINISH where JJ_NO = '{0}'", V.Local.sJJNO, V.Local.sSql)	
+F.Data.DataTable.CreateFromSQL("dtFinish", "conx", V.Local.sSql, True)
+F.Intrinsic.Control.If(V.DataTable.dtFinish.RowCount, =, 0)
+	'Maybe we can set a flag that records that this is a new record?
+	F.Data.DataTable.AddRow("dtFinish", "JJ_NO", V.Local.sJJNO)
+F.Intrinsic.Control.EndIf
+
+Gui.F_JobJacket.txtFinTableTop.Text(V.DataTable.dtFinish(0).TT_REW_FIN!FieldVal)
+
+Gui.F_JobJacket.txtFinCore.Text(V.DataTable.dtFinish(0).CORE_NO!FieldVal)
+'Get the core description
+F.Intrinsic.Control.CallSub(PopCore)
+
+Gui.F_JobJacket.txtFinBox1.Text(V.DataTable.dtFinish(0).BOX_1!FieldVal)
+'Get the Box description
+F.Intrinsic.Control.CallSub(PopBox, "ControlName", "TXTFINBOX1")
+
+Gui.F_JobJacket.txtFinBox2.Text(V.DataTable.dtFinish(0).BOX_2!FieldVal)
+F.Intrinsic.Control.CallSub(PopBox, "ControlName", "TXTFINBOX2")
+
+Gui.F_JobJacket.txtFinLabel1.Text(V.DataTable.dtFinish(0).LABEL_1!FieldVal)
+Gui.F_JobJacket.txtFinLocation1.Text(V.DataTable.dtFinish(0).LAB_LOC_1!FieldVal)
+Gui.F_JobJacket.txtFinLabel2.Text(V.DataTable.dtFinish(0).LABEL_2!FieldVal)
+Gui.F_JobJacket.txtFinLocation2.Text(V.DataTable.dtFinish(0).LAB_LOC_2!FieldVal)
+Gui.F_JobJacket.txtFinLabel3.Text(V.DataTable.dtFinish(0).LABEL_3!FieldVal)
+Gui.F_JobJacket.txtFinLocation3.Text(V.DataTable.dtFinish(0).LAB_LOC_3!FieldVal)
+Gui.F_JobJacket.txtFinLabel4.Text(V.DataTable.dtFinish(0).LABEL_4!FieldVal)
+Gui.F_JobJacket.txtFinLocation4.Text(V.DataTable.dtFinish(0).LAB_LOC_4!FieldVal)
+
+'Customer requested that we only change the Finished Notes on the screen if there were no previous Finishing notes when populating new information
+F.Intrinsic.Control.If(V.Screen.F_JobJacket!mltxFinNotes.Text.Trim, =, "")
+	Gui.F_JobJacket.mltxFinNotes.Text(V.DataTable.dtFinish(0).FINISH_NOTES!FieldVal)
+F.Intrinsic.Control.EndIf
+
+'Customer requested that we only change the Packing Notes on the screen if there were no previous Finishing notes when populating new information
+F.Intrinsic.Control.If(V.Screen.F_JobJacket!mltxPackNotes.Text.Trim, =, "")
+	Gui.F_JobJacket.mltxPackNotes.Text(V.DataTable.dtFinish(0).PACKING_NOTES!FieldVal)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtFinish(0).REWIND!FieldVal, =, "True")
+	Gui.F_JobJacket.chkFinRew.Value(1)
+	Gui.F_JobJacket.txtFinCoreID.Text(V.DataTable.dtFinish(0).R_CORE_ID!FieldVal)
+	Gui.F_JobJacket.txtFinMaxOD.Text(V.DataTable.dtFinish(0).R_MAX_OD!FieldVal)
+	Gui.F_JobJacket.txtFinWound.Text(V.DataTable.dtFinish(0).R_WOUND!FieldValTrim)
+	Gui.F_JobJacket.txtFinLabelroll.Text(V.DataTable.dtFinish(0).R_LABS_ROLL!FieldVal)
+	Gui.F_JobJacket.txtFinRollsCase.Text(V.DataTable.dtFinish(0).R_ROLLS_CASE!FieldVal)
+	Gui.F_JobJacket.txtFinCounter.Text(V.DataTable.dtFinish(0).R_COUNTER!FieldVal)
+	Gui.F_JobJacket.txtFinFinAcr.Text(V.DataTable.dtFinish(0).R_FINISH_ACR!FieldVal)
+	Gui.F_JobJacket.txtFinCoreWidth.Text(V.DataTable.dtFinish(0).R_CORE_WIDTH!FieldVal)
+	Gui.F_JobJacket.txtFinCoreThick.Text(V.DataTable.dtFinish(0).R_CORE_THICK!FieldVal)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkFinRew.Value(0)
+	Gui.F_JobJacket.txtFinCoreID.Text("")
+	Gui.F_JobJacket.txtFinMaxOD.Text("")
+	Gui.F_JobJacket.txtFinWound.Text("")
+	Gui.F_JobJacket.txtFinLabelroll.Text("")
+	Gui.F_JobJacket.txtFinRollsCase.Text("")
+	Gui.F_JobJacket.txtFinCounter.Text("")
+	Gui.F_JobJacket.txtFinFinAcr.Text("")
+	Gui.F_JobJacket.txtFinCoreWidth.Text("")
+	Gui.F_JobJacket.txtFinCoreThick.Text("")
+F.Intrinsic.Control.EndIf
+
+		
+F.Intrinsic.Control.If(V.DataTable.dtFinish(0).FANFOLD!FieldVal, =, "True")
+	Gui.F_JobJacket.chkFinFanfold.Value(1)
+	Gui.F_JobJacket.txtFinlbsfold.Text(V.DataTable.dtFinish(0).F_LABS_FOLD!FieldVal)
+	Gui.F_JobJacket.txtFinlbsStack.Text(V.DataTable.dtFinish(0).F_LABS_STACK!FieldVal)
+	Gui.F_JobJacket.txtFinStacksBox.Text(V.DataTable.dtFinish(0).F_STACKS_BOX!FieldVal)
+	Gui.F_JobJacket.txtFinFanFinAcr.Text(V.DataTable.dtFinish(0).F_FINISH_ACR!FieldVal)
+	Gui.F_JobJacket.txtFinRepeatFold.Text(V.DataTable.dtFinish(0).F_REPEAT_FOLD!FieldVal)
+	Gui.F_JobJacket.txtFinFanCounter.Text(V.DataTable.dtFinish(0).F_COUNTER!FieldVal)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkFinFanfold.Value(0)
+	Gui.F_JobJacket.txtFinlbsfold.Text("")
+	Gui.F_JobJacket.txtFinlbsStack.Text("")
+	Gui.F_JobJacket.txtFinStacksBox.Text("")
+	Gui.F_JobJacket.txtFinFanFinAcr.Text("")
+	Gui.F_JobJacket.txtFinRepeatFold.Text("")
+	Gui.F_JobJacket.txtFinFanCounter.Text("")
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.If(V.DataTable.dtFinish(0).SHEETED!FieldVal, =, "True")
+	Gui.F_JobJacket.chkFinSheeted.Value(1)
+	F.Intrinsic.Control.If(V.DataTable.dtFinish(0).SHRINKWRAP!FieldVal, =, "True")
+		Gui.F_JobJacket.chkFinShinkwrap.Value(1)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.chkFinShinkwrap.Value(0)
+	F.Intrinsic.Control.EndIf
+	Gui.F_JobJacket.txtFinShtStack.Text(V.DataTable.dtFinish(0).S_SHT_STACK!FieldVal)
+	Gui.F_JobJacket.txtFinStackCase.Text(V.DataTable.dtFinish(0).S_STCK_CASE!FieldVal)
+	Gui.F_JobJacket.txtFinShtCase.Text(V.DataTable.dtFinish(0).S_SHT_CASE!FieldVal)
+	Gui.F_JobJacket.txtFinShinkwrap.Text(V.DataTable.dtFinish(0).S_SHRINKWRAP!FieldVal)
+	Gui.F_JobJacket.txtFinShetCounter.Text(V.DataTable.dtFinish(0).S_COUNTER!FieldVal)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkPressDeReLam.Value(0)
+	Gui.F_JobJacket.chkFinShinkwrap.Value(0)
+	Gui.F_JobJacket.txtFinShtStack.Text("")
+	Gui.F_JobJacket.txtFinStackCase.Text("")
+	Gui.F_JobJacket.txtFinShtCase.Text("")
+	Gui.F_JobJacket.txtFinShinkwrap.Text("")
+	Gui.F_JobJacket.txtFinShetCounter.Text("")
+F.Intrinsic.Control.EndIf
+'***FINISH***
+
+'***VARIABLE***
+F.Intrinsic.String.Build("Select Top 1 JJ_NO, OFFLINE, ON_PRESS, MUST_PROOF, LABS_PER_SEQ, HUM_READ, RIBBON, FILE_NAME, BARCODE_SPEC, BARCODE_RATIO, BARCODE_HEIGHT, LAB_ROLL_CHK, LAB_ROLL, LAB_FOLD_CHK, LAB_FOLD, LAB_STACK_CHK, LAB_STACK, LAB_PAD_CHK, LAB_PAD, VAR_NOTES from GCG_3623_JJ_VARIABLE where JJ_NO = '{0}'", V.Local.sJJNO, V.Local.sSql)
+F.Data.DataTable.CreateFromSQL("dtVar", "conx", V.Local.sSql, True)
+F.Intrinsic.Control.If(V.DataTable.dtVar.RowCount, =, 0)
+	'Maybe we can set a flag that records that this is a new record?
+	F.Data.DataTable.AddRow("dtVar", "JJ_NO", V.Local.sJJNO, "VAR_NOTES", "")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtVar(0).OFFLINE!FieldVal, =, "True")
+	Gui.F_JobJacket.chkOffline.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkOffline.Value(0)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtVar(0).ON_PRESS!FieldVal, =, "True")
+	Gui.F_JobJacket.chkOnPress.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkOnPress.Value(0)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtVar(0).MUST_PROOF!FieldVal, =, "True")
+	Gui.F_JobJacket.chkVarMustProof.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkVarMustProof.Value(0)
+F.Intrinsic.Control.EndIf
+
+Gui.F_JobJacket.txtVarLabPerNo.Text(V.DataTable.dtVar(0).LABS_PER_SEQ!FieldVal)
+Gui.F_JobJacket.txtVarHumRead.Text(V.DataTable.dtVar(0).HUM_READ!FieldVal)
+Gui.F_JobJacket.txtVarRibbon.Text(V.DataTable.dtVar(0).RIBBON!FieldVal)
+Gui.F_JobJacket.txtVarFileName.Text(V.DataTable.dtVar(0).FILE_NAME!FieldVal)
+Gui.F_JobJacket.txtVarBarSpec.Text(V.DataTable.dtVar(0).BARCODE_SPEC!FieldVal)
+Gui.F_JobJacket.txtVarBarRatio.Text(V.DataTable.dtVar(0).BARCODE_RATIO!FieldVal)
+Gui.F_JobJacket.txtVarBarHeight.Text(V.DataTable.dtVar(0).BARCODE_HEIGHT!FieldVal)
+
+F.Intrinsic.Control.If(V.DataTable.dtVar(0).LAB_ROLL_CHK!FieldVal, =, "True")
+	Gui.F_JobJacket.chkVarLabRoll.Value(1)
+	Gui.F_JobJacket.txtVarLabRolls.Text(V.DataTable.dtVar(0).LAB_ROLL!FieldVal)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkVarLabRoll.Value(0)
+	Gui.F_JobJacket.txtVarLabRolls.Text("")
+F.Intrinsic.Control.EndIf	
+
+F.Intrinsic.Control.If(V.DataTable.dtVar(0).LAB_FOLD_CHK!FieldVal, =, "True")
+	Gui.F_JobJacket.chkVarLabFold.Value(1)
+	Gui.F_JobJacket.txtVarLabFold.Text(V.DataTable.dtVar(0).LAB_FOLD!FieldVal)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkVarLabFold.Value(0)
+	Gui.F_JobJacket.txtVarLabFold.Text("")
+F.Intrinsic.Control.EndIf	
+
+F.Intrinsic.Control.If(V.DataTable.dtVar(0).LAB_STACK_CHK!FieldVal, =, "True")
+	Gui.F_JobJacket.chkVarLabStack.Value(1)
+	Gui.F_JobJacket.txtVarLabStack.Text(V.DataTable.dtVar(0).LAB_STACK!FieldVal)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkOffline.Value(0)
+	Gui.F_JobJacket.txtVarLabStack.Text("")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtVar(0).LAB_PAD_CHK!FieldVal, =, "True")
+	Gui.F_JobJacket.chkVarLabPad.Value(1)
+	Gui.F_JobJacket.txtVarLabPad.Text(V.DataTable.dtVar(0).LAB_PAD!FieldVal)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.chkVarLabPad.Value(0)
+	Gui.F_JobJacket.txtVarLabPad.Text("")
+F.Intrinsic.Control.EndIf
+
+Gui.F_JobJacket.mltxVarNotes.Text(V.DataTable.dtVar(0).VAR_NOTES!FieldVal)
+'***VARIABLE***
+
+'F.Intrinsic.Control.CallSub(DisableNavigation)
+
+F.Intrinsic.Control.UnBlockEvents
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.PopulateFullJacket.End
+
+Program.Sub.SaveFullJacket.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sMessage.Declare(String, "")
+V.Local.sDesc.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+V.Local.sJRev.Declare(String, "")
+V.Local.sKeyFields.Declare(String, "")
+V.Local.sLabel.Declare(String, "")
+V.Local.sUName.Declare(String, "")
+V.Local.iSaveMode.Declare(Long, 0)
+
+F.Intrinsic.Control.BlockEvents
+F.Intrinsic.Control.CallSub(OpenConnection)
+
+'If this is supposed to be deleting the Job Jacket, we will be removing it from the 
+F.Intrinsic.Control.If(V.Caller.Switches, =, "D")
+	F.Intrinsic.String.Build("Delete from GCG_3623_JJ_FINISH where JJ_NO = '{0}'", V.Global.sJJNo.Long, V.Local.sSql)
+	F.ODBC.Connection!conx.Execute(V.Local.sSql)
+	
+	F.Intrinsic.String.Build("Delete from GCG_3623_JJ_PRESS where JJ_NO = '{0}'", V.Global.sJJNo.Long, V.Local.sSql)
+	F.ODBC.Connection!conx.Execute(V.Local.sSql)
+	
+	F.Intrinsic.String.Build("Delete from GCG_3623_JJ_VARIABLE where JJ_NO = '{0}'", V.Global.sJJNo.Long, V.Local.sSql)
+	F.ODBC.Connection!conx.Execute(V.Local.sSql)
+	
+	F.Intrinsic.String.Build("Delete from GCG_3623_JJ_INKS where JJ_NO = '{0}'", V.Global.sJJNo.Long, V.Local.sSql)
+	F.ODBC.Connection!conx.Execute(V.Local.sSql)
+	
+	F.Intrinsic.String.Build("Delete from GCG_3623_JJ_MATERIAL where JJ_NO = '{0}'", V.Global.sJJNo.Long, V.Local.sSql)
+	F.ODBC.Connection!conx.Execute(V.Local.sSql)
+	
+	F.Intrinsic.String.Build("Delete from GCG_3623_JJ_TOOLING where JJ_NO = '{0}'", V.Global.sJJNo.Long, V.Local.sSql)
+	F.ODBC.Connection!conx.Execute(V.Local.sSql)
+	
+	F.Intrinsic.String.Build("Delete from GCG_3623_JJ_HEAD where JJ_NO = '{0}'", V.Global.sJJNo.Long, V.Local.sSql)
+	F.ODBC.Connection!conx.Execute(V.Local.sSql)
+	
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "YES")
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.F_JobJacket!txtItemNo.Text, =, "")
+	F.Intrinsic.Control.UnBlockEvents
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'We are going to check to see if the Job Jacket we are saving already exists. If it does, we ask the customer if they want to override the data or save as a new entry.
+F.Intrinsic.Control.If(V.Global.sJJNo, <>, -1)
+	F.Intrinsic.String.Build("Job Jacket for Finished Item '{0}' and{1}Jacket Revision '{2}' already exists.{1}{1}Would you like to create a new Revision?", V.Screen.F_JobJacket!txtItemNo.Text, V.Ambient.NewLine, V.Screen.F_JobJacket!txtRevTest.Text, V.Local.sMessage)
+	F.Intrinsic.UI.Msgbox(V.Local.sMessage, "JOB JACKET SAVE", 3, V.Local.sRet)
+	F.Intrinsic.Control.SelectCase(V.Local.sRet)
+		F.Intrinsic.Control.Case(6)
+			'If they say YES
+			V.Global.sJJNo.Set(-1)
+		F.Intrinsic.Control.Case(7)
+			'If they say NO we are just saving the regular
+			
+		F.Intrinsic.Control.Case(2)
+			'If they say CANCEL
+			F.Intrinsic.Control.CallSub(CloseConnection)
+			F.Intrinsic.Control.UnBlockEvents
+			F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndSelect
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Global.sJJNo, =, -1)
+
+	F.Intrinsic.String.Build("Select TOP 1 JACKET_REV from GCG_3623_JJ_HEAD where FINISH_PART = '{0}' and FINISH_LOC = '{1}' order by JACKET_REV DESC", V.Screen.F_JobJacket!txtItemNo.Text,  V.Screen.F_JobJacket!txtLocation.Text, V.Local.sSql)
+	F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql, V.Local.sJRev)
+	F.Intrinsic.Math.Add(V.Local.sJRev.Long, 1, V.Local.sJRev)
+	Gui.F_JobJacket.txtRevTest.Text(V.Local.sJRev)
+	
+F.Intrinsic.Control.EndIf
+
+'There is a datatable for everything that we are saving. Three of these datatables represent a list of entries associated with the Job Jacket, so these can have multiple entries per job jacket number. The other should only have one entry for the job jacket.
+
+'Header info should only have a single record.
+F.Intrinsic.Control.If(V.DataTable.dtHead.RowCount, =, 0)
+	'We shouldnt run into this scenario unless we give them permission to create a new Job Jacket after they have put in information. If that is the case we are probably going to have to 
+	F.Data.DataTable.AddRow("dtHead", "CREATOR", V.Caller.User, "CREATE_DATE", V.Ambient.Date)
+F.Intrinsic.Control.EndIf
+
+'***HEADER***
+F.Intrinsic.String.Build("{0}*!*{1}", V.Screen.F_JobJacket!txtItemDesc1.Text, V.Screen.F_JobJacket!txtItemDesc2.Text, V.Local.sDesc)
+	
+F.Data.DataTable.SetValue("dtHead", 0, "FINISH_PART", V.Screen.F_JobJacket!txtItemNo.Text, "FINISH_DESCRIPTION", V.Local.sDesc, "ROUTER", V.Screen.F_JobJacket!txtRouter.Text, "ROUTER_REV", V.Screen.F_JobJacket!txtRouterRev.Text, "DICE_NO", V.Screen.F_JobJacket!txtDICENo.Text)
+F.Data.DataTable.SetValue("dtHead", 0, "CUSTOMER", V.Screen.F_JobJacket!txtCustNo.Text, "JACKET_REV", V.Screen.F_JobJacket!txtRevTest.Text, "FINISH_LOC", V.Screen.F_JobJacket!txtLocation.Text, "EST_NOTES", V.Screen.F_JobJacket!mltxEstNotes.Text)
+F.Data.DataTable.SetValue("dtHead", 0, "FACE_CUT", V.Screen.F_JobJacket!chkFaceCut.Value, "FACE_CUT_DESC", V.Screen.F_JobJacket!txtFaceCut.Text, "BACK_CUT", V.Screen.F_JobJacket!chkBackCut.Value, "BACK_CUT_DESC",  V.Screen.F_JobJacket!txtBackCut.Text)
+F.Data.DataTable.SetValue("dtHead", 0, "H_WIDTH", V.Screen.F_JobJacket!txtWidth.Text.Float, "H_LENGTH", V.Screen.F_JobJacket!txtLength.Text.Float, "FINISH_ACROSS", V.Screen.F_JobJacket!txtFinAcr.Text.Float, "GAP_ACROSS", V.Screen.F_JobJacket!txtGapAcr.Text.Float, "GAP_DOWN", V.Screen.F_JobJacket!txtGapDown.Text.Float)
+F.Data.DataTable.SetValue("dtHead", 0, "REPEAT_HD", V.Screen.F_JobJacket!txtRepeat.Text.Float, "ACR_DIE", V.Screen.F_JobJacket!txtAcrDie.Text.Float, "ACR_PRESS", V.Screen.F_JobJacket!txtAcrPress.Text.Float, "CARRIER_WIDTH", V.Screen.F_JobJacket!txtCarrierWdt.Text.Float, "SHAPE", V.Screen.F_JobJacket!txtShape.Text)
+F.Data.DataTable.SetValue("dtHead", 0, "PERF", V.Screen.F_JobJacket!chkPerfed.Value, "PERF_AT", V.Screen.F_JobJacket!txtPerfed.Text, "SHEETED", V.Screen.F_JobJacket!chkSheeted.Value, "SHEETED_AT", V.Screen.F_JobJacket!txtSheeted.Text)
+F.Data.DataTable.SetValue("dtHead", 0, "FANFOLD", V.Screen.F_JobJacket!chkFanfold.Value, "FANFOLD_GEAR", V.Screen.F_JobJacket!txtFanfold.Text, "QUOTE_NO", V.Screen.F_JobJacket!txtDICENo.Text)
+F.Data.DataTable.SetValue("dtHead", 0, "UPDATE_DATE", V.Ambient.Date, "UPDATED_BY", V.Caller.User)
+'***HEADER***
+
+F.Intrinsic.Control.If(V.Global.sJJNo, =, -1)
+	'New save entry, so we save the data as a brand new thing, let Pervasive populate the unique ID, and grab that from there
+	F.Data.DataTable.SaveToDB("dtHead", "conx", "GCG_3623_JJ_HEAD", "JJ_NO", 128)
+	F.Intrinsic.String.Build("Select TOP 1 JJ_NO from GCG_3623_JJ_HEAD where FINISH_PART = '{0}' and JACKET_REV = '{1}' and FINISH_LOC = '{2}'", V.Screen.F_JobJacket!txtItemNo.Text, V.Screen.F_JobJacket!txtRevTest.Text, V.Screen.F_JobJacket!txtLocation.Text, V.Local.sSql)
+	F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql, V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet.Trim, <>, "")
+		V.Global.sJJNo.Set(V.Local.sRet.Long)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("Error saving new job jacket. New job jacket header information was not found in database after save. Please contact Global Shop Solutions")
+		F.Intrinsic.Control.UnBlockEvents
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	'We just save with the key as the JJ_NO
+	F.Data.DataTable.SetValue("dtHead", 0, "JJ_NO", V.Global.sJJNo)
+	F.Data.DataTable.SaveToDB("dtHead", "conx", "GCG_3623_JJ_HEAD", "JJ_NO", 256)
+F.Intrinsic.Control.EndIf
+
+'Post the save info on teh screen
+F.Intrinsic.String.Build("Date Last Updated : {0}", V.DataTable.dtHead(0).UPDATE_DATE!FieldValTrim, V.Local.sLabel)
+Gui.F_JobJacket.lblUdateDate.Text(V.Local.sLabel)
+
+F.Global.Security.GetFullName(V.DataTable.dtHead(0).UPDATED_BY!FieldValUCRTrim, V.Local.sUName)
+F.Intrinsic.String.Build("Last Updated by : {0}", V.Local.sUName, V.Local.sLabel)
+Gui.F_JobJacket.lblUpdateBy.Text(V.Local.sLabel)
+
+F.Intrinsic.String.Build("Date Created : {0}", V.DataTable.dtHead(0).CREATE_DATE!FieldValTrim, V.Local.sLabel)
+Gui.F_JobJacket.lblCreateDate.Text(V.Local.sLabel)
+
+F.Global.Security.GetFullName(V.DataTable.dtHead(0).CREATOR!FieldValUCRTrim, V.Local.sUName)
+F.Intrinsic.String.Build("Created by : {0}", V.Local.sUName, V.Local.sLabel)
+Gui.F_JobJacket.lblCreateBy.Text(V.Local.sLabel)
+
+'***PRESS***
+'The Press screen and info
+F.Intrinsic.Control.If(V.DataTable.dtPress.RowCount, =, 0)
+	'Maybe we can set a flag that records that this is a new record?
+	F.Data.DataTable.AddRow("dtPress", "PRESS", "")
+F.Intrinsic.Control.EndIf
+	
+F.Data.DataTable.SetValue("dtPress", 0, "PRESS", V.Screen.F_JobJacket!txtPress.Text, "AUTO_APPLY", V.Screen.F_JobJacket!chkPressAutoApply.Value, "VAC", V.Screen.F_JobJacket!chkPressVacuum.Value, "JJ_NO", V.Global.sJJNo.Long)
+F.Data.DataTable.SetValue("dtPress", 0, "AIR_EJECT", V.Screen.F_JobJacket!chkPressAirEject.Value, "TURNBAR", V.Screen.F_JobJacket!chkPressTurnBar.Value, "DE_RELAM", V.Screen.F_JobJacket!chkPressDeReLam.Value)
+F.Data.DataTable.SetValue("dtPress", 0, "PINFEED", V.Screen.F_JobJacket!chkPressPinFeed.Value, "TURRET", V.Screen.F_JobJacket!chkPressTurret.Value, "PRESS_NOTES", V.Screen.F_JobJacket!mltxPressNotes.Text)
+
+F.Intrinsic.String.Build("Delete from GCG_3623_JJ_PRESS where JJ_NO = '{0}'", V.Global.sJJNo.Long, V.Local.sSql)
+F.ODBC.Connection!conx.Execute(V.Local.sSql)
+F.Data.DataTable.SaveToDB("dtPress", "conx", "GCG_3623_JJ_PRESS", "JJ_NO", 128)
+'***PRESS***
+
+'***FINISH***
+F.Intrinsic.Control.If(V.DataTable.dtFinish.RowCount, =, 0)
+	'Maybe we can set a flag that records that this is a new record?
+	F.Data.DataTable.AddRow("dtFinish", "CORE_NO", "0")
+F.Intrinsic.Control.EndIf
+
+F.Data.DataTable.SetValue("dtFinish", 0, "TT_REW_FIN", V.Screen.F_JobJacket!txtFinTableTop.Text, "CORE_NO", V.Screen.F_JobJacket!txtFinCore.Text, "BOX_1",  V.Screen.F_JobJacket!txtFinBox1.Text, "BOX_2", V.Screen.F_JobJacket!txtFinBox2.Text)
+F.Data.DataTable.SetValue("dtFinish", 0, "LABEL_1", V.Screen.F_JobJacket!txtFinLabel1.Text, "LAB_LOC_1", V.Screen.F_JobJacket!txtFinLocation1.Text, "LABEL_2", V.Screen.F_JobJacket!txtFinLabel2.Text, "LAB_LOC_2", V.Screen.F_JobJacket!txtFinLocation2.Text)
+F.Data.DataTable.SetValue("dtFinish", 0, "LABEL_3", V.Screen.F_JobJacket!txtFinLabel3.Text, "LAB_LOC_3", V.Screen.F_JobJacket!txtFinLocation3.Text, "LABEL_4", V.Screen.F_JobJacket!txtFinLabel4.Text, "LAB_LOC_4", V.Screen.F_JobJacket!txtFinLocation4.Text)
+F.Data.DataTable.SetValue("dtFinish", 0, "FINISH_NOTES", V.Screen.F_JobJacket!mltxFinNotes.Text, "PACKING_NOTES", V.Screen.F_JobJacket!mltxPackNotes.Text, "JJ_NO", V.Global.sJJNo.Long)
+'The Rewind stuff
+F.Data.DataTable.SetValue("dtFinish", 0, "REWIND", V.Screen.F_JobJacket!chkFinRew.Value, "R_CORE_ID", V.Screen.F_JobJacket!txtFinCoreID.Text.Float, "R_MAX_OD", V.Screen.F_JobJacket!txtFinMaxOD.Text.Float, "R_WOUND", V.Screen.F_JobJacket!txtFinWound.Text)
+F.Data.DataTable.SetValue("dtFinish", 0, "R_LABS_ROLL", V.Screen.F_JobJacket!txtFinLabelroll.Text.Float, "R_ROLLS_CASE", V.Screen.F_JobJacket!txtFinRollsCase.Text.Float, "R_COUNTER", V.Screen.F_JobJacket!txtFinCounter.Text.Float)
+F.Data.DataTable.SetValue("dtFinish", 0, "R_FINISH_ACR", V.Screen.F_JobJacket!txtFinFinAcr.Text.Float, "R_CORE_WIDTH", V.Screen.F_JobJacket!txtFinCoreWidth.Text.Float, "R_CORE_THICK", V.Screen.F_JobJacket!txtFinCoreThick.Text.Float)
+'The Fanfold stuff
+F.Data.DataTable.SetValue("dtFinish", 0, "FANFOLD", V.Screen.F_JobJacket!chkFinFanfold.Value, "F_LABS_FOLD", V.Screen.F_JobJacket!txtFinlbsfold.Text.Float, "F_LABS_STACK", V.Screen.F_JobJacket!txtFinlbsStack.Text.Float, "F_STACKS_BOX", V.Screen.F_JobJacket!txtFinStacksBox.Text.Float)
+F.Data.DataTable.SetValue("dtFinish", 0, "F_FINISH_ACR", V.Screen.F_JobJacket!txtFinFanFinAcr.Text.Float, "F_REPEAT_FOLD", V.Screen.F_JobJacket!txtFinRepeatFold.Text.Float, "F_COUNTER", V.Screen.F_JobJacket!txtFinFanCounter.Text.Float)
+'The Sheeted stuff
+F.Data.DataTable.SetValue("dtFinish", 0, "SHEETED", V.Screen.F_JobJacket!chkFinSheeted.Value, "SHRINKWRAP", V.Screen.F_JobJacket!chkFinShinkwrap.Value, "S_SHT_STACK", V.Screen.F_JobJacket!txtFinShtStack.Text.Float, "S_STCK_CASE", V.Screen.F_JobJacket!txtFinStackCase.Text.Float)
+F.Data.DataTable.SetValue("dtFinish", 0, "S_SHT_CASE", V.Screen.F_JobJacket!txtFinShtCase.Text.Float, "S_SHRINKWRAP", V.Screen.F_JobJacket!txtFinShinkwrap.Text.Float, "S_COUNTER", V.Screen.F_JobJacket!txtFinShetCounter.Text.Float)
+F.Data.DataTable.SetValue("dtFinish", 0, "CORE_DESC", V.Screen.F_JobJacket!txtFinCoreDesc.Text, "BOX_1_DESC", V.Screen.F_JobJacket!txtFinBoxDesc1.Text, "BOX_2_DESC", V.Screen.F_JobJacket!txtFinBoxDesc2.Text)
+
+F.Intrinsic.String.Build("Delete from GCG_3623_JJ_FINISH where JJ_NO = '{0}'", V.Global.sJJNo.Long, V.Local.sSql)
+F.ODBC.Connection!conx.Execute(V.Local.sSql)
+F.Data.DataTable.SaveToDB("dtFinish", "conx", "GCG_3623_JJ_FINISH", "JJ_NO", 128)
+'***FINISH***
+
+'***VARIABLE***
+F.Intrinsic.Control.If(V.DataTable.dtVar.RowCount, =, 0)
+	'Maybe we can set a flag that records that this is a new record?
+	F.Data.DataTable.AddRow("dtVar", "HUM_READ", "")
+F.Intrinsic.Control.EndIf
+
+F.Data.DataTable.SetValue("dtVar", 0, "OFFLINE", V.Screen.F_JobJacket!chkOffline.Value, "ON_PRESS", V.Screen.F_JobJacket!chkOnPress.Value, "MUST_PROOF", V.Screen.F_JobJacket!chkVarMustProof.Value)
+F.Data.DataTable.SetValue("dtVar", 0, "LABS_PER_SEQ", V.Screen.F_JobJacket!txtVarLabPerNo.Text, "HUM_READ", V.Screen.F_JobJacket!txtVarHumRead.Text, "RIBBON", V.Screen.F_JobJacket!txtVarRibbon.Text, "FILE_NAME", V.Screen.F_JobJacket!txtVarFileName.Text)
+F.Data.DataTable.SetValue("dtVar", 0, "BARCODE_SPEC", V.Screen.F_JobJacket!txtVarBarSpec.Text, "BARCODE_RATIO", V.Screen.F_JobJacket!txtVarBarRatio.Text, "BARCODE_HEIGHT", V.Screen.F_JobJacket!txtVarBarHeight.Text)
+F.Data.DataTable.SetValue("dtVar", 0, "LAB_ROLL_CHK", V.Screen.F_JobJacket!chkVarLabRoll.Value, "LAB_ROLL", V.Screen.F_JobJacket!txtVarLabRolls.Text, "LAB_FOLD_CHK", V.Screen.F_JobJacket!chkVarLabFold.Value, "LAB_FOLD", V.Screen.F_JobJacket!txtVarLabFold.Text)
+F.Data.DataTable.SetValue("dtVar", 0, "LAB_STACK_CHK", V.Screen.F_JobJacket!chkVarLabStack.Value, "LAB_STACK", V.Screen.F_JobJacket!txtVarLabStack.Text, "LAB_PAD_CHK", V.Screen.F_JobJacket!chkVarLabPad.Value, "LAB_PAD", V.Screen.F_JobJacket!txtVarLabPad.Text)
+F.Data.DataTable.SetValue("dtVar", 0, "VAR_NOTES", V.Screen.F_JobJacket!mltxVarNotes.Text, "JJ_NO", V.Global.sJJNo.Long)
+
+F.Intrinsic.String.Build("Delete from GCG_3623_JJ_VARIABLE where JJ_NO = '{0}'", V.Global.sJJNo.Long, V.Local.sSql)
+F.ODBC.Connection!conx.Execute(V.Local.sSql)
+F.Data.DataTable.SaveToDB("dtVar", "conx", "GCG_3623_JJ_VARIABLE", "JJ_NO", 128)
+'***VARIABLE***
+
+'***INKS***
+'"dtInks"
+F.Intrinsic.String.Build("Delete from GCG_3623_JJ_INKS where JJ_NO = '{0}'", V.Global.sJJNo.Long, V.Local.sSql)
+F.ODBC.Connection!conx.Execute(V.Local.sSql)
+
+F.Data.DataTable.SetValue("dtInks", -1, "JJ_NO", V.Global.sJJNo)
+F.Data.DataView.Create("dtInks", "dvInkSave", 22, "[Deleted] = 'NO'", "")
+F.Data.DataView.ToDataTable("dtInks", "dvInkSave", "dtInkSave", True)
+F.Data.DataTable.RemoveColumn("dtInkSave", "Deleted")
+
+F.Data.DataTable.SaveToDB("dtInkSave", "conx", "GCG_3623_JJ_INKS", "INK_JJ_ID", 128)
+F.Data.DataTable.Close("dtInkSave")
+F.Data.DataView.Close("dtInks", "dvInkSave")
+'***INKS***
+
+'***MATERIALS***
+'"dtMats"
+F.Intrinsic.String.Build("Delete from GCG_3623_JJ_MATERIAL where JJ_NO = '{0}'", V.Global.sJJNo.Long, V.Local.sSql)
+F.ODBC.Connection!conx.Execute(V.Local.sSql)
+
+F.Data.DataTable.SetValue("dtMats", -1, "JJ_NO", V.Global.sJJNo)
+F.Data.DataView.Create("dtMats", "dvMatsSave", 22, "[Deleted] = 'NO'", "")
+F.Data.DataView.ToDataTable("dtMats", "dvMatsSave", "dtMatsSave", True)
+F.Data.DataTable.RemoveColumn("dtMatsSave", "Deleted")
+
+F.Data.DataTable.SaveToDB("dtMatsSave", "conx", "GCG_3623_JJ_MATERIAL", "MATERIAL_JJ_ID", 128)
+F.Data.DataTable.Close("dtMatsSave")
+F.Data.DataView.Close("dtMats", "dvMatsSave")
+'***MATERIALS***
+
+'***TOOLING***
+'"dtTooling"
+F.Intrinsic.String.Build("Delete from GCG_3623_JJ_TOOLING where JJ_NO = '{0}'", V.Global.sJJNo.Long, V.Local.sSql)
+F.ODBC.Connection!conx.Execute(V.Local.sSql)
+
+F.Data.DataTable.SetValue("dtTooling", -1, "JJ_NO", V.Global.sJJNo)
+F.Data.DataView.Create("dtTooling", "dvToolSave", 22, "[Deleted] = 'NO'", "")
+F.Data.DataView.ToDataTable("dtTooling", "dvToolSave", "dtToolSave", True)
+F.Data.DataTable.RemoveColumn("dtToolSave", "Deleted")
+
+F.Data.DataTable.SaveToDB("dtToolSave", "conx", "GCG_3623_JJ_TOOLING", "TOOL_JJ_ID", 128)
+F.Data.DataTable.Close("dtToolSave")
+F.Data.DataView.Close("dtTooling", "dvToolSave")
+'***TOOLING***
+
+F.Intrinsic.Control.CallSub(CloseConnection)
+F.Intrinsic.Control.UnBlockEvents
+
+V.Global.bSave.Set(True)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.SaveFullJacket.End
+
+Program.Sub.ToolClick.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sTitles.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.sJJNo.Declare(String, "")
+V.Local.sSQL.Declare(String, "")
+V.Local.sBrowser.Declare(String, "")
+V.Local.sForm.Declare(String, "")
+V.Local.iWidths.Declare(Long, 0)
+V.Local.iRet.Declare(Long, 0)
+V.Local.iCount.Declare(Long, 0)
+
+V.Local.sJJNo.Set(1)
+'Fired when the user right clicks on the tooling grid. They can either add new tool or delete the tool
+F.Intrinsic.Control.SelectCase(V.Args.ItemName)
+	F.Intrinsic.Control.Case("NEW")
+		'If they select on the new option, the browser will appear for them. We fill the info in automatically. Heather mentioned that we may need to
+'		F.Data.DataView.ToString("dtMtlforTools", "dvForToolBrowser", "MAT_USED*!*Location*!*LENGTH*!*SHAPE_DESC*!*ACROSS*!*GAP_ACROSS*!*GAP_DOWN*!*LINER_THICK*!*TOOTH_SIZE*!*CORNER_RADII", "*!*", "@$@", V.Local.sBrowser)
+'		
+'		F.Intrinsic.String.Split("Material*!*Loc*!*Length*!*Special Description*!*# Across*!*Gap Acr*!*Gap Down*!*Liner*!*Teeth*!*Corners", "*!*", V.Local.sTitles)
+'		F.Intrinsic.String.Split("150*!*75*!*75*!*250*!*75*!*250*!*75*!*75*!*75*!*35", "*!*", V.Local.iWidths)
+
+		F.Data.DataView.ToString("dtMtlforTools", "dvForToolBrowser", "PART*!*Location*!*DESCRIPTION*!*WIDTH*!*LENGTH*!*SHAPE*!*MAT_USED*!*SHAPE_DESC*!*ACROSS*!*GAP_ACROSS*!*GAP_DOWN*!*CORNER_RADII*!*LINER_THICK*!*TOOTH_SIZE", "*!*", "@$@", V.Local.sBrowser)
+		
+		F.Intrinsic.String.Split("Part*!*Loc*!*Description*!*Width*!*Length*!*Shape*!*Material*!*Special Description*!*# Across*!*Gap Acr*!*Gap Down*!*Corners*!*Liner*!*Teeth", "*!*", V.Local.sTitles)
+		F.Intrinsic.String.Split("150*!*60*!*275*!*75*!*75*!*75*!*100*!*275*!*75*!*75*!*80*!*75*!*75*!*70", "*!*", V.Local.iWidths)
+		F.Intrinsic.String.Split("*!**!**!**!**!**!**!**!**!**!**!**!**!*", "*!*", V.Local.sForm)
+		
+'		F.Data.DataView.ToString("dtMtlforTools", "dvForToolBrowser", "MAT_USED*!*SHAPE_DESC", "*!*", "@$@", V.Local.sBrowser)
+'		
+'		F.Intrinsic.String.Split("Part #*!*Description", "*!*", V.Local.sTitles)
+'		F.Intrinsic.String.Split("75*!*250", "*!*", V.Local.iWidths)
+		
+		F.Intrinsic.UI.BrowserFromString("Please select a Tool", V.Local.sBrowser, "*!*", "@$@", V.Local.sTitles, Variable.Local.iWidths, 17500, 10000, V.Local.sForm, V.Local.sForm, V.Local.sRet)
+		
+		F.Intrinsic.Control.If(V.Local.sRet, <>, "***CANCEL***")
+			F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+			V.Local.sRet.RedimPreserve(0, 4)
+			F.Data.DataTable.AddRow("dtTooling", "JJ_NO", V.Local.sJJNo.Long, "TOOL_NO", V.Local.sRet(0).Trim, "TOOL_DESC", V.Local.sRet(2).Trim, "ROW_NUM", V.DataTable.dtTooling.RowCount, "Deleted", "NO", "TOOL_JJ_ID", -1)
+			
+		F.Intrinsic.Control.EndIf
+			
+	F.Intrinsic.Control.Case("DELETE")
+		'If they select on the Delete option, we flag the line so we can delete it or ommit it on a save. We'll have to see what row they selected first.
+		Gui.F_JobJacket.gsgcTooling.GetSelectedRows("gridTooling", V.Local.sRet)
+		F.Intrinsic.Control.If(V.Local.sRet, <>, "")
+			F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.iRet)
+			F.Intrinsic.Control.For(V.Local.iCount, V.Local.iRet.UBound, 0, -1)
+				F.Data.DataTable.SetValue("dtTooling", V.Local.iRet(V.Local.iCount), "Deleted", "YES")
+			F.Intrinsic.Control.Next(V.Local.iCount)	
+		F.Intrinsic.Control.EndIf		
+	
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.ToolClick.End
+
+Program.Sub.MaterialClick.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sTitles.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.sJJNo.Declare(String, "")
+V.Local.sSQL.Declare(String, "")
+V.Local.sBrowser.Declare(String, "")
+V.Local.sMat.Declare(String, "")
+V.Local.iRet.Declare(Long, -1)
+V.Local.iCount.Declare(Long, 0)
+V.Local.iRow.Declare(Long, 0)
+V.Local.iWidths.Declare(Long, 0)
+
+V.Local.sJJNo.Set(1)
+
+'Fired when the user right clicks on the tooling grid. They can either add new tool or delete the tool
+F.Intrinsic.Control.SelectCase(V.Args.ItemName)
+	F.Intrinsic.Control.Case("NEW")
+		'If they select on the new option, the browser will appear for them. We fill the info in automatically
+'		F.Intrinsic.UI.Msgbox("This is the Material New Click")
+		'*!*!*!
+		F.Data.DataView.ToString("dtMtlforTools", "dvInvForMtlBrowser", "PART*!*Location*!*DESCRIPTION*!*UM_INVENTORY", "*!*", "@$@", V.Local.sBrowser)
+		
+		F.Intrinsic.String.Split("Material*!*Location*!*Description*!*UM", "*!*", V.Local.sTitles)
+		F.Intrinsic.String.Split("150*!*75*!*350*!*75", "*!*", V.Local.iWidths)
+		
+		F.Intrinsic.UI.BrowserFromString("Please select a Material", V.Local.sBrowser, "*!*", "@$@", V.Local.sTitles, V.Local.iWidths, V.Local.sRet)
+		
+		F.Intrinsic.Control.If(V.Local.sRet, <>, "***CANCEL***")
+			F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+			V.Local.sRet.RedimPreserve(0, 3)
+			F.Intrinsic.String.Left(V.Local.sRet(0), 5, V.Local.sMat)
+			F.Data.DataTable.AddRow("dtMats", "JJ_NO", V.Local.sJJNo.Long, "MATERIAL", V.Local.sMat, "ITEM_NO", V.Local.sRet(0).Trim, "ITEM_DESC", V.Local.sRet(2).Trim, "ROW_NUM", V.DataTable.dtMats.RowCount, "Deleted", "NO", "MATERIAL_JJ_ID", -1)
+			
+		F.Intrinsic.Control.EndIf
+			
+	F.Intrinsic.Control.Case("DELETE")
+		'If they select on the Delete option, we flag the line so we can delete it or ommit it on a save
+		Gui.F_JobJacket.gsgcMats.GetSelectedRows("gridMats", V.Local.sRet)
+		F.Intrinsic.Control.If(V.Local.sRet, <>, "")
+			F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.iRet)
+			F.Intrinsic.Control.For(V.Local.iCount, V.Local.iRet.UBound, 0, -1)
+	'			Gui.F_JobJacket.gsgcMats.GetRowHandle("gridMats", , V.Local.iRow)
+				F.Data.DataTable.SetValue("dtMats", V.Local.iRet(V.Local.iCount), "Deleted", "YES")
+				
+			F.Intrinsic.Control.Next(V.Local.iCount)	
+		F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.MaterialClick.End
+
+Program.Sub.InkClick.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sTitles.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.sJJNo.Declare(String, "")
+V.Local.sSQL.Declare(String, "")
+V.Local.sBrowser.Declare(String, "")
+V.Local.sMat.Declare(String, "")
+V.Local.iWidths.Declare(Long, 0)
+V.Local.iRet.Declare(Long, 0)
+V.Local.iCount.Declare(Long, 0)
+
+V.Local.sJJNo.Set(1)
+'Fired when the user right clicks on the tooling grid. They can either add new tool or delete the tool
+F.Intrinsic.Control.SelectCase(V.Args.ItemName)
+	F.Intrinsic.Control.Case("NEW")
+		'If they select on the new option, the browser will appear for them. We fill the info in automatically
+		F.Data.DataView.ToString("dtMtlforTools", "dvInvFornksBrowser", "PART*!*Location*!*DESCRIPTION*!*UM_INVENTORY", "*!*", "@$@", V.Local.sBrowser)
+		
+		F.Intrinsic.String.Split("Ink*!*Location*!*Description*!*UM", "*!*", V.Local.sTitles)
+		F.Intrinsic.String.Split("150*!*75*!*350*!*75", "*!*", V.Local.iWidths)
+		
+		F.Intrinsic.UI.BrowserFromString("Please select a Material", V.Local.sBrowser, "*!*", "@$@", V.Local.sTitles, V.Local.iWidths, V.Local.sRet)
+		
+		F.Intrinsic.Control.If(V.Local.sRet, <>, "***CANCEL***")
+			F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+			V.Local.sRet.RedimPreserve(0, 3)
+			F.Intrinsic.String.Left(V.Local.sRet(0), 5, V.Local.sMat)
+			F.Data.DataTable.AddRow("dtInks", "JJ_NO", V.Local.sJJNo.Long, "INK", V.Local.sRet(0).Trim, "ROW_NUM", V.DataTable.dtInks.RowCount, "Deleted", "NO", "INK_JJ_ID", -1)
+			
+		F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.Case("CUSTOM")
+		'If they select on the custom option, we create a new blank line for them. They will fill in the data manually
+		F.Data.DataTable.AddRow("dtInks", "JJ_NO", V.Local.sJJNo, "ROW_NUM", V.DataView.dtInks!dvInks.RowCount, "Deleted", "NO", "INK_JJ_ID", -1)
+	
+	F.Intrinsic.Control.Case("DELETE")
+		'If they select on the Delete option, we flag the line so we can delete it or ommit it on a save
+		Gui.F_JobJacket.gsgcInks.GetSelectedRows("gridInks", V.Local.sRet)
+		F.Intrinsic.Control.If(V.Local.sRet, <>, "")
+			F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.iRet)
+			F.Intrinsic.Control.For(V.Local.iCount, V.Local.iRet.UBound, 0, -1)
+				F.Data.DataTable.SetValue("dtInks", V.Local.iRet(V.Local.iCount), "Deleted", "YES")
+			F.Intrinsic.Control.Next(V.Local.iCount)	
+		F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.InkClick.End
+
+Program.Sub.Initialization.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sFile.Declare(String, "")
+V.Local.bExist.Declare(Boolean, False)
+V.Local.bLocked.Declare(Boolean, False)
+V.Local.iCount.Declare(Long, 0)
+
+F.Intrinsic.Control.CallSub(OpenConnection)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+'I modified the gab script that creates the XML for the parts browser for the DICE to create a second file that will be used for the inventory browser in here.
+F.Intrinsic.String.Build("{0}\{1}JJPartBrowXML.xml",v.Caller.FilesDir,v.Caller.CompanyCode,v.Local.sFile)
+F.Intrinsic.File.Exists(v.Local.sFile,v.Local.bExist)
+
+F.Intrinsic.Control.If(v.Local.bExist,=,True)
+	'Check to see if the file is locked or not
+	F.Intrinsic.File.IsFileLocked(V.Local.sFile,V.Local.bLocked)
+	
+	F.Intrinsic.Control.DoUntil(V.Local.bLocked,=,False)
+		F.Intrinsic.Math.Add(V.Local.iCount,1,V.Local.iCount)
+
+		F.Intrinsic.Control.If(V.Local.iCount,>=,100)
+			F.Intrinsic.UI.Msgbox("Part Browser XML is Locked. Please close file to open browser.")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.UI.Sleep(1)
+		F.Intrinsic.File.IsFileLocked(V.Local.sFile,V.Local.bLocked)
+	F.Intrinsic.Control.Loop
+
+	F.Data.DataTable.CreateFromXML("dtMtlforTools",v.Local.sFile,True)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("{0}\GCG_3623_XML_Part_Update.g2u",v.Caller.GasDir,v.Local.sFile)
+	F.Global.Task.CallSyncGAS(v.Local.sFile)
+	F.Intrinsic.String.Build("{0}\{1}JJPartBrowXML.xml",v.Caller.FilesDir,v.Caller.CompanyCode,v.Local.sFile)
+	
+	'Check to see if the file is locked or not
+	F.Intrinsic.File.IsFileLocked(V.Local.sFile,V.Local.bLocked)
+	
+	F.Intrinsic.Control.DoUntil(V.Local.bLocked,=,False)
+		F.Intrinsic.Math.Add(V.Local.iCount,1,V.Local.iCount)
+
+		F.Intrinsic.Control.If(V.Local.iCount,>=,100)
+			F.Intrinsic.UI.Msgbox("Part Browser XML is Locked. Please close file to open browser.")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.UI.Sleep(1)
+		F.Intrinsic.File.IsFileLocked(V.Local.sFile,V.Local.bLocked)
+	F.Intrinsic.Control.Loop
+	F.Data.DataTable.CreateFromXML("dtMtlforTools",v.Local.sFile,True)
+F.Intrinsic.Control.EndIf
+
+'F.Data.DataView.Create("dtMtlforTools", "dvForToolBrowser", 22, "[PRODUCT_LINE] = 'ZT' AND [MAT_USED] <> ''", "")
+F.Data.DataView.Create("dtMtlforTools", "dvForToolBrowser", 22, "[PRODUCT_LINE] = 'ZT'", "")
+
+F.Data.DataView.Create("dtMtlforTools", "dvInvForMtlBrowser", 22, "[PRODUCT_LINE] = 'RM'", "")
+
+F.Data.DataView.Create("dtMtlforTools", "dvInvFornksBrowser", 22, "[PRODUCT_LINE] = 'IK'", "")
+
+F.Data.DataView.Create("dtMtlforTools", "dvCoreBrowser", 22, "[PRODUCT_LINE] = 'PC'", "")
+
+F.Data.DataView.Create("dtMtlforTools", "dvBoxBrowser", 22, "[PRODUCT_LINE] = 'PB'", "")
+
+F.Data.Dictionary.CreateFromSQL("dicPL", "conx", "Select Part, PRODUCT_LINE from V_INVENTORY_MSTR")
+F.Data.Dictionary.SetDefaultReturn("dicPL", "")
+
+F.Data.Dictionary.Create("dicPress")
+F.Data.Dictionary.AddItem("dicPress", "GP", "Y")
+F.Data.Dictionary.AddItem("dicPress", "IP", "Y")
+F.Data.Dictionary.AddItem("dicPress", "NP", "Y")
+F.Data.Dictionary.AddItem("dicPress", "TP", "Y")
+F.Data.Dictionary.SetDefaultReturn("dicpress", "N")
+
+F.Intrinsic.Control.CallSub(CloseConnection)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.Initialization.End
+
+Program.Sub.PopulateRTFields.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+V.Local.sJJNO.Declare(String, "-1")
+V.Local.sMat.Declare(String, "")
+V.Local.sRouter.Declare(String, "")
+V.Local.iDrac.Declare(Long, 0)
+V.Local.bRTCheck.Declare(Boolean, False)
+
+'This subroutime will be called from two different places: When a user selects a router from the router browser, it will call this subroutine to populate fields accordingly, or when the script is successfully ran from teh Router Script button, in which case we grab the Router number from the passed info and populate stuff accrodingly.
+'In either case, we should not expect to have this subroutine called unless the router number and revison passed.
+
+'The first part of the passed variable should be the router/rev, full 20 chars
+F.Intrinsic.Variable.ArgExists("RouterRev", V.Local.bRTCheck)
+
+F.Intrinsic.Control.If(V.Local.bRTCheck, =, True)
+	F.Intrinsic.Control.BlockEvents
+	
+	F.Intrinsic.String.Split(V.Args.RouterRev, "*!*", V.Local.sRet)
+	V.Local.sRet.RedimPreserve(0,5)
+	V.Local.sRouter.Redim(0,2)
+	F.Intrinsic.String.RPad(V.Local.sRet(0), " ", 20, V.Local.sRet(0))
+	F.Intrinsic.String.Right(V.Local.sRet(0), 3, V.Local.sRouter(2))
+	F.Intrinsic.String.Left(V.Local.sRet(0), 17, V.Local.sRouter(1))
+	
+	Gui.F_JobJacket.txtRouter.Text(V.Local.sRouter(1).UCase)
+	Gui.F_JobJacket.txtRouterRev.Text(V.Local.sRouter(2).UCase)
+		
+	'We have a lot of things to populate from the Router selection
+	F.Intrinsic.String.Build("Select Router, Line_Router, LMO, PART_WC_OUTSIDE, Operation, Desc_RT_LINE, SORT_CODE from V_ROUTER_LINE where ROUTER = '{0}'", V.Local.sRet(0).trim, V.Local.sSql)
+	F.Data.DataTable.CreateFromSQL("dtRouter", "conx", V.Local.sSql)
+	
+	'	F.Data.Dictionary.CreateFromSQL("dicPL", "conx", "Select Part + '-' + Location as partloc, PRODUCT_LINE from V_INVENTORY_MSTR")
+	F.Data.DataTable.AddColumn("dtRouter", "PL", "String")
+	
+	F.Data.DataTable.FillFromDictionary("dtRouter", "dicPL", "PART_WC_OUTSIDE", "PL")
+			
+	'Tooling grid: grab all M sequences that have a part with a PL of ZT
+	F.Data.DataTable.DeleteRow("dtTooling")
+'	F.Data.DataView.Create("dtRouter", "dvRTTools", 22, "[SORT_CODE] in ('DIE', 'MAG', 'PERF', 'FFGEAR')", "")
+	F.Data.DataView.Create("dtRouter", "dvRTTools", 22, "[PL] = 'ZT'", "")
+	F.Intrinsic.Control.For(V.Local.iDrac, 0, V.DataView.dtRouter!dvRTTools.RowCount--, 1)
+		F.Data.DataTable.AddRow("dtTooling", "JJ_NO", V.Local.sJJNO.Long, "TOOL_NO", V.DataView.dtRouter!dvRTTools(V.Local.iDrac).PART_WC_OUTSIDE!FieldValUCRTrim, "TOOL_DESC", V.DataView.dtRouter!dvRTTools(V.Local.iDrac).Desc_RT_LINE!FieldValUCRTrim, "ROW_NUM", V.DataView.dtTooling!dvTooling.RowCount, "TOOL_JJ_ID", -1, "Deleted", "NO")
+	F.Intrinsic.Control.Next(V.Local.iDrac)
+	F.Data.DataView.Close("dtRouter", "dvRTTools")
+		
+	'Material grid: grab all M sequences that have parts with a PL of RM
+	F.Data.DataView.Create("dtRouter", "dvRTMatl", 22, "[PL] = 'RM'", "")
+	F.Data.DataTable.DeleteRow("dtMats")
+	F.Data.DataView.ToDataTableDistinct("dtRouter", "dvRTMatl", "dtDistinctMats", "PART_WC_OUTSIDE*!*Desc_RT_LINE")
+	F.Intrinsic.Control.For(V.Local.iDrac, 0, V.DataTable.dtDistinctMats.RowCount--, 1)
+		F.Intrinsic.String.Left(V.DataTable.dtDistinctMats(V.Local.iDrac).PART_WC_OUTSIDE!FieldValUCRTrim, 5, V.Local.sMat)
+		F.Data.DataTable.AddRow("dtMats", "JJ_NO", V.Local.sJJNO.Long, "ROW_NUM", V.DataView.dtMats!dvMats.RowCount, "MATERIAL", V.Local.sMat, "ITEM_NO", V.DataTable.dtDistinctMats(V.Local.iDrac).PART_WC_OUTSIDE!FieldValUCRTrim, "ITEM_DESC", V.DataTable.dtDistinctMats(V.Local.iDrac).Desc_RT_LINE!FieldValUCRTrim, "Deleted", "NO", "MATERIAL_JJ_ID", -1)
+	F.Intrinsic.Control.Next(V.Local.iDrac)
+	F.Data.DataView.Close("dtRouter", "dvRTMatl")
+	F.Data.DataTable.Close("dtDistinctMats")
+	
+	'Ink grid: grab all M sequences that have parts with a PL of IK
+	F.Data.DataView.Create("dtRouter", "dvRTInks", 22, "[PL] = 'IK'", "")
+	F.Data.DataTable.DeleteRow("dtInks")
+	F.Intrinsic.Control.For(V.Local.iDrac, 0, V.DataView.dtRouter!dvRTInks.RowCount--, 1)
+		F.Data.DataTable.AddRow("dtInks", "JJ_NO", V.Local.sJJNO.Long, "INK", V.DataView.dtRouter!dvRTInks(V.Local.iDrac).PART_WC_OUTSIDE!FieldValUCRTrim, "ROW_NUM", V.DataView.dtInks!dvInks.RowCount, "Deleted", "NO", "INK_JJ_ID", -1)
+	F.Intrinsic.Control.Next(V.Local.iDrac)
+	F.Data.DataView.Close("dtRouter", "dvRTInks")
+		
+	'Core info: grab all M sequences that have parts with a PL of PC
+	F.Data.DataView.Create("dtRouter", "dvRTCore", 22, "[PL] = 'PC'", "")
+	F.Intrinsic.Control.If(V.DataView.dtRouter!dvRTCore.RowCount, >, 0)
+		Gui.F_JobJacket.txtFinCore.Text(V.DataView.dtRouter!dvRTCore(0).PART_WC_OUTSIDE!FieldValUCRTrim)
+		Gui.F_JobJacket.txtFinCoreDesc.Text(V.DataView.dtRouter!dvRTCore(0).DESC_RT_LINE!FieldValUCRTrim)
+	F.Intrinsic.Control.EndIf
+	F.Data.DataView.Close("dtRouter", "dvRTCore")	
+	
+	'Box info: grab all M sequences that have parts with a PL of PB
+	F.Data.DataView.Create("dtRouter", "dvRTBox", 22, "[PL] = 'PB'", "")
+	F.Intrinsic.Control.SelectCase(V.DataView.dtRouter!dvRTBox.RowCount)
+	F.Intrinsic.Control.Case(0)
+		'We do nothing
+		
+	F.Intrinsic.Control.Case(1)
+		'We only fill out the first box
+		Gui.F_JobJacket.txtFinBox1.Text(V.DataView.dtRouter!dvRTBox(0).PART_WC_OUTSIDE!FieldValUCRTrim)
+		Gui.F_JobJacket.txtFinBoxDesc1.Text(V.DataView.dtRouter!dvRTBox(0).DESC_RT_LINE!FieldValUCRTrim)
+		
+	F.Intrinsic.Control.CaseElse
+		'Means there are two or more rows.
+		Gui.F_JobJacket.txtFinBox1.Text(V.DataView.dtRouter!dvRTBox(0).PART_WC_OUTSIDE!FieldValUCRTrim)
+		Gui.F_JobJacket.txtFinBoxDesc1.Text(V.DataView.dtRouter!dvRTBox(0).DESC_RT_LINE!FieldValUCRTrim)
+		Gui.F_JobJacket.txtFinBox2.Text(V.DataView.dtRouter!dvRTBox(1).PART_WC_OUTSIDE!FieldValUCRTrim)
+		Gui.F_JobJacket.txtFinBoxDesc2.Text(V.DataView.dtRouter!dvRTBox(1).DESC_RT_LINE!FieldValUCRTrim)
+	
+	F.Intrinsic.Control.EndSelect
+	F.Data.DataView.Close("dtRouter", "dvRTBox")
+		
+	F.Data.DataTable.AddExpressionColumn("dtRouter", "PressCheck", "String", "SUBSTRING(PART_WC_OUTSIDE, 1, 2)")
+	F.Data.DataTable.AddColumn("dtRouter", "DICTIONARY", "String")
+	F.Data.DataTable.FillFromDictionary("dtRouter", "dicPress", "PressCheck", "DICTIONARY")
+	
+	F.Data.DataView.Create("dtRouter", "dvForPress", 22, "[DICTIONARY] = 'Y'", "")
+	F.Intrinsic.Control.If(V.DataView.dtRouter!dvForPress.RowCount, >, 0)
+		Gui.F_JobJacket.txtPress.Text(V.DataView.dtRouter!dvForPress(0).PART_WC_OUTSIDE!FieldValUCRTrim)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.txtPress.Text("")
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataView.Close("dtRouter", "dvForPress")
+	
+	'Ribbon has a sort code of DLS RIBBON
+	
+	F.Data.DataView.Create("dtRouter", "dvRibbon", 22, "[PL] = 'OS'", "")
+	F.Intrinsic.Control.If(V.DataView.dtRouter!dvRibbon.RowCount, >, 0)
+		Gui.F_JobJacket.txtVarRibbon.Text(V.DataView.dtRouter!dvRibbon(0).PART_WC_OUTSIDE!FieldValUCRTrim)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.txtVarRibbon.Text("")
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataView.Close("dtRouter", "dvRibbon")
+	
+	F.Data.Datatable.Close("dtRouter")
+	
+	F.Intrinsic.Control.UnBlockEvents
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.PopulateRTFields.End
+
+Program.Sub.BrowJobJacket.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sTitles.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.sBrowser.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+V.Local.sJRev.Declare(String, "")
+V.Local.sLabel.Declare(String, "")
+V.Local.sForm.Declare(String, "")
+V.Local.sUName.Declare(String, "")
+V.Local.iWidths.Declare(Long, 0)
+
+'If we are looking to populate an existing Job Jacket, this is the subroutine that should be executed. These are the fields that DLS requested:
+'item#/jj rev, 
+'location, 
+'quote # (not est #), 
+'router/rev, 
+'width/length, 
+'creator (initials), 
+'created date.
+
+F.Intrinsic.Control.CallSub(OpenConnection)
+F.Intrinsic.String.Split("Item #*!*Jacket Rev*!*Location*!*Quote #*!*Router*!*Rev*!*Width*!*Length*!*Creator*!*Created Date*!*Customer", "*!*", V.Local.sTitles)
+F.Intrinsic.String.Split("150*!*50*!*50*!*100*!*150*!*45*!*55*!*55*!*65*!*70*!*65", "*!*", V.Local.iWidths)
+F.Intrinsic.String.Split("*!**!**!**!**!**!**!**!**!**!*", "*!*", V.Local.sForm)
+
+F.Intrinsic.UI.Browser("Job Jacket Browser", "conx", "Select FINISH_PART, JACKET_REV, FINISH_LOC, QUOTE_NO, ROUTER, ROUTER_REV, H_WIDTH, H_LENGTH, CREATOR, CREATE_DATE, CUSTOMER from GCG_3623_JJ_HEAD", V.Local.sTitles, V.Local.iWidths, 15000, 10000, V.Local.sForm, V.Local.sForm, V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet, <>, "***CANCEL***")
+
+	F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+	F.Intrinsic.String.Build("Select TOP 1 JJ_NO from GCG_3623_JJ_HEAD where FINISH_PART = '{0}' and JACKET_REV = '{1}' and FINISH_LOC = '{2}'", V.Local.sRet(0).Trim, V.Local.sRet(1).Long, V.Local.sRet(2).Trim, V.Local.sSql)
+	F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql, V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet, <>, "")
+'		F.Intrinsic.Control.CallSub(CloseConnection)
+		V.Global.sJJNo.Set(V.Local.sRet.Long)
+		F.Intrinsic.Control.CallSub(PopulateFullJacket)
+		
+		'We want to check the flags to see how the information needs to be displayed and the capability of the form.
+		F.Intrinsic.Control.SelectCase(V.Caller.Switches.UCase)
+			F.Intrinsic.Control.Case("D")
+				'If the flag is D, we are going to be deleting the Job Jacket. We need to change the 'Save' button to say Delete and remove or disable the navigation buttons.
+				Gui.F_JobJacket.cmdSave.Caption("DELETE")
+				Gui.F_JobJacket.cmdNext.Enabled(False)
+				Gui.F_JobJacket.cmdPrevious.Enabled(False)
+				V.Global.bSave.Set(True)
+				
+			F.Intrinsic.Control.Case("C")
+				'If the flag is C, we are going to copy the job jacket. This will then 
+				Gui.F_JobJacket.cmdNext.Enabled(False)
+				Gui.F_JobJacket.cmdPrevious.Enabled(False)
+				V.Global.sJJNo.Set(-1)
+'				F.Intrinsic.String.Build("Select TOP 1 JACKET_REV from GCG_3623_JJ_HEAD where FINISH_PART = '{0}' and FINISH_LOC = '{1}' order by JACKET_REV DESC", V.Screen.F_JobJacket!txtItemNo.Text,  V.Screen.F_JobJacket!txtLocation.Text, V.Local.sSql)
+'				F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql, V.Local.sJRev)
+'				F.Intrinsic.Math.Add(V.Local.sJRev, 1, V.Local.sJRev)
+'				Gui.F_JobJacket.txtRevTest.Text(V.Local.sJRev)
+				F.Data.DataTable.SetValue("dtHead", 0, "CREATE_DATE", V.Ambient.Date, "CREATOR", V.Caller.User)
+				
+				Gui.F_JobJacket.lblUdateDate.Text("Date Last Updated : ")
+				Gui.F_JobJacket.lblUpdateBy.Text("Last Updated by : ")
+				
+				F.Intrinsic.String.Build("Date Created : {0}", V.DataTable.dtHead(0).CREATE_DATE!FieldValTrim, V.Local.sLabel)
+				Gui.F_JobJacket.lblCreateDate.Text(V.Local.sLabel)
+				
+				F.Global.Security.GetFullName(V.DataTable.dtHead(0).CREATOR!FieldValUCRTrim, V.Local.sUName)
+				F.Intrinsic.String.Build("Created by : {0}", V.Local.sUName, V.Local.sLabel)
+				Gui.F_JobJacket.lblCreateBy.Text(V.Local.sLabel)
+				V.Global.bSave.Set(True)
+				
+			F.Intrinsic.Control.Case("O")
+				V.Global.bSave.Set(True)
+				
+		F.Intrinsic.Control.EndSelect
+		
+	F.Intrinsic.Control.Else
+		'Job Jacket not found
+		F.Intrinsic.UI.Msgbox("Error retrieving data. Job Jacket not found.")
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "YES")
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(CloseConnection)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.BrowJobJacket.End
+
+Program.Sub.FormatField.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sValue.Declare(String, "")
+
+'This is going to be attached to all textboxes. we are going to grab the value of the textbox and uppercase it when they tab out of the textboxes
+F.Intrinsic.Control.BlockEvents
+
+V.Local.sValue.Set(V.Screen.F_JobJacket![V.Args.ControlName].Text)
+
+Gui.F_JobJacket.[V.Args.ControlName].Text(V.Local.sValue.UCase)
+
+F.Intrinsic.Control.UnBlockEvents
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.FormatField.End
+
+Program.Sub.TabCust.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.sCustNo.Declare(String, "")
+
+V.Local.sCustNo.Set(V.Screen.F_JobJacket!txtCustNo.Text)
+
+'This will be attached to the Customer textbox. If a there is a value in the Customer textbox, we will query for the customer name and populate it, Uppercasing both textboxes.
+F.Intrinsic.Control.If(V.Screen.F_JobJacket!txtCustNo.Text.Trim, <>, "")
+	F.Intrinsic.String.Build("Select Top 1 NAME_CUSTOMER from V_CUSTOMER_MASTER where CUSTOMER = '{0}'", V.Local.sCustNo, V.Local.sSql)
+	F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql, V.Local.sRet)
+	Gui.F_JobJacket.txtCustNo.Text(V.Local.sCustNo.UBound)
+	Gui.F_JobJacket.txtCustName.Text(V.Local.sRet.UCase)
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.TabCust.End
+
+Program.Sub.TabItem.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+V.Local.sItem.Declare(String, "")
+V.Local.sLoc.Declare(String, "")
+V.Local.sDesc.Declare(STring, "")
+
+'When they tab out of the item box, we populate the item stuff
+V.Local.sItem.Set(V.Screen.F_JobJacket!txtItemNo.Text)
+V.Local.sLoc.Set(V.Screen.F_JobJacket!txtLocation.Text)
+
+F.Intrinsic.Control.BlockEvents
+
+Gui.F_JobJacket.txtItemNo.Text(V.Local.sItem.UCase)
+
+F.Intrinsic.Control.If(V.Local.sItem.Trim, <>, "", "OR", V.Local.sLoc.Trim, <>, "")
+
+	F.Intrinsic.Control.CallSub(OpenConnection)
+	F.Intrinsic.String.Build("Select TOP 1 DESCRIPTION from V_INVENTORY_MSTR where PART = '{0}' and LOCATION = '{1}'", V.Local.sItem, V.Local.sLoc, V.Local.sSql)
+	F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql, V.Local.sDesc)
+	Gui.F_JobJacket.txtItemDesc1.Text(V.Local.sDesc.UCase)
+	F.Intrinsic.String.Build("Select TOP 1 DESCRIPTION_2 from V_INVENTORY_MST2 where PART = '{0}' and LOCATION = '{1}'", V.Local.sItem, V.Local.sLoc, V.Local.sSql)
+	F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql, V.Local.sDesc)
+	Gui.F_JobJacket.txtItemDesc2.Text(V.Local.sDesc.UCase)
+	F.Intrinsic.Control.If(V.Global.bSave)
+		F.Intrinsic.Control.UnBlockEvents
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	'There is a posibility that if they change the Item number, we are going to need to change the JobJacket number, since the key for the job jacket is item number and jacket revision.	
+	F.Intrinsic.String.Build("Select TOP 1 JJ_NO, JACKET_REV from GCG_3623_JJ_HEAD where FINISH_PART = '{0}' and FINISH_LOC = '{1}' order by JACKET_REV DESC", V.Local.sItem, V.Local.sLoc, V.Local.sSql)
+	F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql, V.Local.sDesc)
+	F.Intrinsic.Control.If(V.Local.sDesc.Trim, <>, "")
+		F.Intrinsic.String.Split(V.Local.sDesc, "*!*", V.Local.sDesc)
+		'recording new info
+		Gui.F_JobJacket.txtRevTest.Text(V.Local.sDesc(1))
+		V.Global.sJJNo.Set(V.Local.sDesc(0).Long)
+		F.Intrinsic.Control.CallSub(PopulateFullJacket)
+	F.Intrinsic.Control.Else
+		'New Job Jacket
+		Gui.F_JobJacket.txtRevTest.Text(1)
+		V.Global.sJJNo.Set(-1)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.CallSub(CloseConnection)
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.UnBlockEvents
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.TabItem.End
+
+Program.Sub.TabRouter.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.sRouter.Declare(String, "")
+V.Local.sRev.Declare(String, "")
+
+'All we have to do is check to see if the job jacket has been saved. If it has, we do not populate anything.
+F.Intrinsic.Control.If(V.Global.bSave)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	F.Inrinsic.Control.Callsub(RefreshRouter)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.TabRouter.End
+
+Program.Sub.NavigateButtons.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+V.Local.sOpposite.Declare(String, "")
+V.Local.sPartOrder.Declare(String, "")
+V.Local.sRevOrder.Declare(String, "")
+V.Local.sNextRev.Declare(String, "")
+V.Local.sNextPart.Declare(String, "")
+
+'We are going to populate eiher the previoius or the next job jacket number. We check the one after we populate as well to determine if we need to disable the button after we populate the job jacket
+F.Intrinsic.Control.SelectCase(V.Args.ControlName)
+	F.Intrinsic.Control.Case("CMDPREVIOUS")
+		F.Intrinsic.String.Build("Select JJ_NO, FINISH_PART, JACKET_REV from GCG_3623_JJ_HEAD where Finish_Part <= '{0}' Order by FINISH_PART desc, JACKET_REV desc", V.Screen.F_JobJacket!txtItemNo.Text.Trim, V.Local.sSql)
+		V.Local.sOpposite.Set("CMDNEXT")
+		V.Local.sPartOrder.Set("FINISH_PART DESC, JACKET_REV DESC")
+		V.Local.sRevOrder.Set("JACKET_REV DESC")
+		F.Intrinsic.String.Build("[FINISH_PART] = '{0}' AND [JACKET_REV] < '{1}'", V.Screen.F_JobJacket!txtItemNo.Text.Trim, V.Screen.F_JobJacket!txtRevTest.Text, V.Local.sNextRev)
+		F.Intrinsic.String.Build("[FINISH_PART] < '{0}'", V.Screen.F_JobJacket!txtItemNo.Text.Trim, V.Local.sNextPart) 
+	F.Intrinsic.Control.Case("CMDNEXT")
+		F.Intrinsic.String.Build("Select JJ_NO, FINISH_PART, JACKET_REV from GCG_3623_JJ_HEAD where Finish_Part >= '{0}' Order by FINISH_PART asc, JACKET_REV asc", V.Screen.F_JobJacket!txtItemNo.Text.Trim, V.Local.sSql)
+		V.Local.sOpposite.Set("CMDPREVIOUS")
+		V.Local.sPartOrder.Set("FINISH_PART ASC, JACKET_REV ASC")
+		V.Local.sRevOrder.Set("JACKET_REV ASC")
+		F.Intrinsic.String.Build("[FINISH_PART] = '{0}' AND [JACKET_REV] > '{1}'", V.Screen.F_JobJacket!txtItemNo.Text.Trim, V.Screen.F_JobJacket!txtRevTest.Text, V.Local.sNextRev)
+		F.Intrinsic.String.Build("[FINISH_PART] > '{0}'", V.Screen.F_JobJacket!txtItemNo.Text.Trim, V.Local.sNextPart) 
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.CallSub(OpenConnection)
+
+F.Data.DataTable.CreateFromSQL("dtNext", "conx", V.Local.sSql)
+
+F.Data.DataView.Create("dtNext", "dvNextRev", 22, V.Local.sNextRev, V.Local.sRevOrder)
+'If we have a row in this dataview, then the next job jacket to populate is the same part, different revision, otherwise it will be the next part, first revision we find.
+F.Intrinsic.Control.If(V.DataView.dtNext!dvNextRev.RowCount, >, 0)
+	V.Global.sJJNo.Set(V.DataView.dtNext!dvNextRev(0).JJ_NO!FieldValLong)
+F.Intrinsic.Control.Else
+	F.Data.DataView.Create("dtNext", "dvNextPart", 22, V.Local.sNextPart, V.Local.sPartOrder)
+	F.Intrinsic.Control.If(V.DataView.dtNext!dvNextPart.RowCount, >, 0)
+		V.Global.sJJNo.Set(V.DataView.dtNext!dvNextPart(0).JJ_NO!FieldValLong)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.[V.Args.ControlName].Enabled(False)
+		F.Data.DataView.Close("dtNext", "dvNextPart")
+		F.Data.DataView.Close("dtNext", "dvNextRev")
+		F.Data.Datatable.Close("dtNext")
+		F.Intrinsic.Control.CallSub(CloseConnection)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+
+F.Data.DataView.Close("dtNext", "dvNextRev")
+F.Data.Datatable.Close("dtNext")
+
+F.Intrinsic.Control.CallSub(PopulateFullJacket)
+
+Gui.F_JobJacket.[V.Local.sOpposite].Enabled(True)
+
+F.Intrinsic.Control.CallSub(CloseConnection)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.NavigateButtons.End
+
+Program.Sub.TabJJRev.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+
+'We probably do not need this subroutine anymore, since tehy are not allowed to make modifications to this textbox
+F.Intrinsic.Control.BlockEvents
+
+F.Intrinsic.Control.CallSub(OpenConnection)
+'If they populate something in the Job Jacket rev, we check to see if there is a Job Jacket in the system that matches
+F.Intrinsic.String.Build("Select TOP 1 JJ_NO from GCG_3623_JJ_HEAD where FINISH_PART = '{0}' and JACKET_REV = '{1}' and FINISH_LOC = '{2}' order by JACKET_REV DESC", V.Screen.F_JobJacket!txtItemNo.Text, V.Screen.F_JobJacket!txtRevTest.Text, V.Screen.F_JobJacket!txtLocation.Text, V.Local.sSql)
+F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql, V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet.Trim, <>, "")
+	V.Global.sJJNo.Set(V.Local.sRet.Long)
+	F.Intrinsic.Control.CallSub(PopulateFullJacket)
+F.Intrinsic.Control.Else
+	V.Global.sJJNo.Set(-1)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(CloseConnection)
+
+F.Intrinsic.Control.UnBlockEvents
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.TabJJRev.End
+
+Program.Sub.CloseTables.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+
+F.Intrinsic.Control.If(V.DataTable.dtHead.Exists, =, True)
+	F.Data.DataTable.Close("dtHead")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtTooling.Exists, =, True)
+	F.Data.DataView.Close("dtTooling", "dvTooling")
+	F.Data.DataTable.Close("dtTooling")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtPress.Exists, =, True)
+	F.Data.DataTable.Close("dtPress")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtInks.Exists, =, True)
+	F.Data.DataView.Close("dtInks", "dvInks")
+	F.Data.DataTable.Close("dtInks")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtMats.Exists, =, True)
+	F.Data.DataView.Close("dtMats", "dvMats")
+	F.Data.DataTable.Close("dtMats")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtFinish.Exists, =, True)
+	F.Data.DataTable.Close("dtFinish")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtVar.Exists, =, True)
+	F.Data.DataTable.Close("dtVar")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch 
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.CloseTables.End
+
+Program.Sub.lbl20_DblClick.Start
+Function.Intrinsic.Debug.InvokeDebugger
+Function.Intrinsic.Debug.Stop
+Program.Sub.lbl20_DblClick.End
+
+Program.Sub.DisableNavigation.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+V.Local.sNextRev.Declare(String, "")
+V.Local.sNextPart.Declare(String, "")
+ 
+F.Intrinsic.Control.If(V.Global.sJJNo, =, -1)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'This subroutine will be called after a job jacket has been populated. It will check to see if there is anything forwards/backwards that could potentially be populated, for the sole purpose of disabling/enabling the navigation buttons.
+F.Intrinsic.String.Build("Select JJ_NO, FINISH_PART, JACKET_REV from GCG_3623_JJ_HEAD where Finish_Part <= '{0}' Order by FINISH_PART desc, JACKET_REV desc", V.Screen.F_JobJacket!txtItemNo.Text.Trim, V.Local.sSql)
+F.Data.DataTable.CreateFromSQL("dtNext", "conx", V.Local.sSql)
+
+
+F.Intrinsic.String.Build("[FINISH_PART] = '{0}' AND [JACKET_REV] < '{1}'", V.Screen.F_JobJacket!txtItemNo.Text.Trim, V.Screen.F_JobJacket!txtRevTest.Text, V.Local.sNextRev)
+F.Intrinsic.String.Build("[FINISH_PART] < '{0}'", V.Screen.F_JobJacket!txtItemNo.Text.Trim, V.Local.sNextPart) 
+
+F.Data.DataView.Create("dtNext", "dvNextRev", 22, V.Local.sNextRev, "JACKET_REV DESC")
+'If we have a row in this dataview, then the next job jacket to populate is the same part, different revision, otherwise it will be the next part, first revision we find.
+F.Intrinsic.Control.If(V.DataView.dtNext!dvNextRev.RowCount, =, 0)
+	F.Data.DataView.Create("dtNext", "dvNextPart", 22, V.Local.sNextPart, "FINISH_PART DESC, JACKET_REV DESC")
+	F.Intrinsic.Control.If(V.DataView.dtNext!dvNextPart.RowCount, =, 0)
+		Gui.F_JobJacket.cmdPrevious.Enabled(False)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.cmdPrevious.Enabled(True)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.cmdPrevious.Enabled(True)
+F.Intrinsic.Control.EndIf
+
+F.Data.DataView.Close("dtNext", "dvNextRev")
+F.Data.Datatable.Close("dtNext")
+
+F.Intrinsic.String.Build("Select JJ_NO, FINISH_PART, JACKET_REV from GCG_3623_JJ_HEAD where Finish_Part >= '{0}' Order by FINISH_PART asc, JACKET_REV asc", V.Screen.F_JobJacket!txtItemNo.Text.Trim, V.Local.sSql)
+F.Data.DataTable.CreateFromSQL("dtNext", "conx", V.Local.sSql)
+
+
+F.Intrinsic.String.Build("[FINISH_PART] = '{0}' AND [JACKET_REV] > '{1}'", V.Screen.F_JobJacket!txtItemNo.Text.Trim, V.Screen.F_JobJacket!txtRevTest.Text, V.Local.sNextRev)
+F.Intrinsic.String.Build("[FINISH_PART] > '{0}'", V.Screen.F_JobJacket!txtItemNo.Text.Trim, V.Local.sNextPart) 
+
+F.Data.DataView.Create("dtNext", "dvNextRev", 22, V.Local.sNextRev, "JACKET_REV ASC")
+'If we have a row in this dataview, then the next job jacket to populate is the same part, different revision, otherwise it will be the next part, first revision we find.
+F.Intrinsic.Control.If(V.DataView.dtNext!dvNextRev.RowCount, =, 0)
+	F.Data.DataView.Create("dtNext", "dvNextPart", 22, V.Local.sNextPart, "FINISH_PART ASC, JACKET_REV ASC")
+	F.Intrinsic.Control.If(V.DataView.dtNext!dvNextPart.RowCount, =, 0)
+		Gui.F_JobJacket.cmdNext.Enabled(False)
+	F.Intrinsic.Control.Else
+		Gui.F_JobJacket.cmdNext.Enabled(True)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.cmdNext.Enabled(True)
+F.Intrinsic.Control.EndIf
+
+F.Data.DataView.Close("dtNext", "dvNextRev")
+F.Data.Datatable.Close("dtNext")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.DisableNavigation.End
+
+Program.Sub.PopCust.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+
+F.Intrinsic.Control.CallSub(OpenConnection)
+
+'This subroutine will fire from when the user tabs out of the customer number textbox. We want to grab the customer name and populate it in the customer name textbox
+F.Intrinsic.String.Build("Select TOP 1 NAME_CUSTOMER, CUSTOMER from V_CUSTOMER_MASTER where CUSTOMER = '{0}'", V.Screen.F_JobJacket!txtCustNo.Text.Trim, V.Local.sSql)
+F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql, V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet.Trim, <>, "")
+	F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+	Gui.F_JobJacket.txtCustNo.Text(V.Local.sRet(1).UCase)
+	Gui.F_JobJacket.txtCustName.Text(V.Local.sRet(0).UCase)
+F.Intrinsic.Control.Else
+	V.Local.sRet.Set(V.Screen.F_JobJacket!txtCustNo.Text.Trim)
+	Gui.F_JobJacket.txtCustNo.Text(V.Local.sRet.UCase)
+	Gui.F_JobJacket.txtCustName.Text("")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(CloseConnection)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "YES")
+F.Intrinsic.Control.EndTry
+Program.Sub.PopCust.End
+
+Program.Sub.PopBox.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sFilter.Declare(String, "")
+
+'This subroutine will fire from when the user tabs out of either Box textbox. We want to grab the Box desc and populate it in the corresponding BOX textbox
+F.Intrinsic.Control.SelectCase(V.Args.ControlName.UCase)
+	F.Intrinsic.Control.Case("TXTFINBOX1")
+		F.Intrinsic.String.Build("[PRODUCT_LINE] = 'PB' AND [PART] = '{0}' AND [LOCATION] = '{1}'", V.Screen.F_JobJacket!txtFinBox1.Text, V.Screen.F_JobJacket!txtLocation.Text, V.Local.sFilter)
+		F.Data.DataView.Create("dtMtlforTools", "dvBoxPop", 22, V.Local.sFilter, "")
+		
+		F.Intrinsic.Control.If(V.DataView.dtMtlforTools!dvBoxPop.RowCount, >, 0)
+			Gui.F_JobJacket.txtFinBox1.Text(V.DataView.dtMtlforTools!dvBoxPop(0).PART!FieldValUCRTrim)
+			Gui.F_JobJacket.txtFinBoxDesc1.Text(V.DataView.dtMtlforTools!dvBoxPop(0).DESCRIPTION!FieldValUCRTrim)
+		F.Intrinsic.Control.Else
+			Gui.F_JobJacket.txtFinBox1.Text(V.Screen.F_JobJacket!txtFinBox1.Text.Ucase)
+			Gui.F_JobJacket.txtFinBoxDesc1.Text("")
+		F.Intrinsic.Control.EndIf
+		
+		F.Data.DataView.Close("dtMtlforTools", "dvBoxPop")
+		
+	F.Intrinsic.Control.Case("TXTFINBOX2")
+		F.Intrinsic.String.Build("[PRODUCT_LINE] = 'PB' AND [PART] = '{0}' AND [LOCATION] = '{1}'", V.Screen.F_JobJacket!txtFinBox2.Text, V.Screen.F_JobJacket!txtLocation.Text, V.Local.sFilter)
+		F.Data.DataView.Create("dtMtlforTools", "dvBoxPop", 22, V.Local.sFilter, "")
+		
+		F.Intrinsic.Control.If(V.DataView.dtMtlforTools!dvBoxPop.RowCount, >, 0)
+			Gui.F_JobJacket.txtFinBox2.Text(V.DataView.dtMtlforTools!dvBoxPop(0).PART!FieldValUCRTrim)
+			Gui.F_JobJacket.txtFinBoxDesc2.Text(V.DataView.dtMtlforTools!dvBoxPop(0).DESCRIPTION!FieldValUCRTrim)
+		F.Intrinsic.Control.Else
+			Gui.F_JobJacket.txtFinBox2.Text(V.Screen.F_JobJacket!txtFinBox2.Text.Ucase)
+			Gui.F_JobJacket.txtFinBoxDesc2.Text("")
+		F.Intrinsic.Control.EndIf
+		
+		F.Data.DataView.Close("dtMtlforTools", "dvBoxPop")
+		
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.PopBox.End
+
+Program.Sub.PopCore.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sFilter.Declare(String, "")
+
+F.Intrinsic.String.Build("[PRODUCT_LINE] = 'PC' AND [PART] = '{0}' AND [LOCATION] = '{1}'", V.Screen.F_JobJacket!txtFinCore.Text, V.Screen.F_JobJacket!txtLocation.Text, V.Local.sFilter)
+F.Data.DataView.Create("dtMtlforTools", "dvCorePop", 22, V.Local.sFilter, "")
+
+F.Intrinsic.Control.If(V.DataView.dtMtlforTools!dvCorePop.RowCount, >, 0)
+	Gui.F_JobJacket.txtFinCore.Text(V.DataView.dtMtlforTools!dvCorePop(0).PART!FieldValUCRTrim)
+	Gui.F_JobJacket.txtFinCoreDesc.Text(V.DataView.dtMtlforTools!dvCorePop(0).DESCRIPTION!FieldValUCRTrim)
+F.Intrinsic.Control.Else
+	Gui.F_JobJacket.txtFinCore.Text(V.Screen.F_JobJacket!txtFinCore.Text.Ucase)
+	Gui.F_JobJacket.txtFinCoreDesc.Text("")
+F.Intrinsic.Control.EndIf
+
+F.Data.DataView.Close("dtMtlforTools", "dvCorePop")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.PopCore.End
+
+Program.Sub.BrowWC.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+
+'This can be fired from two different places, either the Workcenter browser in the Press tab or the Workcenter browser on the Finishing tab.
+F.Intrinsic.UI.Browser(400,"",v.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet, <>, "***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+	F.Intrinsic.Control.SelectCase(V.Args.ControlName.UCase)
+		F.Intrinsic.Control.Case("CMDPRESSPRESS")
+			Gui.F_JobJacket.txtPress.Text(V.Local.sRet.UCase)
+		F.Intrinsic.Control.Case("CMDFINTABLET")
+			Gui.F_JobJacket.txtFinTableTop.Text(V.Local.sRet.UCase)
+	F.Intrinsic.Control.EndSelect
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.BrowWC.End
+
+Program.Sub.CounterCalc.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.iCounter.Declare(Long, 0)
+V.Local.fCounter.Declare(Float, 0.00)
+V.Local.fNumerator.Declare(Float, 0.00)
+V.Local.fDenominator.Declare(Float, 0.00)
+
+'This will fire when teh user tabs out of the counter textbox of the finishing tab. It will perform teh appropriate calculations and override the value of the Counter textbox
+F.Intrinsic.Control.SelectCase(V.Args.ControlName.UCase)
+	F.Intrinsic.Control.Case("TXTFINCOUNTER")
+		'The Counter textbox needs to be calculated. For the Finishing, itll be Repeat (from header) * Labels/roll (Finishing/rewind)
+		'Header>Repeat (multiplied by) Finishing>Rewind>Labels/Roll (divided by) Finishing>Finished/Acr (divided by) 10 ? round off result to nearest whole number.
+		F.Intrinsic.Math.Mult(V.Screen.F_JobJacket!txtRepeat.Text.Float, V.Screen.F_JobJacket!txtFinLabelroll.Text.Float, V.Local.fNumerator)
+		F.Intrinsic.Math.Mult(V.Screen.F_JobJacket!txtFinFinAcr.Text.Float, 10, V.Local.fDenominator)
+		F.Intrinsic.Control.If(V.Local.fDenominator, <>, 0)
+			F.Intrinsic.Math.Div(V.Local.fNumerator, V.Local.fDenominator, V.Local.fCounter)
+			F.Intrinsic.Math.Ceiling(V.Local.fCounter, V.Local.iCounter)
+			Gui.F_JobJacket.txtFinCounter.Text(V.Local.iCounter)
+		F.Intrinsic.Control.Else
+			Gui.F_JobJacket.txtFinCounter.Text(0)
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Case("TXTFINFANCOUNTER")
+		'The Counter textbox needs to be calculated. For the Fanfold section, itll be Lbls/Stack (Finishing/fanfold) / Finished/ACR (Finish)
+		'Header>Repeat (multiplied by) Finishing>Fanfold>Lbls/Stack (divided by) Fanfold > Finish Across (divided by) 10 ? round off result to nearest whole number.
+		F.Intrinsic.Math.Mult(V.Screen.F_JobJacket!txtRepeat.Text.Float, V.Screen.F_JobJacket!txtFinlbsStack.Text.Float, V.Local.fNumerator)
+		F.Intrinsic.Math.Mult(V.Screen.F_JobJacket!txtFinFanFinAcr.Text.Float, 10, V.Local.fDenominator)
+		F.Intrinsic.Control.If(V.Local.fDenominator, <>, 0)
+			F.Intrinsic.Math.Div(V.Local.fNumerator, V.Local.fDenominator, V.Local.fCounter)
+			F.Intrinsic.Math.Ceiling(V.Local.fCounter, V.Local.iCounter)
+			Gui.F_JobJacket.txtFinFanCounter.Text(V.Local.iCounter)		
+		F.Intrinsic.Control.Else
+			Gui.F_JobJacket.txtFinFanCounter.Text(0)
+		F.Intrinsic.Control.EndIf
+		
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.CounterCalc.End
+
+Program.Sub.RefreshRouter.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sRouter.Declare(String, "")
+V.Local.sRev.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.sSql.Declare(String, "")
+
+'This subroutine will run whenever the user clicks on the refresh button. We are going to be grabbing the router number and router rev and location and re-populate all the router information
+V.Local.sRouter.Set(V.Screen.F_JobJacket!txtRouter.Text)
+V.Local.sRev.Set(V.Screen.F_JobJacket!txtRouterRev.Text)
+
+F.Intrinsic.String.Left(V.Screen.F_JobJacket!txtRouter.Text, 17, V.Local.sRouter)
+F.Intrinsic.String.RPad(V.Local.sRouter, " ", 17, V.Local.sRouter)
+
+F.Intrinsic.String.Left(V.Screen.F_JobJacket!txtRouterRev.Text, 3, V.Local.sRev)
+F.Intrinsic.String.RPad(V.Local.sRev, " ", 3, V.Local.sRev)
+
+F.Intrinsic.String.Build("{0}{1}", V.Local.sRouter, V.Local.sRev, V.Local.sRouter)
+
+'F.Global.Inventory.GetGSSRouter(V.Screen.F_JobJacket!txtRouter.Text, V.Screen.F_JobJacket!txtRouterRev.Text, V.Local.sRouter)
+
+F.Intrinsic.Control.If(V.Local.sRouter.Trim, <>, "")
+	
+	F.Intrinsic.Control.CallSub(OpenConnection)
+	
+	F.Intrinsic.String.Build("SELECT Top 1 ROUTER, ROUTER_SUFFIX, DESCRIPTION_ROUTER from V_ROUTER_HEADER Where ROUTER = '{0}'", V.Local.sRouter, V.Local.sSql)
+	F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql, V.Local.sRet)
+	
+	F.Intrinsic.Control.If(V.Local.sRet.Trim, <>, "")
+		F.Intrinsic.Control.CallSub(PopulateRTFields, "RouterRev", V.Local.sRet)
+	F.Intrinsic.Control.Else
+'		F.Intrinsic.UI.Msgbox("Router was not found in database", "ROUTER LOADING ERROR")
+'		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.CallSub(CloseConnection)
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.RefreshRouter.End
+
+Program.Sub.PrintJob.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare(String, "")
+V.Local.sRet.Declare(String, "")
+V.Local.iReptID.Declare(Long, 0)
+V.Local.iBIRunID.Declare(Long, 0)
+V.Local.iLogID.Declare(Long, 0)
+
+F.Intrinsic.Control.CallSub(SaveFullJacket)
+
+'The Job Jacket number is stored in V.Global.sJobJacket. We can call the report and pass it the parameter
+
+F.Global.BI.GetRunID(V.Local.iBIRunID)
+
+F.Global.BI.GetIDFromName("GCG_3623_JobJacket2019.rpt",V.Local.iReptID)
+
+F.Global.BI.StartLogging(V.Local.iBIRunID,V.Local.iReptID,0,"",V.Local.iLogID)
+
+F.Global.BI.StopLogging(V.Local.iBIRunID)
+
+F.Global.BI.RunReportPreProcessor(V.Local.iBIRunID, V.Local.iLogID, "JJ_NO", V.Global.sJJNo, "", -1, False, "", -1, "", -1, "", "", V.Local.sRet)
+'F.Global.BI.RunReportPreProcessor(V.Local.iReptID, -1, "JJ_NO", V.Global.sJJNo, "", -1, False, "", -1, "", -1, "", "", V.Local.iLogID)
+
+'F.Global.BI.PrintReport(V.Local.iReptID, 0, "JJ_NO", V.Global.sJJNo.Long, False)
+
+'F.Global.BI.StopLogging(V.Local.iBIRunID)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload, "Connection", "NO")
+F.Intrinsic.Control.EndTry
+Program.Sub.PrintJob.End
