@@ -1,0 +1,2256 @@
+Program.Sub.ScreenSU.Start
+Gui.F_Job_Jacket..Create
+Gui.F_Job_Jacket..Caption("Job Jacket")
+Gui.F_Job_Jacket..Size(14535,11595)
+Gui.F_Job_Jacket..MinX(0)
+Gui.F_Job_Jacket..MinY(0)
+Gui.F_Job_Jacket..Position(0,0)
+Gui.F_Job_Jacket..BackColor(-2147483633)
+Gui.F_Job_Jacket..MousePointer(0)
+Gui.F_Job_Jacket..Event(UnLoad,F_Job_Jacket_UnLoad)
+Gui.F_Job_Jacket.tab1.Create(Tab)
+Gui.F_Job_Jacket.tab1.Size(14130,10230)
+Gui.F_Job_Jacket.tab1.Position(150,165)
+Gui.F_Job_Jacket.tab1.DefaultValue("0")
+Gui.F_Job_Jacket.tab1.Tabs(2)
+Gui.F_Job_Jacket.tab1.SetTab(0)
+Gui.F_Job_Jacket.tab1.Caption("Basic Info")
+Gui.F_Job_Jacket.tab1.SetTab(1)
+Gui.F_Job_Jacket.tab1.Caption("Part")
+Gui.F_Job_Jacket.lbl1.Create(Label,"Finished Part",True,1725,255,0,195,195,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl1.Parent("tab1",0)
+Gui.F_Job_Jacket.txtFINISHPART.Create(TextBox,"",True,1770,300,0,195,405,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtFINISHPART.Parent("tab1",0)
+Gui.F_Job_Jacket.txtFINISHPART.ControlGroup(1)
+Gui.F_Job_Jacket.txtFINISHPART.DefaultValue("")
+Gui.F_Job_Jacket.txtFINISHPART.MaxLength(20)
+Gui.F_Job_Jacket.cmdFinishPartBrow.Create(Button)
+Gui.F_Job_Jacket.cmdFinishPartBrow.Size(495,375)
+Gui.F_Job_Jacket.cmdFinishPartBrow.Position(2625,390)
+Gui.F_Job_Jacket.cmdFinishPartBrow.Parent("tab1",0)
+Gui.F_Job_Jacket.cmdFinishPartBrow.Caption("^")
+Gui.F_Job_Jacket.cmdFinishPartBrow.Event(Click,cmdFinishPartBrow_Click)
+Gui.F_Job_Jacket.lbl2.Create(Label,"Quote/Estimate No",True,1935,255,0,195,915,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl2.Parent("tab1",0)
+Gui.F_Job_Jacket.txtQuote.Create(TextBox,"",True,1215,300,0,195,1125,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtQuote.Parent("tab1",0)
+Gui.F_Job_Jacket.txtQuote.ControlGroup(2)
+Gui.F_Job_Jacket.txtQuote.DefaultValue("")
+Gui.F_Job_Jacket.lbl3.Create(Label,"Loc",True,465,255,0,2070,195,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl3.Parent("tab1",0)
+Gui.F_Job_Jacket.txtFINISHLOC.Create(TextBox,"",True,420,300,0,2070,405,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtFINISHLOC.Parent("tab1",0)
+Gui.F_Job_Jacket.txtFINISHLOC.ControlGroup(1)
+Gui.F_Job_Jacket.txtFINISHLOC.DefaultValue("")
+Gui.F_Job_Jacket.txtFINISHLOC.MaxLength(2)
+Gui.F_Job_Jacket.lbl4.Create(Label,"Description",True,1935,255,0,3345,195,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl4.Parent("tab1",0)
+Gui.F_Job_Jacket.txtFinishDesc.Create(TextBox,"",True,2625,300,0,3345,405,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtFinishDesc.Parent("tab1",0)
+Gui.F_Job_Jacket.txtFinishDesc.ControlGroup(1)
+Gui.F_Job_Jacket.txtFinishDesc.DefaultValue("")
+Gui.F_Job_Jacket.txtFinishDesc.MaxLength(30)
+Gui.F_Job_Jacket.cmdQuoteBrow.Create(Button)
+Gui.F_Job_Jacket.cmdQuoteBrow.Size(510,375)
+Gui.F_Job_Jacket.cmdQuoteBrow.Position(1515,1110)
+Gui.F_Job_Jacket.cmdQuoteBrow.Parent("tab1",0)
+Gui.F_Job_Jacket.cmdQuoteBrow.Caption("^")
+Gui.F_Job_Jacket.cmdQuoteBrow.Event(Click,cmdQuoteBrow_Click)
+Gui.F_Job_Jacket.lbl5.Create(Label,"Estimate Notes",True,1935,255,0,6075,915,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl5.Parent("tab1",0)
+Gui.F_Job_Jacket.lbl6.Create(Label,"Width",True,765,255,0,195,1635,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl6.Parent("tab1",0)
+Gui.F_Job_Jacket.txtWidth.Create(TextBox,"",True,1215,300,0,195,1845,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtWidth.Parent("tab1",0)
+Gui.F_Job_Jacket.txtWidth.ControlGroup(2)
+Gui.F_Job_Jacket.txtWidth.DefaultValue("")
+Gui.F_Job_Jacket.txtWidth.NumericOnly(True)
+Gui.F_Job_Jacket.lbl7.Create(Label,"Gap Across",True,1170,255,0,1545,1635,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl7.Parent("tab1",0)
+Gui.F_Job_Jacket.txtGapAcross.Create(TextBox,"",True,1215,300,0,1590,1845,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtGapAcross.Parent("tab1",0)
+Gui.F_Job_Jacket.txtGapAcross.ControlGroup(2)
+Gui.F_Job_Jacket.txtGapAcross.DefaultValue("")
+Gui.F_Job_Jacket.txtGapAcross.NumericOnly(True)
+Gui.F_Job_Jacket.lbl8.Create(Label,"# Acr Die",True,1185,255,0,2970,1635,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl8.Parent("tab1",0)
+Gui.F_Job_Jacket.txtACRDie.Create(TextBox,"",True,1215,300,0,2970,1845,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtACRDie.Parent("tab1",0)
+Gui.F_Job_Jacket.txtACRDie.ControlGroup(2)
+Gui.F_Job_Jacket.txtACRDie.DefaultValue("")
+Gui.F_Job_Jacket.txtACRDie.NumericOnly(True)
+Gui.F_Job_Jacket.lbl9.Create(Label,"Length",True,1035,255,0,195,2355,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl9.Parent("tab1",0)
+Gui.F_Job_Jacket.txtLength.Create(TextBox,"",True,1215,300,0,195,2565,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtLength.Parent("tab1",0)
+Gui.F_Job_Jacket.txtLength.ControlGroup(2)
+Gui.F_Job_Jacket.txtLength.DefaultValue("")
+Gui.F_Job_Jacket.txtLength.NumericOnly(True)
+Gui.F_Job_Jacket.lbl10.Create(Label,"Gap Down",True,1155,255,0,1545,2355,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl10.Parent("tab1",0)
+Gui.F_Job_Jacket.txtGAPDown.Create(TextBox,"",True,1215,300,0,1545,2565,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtGAPDown.Parent("tab1",0)
+Gui.F_Job_Jacket.txtGAPDown.ControlGroup(2)
+Gui.F_Job_Jacket.txtGAPDown.DefaultValue("")
+Gui.F_Job_Jacket.txtGAPDown.NumericOnly(True)
+Gui.F_Job_Jacket.lbl11.Create(Label,"# Acr Press",True,1065,255,0,2970,2355,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl11.Parent("tab1",0)
+Gui.F_Job_Jacket.txtAcrPress.Create(TextBox,"",True,1215,300,0,2970,2565,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtAcrPress.Parent("tab1",0)
+Gui.F_Job_Jacket.txtAcrPress.ControlGroup(2)
+Gui.F_Job_Jacket.txtAcrPress.DefaultValue("")
+Gui.F_Job_Jacket.txtAcrPress.NumericOnly(True)
+Gui.F_Job_Jacket.lbl12.Create(Label,"#Acr Fin",True,1170,255,0,195,3045,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl12.Parent("tab1",0)
+Gui.F_Job_Jacket.txtAcrFin.Create(TextBox,"",True,1215,300,0,195,3255,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtAcrFin.Parent("tab1",0)
+Gui.F_Job_Jacket.txtAcrFin.ControlGroup(2)
+Gui.F_Job_Jacket.txtAcrFin.DefaultValue("")
+Gui.F_Job_Jacket.txtAcrFin.NumericOnly(True)
+Gui.F_Job_Jacket.lbl13.Create(Label,"Repeat",True,945,255,0,1545,3045,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl13.Parent("tab1",0)
+Gui.F_Job_Jacket.txtRepeat.Create(TextBox,"",True,1215,300,0,1545,3255,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtRepeat.Parent("tab1",0)
+Gui.F_Job_Jacket.txtRepeat.ControlGroup(2)
+Gui.F_Job_Jacket.txtRepeat.DefaultValue("")
+Gui.F_Job_Jacket.txtRepeat.NumericOnly(True)
+Gui.F_Job_Jacket.lbl14.Create(Label,"Perf @",True,1125,255,0,2970,3045,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl14.Parent("tab1",0)
+Gui.F_Job_Jacket.txtPerfAt.Create(TextBox,"",True,1215,300,0,2970,3255,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtPerfAt.Parent("tab1",0)
+Gui.F_Job_Jacket.txtPerfAt.ControlGroup(2)
+Gui.F_Job_Jacket.txtPerfAt.DefaultValue("")
+Gui.F_Job_Jacket.lbl15.Create(Label,"Fin Carrier Width",True,1485,255,0,195,3720,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl15.Parent("tab1",0)
+Gui.F_Job_Jacket.txtFinCarrierWidth.Create(TextBox,"",True,1215,300,0,195,3930,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtFinCarrierWidth.Parent("tab1",0)
+Gui.F_Job_Jacket.txtFinCarrierWidth.ControlGroup(2)
+Gui.F_Job_Jacket.txtFinCarrierWidth.DefaultValue("")
+Gui.F_Job_Jacket.txtFinCarrierWidth.NumericOnly(True)
+Gui.F_Job_Jacket.lbl16.Create(Label,"Web Width",True,1935,255,0,1545,3720,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl16.Parent("tab1",0)
+Gui.F_Job_Jacket.txtWebWidth.Create(TextBox,"",True,1215,300,0,1545,3930,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtWebWidth.Parent("tab1",0)
+Gui.F_Job_Jacket.txtWebWidth.ControlGroup(2)
+Gui.F_Job_Jacket.txtWebWidth.DefaultValue("")
+Gui.F_Job_Jacket.txtWebWidth.NumericOnly(True)
+Gui.F_Job_Jacket.lbl17.Create(Label,"Shape",True,1185,255,0,195,4395,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl17.Parent("tab1",0)
+Gui.F_Job_Jacket.lbl18.Create(Label,"UM",True,1200,255,0,1545,4395,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl18.Parent("tab1",0)
+Gui.F_Job_Jacket.lbl19.Create(Label,"%Ovrs/Undr",True,1200,255,0,2970,4395,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl19.Parent("tab1",0)
+Gui.F_Job_Jacket.txtOvrUndr.Create(TextBox,"",True,1215,300,0,2970,4605,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtOvrUndr.Parent("tab1",0)
+Gui.F_Job_Jacket.txtOvrUndr.ControlGroup(2)
+Gui.F_Job_Jacket.txtOvrUndr.DefaultValue("")
+Gui.F_Job_Jacket.txtOvrUndr.NumericOnly(True)
+Gui.F_Job_Jacket.lbl20.Create(Label,"Special Perf",True,1305,255,0,195,5145,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl20.Parent("tab1",0)
+Gui.F_Job_Jacket.txtSpecialPerf.Create(TextBox,"",True,1215,300,0,195,5355,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtSpecialPerf.Parent("tab1",0)
+Gui.F_Job_Jacket.txtSpecialPerf.ControlGroup(2)
+Gui.F_Job_Jacket.txtSpecialPerf.DefaultValue("")
+Gui.F_Job_Jacket.chkAirEject.Create(CheckBox)
+Gui.F_Job_Jacket.chkAirEject.Size(1560,360)
+Gui.F_Job_Jacket.chkAirEject.Position(195,5805)
+Gui.F_Job_Jacket.chkAirEject.Parent("tab1",0)
+Gui.F_Job_Jacket.chkAirEject.Caption("Air Eject")
+Gui.F_Job_Jacket.chkAirEject.DefaultValue("")
+Gui.F_Job_Jacket.chkAirEject.ControlGroup(0)
+Gui.F_Job_Jacket.chkSheeted.Create(CheckBox)
+Gui.F_Job_Jacket.chkSheeted.Size(1095,360)
+Gui.F_Job_Jacket.chkSheeted.Position(195,6225)
+Gui.F_Job_Jacket.chkSheeted.Parent("tab1",0)
+Gui.F_Job_Jacket.chkSheeted.Caption("Sheeted")
+Gui.F_Job_Jacket.lbl21.Create(Label,"At",True,480,255,0,1515,6285,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl21.Parent("tab1",0)
+Gui.F_Job_Jacket.txtSheetedAt.Create(TextBox,"",True,855,300,0,1920,6225,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtSheetedAt.Parent("tab1",0)
+Gui.F_Job_Jacket.txtSheetedAt.ControlGroup(2)
+Gui.F_Job_Jacket.txtSheetedAt.DefaultValue("")
+Gui.F_Job_Jacket.chkPinFeed.Create(CheckBox)
+Gui.F_Job_Jacket.chkPinFeed.Size(1560,360)
+Gui.F_Job_Jacket.chkPinFeed.Position(195,6660)
+Gui.F_Job_Jacket.chkPinFeed.Parent("tab1",0)
+Gui.F_Job_Jacket.chkPinFeed.Caption("PinFeed")
+Gui.F_Job_Jacket.chkBackCut.Create(CheckBox)
+Gui.F_Job_Jacket.chkBackCut.Size(1140,360)
+Gui.F_Job_Jacket.chkBackCut.Position(2970,5805)
+Gui.F_Job_Jacket.chkBackCut.Parent("tab1",0)
+Gui.F_Job_Jacket.chkBackCut.Caption("Back cut")
+Gui.F_Job_Jacket.lbl22.Create(Label,"Description",True,1065,255,0,4410,5880,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl22.Parent("tab1",0)
+Gui.F_Job_Jacket.txtBackCutDesc.Create(TextBox,"",True,2985,300,0,5700,5805,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtBackCutDesc.Parent("tab1",0)
+Gui.F_Job_Jacket.txtBackCutDesc.DefaultValue("")
+Gui.F_Job_Jacket.txtBackCutDesc.ControlGroup(2)
+Gui.F_Job_Jacket.chkFaceCut.Create(CheckBox)
+Gui.F_Job_Jacket.chkFaceCut.Size(1200,360)
+Gui.F_Job_Jacket.chkFaceCut.Position(2970,6225)
+Gui.F_Job_Jacket.chkFaceCut.Parent("tab1",0)
+Gui.F_Job_Jacket.chkFaceCut.Caption("Face cut")
+Gui.F_Job_Jacket.lbl23.Create(Label,"Description",True,1155,255,0,4410,6300,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl23.Parent("tab1",0)
+Gui.F_Job_Jacket.txtFaceCutDesc.Create(TextBox,"",True,3045,300,0,5700,6225,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtFaceCutDesc.Parent("tab1",0)
+Gui.F_Job_Jacket.txtFaceCutDesc.ControlGroup(2)
+Gui.F_Job_Jacket.txtFaceCutDesc.DefaultValue("")
+Gui.F_Job_Jacket.chkVacuum.Create(CheckBox)
+Gui.F_Job_Jacket.chkVacuum.Size(1065,360)
+Gui.F_Job_Jacket.chkVacuum.Position(2970,6660)
+Gui.F_Job_Jacket.chkVacuum.Parent("tab1",0)
+Gui.F_Job_Jacket.chkVacuum.Caption("Vacuum")
+Gui.F_Job_Jacket.chkAutoApply.Create(CheckBox)
+Gui.F_Job_Jacket.chkAutoApply.Size(1335,360)
+Gui.F_Job_Jacket.chkAutoApply.Position(4410,6660)
+Gui.F_Job_Jacket.chkAutoApply.Parent("tab1",0)
+Gui.F_Job_Jacket.chkAutoApply.Caption("Auto Apply")
+Gui.F_Job_Jacket.GsGridControl1.Create(GsGridControl)
+Gui.F_Job_Jacket.GsGridControl1.Size(13635,9000)
+Gui.F_Job_Jacket.GsGridControl1.Position(195,195)
+Gui.F_Job_Jacket.GsGridControl1.Parent("tab1",1)
+Gui.F_Job_Jacket.GsGridControl1.Event(RowCellClick,GsGridControl1_RowCellClick)
+Gui.F_Job_Jacket.GsGridControl1.Event(CellValueChanged,GsGridControl1_CellValueChanged)
+Gui.F_Job_Jacket.cmdAddDie.Create(Button)
+Gui.F_Job_Jacket.cmdAddDie.Size(1125,375)
+Gui.F_Job_Jacket.cmdAddDie.Position(195,9270)
+Gui.F_Job_Jacket.cmdAddDie.Parent("tab1",1)
+Gui.F_Job_Jacket.cmdAddDie.Caption("Add Die")
+Gui.F_Job_Jacket.cmdAddDie.Event(Click,cmdAddDie_Click)
+Gui.F_Job_Jacket.cmdAddMat.Create(Button)
+Gui.F_Job_Jacket.cmdAddMat.Size(1125,375)
+Gui.F_Job_Jacket.cmdAddMat.Position(1485,9270)
+Gui.F_Job_Jacket.cmdAddMat.Parent("tab1",1)
+Gui.F_Job_Jacket.cmdAddMat.Caption("Add Material")
+Gui.F_Job_Jacket.cmdAddMat.Event(Click,cmdAddMat_Click)
+Gui.F_Job_Jacket.cmdAddInk.Create(Button)
+Gui.F_Job_Jacket.cmdAddInk.Size(1125,375)
+Gui.F_Job_Jacket.cmdAddInk.Position(2775,9270)
+Gui.F_Job_Jacket.cmdAddInk.Parent("tab1",1)
+Gui.F_Job_Jacket.cmdAddInk.Caption("Add Ink")
+Gui.F_Job_Jacket.cmdAddInk.Event(Click,cmdAddInk_Click)
+Gui.F_Job_Jacket.cmdAddLabel.Create(Button)
+Gui.F_Job_Jacket.cmdAddLabel.Size(1125,375)
+Gui.F_Job_Jacket.cmdAddLabel.Position(4065,9270)
+Gui.F_Job_Jacket.cmdAddLabel.Parent("tab1",1)
+Gui.F_Job_Jacket.cmdAddLabel.Caption("Add Label")
+Gui.F_Job_Jacket.cmdAddLabel.Event(Click,cmdAddLabel_Click)
+Gui.F_Job_Jacket.mltEstNotes.Create(TextboxM)
+Gui.F_Job_Jacket.mltEstNotes.Size(3870,2055)
+Gui.F_Job_Jacket.mltEstNotes.Position(6075,1140)
+Gui.F_Job_Jacket.mltEstNotes.Parent("tab1",0)
+Gui.F_Job_Jacket.mltEstNotes.ControlGroup(2)
+Gui.F_Job_Jacket.mltEstNotes.DefaultValue("")
+Gui.F_Job_Jacket.mltEstNotes.MaxLength(500)
+Gui.F_Job_Jacket.cmdAddFinish.Create(Button)
+Gui.F_Job_Jacket.cmdAddFinish.Size(1125,375)
+Gui.F_Job_Jacket.cmdAddFinish.Position(5355,9270)
+Gui.F_Job_Jacket.cmdAddFinish.Parent("tab1",1)
+Gui.F_Job_Jacket.cmdAddFinish.Caption("Add Finish")
+Gui.F_Job_Jacket.cmdAddFinish.Event(Click,cmdAddFinish_Click)
+Gui.F_Job_Jacket.lbl24.Create(Label,"Customer",True,1125,255,0,2445,915,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl24.Parent("tab1",0)
+Gui.F_Job_Jacket.txtCustomer.Create(TextBox,"",True,1215,300,0,2445,1125,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtCustomer.Parent("tab1",0)
+Gui.F_Job_Jacket.txtCustomer.ControlGroup(2)
+Gui.F_Job_Jacket.txtCustomer.DefaultValue("")
+Gui.F_Job_Jacket.txtCustomer.MaxLength(30)
+Gui.F_Job_Jacket.lbl25.Create(Label,"TPI",True,1140,255,0,195,7140,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl25.Parent("tab1",0)
+Gui.F_Job_Jacket.txtTPI.Create(TextBox,"",True,1215,300,0,195,7350,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtTPI.Parent("tab1",0)
+Gui.F_Job_Jacket.txtTPI.ControlGroup(2)
+Gui.F_Job_Jacket.txtTPI.DefaultValue("")
+Gui.F_Job_Jacket.lbl26.Create(Label,"BTC",True,1185,255,0,2970,7140,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl26.Parent("tab1",0)
+Gui.F_Job_Jacket.txtBTC.Create(TextBox,"",True,1215,300,0,2970,7350,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtBTC.Parent("tab1",0)
+Gui.F_Job_Jacket.txtBTC.ControlGroup(2)
+Gui.F_Job_Jacket.txtBTC.DefaultValue("")
+Gui.F_Job_Jacket.lbl27.Create(Label,"Turret",True,1230,255,0,1545,7140,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl27.Parent("tab1",0)
+Gui.F_Job_Jacket.txtTurret.Create(TextBox,"",True,1215,300,0,1545,7350,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtTurret.Parent("tab1",0)
+Gui.F_Job_Jacket.txtTurret.ControlGroup(2)
+Gui.F_Job_Jacket.txtTurret.DefaultValue("")
+Gui.F_Job_Jacket.lbl28.Create(Label,"BTC Setting",True,1245,255,0,4410,7140,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl28.Parent("tab1",0)
+Gui.F_Job_Jacket.txtBTCSetting.Create(TextBox,"",True,1215,300,0,4410,7350,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtBTCSetting.Parent("tab1",0)
+Gui.F_Job_Jacket.txtBTCSetting.ControlGroup(2)
+Gui.F_Job_Jacket.txtBTCSetting.DefaultValue("")
+Gui.F_Job_Jacket.cboShape.Create(ComboBox)
+Gui.F_Job_Jacket.cboShape.Size(1095,330)
+Gui.F_Job_Jacket.cboShape.Position(195,4605)
+Gui.F_Job_Jacket.cboShape.Parent("tab1",0)
+Gui.F_Job_Jacket.cboUM.Create(ComboBox)
+Gui.F_Job_Jacket.cboUM.Size(1095,330)
+Gui.F_Job_Jacket.cboUM.Position(1545,4605)
+Gui.F_Job_Jacket.cboUM.Parent("tab1",0)
+Gui.F_Job_Jacket.lbl29.Create(Label,"Rev",True,600,255,0,3990,915,True,0,"Arial",8,-986896,0)
+Gui.F_Job_Jacket.lbl29.Parent("tab1",0)
+Gui.F_Job_Jacket.txtFinish_Rev.Create(TextBox,"",True,900,300,0,3990,1125,True,0,"Arial",8,-2147483643,1)
+Gui.F_Job_Jacket.txtFinish_Rev.Parent("tab1",0)
+Gui.F_Job_Jacket.txtFinish_Rev.ControlGroup(1)
+Gui.F_Job_Jacket.txtFinish_Rev.DefaultValue("")
+Gui.F_Job_Jacket.txtFinish_Rev.MaxLength(3)
+Gui.F_Job_Jacket.cmdDeleteFinish.Create(Button)
+Gui.F_Job_Jacket.cmdDeleteFinish.Enabled(False)
+Gui.F_Job_Jacket.cmdDeleteFinish.Size(1125,375)
+Gui.F_Job_Jacket.cmdDeleteFinish.Position(6645,9270)
+Gui.F_Job_Jacket.cmdDeleteFinish.Parent("tab1",1)
+Gui.F_Job_Jacket.cmdDeleteFinish.Caption("Del Finish")
+Gui.F_Job_Jacket.cmdDeleteFinish.Event(Click,cmdDeleteFinish_Click)
+Gui.F_Job_Jacket.cmdPrint.Create(Button)
+Gui.F_Job_Jacket.cmdPrint.Size(855,375)
+Gui.F_Job_Jacket.cmdPrint.Position(195,10635)
+Gui.F_Job_Jacket.cmdPrint.Caption("Print")
+Gui.F_Job_Jacket.cmdPrint.Event(Click,cmdPrint_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.Global.iFinish.Declare(Long,1)
+
+Variable.Global.iInk.Declare(Long,1)
+Variable.Global.sFinish.Declare(String)
+Variable.Global.iRelation.Declare(Long,29)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+f.ODBC.Connection!Con.OpenConnection(v.Ambient.PDSN,v.Ambient.PUser,v.Ambient.PPass)
+
+Gui.F_Job_Jacket.tab1.SetTab(0)
+'Create Shape and UM Dictionarys
+f.Data.Dictionary.CreateFromSQL("Shape","Con","Select distinct Shape, Shape from GCG_3623_INVENTORY where SHAPE <> ''",4)
+Gui.F_Job_Jacket.cboShape.AddAutoCompleteItem("Shape",Dictionary)
+f.Data.Dictionary.CreateFromSQL("UM","Con","Select distinct UM_INVENTORY, UM_INVENTORY from V_INVENTORY_MSTR where UM_INVENTORY <> '' ",4)
+Gui.F_Job_Jacket.cboUM.AddAutoCompleteItem("UM",Dictionary)
+
+'Populate Shape and UM ddls
+Gui.F_Job_Jacket.cboShape.AddItem("")
+Gui.F_Job_Jacket.cboUM.AddItem("")
+Gui.F_Job_Jacket.cboShape.AddItems("Dictionary","Shape")
+Gui.F_Job_Jacket.cboUM.AddItems("Dictionary","UM")
+
+f.Intrinsic.Control.CallSub(freshgrid,"Type","Jacket")
+
+Gui.F_Job_Jacket..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_JOB_JACKET.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Main.End
+
+Program.Sub.F_Job_Jacket_UnLoad.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+f.ODBC.Connection!Con.Close
+f.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_JOB_JACKET.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+Program.Sub.F_Job_Jacket_UnLoad.End
+
+Program.Sub.cmdAddDie_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Add a row to Die this will be in the Tooling table
+f.Data.DataTable.AddRow("Header$Tooling$Die","Type","Die","Sort_Code","DIE","Section","Tooling")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_JOB_JACKET.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(f_job_jacket_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdAddDie_Click.End
+
+Program.Sub.cmdAddMat_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdAddDie_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'Add a row to Material this will be in the RawMat table
+f.Data.DataTable.AddRow("Header$Raw","Type","Raw","Sort_Code","RAW","Section","Raw Material")
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdAddDie_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_JOB_JACKET.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(f_job_jacket_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdAddMat_Click.End
+
+Program.Sub.cmdAddInk_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdAddMat_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Add a row to Ink this will be in the Ink table
+f.Data.DataTable.AddRow("Header$InkHead$Ink","Type","Ink","Row_Num",v.Global.iInk)'add next row number here! dont forgetl;kasdjfl;kasjd;lfjasdl;fkjasdfjadsfjl;kdsfjfjfjldskfjkldsfjdsl;kfjadsl;kfjadskl;fjkldsfj;kdsjfkldsfj
+f.Intrinsic.Math.Add(v.Global.iInk,1,v.Global.iInk)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdAddMat_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_JOB_JACKET.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(f_job_jacket_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdAddInk_Click.End
+
+Program.Sub.cmdAddLabel_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdAddMisc_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Add a row to Label this will be in the Label table
+f.Data.DataTable.AddRow("Header$Labels","Type","Labels")
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdAddMisc_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_JOB_JACKET.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(f_job_jacket_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdAddLabel_Click.End
+
+Program.Sub.cmdPrint_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdAddInk_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(string)
+v.Local.sHold.Declare(string)
+v.Local.iCount.Declare(long)
+v.Local.iBool.Declare(Long)
+v.Local.iFinish.Declare(long)
+v.Local.sTable.Declare(string)
+v.Local.iPos.Declare(long)
+v.Local.iRewind.Declare(long)
+v.Local.iFanFold.Declare(long)
+v.Local.iSheeted.Declare(long)
+v.Local.sParam.Declare(string)
+v.Local.sValue.Declare(string)
+v.Local.sFinishNum.Declare(string)
+v.Local.sColumns.Declare(string)
+v.Local.sLine.Declare(string)
+
+Gui.F_Job_Jacket..Visible(False)
+
+'Lets save the Jacket table first
+f.Intrinsic.String.Build("SELECT * FROM GCG_3623_JACKET WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' ",V.Screen.F_Job_Jacket!txtFINISHPART.Text.Trim,v.Screen.F_Job_Jacket!txtFINISHLOC.Text.Trim,V.Screen.F_Job_Jacket!txtFinish_Rev.Text.Trim,v.Local.sSQL)
+f.ODBC.Connection!Con.OpenLocalRecordsetRW("rstJacketSave",v.Local.sSQL)
+f.Intrinsic.Control.If(v.ODBC.Con!rstJacketSave.EOF,=,True)
+	f.ODBC.Con!rstJacketSave.AddNew
+f.Intrinsic.Control.EndIf
+'set all the fields
+f.ODBC.Con!rstJacketSave.Set!FINISH_PART(V.Screen.F_Job_Jacket!txtFINISHPART.Text.Trim)
+f.ODBC.Con!rstJacketSave.Set!CUSTOMER(v.Screen.F_Job_Jacket!txtCustomer.Text)
+f.ODBC.Con!rstJacketSave.Set!FINISH_DESCRIPTION(V.Screen.F_Job_Jacket!txtFinishDesc.Text)
+F.ODBC.Con!rstJacketSave.Set!EST_NOTES(V.Screen.F_Job_Jacket!mltEstNotes.Text)
+F.ODBC.Con!rstJacketSave.Set!FINISH_REV(V.Screen.F_Job_Jacket!txtFinish_Rev.Text)
+f.ODBC.Con!rstJacketSave.Set!PERF(v.DataView.Header$Part!PartPerf(0).PART!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!PERF_AT(v.Screen.F_Job_Jacket!txtPerfAt.Text)
+f.ODBC.Con!rstJacketSave.Set!TPI(v.Screen.F_Job_Jacket!txtTPI.Text)
+f.ODBC.Con!rstJacketSave.Set!SPECIAL_PERF(v.Screen.F_Job_Jacket!txtSpecialPerf.Text)
+f.ODBC.Con!rstJacketSave.Set!AUTO_APPLY(v.Screen.F_Job_Jacket!chkAutoApply.Value)
+f.ODBC.Con!rstJacketSave.Set!VAC(v.Screen.F_Job_Jacket!chkVacuum.Value)
+f.ODBC.Con!rstJacketSave.Set!BTC(v.Screen.F_Job_Jacket!txtBTC.Text)
+f.ODBC.Con!rstJacketSave.Set!TURRET(v.Screen.F_Job_Jacket!txtTurret.Text)
+f.ODBC.Con!rstJacketSave.Set!BTC_SETTING(v.Screen.F_Job_Jacket!txtBTCSetting.Text)
+f.ODBC.Con!rstJacketSave.Set!SHEETED(v.Screen.F_Job_Jacket!chkSheeted.Value)
+f.ODBC.Con!rstJacketSave.Set!SHEETED_AT(v.Screen.F_Job_Jacket!txtSheetedAt.Text)
+f.ODBC.Con!rstJacketSave.Set!AIR_EJECT(v.Screen.F_Job_Jacket!chkAirEject.Value)
+
+f.Intrinsic.Control.If(v.DataView.Header$InkHead$Basic!InkBasic.RowCount,>,0)
+	f.Intrinsic.Control.If(v.DataView.Header$InkHead$Basic!InkBasic(0).Turn_Bar!FieldValString,<>,"")
+		f.ODBC.Con!rstJacketSave.Set!TURNBAR(v.DataView.Header$InkHead$Basic!InkBasic(0).Turn_Bar!FieldVal)
+	f.Intrinsic.Control.Else
+		f.ODBC.Con!rstJacketSave.Set!TURNBAR(0)
+	f.Intrinsic.Control.endif
+	f.Intrinsic.Control.If(v.DataView.Header$InkHead$Basic!InkBasic(0).Relam/Delam!FieldValString,<>,"")
+		f.ODBC.Con!rstJacketSave.Set!DE_RELAM(v.DataView.Header$InkHead$Basic!InkBasic(0).Relam/Delam!FieldVal)
+	f.Intrinsic.Control.Else
+		f.ODBC.Con!rstJacketSave.Set!DE_RELAM(0)
+	f.Intrinsic.Control.endif
+	f.ODBC.Con!rstJacketSave.Set!PRINT_NOTES(v.DataView.Header$InkHead$Basic!InkBasic(v.DataView.Header$InkHead$Basic!InkBasic.RowCount--).Printing_Notes.FieldValTrim)
+f.Intrinsic.Control.EndIf
+f.ODBC.Con!rstJacketSave.Set!PRESS(v.DataView.Header$Press!Press(0).Work_Center!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!QUOTE1(v.Screen.F_Job_Jacket!txtQuote.Text)
+f.ODBC.Con!rstJacketSave.Set!PRESS_GRP(v.DataView.Header$Press!Press(0).W_Group!FieldValTrim)
+
+f.ODBC.Con!rstJacketSave.Set!CARRIER_WIDTH(v.Screen.F_Job_Jacket!txtFinCarrierWidth.Text.Float)
+f.ODBC.Con!rstJacketSave.Set!BACK_CUT(v.Screen.F_Job_Jacket!chkBackCut.Value)
+f.ODBC.Con!rstJacketSave.Set!PINFEED(v.Screen.F_Job_Jacket!chkPinFeed.Value)
+f.ODBC.Con!rstJacketSave.Set!FACE_CUT(v.Screen.F_Job_Jacket!chkFaceCut.Value)
+f.ODBC.Con!rstJacketSave.Set!COUNTER("0")
+f.Intrinsic.Control.If(v.DataTable.Header$Packaging$Bagged(v.DataTable.Header$Packaging$Bagged.RowCount--).Bagged.FieldValString,<>,"")
+	f.ODBC.Con!rstJacketSave.Set!BAGGED(v.DataTable.Header$Packaging$Bagged(v.DataTable.Header$Packaging$Bagged.RowCount--).Bagged.FieldVal)
+f.Intrinsic.Control.Else
+	f.ODBC.Con!rstJacketSave.Set!BAGGED(0)
+F.Intrinsic.Control.EndIf
+f.ODBC.Con!rstJacketSave.Set!BAG_SIZE(v.DataTable.Header$Packaging$Bagged(0).Bag_Size/Type!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!LABELS_BAG(v.DataTable.Header$Packaging$Bagged(0).Labels/Bag!FieldValFloat)
+f.ODBC.Con!rstJacketSave.Set!PRESS_NOTES(v.DataView.Header$Press!Press(0).Press_Notes!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!FACECUT_DESC(v.Screen.F_Job_Jacket!txtFaceCutDesc.Text)
+f.ODBC.Con!rstJacketSave.Set!BACKCUT_DESC(v.Screen.F_Job_Jacket!txtBackCutDesc.Text)
+f.ODBC.Con!rstJacketSave.Set!FINISH_ACROSS(v.Screen.F_Job_Jacket!txtAcrFin.Text.Float)
+f.ODBC.Con!rstJacketSave.Set!EST_NO(v.Screen.F_Job_Jacket!txtQuote.Text)
+f.ODBC.Con!rstJacketSave.Set!H_WIDTH(v.Screen.F_Job_Jacket!txtWidth.Text.Float)
+f.ODBC.Con!rstJacketSave.Set!H_LENGTH(v.Screen.F_Job_Jacket!txtLength.Text.Float)
+f.ODBC.Con!rstJacketSave.Set!GAP_ACROSS(v.Screen.F_Job_Jacket!txtGapAcross.Text.Float)
+f.ODBC.Con!rstJacketSave.Set!GAP_DOWN(v.Screen.F_Job_Jacket!txtGAPDown.Text.Float)
+f.ODBC.Con!rstJacketSave.Set!ACR_DIE(v.Screen.F_Job_Jacket!txtACRDie.Text.Float)
+f.ODBC.Con!rstJacketSave.Set!ACR_PRESS(v.Screen.F_Job_Jacket!txtAcrPress.Text.Float)
+f.ODBC.Con!rstJacketSave.Set!REPEAT1(v.Screen.F_Job_Jacket!txtRepeat.Text.Float)
+f.ODBC.Con!rstJacketSave.Set!WEB_WIDTH(v.Screen.F_Job_Jacket!txtWebWidth.Text.Float)
+f.ODBC.Con!rstJacketSave.Set!SHAPE(v.Screen.F_Job_Jacket!cboShape.Text)
+f.ODBC.Con!rstJacketSave.Set!SHAPE_UM(v.Screen.F_Job_Jacket!cboUM.Text)
+f.ODBC.Con!rstJacketSave.Set!OVR_UNDR(v.Screen.F_Job_Jacket!txtOvrUndr.Text.Float)
+f.ODBC.Con!rstJacketSave.Set!FINISH_LOC(v.Screen.F_Job_Jacket!txtFINISHLOC.Text)
+f.Intrinsic.Control.If(v.DataTable.Header$Packaging$ShrinkWrap(v.DataTable.Header$Packaging$ShrinkWrap.RowCount--).ShrinkWrapped.FieldValString,<>,"")
+	f.ODBC.Con!rstJacketSave.Set!SHRINKWRAP(v.DataTable.Header$Packaging$ShrinkWrap(v.DataTable.Header$Packaging$ShrinkWrap.RowCount--).ShrinkWrapped.FieldVal)
+f.Intrinsic.Control.Else
+	f.ODBC.Con!rstJacketSave.Set!SHRINKWRAP(0)
+F.Intrinsic.Control.EndIf
+f.ODBC.Con!rstJacketSave.Set!LABEL_PACK(v.DataTable.Header$Packaging$ShrinkWrap(0).Labels/Pack!FieldValFloat)
+f.ODBC.Con!rstJacketSave.Set!PALLET_SIZE(v.DataTable.Header$Packaging$Basic(0).Pallet_Size_wxlxh!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!CASES_LAYER(v.DataTable.Header$Packaging$Basic(0).Cases/Layer!FieldValFloat)
+f.ODBC.Con!rstJacketSave.Set!LAYERS_SKID(v.DataTable.Header$Packaging$Basic(0).Layers/skid!FieldValFloat)
+f.ODBC.Con!rstJacketSave.Set!FORMAT_TYPE(v.DataTable.Header$VarImage$Basic(0).Format_Type!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!COPY_CHNG(v.DataTable.Header$VarImage$Basic(0).Copy_Chng!FieldValFloat)
+f.ODBC.Con!rstJacketSave.Set!PROOFS(v.DataTable.Header$VarImage$Basic(0).Proofs!FieldValFloat)
+f.ODBC.Con!rstJacketSave.Set!ACR_FRM_PREV(v.DataTable.Header$VarImage$Basic(0).ACR_Frm_Prev!FieldValFloat)
+f.ODBC.Con!rstJacketSave.Set!FILE_NAME(v.DataTable.Header$VarImage$Basic(0).FileName!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!SEQ_START(v.DataTable.Header$VarImage$Basic(0).Seq_Start!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!SEQ_END(v.DataTable.Header$VarImage$Basic(0).Seq_End!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!BC_SPEC(v.DataTable.Header$VarImage$Barcode(0).BarCode_Spec!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!VAR_INST(v.DataTable.Header$VarImage$Notes(V.DataTable.Header$VarImage$Notes.RowCount--).Variable_Notes!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!BC_RATIO(v.DataTable.Header$VarImage$Barcode(0).Barcode_Ratio!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!BC_HEIGHT(v.DataTable.Header$VarImage$Barcode(0).Barcode_Height!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!BC_READ(v.DataTable.Header$VarImage$Barcode(0).Bar_Readable!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!FOLD_BY(v.DataTable.Header$VarImage$Barcode(0).Fold_by!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!LBL_SRC(v.DataTable.Header$VarImage$Labels(0).Label_Source!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!LBL_NUMBER(v.DataTable.Header$VarImage$Labels(0).Labels/Number!FieldValFloat)
+f.ODBC.Con!rstJacketSave.Set!LBL_ROLL(v.DataTable.Header$VarImage$Labels(0).Labels_Roll!FieldValFloat)
+f.Intrinsic.Control.If(v.DataTable.Header$VarImage$Labels(0).Labels_Sheeted!FieldValString,<>,"")
+	f.ODBC.Con!rstJacketSave.Set!LBL_SHEETED(v.DataTable.Header$VarImage$Labels(0).Labels_Sheeted!FieldVal)
+f.Intrinsic.Control.Else
+	f.ODBC.Con!rstJacketSave.Set!LBL_SHEETED(0)
+f.Intrinsic.Control.EndIf
+f.ODBC.Con!rstJacketSave.Set!LBL_STACK(v.DataTable.Header$VarImage$Labels(0).Labels/Stack!FieldValFloat)
+f.Intrinsic.Control.If(v.DataTable.Header$VarImage$Labels(0).Labels_Padded!FieldValString,<>,"")
+	f.ODBC.Con!rstJacketSave.Set!LBL_PADD(v.DataTable.Header$VarImage$Labels(0).Labels_Padded!FieldVal)
+f.Intrinsic.Control.Else
+	f.ODBC.Con!rstJacketSave.Set!LBL_PADD(0)
+f.Intrinsic.Control.EndIf
+f.ODBC.Con!rstJacketSave.Set!LBL_PAD(v.DataTable.Header$VarImage$Labels(0).Labels/Pad!FieldValFloat)
+f.ODBC.Con!rstJacketSave.Set!PACK_NOTES(v.DataTable.Header$Packaging$Basic(0).Packaging_Notes!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Set!SPEC_NOTES(v.DataTable.Header$Packaging$Basic(0).Special_Inspection_Notes!FieldValTrim)
+f.ODBC.Con!rstJacketSave.Update
+f.ODBC.Con!rstJacketSave.Close
+
+'We need to get all of the colums and loop through them and create a data view that is filtered where column is null and set it to blank
+f.Intrinsic.String.Split(v.DataTable.Header$Tooling$Die.FieldNames,"*!*",v.Local.sColumns)
+f.Intrinsic.Control.For(v.Local.iCount,v.Local.sColumns.LBound,v.Local.sColumns.UBound,1)
+	f.Intrinsic.String.Build("{0} IS NULL",V.Local.sColumns(V.Local.iCount),V.Local.sLine)
+	f.Data.DataView.Create("Header$Tooling$Die","TempValue",22,V.Local.sLine,"")
+	f.Intrinsic.Control.If(v.Local.sColumns(v.Local.iCount).UCase,<>,"QTY","AND",V.Local.sColumns(V.Local.iCount).UCase,<>,"ACROSS")
+		F.Data.DataView.SetValue("Header$Tooling$Die","TempValue",-1,v.Local.sColumns(v.Local.iCount),"")
+	f.Intrinsic.Control.Else
+		F.Data.DataView.SetValue("Header$Tooling$Die","TempValue",-1,v.Local.sColumns(v.Local.iCount),0)
+	f.Intrinsic.Control.EndIf
+	f.Data.DataView.Close("Header$Tooling$Die","TempValue")
+f.Intrinsic.Control.Next(v.Local.iCount)
+F.Data.DataTable.SetValue("Header$Tooling$Die",-1,"Finish_Part",v.Screen.F_Job_Jacket!txtFINISHPART.Text,"Finish_Loc",v.Screen.F_Job_Jacket!txtFINISHLOC.Text,"Finish_Rev",v.Screen.F_Job_Jacket!txtFinish_Rev.Text)
+F.Data.DataTable.SaveToDB("Header$Tooling$Die","Con","GCG_3623_Jacket_Part","FINISH_PART*!*PART*!*DESCRIPTION*!*SORT_CODE*!*QTY*!*FINISH_LOC*!*W_GROUP*!*WORK_CENTER*!*FINISH_REV",7,"FINISH_PART@!@FINISH_PART*!*PART@!@PART*!*DESCRIPTION@!@DESCRIPTION*!*SORT_CODE@!@SORT_CODE*!*QTY@!@QTY*!*FINISH_LOC@!@FINISH_LOC*!*W_GROUP@!@W_GROUP*!*WORK_CENTER@!@WORK_CENTER*!*FINISH_REV@!@FINISH_REV")
+
+f.Intrinsic.String.Split(v.DataTable.Header$Raw.FieldNames,"*!*",v.Local.sColumns)
+f.Intrinsic.Control.For(v.Local.iCount,v.Local.sColumns.LBound,v.Local.sColumns.UBound,1)
+	f.Intrinsic.String.Build("{0} IS NULL",V.Local.sColumns(V.Local.iCount),V.Local.sLine)
+	f.Data.DataView.Create("Header$Raw","TempValue",22,V.Local.sLine,"")
+	f.Intrinsic.Control.If(v.Local.sColumns(v.Local.iCount).UCase,<>,"QTY","AND",V.Local.sColumns(V.Local.iCount).UCase,<>,"ACROSS")
+		F.Data.DataView.SetValue("Header$Raw","TempValue",-1,v.Local.sColumns(v.Local.iCount),"")
+	f.Intrinsic.Control.Else
+		F.Data.DataView.SetValue("Header$Raw","TempValue",-1,v.Local.sColumns(v.Local.iCount),0)
+	f.Intrinsic.Control.EndIf
+	f.Data.DataView.Close("Header$Raw","TempValue")
+f.Intrinsic.Control.Next(v.Local.iCount)
+F.Data.DataTable.SetValue("Header$Raw",-1,"Finish_Part",v.Screen.F_Job_Jacket!txtFINISHPART.Text,"Finish_Loc",v.Screen.F_Job_Jacket!txtFINISHLOC.Text,"Finish_Rev",v.Screen.F_Job_Jacket!txtFinish_Rev.Text)
+F.Data.DataTable.SaveToDB("Header$Raw","Con","GCG_3623_Jacket_Part","FINISH_PART*!*PART*!*DESCRIPTION*!*SORT_CODE*!*QTY*!*FINISH_LOC*!*W_GROUP*!*WORK_CENTER*!*FINISH_REV",7,"FINISH_PART@!@FINISH_PART*!*PART@!@PART*!*DESCRIPTION@!@DESCRIPTION*!*SORT_CODE@!@SORT_CODE*!*QTY@!@QTY*!*FINISH_LOC@!@FINISH_LOC*!*W_GROUP@!@W_GROUP*!*WORK_CENTER@!@WORK_CENTER*!*FINISH_REV@!@FINISH_REV")
+
+
+f.Intrinsic.String.Split(v.DataTable.Header$Part.FieldNames,"*!*",v.Local.sColumns)
+f.Intrinsic.Control.For(v.Local.iCount,v.Local.sColumns.LBound,v.Local.sColumns.UBound,1)
+	f.Intrinsic.String.Build("{0} IS NULL",V.Local.sColumns(V.Local.iCount),V.Local.sLine)
+	f.Data.DataView.Create("Header$Part","TempValue",22,V.Local.sLine,"")
+	f.Intrinsic.Control.If(v.Local.sColumns(v.Local.iCount).UCase,<>,"QTY","AND",V.Local.sColumns(V.Local.iCount).UCase,<>,"ACROSS")
+		F.Data.DataView.SetValue("Header$Part","TempValue",-1,v.Local.sColumns(v.Local.iCount),"")
+	f.Intrinsic.Control.Else
+		F.Data.DataView.SetValue("Header$Part","TempValue",-1,v.Local.sColumns(v.Local.iCount),0)
+	f.Intrinsic.Control.EndIf
+	f.Data.DataView.Close("Header$Part","TempValue")
+	'do this for press
+	f.Intrinsic.String.Build("{0} IS NULL",V.Local.sColumns(V.Local.iCount),V.Local.sLine)
+	f.Data.DataView.Create("Header$Press","TempValue",22,V.Local.sLine,"")
+	f.Intrinsic.Control.If(v.Local.sColumns(v.Local.iCount).UCase,<>,"QTY","AND",V.Local.sColumns(V.Local.iCount).UCase,<>,"ACROSS")
+		F.Data.DataView.SetValue("Header$Press","TempValue",-1,v.Local.sColumns(v.Local.iCount),"")
+	f.Intrinsic.Control.Else
+		F.Data.DataView.SetValue("Header$Press","TempValue",-1,v.Local.sColumns(v.Local.iCount),0)
+	f.Intrinsic.Control.EndIf
+	f.Data.DataView.Close("Header$Press","TempValue")
+	'do this for Label Misc
+	f.Intrinsic.String.Build("{0} IS NULL",V.Local.sColumns(V.Local.iCount),V.Local.sLine)
+	f.Data.DataView.Create("Header$Label$Misc","TempValue",22,V.Local.sLine,"")
+	f.Intrinsic.Control.If(v.Local.sColumns(v.Local.iCount).UCase,<>,"QTY","AND",V.Local.sColumns(V.Local.iCount).UCase,<>,"ACROSS")
+		F.Data.DataView.SetValue("Header$Label$Misc","TempValue",-1,v.Local.sColumns(v.Local.iCount),"")
+	f.Intrinsic.Control.Else
+		F.Data.DataView.SetValue("Header$Label$Misc","TempValue",-1,v.Local.sColumns(v.Local.iCount),0)
+	f.Intrinsic.Control.EndIf
+	f.Data.DataView.Close("Header$Label$Misc","TempValue")
+	f.Intrinsic.Control.DoEvents
+f.Intrinsic.Control.Next(v.Local.iCount)
+F.Data.DataTable.SetValue("Header$Part",-1,"Finish_Part",v.Screen.F_Job_Jacket!txtFINISHPART.Text,"Finish_Loc",v.Screen.F_Job_Jacket!txtFINISHLOC.Text,"Finish_Rev",v.Screen.F_Job_Jacket!txtFinish_Rev.Text)
+F.Data.DataTable.SetValue("Header$Press",-1,"Finish_Part",v.Screen.F_Job_Jacket!txtFINISHPART.Text,"Finish_Loc",v.Screen.F_Job_Jacket!txtFINISHLOC.Text,"Finish_Rev",v.Screen.F_Job_Jacket!txtFinish_Rev.Text)
+F.Data.DataTable.SetValue("Header$Label$Misc",-1,"Finish_Part",v.Screen.F_Job_Jacket!txtFINISHPART.Text,"Finish_Loc",v.Screen.F_Job_Jacket!txtFINISHLOC.Text,"Finish_Rev",v.Screen.F_Job_Jacket!txtFinish_Rev.Text)
+F.Data.DataTable.SaveToDB("Header$Part","Con","GCG_3623_Jacket_Part","FINISH_PART*!*PART*!*DESCRIPTION*!*SORT_CODE*!*QTY*!*FINISH_LOC*!*W_GROUP*!*WORK_CENTER*!*FINISH_REV",7,"FINISH_PART@!@FINISH_PART*!*PART@!@PART*!*DESCRIPTION@!@DESCRIPTION*!*SORT_CODE@!@SORT_CODE*!*QTY@!@QTY*!*FINISH_LOC@!@FINISH_LOC*!*W_GROUP@!@W_GROUP*!*WORK_CENTER@!@WORK_CENTER*!*FINISH_REV@!@FINISH_REV")
+F.Data.DataTable.SaveToDB("Header$Press","Con","GCG_3623_Jacket_Part","FINISH_PART*!*PART*!*DESCRIPTION*!*SORT_CODE*!*QTY*!*FINISH_LOC*!*W_GROUP*!*WORK_CENTER*!*FINISH_REV",7,"FINISH_PART@!@FINISH_PART*!*PART@!@PART*!*DESCRIPTION@!@DESCRIPTION*!*SORT_CODE@!@SORT_CODE*!*QTY@!@QTY*!*FINISH_LOC@!@FINISH_LOC*!*W_GROUP@!@W_GROUP*!*WORK_CENTER@!@WORK_CENTER*!*FINISH_REV@!@FINISH_REV")
+F.Data.DataTable.SaveToDB("Header$Label$Misc","Con","GCG_3623_Jacket_Part","FINISH_PART*!*PART*!*DESCRIPTION*!*SORT_CODE*!*QTY*!*FINISH_LOC*!*W_GROUP*!*WORK_CENTER*!*FINISH_REV",7,"FINISH_PART@!@FINISH_PART*!*PART@!@PART*!*DESCRIPTION@!@DESCRIPTION*!*SORT_CODE@!@SORT_CODE*!*QTY@!@QTY*!*FINISH_LOC@!@FINISH_LOC*!*W_GROUP@!@W_GROUP*!*WORK_CENTER@!@WORK_CENTER*!*FINISH_REV@!@FINISH_REV")
+
+f.Intrinsic.String.Split(v.DataTable.Header$Labels.FieldNames,"*!*",v.Local.sColumns)
+f.Intrinsic.Control.For(v.Local.iCount,v.Local.sColumns.LBound,v.Local.sColumns.UBound,1)
+	f.Intrinsic.String.Build("{0} IS NULL",V.Local.sColumns(V.Local.iCount),V.Local.sLine)
+	f.Data.DataView.Create("Header$Labels","TempValue",22,V.Local.sLine,"")
+	F.Data.DataView.SetValue("Header$Labels","TempValue",-1,v.Local.sColumns(v.Local.iCount),"")
+	f.Data.DataView.Close("Header$Labels","TempValue")
+f.Intrinsic.Control.Next(v.Local.iCount)
+
+F.Data.DataTable.SetValue("Header$Labels",-1,"Finish_Part",v.Screen.F_Job_Jacket!txtFINISHPART.Text,"Finish_Loc",v.Screen.F_Job_Jacket!txtFINISHLOC.Text,"Finish_Rev",v.Screen.F_Job_Jacket!txtFinish_Rev.Text)
+F.Data.DataTable.SaveToDB("Header$Labels","Con","GCG_3623_Jacket_LBL","FINISH_PART*!*LABEL*!*FORMAT*!*LBL_LOCATION*!*FINISH_LOC*!*FINISH_REV",7,"FINISH_PART@!@FINISH_PART*!*LABEL@!@LABEL*!*FORMAT@!@FORMAT*!*LBL_LOCATION@!@LBL_LOCATION*!*FINISH_LOC@!@FINISH_LOC*!*FINISH_REV@!@FINISH_REV")
+
+v.Local.iCount2.Declare(long)
+v.Local.iFinishes.Declare(long)
+v.Local.sOrg.Declare(string)
+v.Local.iCount3.Declare(long)
+v.Local.sTab.Declare(string)
+v.Local.iActual.Declare(long,0)
+
+f.Intrinsic.Math.Sub(v.Global.iFinish,1,v.Local.iFinishes)
+f.Intrinsic.Control.For(v.Local.iCount2,1,v.Local.iFinishes,1)
+	f.Intrinsic.String.Build("Header$Finish{0}",v.Local.iCount2,v.Local.sOrg)
+	'We will check to see if the finish still exists
+	f.Intrinsic.Control.If(v.DataTable.[v.Local.sOrg].Exists,=,True)
+		'Finish still exists so lets save it
+		f.Intrinsic.Math.Add(v.Local.iActual,1,v.Local.iActual)
+		f.Intrinsic.String.Split("Basic*!*Rewind*!*FanFold*!*Sheeted","*!*",v.Local.sTable)
+		f.Intrinsic.Control.For(v.Local.iCount3,v.Local.sTable.LBound,v.Local.sTable.UBound,1)
+			f.Intrinsic.String.Build("{0}${1}",v.Local.sOrg,v.Local.sTable(v.Local.iCount3),v.Local.sTab)
+			f.Intrinsic.String.Split(v.DataTable.[v.Local.sTab].FieldNames,"*!*",v.Local.sColumns)
+			f.Intrinsic.Control.For(v.Local.iCount,v.Local.sColumns.LBound,v.Local.sColumns.UBound,1)
+				f.Intrinsic.String.Build("{0} IS NULL",V.Local.sColumns(V.Local.iCount),V.Local.sLine)
+				f.Data.DataView.Create(v.Local.sTab,"TempValue",22,V.Local.sLine,"")
+				f.Intrinsic.Control.If(v.Local.sColumns(v.Local.iCount).UCase,=,"FINISH_PART","OR",V.Local.sColumns(V.Local.iCount).UCase,=,"FINISH_LOC",V.Local.sColumns(V.Local.iCount).UCase,=,"CORE_SIZE",V.Local.sColumns(V.Local.iCount).UCase,=,"BOX_SIZE",V.Local.sColumns(V.Local.iCount).UCase,=,"FINISH_NOTES",V.Local.sColumns(V.Local.iCount).UCase,=,"WIND_DIRECTION",V.Local.sColumns(V.Local.iCount).UCase,=,"FINISH_REV")
+					F.Data.DataView.SetValue(v.Local.sTab,"TempValue",-1,v.Local.sColumns(v.Local.iCount),"")
+				F.Intrinsic.Control.Else
+					f.Intrinsic.Control.If(V.Local.sColumns(V.Local.iCount).UCase,=,"REWIND","OR",V.Local.sColumns(V.Local.iCount).UCase,=,"FANFOLD",V.Local.sColumns(V.Local.iCount).UCase,=,"SHEETED",V.Local.sColumns(V.Local.iCount).UCase,=,"AUTO_FANFOLD")
+						F.Data.DataView.SetValue(v.Local.sTab,"TempValue",-1,v.Local.sColumns(v.Local.iCount),False)
+					F.Intrinsic.Control.Else
+						F.Data.DataView.SetValue(v.Local.sTab,"TempValue",-1,v.Local.sColumns(v.Local.iCount),0)
+					F.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.EndIf
+				f.Data.DataView.Close(v.Local.sTab,"TempValue")
+				F.Intrinsic.Control.DoEvents
+			f.Intrinsic.Control.Next(v.Local.iCount)
+			F.Data.DataTable.SetValue(v.Local.sTab,-1,"Finish_Part",v.Screen.F_Job_Jacket!txtFINISHPART.Text,"Finish_Loc",v.Screen.F_Job_Jacket!txtFINISHLOC.Text,"Finish_Rev",v.Screen.F_Job_Jacket!txtFinish_Rev.Text)
+
+			f.Data.DataTable.SetValue(v.Local.sTab,-1,"Finish_Type",v.Local.sTable(v.Local.iCount3),"Row_Num",v.Local.iActual)
+			
+			f.Intrinsic.Control.SelectCase(v.Local.sTable(v.Local.iCount3))
+				f.Intrinsic.Control.Case("Rewind")
+					f.Data.DataTable.AddColumn(v.Local.sTab,"Re","String","")
+					f.Intrinsic.Control.If(v.DataTable.[v.Local.sTab](0).Rewind!FieldVal,=,True)
+						f.Data.DataTable.SetValue(v.Local.sTab,0,"Re","1")
+					f.Intrinsic.Control.Else
+						f.Data.DataTable.SetValue(v.Local.sTab,0,"Re","0")
+					f.Intrinsic.Control.EndIf
+'					f.Data.DataTable.SaveToDB(v.Local.sTab,"Con","GCG_3623_JACKET_FIN","FINISH_PART*!*FINISH_LOC*!*RE*!*CORE_ID*!*CORE_WIDTH*!*CORE_THICK*!*ROLL_OD*!*WIND_DIRECTION*!*LABELS_ROLL*!*ROLL_BOX*!*FINISH_REV*!*FINISH_TYPE",7,"FINISH_PART@!@FINISH_PART*!*FINISH_LOC@!@FINISH_LOC*!*RE@!@REWIND*!*CORE_ID@!@CORE_ID*!*CORE_WIDTH@!@CORE_WIDTH*!*CORE_THICK@!@CORE_THICK*!*ROLL_OD@!@ROLL_OD*!*WIND_DIRECTION@!@WIND_DIRECTION*!*LABELS_ROLL@!@LABELS_ROLL*!*ROLL_BOX@!@ROLL_BOX*!*ROW_NUM@!@ROW_NUM*!*FINISH_REV@!@FINISH_REV*!*FINISH_TYPE@!@FINISH_TYPE")
+					f.Data.DataTable.SaveToDB(v.Local.sTab,"Con","GCG_3623_JACKET_FIN","ROW_ID",7,"FINISH_PART@!@FINISH_PART*!*FINISH_LOC@!@FINISH_LOC*!*RE@!@REWIND*!*CORE_ID@!@CORE_ID*!*CORE_WIDTH@!@CORE_WIDTH*!*CORE_THICK@!@CORE_THICK*!*ROLL_OD@!@ROLL_OD*!*WIND_DIRECTION@!@WIND_DIRECTION*!*LABELS_ROLL@!@LABELS_ROLL*!*ROLL_BOX@!@ROLL_BOX*!*ROW_NUM@!@ROW_NUM*!*FINISH_REV@!@FINISH_REV*!*FINISH_TYPE@!@FINISH_TYPE*!*ROW_ID@!@ROW_ID")
+				f.Intrinsic.Control.Case("FanFold")
+					f.Data.DataTable.AddColumn(v.Local.sTab,"Fan","String","")
+					f.Intrinsic.Control.If(v.DataTable.[v.Local.sTab](0).FanFold!FieldVal,=,True)
+						f.Data.DataTable.SetValue(v.Local.sTab,0,"Fan","1")
+					f.Intrinsic.Control.Else
+						f.Data.DataTable.SetValue(v.Local.sTab,0,"Fan","0")
+					f.Intrinsic.Control.EndIf
+					f.Data.DataTable.AddColumn(v.Local.sTab,"Auto","String","")
+					f.Intrinsic.Control.If(v.DataTable.[v.Local.sTab](0).Auto_FanFold!FieldVal,=,True)
+						f.Data.DataTable.SetValue(v.Local.sTab,0,"Auto","1")
+					f.Intrinsic.Control.Else
+						f.Data.DataTable.SetValue(v.Local.sTab,0,"Auto","0")
+					f.Intrinsic.Control.EndIf
+'					f.Data.DataTable.SaveToDB(v.Local.sTab,"Con","GCG_3623_JACKET_FIN","FINISH_PART*!*FINISH_LOC*!*FAN*!*LABELS_FOLD*!*LABELS_STACK*!*STACK_BOX*!*AUTO*!*FANFOLD_GEAR*!*FINISH_REV*!*FINISH_TYPE",7,"FINISH_PART@!@FINISH_PART*!*FINISH_LOC@!@FINISH_LOC*!*FAN@!@FANFOLD*!*LABELS_FOLD@!@LABELS_FOLD*!*LABELS_STACK@!@LABELS_STACK*!*STACK_BOX@!@STACK_BOX*!*AUTO@!@AUTO_FANFOLD*!*FANFOLD_GEAR@!@FANFOLD_GEAR*!*ROW_NUM@!@ROW_NUM*!*FINISH_REV@!@FINISH_REV*!*FINISH_TYPE@!@FINISH_TYPE")
+					f.Data.DataTable.SaveToDB(v.Local.sTab,"Con","GCG_3623_JACKET_FIN","ROW_ID",7,"FINISH_PART@!@FINISH_PART*!*FINISH_LOC@!@FINISH_LOC*!*FAN@!@FANFOLD*!*LABELS_FOLD@!@LABELS_FOLD*!*LABELS_STACK@!@LABELS_STACK*!*STACK_BOX@!@STACK_BOX*!*AUTO@!@AUTO_FANFOLD*!*FANFOLD_GEAR@!@FANFOLD_GEAR*!*ROW_NUM@!@ROW_NUM*!*FINISH_REV@!@FINISH_REV*!*FINISH_TYPE@!@FINISH_TYPE*!*ROW_ID@!@ROW_ID")
+				f.Intrinsic.Control.Case("Sheeted")
+					f.Data.DataTable.AddColumn(v.Local.sTab,"Sheet","String","")
+					f.Intrinsic.Control.If(v.DataTable.[v.Local.sTab](0).Sheeted!FieldVal,=,True)
+						f.Data.DataTable.SetValue(v.Local.sTab,0,"Sheet","1")
+					f.Intrinsic.Control.Else
+						f.Data.DataTable.SetValue(v.Local.sTab,0,"Sheet","0")
+					f.Intrinsic.Control.EndIf
+'					f.Data.DataTable.SaveToDB(v.Local.sTab,"Con","GCG_3623_JACKET_FIN","FINISH_PART*!*FINISH_LOC*!*SHEET*!*LABELS_SHEET*!*SHEETS_STACK*!*STACKS_BOX*!*FINISH_REV*!*FINISH_TYPE",7,"FINISH_PART@!@FINISH_PART*!*FINISH_LOC@!@FINISH_LOC*!*SHEET@!@SHEETED*!*LABELS_SHEET@!@LABELS_SHEET*!*SHEETS_STACK@!@SHEETS_STACK*!*STACKS_BOX@!@STACKS_BOX*!*ROW_NUM@!@ROW_NUM*!*FINISH_REV@!@FINISH_REV*!*FINISH_TYPE@!@FINISH_TYPE")
+					f.Data.DataTable.SaveToDB(v.Local.sTab,"Con","GCG_3623_JACKET_FIN","ROW_ID",7,"FINISH_PART@!@FINISH_PART*!*FINISH_LOC@!@FINISH_LOC*!*SHEET@!@SHEETED*!*LABELS_SHEET@!@LABELS_SHEET*!*SHEETS_STACK@!@SHEETS_STACK*!*STACKS_BOX@!@STACKS_BOX*!*ROW_NUM@!@ROW_NUM*!*FINISH_REV@!@FINISH_REV*!*FINISH_TYPE@!@FINISH_TYPE*!*ROW_ID@!@ROW_ID")	
+				f.Intrinsic.Control.Case("Basic")
+'					f.Data.DataTable.SaveToDB(v.Local.sTab,"Con","GCG_3623_JACKET_FIN","FINISH_PART*!*FINISH_LOC*!*CORE_SIZE*!*BOX_SIZE*!*FINISH_NOTES*!*FINISH_REV*!*FINISH_TYPE",7,"FINISH_PART@!@FINISH_PART*!*FINISH_LOC@!@FINISH_LOC*!*CORE_SIZE@!@CORE_SIZE*!*BOX_SIZE@!@BOX_SIZE*!*FINISH_NOTES@!@FINISH_NOTES*!*ROW_NUM@!@ROW_NUM*!*FINISH_REV@!@FINISH_REV*!*FINISH_TYPE@!@FINISH_TYPE")
+					f.Data.DataTable.SaveToDB(v.Local.sTab,"Con","GCG_3623_JACKET_FIN","ROW_ID",7,"FINISH_PART@!@FINISH_PART*!*FINISH_LOC@!@FINISH_LOC*!*CORE_SIZE@!@CORE_SIZE*!*BOX_SIZE@!@BOX_SIZE*!*FINISH_NOTES@!@FINISH_NOTES*!*ROW_NUM@!@ROW_NUM*!*FINISH_REV@!@FINISH_REV*!*FINISH_TYPE@!@FINISH_TYPE*!*ROW_ID@!@ROW_ID")
+
+			f.Intrinsic.Control.EndSelect
+			
+			F.Intrinsic.Control.DoEvents
+		f.Intrinsic.Control.Next(v.Local.iCount3)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Next(v.Local.iCount2)
+
+f.Intrinsic.String.Split(v.DataTable.Header$InkHead$Basic.FieldNames,"*!*",v.Local.sColumns)
+f.Intrinsic.Control.For(v.Local.iCount,v.Local.sColumns.LBound,v.Local.sColumns.UBound,1)
+	f.Intrinsic.Control.If(v.Local.sColumns(v.Local.iCount),<>,"Relam/Delam")
+		f.Intrinsic.String.Build("{0} IS NULL",V.Local.sColumns(V.Local.iCount),V.Local.sLine)
+		f.Data.DataView.Create("Header$InkHead$Basic","TempValue",22,V.Local.sLine,"")
+		f.Intrinsic.Control.If(v.Local.sColumns(v.Local.iCount).UCase,<>,"CYLSIZE","AND",V.Local.sColumns(V.Local.iCount).UCase,<>,"I_QTY",V.Local.sColumns(V.Local.iCount).UCase,<>,"I_WEB",V.Local.sColumns(V.Local.iCount).UCase,<>,"I_GRP",V.Local.sColumns(V.Local.iCount).UCase,<>,"ADD_DATETIME",V.Local.sColumns(V.Local.iCount).UCase,<>,"LCK_DATETIME",V.Local.sColumns(V.Local.iCount).UCase,<>,"I_VOLUME",V.Local.sColumns(V.Local.iCount).UCase,<>,"INKNUM",V.Local.sColumns(V.Local.iCount).UCase,<>,"JJ_SEQNO",V.Local.sColumns(V.Local.iCount).UCase,<>,"INKCOV",V.Local.sColumns(V.Local.iCount).UCase,<>,"RIBBON_LEN")
+			F.Data.DataView.SetValue("Header$InkHead$Basic","TempValue",-1,v.Local.sColumns(v.Local.iCount),"")
+		f.Intrinsic.Control.Else
+			f.Intrinsic.Control.If(V.Local.sColumns(V.Local.iCount).UCase,<>,"ADD_DATETIME","AND",V.Local.sColumns(V.Local.iCount).UCase,<>,"LCK_DATETIME")
+				F.Data.DataView.SetValue("Header$InkHead$Basic","TempValue",-1,v.Local.sColumns(v.Local.iCount),0)
+			F.Intrinsic.Control.ElseIf(V.Local.sColumns(V.Local.iCount).UCase,=,"ADD_DATETIME","OR",V.Local.sColumns(V.Local.iCount).UCase,=,"LCK_DATETIME")
+				F.Data.DataView.SetValue("Header$InkHead$Basic","TempValue",-1,v.Local.sColumns(v.Local.iCount),V.Ambient.Date)
+			F.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.EndIf
+		f.Data.DataView.Close("Header$InkHead$Basic","TempValue")
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.DoEvents
+f.Intrinsic.Control.Next(v.Local.iCount)
+
+F.Data.DataTable.SetValue("Header$InkHead$Basic",-1,"Finish_Part",v.Screen.F_Job_Jacket!txtFINISHPART.Text,"Finish_Loc",v.Screen.F_Job_Jacket!txtFINISHLOC.Text,"Finish_Rev",v.Screen.F_Job_Jacket!txtFinish_Rev.Text)
+
+f.Data.DataTable.AddColumn("Header$InkHead$Ink","Ink_Type","String","")
+f.Data.DataTable.AddColumn("Header$InkHead$Ink","Varn_Type","String","")
+f.Data.DataTable.AddColumn("Header$InkHead$Ink","Ribbon_Len","Float",0)
+f.Data.DataTable.AddColumn("Header$InkHead$Ink","Bladroll","String","")
+f.Data.DataTable.AddColumn("Header$InkHead$Ink","Cylsize","Float",0)
+f.Data.DataTable.SetValue("Header$InkHead$Ink",0,"Ink_Type",v.DataTable.Header$InkHead$Basic(0).Ink_Type!FieldValTrim,"Varn_Type",v.DataTable.Header$InkHead$Basic(0).Varn_Type!FieldValTrim,"Ribbon_Len",v.DataTable.Header$InkHead$Basic(0).Ribbon_Len!FieldValTrim,"Bladroll",v.DataTable.Header$InkHead$Basic(0).Bladroll!FieldValTrim,"Cylsize",v.DataTable.Header$InkHead$Basic(0).Cylsize!FieldValTrim)
+
+v.Local.sColumns.Redim(0,0)
+
+f.Intrinsic.String.Split(v.DataTable.Header$InkHead$Ink.FieldNames,"*!*",v.Local.sColumns)
+f.Intrinsic.Control.For(v.Local.iCount,v.Local.sColumns.LBound,v.Local.sColumns.UBound,1)
+	f.Intrinsic.String.Build("{0} IS NULL",V.Local.sColumns(V.Local.iCount),V.Local.sLine)
+	f.Data.DataView.Create("Header$InkHead$Ink","TempValue",22,V.Local.sLine,"")
+	f.Intrinsic.Control.If(v.Local.sColumns(v.Local.iCount).UCase,<>,"CYLSIZE","AND",V.Local.sColumns(V.Local.iCount).UCase,<>,"I_QTY",V.Local.sColumns(V.Local.iCount).UCase,<>,"I_WEB",V.Local.sColumns(V.Local.iCount).UCase,<>,"I_GRP",V.Local.sColumns(V.Local.iCount).UCase,<>,"ADD_DATETIME",V.Local.sColumns(V.Local.iCount).UCase,<>,"LCK_DATETIME",V.Local.sColumns(V.Local.iCount).UCase,<>,"I_VOLUME",V.Local.sColumns(V.Local.iCount).UCase,<>,"JJ_SEQNO",V.Local.sColumns(V.Local.iCount).UCase,<>,"INKCOV",V.Local.sColumns(V.Local.iCount).UCase,<>,"RIBBON_LEN",v.Local.sColumns(v.Local.iCount).UCase,<>,"ROW_NUM")
+		F.Data.DataView.SetValue("Header$InkHead$Ink","TempValue",-1,v.Local.sColumns(v.Local.iCount),"")
+	f.Intrinsic.Control.Else
+		f.Intrinsic.Control.If(V.Local.sColumns(V.Local.iCount).UCase,<>,"ADD_DATETIME","AND",V.Local.sColumns(V.Local.iCount).UCase,<>,"LCK_DATETIME")
+			F.Data.DataView.SetValue("Header$InkHead$Ink","TempValue",-1,v.Local.sColumns(v.Local.iCount),0)
+		F.Intrinsic.Control.ElseIf(V.Local.sColumns(V.Local.iCount).UCase,=,"ADD_DATETIME","OR",V.Local.sColumns(V.Local.iCount).UCase,=,"LCK_DATETIME")
+			F.Data.DataView.SetValue("Header$InkHead$Ink","TempValue",-1,v.Local.sColumns(v.Local.iCount),V.Ambient.Date)
+		F.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.EndIf
+	f.Data.DataView.Close("Header$InkHead$Ink","TempValue")
+	f.Intrinsic.Control.DoEvents
+f.Intrinsic.Control.Next(v.Local.iCount)
+
+
+F.Data.DataTable.SetValue("Header$InkHead$Ink",-1,"Finish_Part",v.Screen.F_Job_Jacket!txtFINISHPART.Text,"Finish_Loc",v.Screen.F_Job_Jacket!txtFINISHLOC.Text,"Finish_Rev",v.Screen.F_Job_Jacket!txtFinish_Rev.Text)
+F.Data.DataTable.SaveToDB("Header$InkHead$Ink","Con","GCG_3623_Jacket_INKS","FINISH_PART*!*FINISH_LOC*!*PMS_NO*!*ANILOX*!*STCKBACK*!*INKNUM*!*INKCOV*!*WEB_DIREC*!*FPS*!*FACE_LINER*!*FINISH_REV*!*CYLSIZE*!*BLADROLL*!*INK_TYPE*!*VARN_TYPE*!*RIBBON_LEN*!*ROW_NUM",7,"FINISH_PART@!@FINISH_PART*!*FINISH_LOC@!@FINISH_LOC*!*PMS_NO@!@PMS_NO*!*ANILOX@!@ANILOX*!*STCKBACK@!@STCKBACK*!*INKNUM@!@INKNUM*!*INKCOV@!@INKCOV*!*WEB_DIREC@!@WEB_DIREC*!*FPS@!@FPS*!*FACE_LINER@!@FACE_LINER*!*FINISH_REV@!@FINISH_REV*!*CYLSIZE@!@CYLSIZE*!*BLADROLL@!@BLADROLL*!*INK_TYPE@!@INK_TYPE*!*VARN_TYPE@!@VARN_TYPE*!*RIBBON_LEN@!@RIBBON_LEN*!*ROW_NUM@!@ROW_NUM")
+
+'print report
+'initilize it first
+f.Intrinsic.String.Build("{0}\Custom\GCG_3623_JOB_JACKET.rpt",v.Caller.BusintDir,v.Local.sHold)
+f.Global.BI.InitializeReport("Job Jacket",v.Local.sHold,v.Local.iPos)
+f.Intrinsic.String.Split("Part*!*Loc*!*Rev","*!*",v.Local.sParam)
+f.Intrinsic.String.Build("{0}*!*{1}*!*{2}",v.Screen.F_Job_Jacket!txtFINISHPART.Text.Trim,v.Screen.F_Job_Jacket!txtFINISHLOC.Text.Trim,v.Screen.F_Job_Jacket!txtFinish_Rev.Text.Trim,v.Local.sValue)
+f.Intrinsic.String.Split(v.Local.sValue,"*!*",v.Local.sValue)
+f.Global.BI.PrintReport(v.Local.iPos,16,v.Local.sParam,v.Local.sValue,False)
+
+f.Intrinsic.Control.CallSub(f_job_jacket_unload)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdAddInk_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_JOB_JACKET.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(f_job_jacket_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdPrint_Click.End
+
+Program.Sub.cmdAddFinish_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.sData.Declare(string)
+v.Local.sColumns.Declare(string)
+v.Local.sTable.Declare(string)
+v.Local.sMisc.Declare(string)
+v.Local.sFilter.Declare(string)
+v.Local.sGrid.Declare(string)
+v.Local.sOrg.Declare(string)
+v.Local.iCount.Declare(long)
+v.Local.sSQL.Declare(string)
+v.Local.iRandom.Declare(long)
+
+
+v.Local.iCount.Set(v.Global.iFinish)
+f.Intrinsic.String.Build("Header$Finish{0}",v.Local.iCount,v.Local.sOrg)
+f.Intrinsic.String.Build("Finish{0}*!*Basic*!*Basic@!@Finish{0}*!*Rewind*!*Rewind@!@Finish{0}*!*FanFold*!*FanFold@!@Finish{0}*!*Sheeted*!*Sheeted",v.Local.iCount,v.Local.sFilter)
+f.Data.DataTable.CreateFromString(v.Local.sOrg,v.Local.sFilter,"Section*!*Type*!*Type2","String*!*String*!*String","*!*","@!@",True)
+f.Intrinsic.String.Build("Finish{0}View",v.Local.iCount,v.Local.sFilter)
+f.Data.DataView.Create(v.Local.sOrg,v.Local.sFilter)
+f.Intrinsic.String.Build("Finish{0}",v.Local.iCount,v.Local.sMisc)
+f.Data.DataTable.AddRow("Header","Section",v.Local.sMisc)
+F.Data.DataTable.AddRelation("Header","Section",v.Local.sOrg,"Section")
+f.Intrinsic.String.Build("GridFinish{0}",v.Local.iCount,v.Local.sTable)
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView(v.Local.sTable,"Header",v.Local.sFilter)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sTable,"ReadOnly",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sTable,"Editable",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sTable,"AllowSort",False)
+'Create Basic Finish
+f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, RTRIM(CORE_SIZE) AS CORE_SIZE, RTRIM(BOX_SIZE) AS BOX_SIZE, RTRIM(FINISH_NOTES) AS FINISH_NOTES, ROW_NUM, RTRIM(FINISH_REV) AS FINISH_REV, RTRIM(FINISH_TYPE) AS FINISH_TYPE, ROW_ID FROM GCG_3623_JACKET_FIN WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' AND ROW_NUM = '{3}' AND FINISH_TYPE = 'Basic' ",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,v.Local.iCount,V.Local.sSQL)
+f.Intrinsic.String.Build("{0}$Basic",v.Local.sOrg,v.Local.sTable)
+f.Data.DataTable.CreateFromSQL(v.Local.sTable,"Con",v.Local.sSQL,True)
+F.Data.DataTable.AddColumn(v.Local.sTable,"Type","String","")
+f.Data.DataTable.AddColumn(v.Local.sTable,"Type2","String","")
+f.Intrinsic.String.Build("Finish{0}Basic",v.Local.iCount,v.Local.sFilter)
+f.Data.DataView.Create(v.Local.sTable,v.Local.sFilter)
+f.Intrinsic.Control.If(v.DataView.[v.Local.sTable]![v.Local.sFilter].RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow(v.Local.sTable,"Type","Basic","Type2","Basic","Row_Num",v.Local.iCount)
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue(v.Local.sTable,v.Local.sFilter,-1,"Type","Basic","Type2","Basic")
+f.Intrinsic.Control.EndIf
+f.Intrinsic.String.Build("Grid{0}",v.Local.sFilter,v.Local.sGrid)
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView(v.Local.sGrid,"Header",v.Local.sFilter)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"ReadOnly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"AllowSort",False)
+
+f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, REWIND, CORE_ID, CORE_WIDTH, CORE_THICK, ROLL_OD, RTRIM(WIND_DIRECTION) AS WIND_DIRECTION, LABELS_ROLL, ROLL_BOX, ROW_NUM, RTRIM(FINISH_REV) AS FINISH_REV, RTRIM(FINISH_TYPE) AS FINISH_TYPE, ROW_ID FROM GCG_3623_JACKET_FIN WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' AND ROW_NUM = '{3}' AND FINISH_TYPE = 'Rewind'",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,v.Local.iCount,V.Local.sSQL)
+f.Intrinsic.String.Build("Finish{0}Rewind",v.Local.iCount,v.Local.sFilter)
+f.Intrinsic.String.Build("{0}$Rewind",v.Local.sOrg,v.Local.sTable)
+f.Data.DataTable.CreateFromSQL(v.Local.sTable,"Con",v.Local.sSQL,True)
+F.Data.DataTable.AddColumn(v.Local.sTable,"Type","String","")
+f.Data.DataTable.AddColumn(v.Local.sTable,"Type2","String","")
+f.Data.DataView.Create(v.Local.sTable,v.Local.sFilter)
+f.Intrinsic.Control.If(v.DataView.[v.Local.sTable]![v.Local.sFilter].RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow(v.Local.sTable,"Type","Rewind","Type2","Rewind","Row_Num",v.Local.iCount)
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue(v.Local.sTable,v.Local.sFilter,-1,"Type","Rewind","Type2","Rewind")
+f.Intrinsic.Control.EndIf
+f.Intrinsic.String.Build("Grid{0}",v.Local.sFilter,v.Local.sGrid)
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView(v.Local.sGrid,"Header",v.Local.sFilter)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"ReadOnly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"AllowSort",False)
+
+f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, FANFOLD,LABELS_FOLD, LABELS_STACK, STACK_BOX, AUTO_FANFOLD, FANFOLD_GEAR, ROW_NUM, RTRIM(FINISH_REV) AS FINISH_REV, RTRIM(FINISH_TYPE) AS FINISH_TYPE, ROW_ID FROM GCG_3623_JACKET_FIN WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' AND ROW_NUM = '{3}' AND FINISH_TYPE = 'FanFold'",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,v.Local.iCount,V.Local.sSQL)
+f.Intrinsic.String.Build("Finish{0}FanFold",v.Local.iCount,v.Local.sFilter)
+f.Intrinsic.String.Build("{0}$FanFold",v.Local.sOrg,v.Local.sTable)
+f.Data.DataTable.CreateFromSQL(v.Local.sTable,"Con",v.Local.sSQL,true)
+F.Data.DataTable.AddColumn(v.Local.sTable,"Type","String","")
+f.Data.DataTable.AddColumn(v.Local.sTable,"Type2","String","")
+f.Data.DataView.Create(v.Local.sTable,v.Local.sFilter)
+f.Intrinsic.Control.If(v.DataView.[v.Local.sTable]![v.Local.sFilter].RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow(v.Local.sTable,"Type","FanFold","Type2","FanFold","Row_Num",v.Local.iCount)
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue(v.Local.sTable,v.Local.sFilter,-1,"Type","FanFold","Type2","FanFold")
+f.Intrinsic.Control.EndIf
+f.Intrinsic.String.Build("Grid{0}",v.Local.sFilter,v.Local.sGrid)
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView(v.Local.sGrid,"Header",v.Local.sFilter)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"ReadOnly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"AllowSort",False)
+f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, SHEETED, LABELS_SHEET, SHEETS_STACK, STACKS_BOX, ROW_NUM, RTRIM(FINISH_REV) AS FINISH_REV, RTRIM(FINISH_TYPE) AS FINISH_TYPE, ROW_ID FROM GCG_3623_JACKET_FIN WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' AND ROW_NUM = '{3}' AND FINISH_TYPE = 'Sheeted'",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,v.Local.iCount,V.Local.sSQL)
+f.Intrinsic.String.Build("Finish{0}Sheeted",v.Local.iCount,v.Local.sFilter)
+f.Intrinsic.String.Build("{0}$Sheeted",v.Local.sOrg,v.Local.sTable)
+f.Data.DataTable.CreateFromSQL(v.Local.sTable,"Con",v.Local.sSQL,True)
+F.Data.DataTable.AddColumn(v.Local.sTable,"Type","String","")
+f.Data.DataTable.AddColumn(v.Local.sTable,"Type2","String","")
+f.Data.DataView.Create(v.Local.sTable,v.Local.sFilter)
+f.Intrinsic.Control.If(v.DataView.[v.Local.sTable]![v.Local.sFilter].RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow(v.Local.sTable,"Type","Sheeted","Type2","Sheeted","Row_Num",v.Local.iCount)
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue(v.Local.sTable,v.Local.sFilter,-1,"Type","Sheeted","Type2","Sheeted")
+f.Intrinsic.Control.EndIf
+f.Intrinsic.String.Build("Grid{0}",v.Local.sFilter,v.Local.sGrid)
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView(v.Local.sGrid,"Header",v.Local.sFilter)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"ReadOnly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"AllowSort",False)
+f.Intrinsic.String.Build("Header$Finish{0}",v.Local.iCount,v.Local.sOrg)
+f.Intrinsic.String.Split("$Basic*!*$Rewind*!*$FanFold*!*$Sheeted","*!*",v.Local.sFilter)
+f.Intrinsic.Control.For(v.Local.iRandom,v.Local.sFilter.LBound,v.Local.sFilter.UBound,1)
+	f.Intrinsic.String.Build("{0}{1}",v.Local.sOrg,v.Local.sFilter(v.Local.iRandom),v.Local.sFilter(v.Local.iRandom))
+	f.Data.DataTable.AddRelation(v.Local.sOrg,"Type",v.Local.sFilter(v.Local.iRandom),"Type")
+	f.Data.DataTable.AddRelation(v.Local.sOrg,"Type",v.Local.sFilter(v.Local.iRandom),"Type2")
+f.Intrinsic.Control.Next(v.Local.iRandom)
+f.Intrinsic.String.Split("Basic*!*Rewind*!*FanFold*!*Sheeted","*!*",v.Local.sFilter)
+f.Intrinsic.Control.For(v.Local.iRandom,v.Local.sFilter.LBound,v.Local.sFilter.UBound,1)
+	f.Intrinsic.String.Build("GridFinish{0}{1}",v.Local.iCount,v.Local.sFilter(v.Local.iRandom),v.Local.sFilter(v.Local.iRandom))
+	Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Finish_Part","Visible",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Finish_Loc","Visible",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Row_Num","Visible",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Finish_Rev","Visible",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Finish_Type","Visible",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Type","Visible",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Type2","Visible",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Row_Id","Visible",False)
+f.Intrinsic.Control.Next(v.Local.iRandom)
+f.Intrinsic.String.Build("GridFinish{0}",v.Local.iCount,v.Local.sGrid)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sGrid,"Section","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sGrid,"Type2","Visible",False)
+
+	
+	
+f.Intrinsic.Math.Add(v.Global.iFinish,1,v.Global.iFinish)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_JOB_JACKET.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(f_job_jacket_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdAddFinish_Click.End
+
+Program.Sub.cmdFinishPartBrow_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.iWidth.Declare(long)
+v.Local.sColumn.Declare(string)
+v.Local.sRet.Declare(string)
+v.Local.iChoice.Declare(long)
+v.Local.sSQL.Declare(string)
+v.Local.iRow.Declare(long)
+v.Local.sFinish.Declare(string)
+v.Local.sMisc.Declare(string)
+v.Local.iPos.Declare(long)
+
+f.Intrinsic.String.Split("Finish Part*!*Location*!*Rev*!*Description","*!*",v.Local.sColumn)
+f.Intrinsic.String.Split("2000*!*500*!*0*!*5000","*!*",v.Local.iWidth)
+f.Intrinsic.UI.Browser("Finish Part Browser","Con","SELECT FINISH_PART, FINISH_LOC, FINISH_REV, FINISH_DESCRIPTION FROM GCG_3623_JACKET ORDER BY FINISH_PART ASC, FINISH_LOC ASC",V.Local.sColumn,V.Local.iWidth,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"***CANCEL***")
+
+	
+	
+	'Clear out all of the fields on the screen
+	Gui.F_Job_Jacket..ClearGroup(2)
+	Gui.F_Job_Jacket..ClearGroup(1)
+	Gui.F_Job_Jacket.chkAirEject.Value(0)
+	Gui.F_Job_Jacket.chkBackCut.Value(0)
+	Gui.F_Job_Jacket.chkSheeted.Value(0)
+	Gui.F_Job_Jacket.chkPinFeed.Value(0)
+	Gui.F_Job_Jacket.chkFaceCut.Value(0)
+	Gui.F_Job_Jacket.chkVacuum.Value(0)
+	Gui.F_Job_Jacket.chkAutoApply.Value(0)
+	Gui.F_Job_Jacket.cboShape.Text("")
+	Gui.F_Job_Jacket.cboUM.Text("")
+	'A Finish Part was selected ask if they would like to edit the existing or create a new Revision
+	'split the return 
+	
+
+	f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	v.Local.sRet.RedimPreserve(0,3)
+	F.Intrinsic.UI.MsgBoxExt("Important","Would you like to EDIT the selected or create a NEW revision?","24*!*Edit*!*New")
+	f.Intrinsic.Control.If(v.Ambient.AltBoxClick,=,4)
+		'they chose New so we need to add one to the highest Rev and set it to the Finish_Rev field
+		'get the highest Rev
+		f.Intrinsic.String.Build("SELECT (CAST(MAX(ISNULL(FINISH_REV,-1)) AS INT) + 1) FROM GCG_3623_JACKET WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' ",V.Local.sRet(0).Trim,V.Local.sRet(1).Trim,V.Local.sSQL)
+		f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL,v.Local.iChoice)
+		GUI.F_Job_Jacket.txtFinish_Rev.Text(V.Local.iChoice)
+	F.Intrinsic.Control.Else
+		'We are not creating New so set the Rev level
+		GUI.F_Job_Jacket.txtFinish_Rev.Text(V.Local.sRet(2).Trim)
+	f.Intrinsic.Control.EndIf
+	
+	'Invoke Message box and close the screen
+	f.Intrinsic.UI.InvokeWaitDialog("Screen is being populated.","Please Wait")
+	Gui.F_Job_Jacket..Visible(False)
+	
+	'Now we can populate everything on the screen.
+	GUI.F_Job_Jacket.txtFINISHPART.Text(V.Local.sRet(0).Trim)
+	GUI.F_Job_Jacket.txtFINISHLOC.Text(V.Local.sRet(1).Trim)
+	GUI.F_Job_Jacket.txtFinishDesc.Text(V.Local.sRet(3).Trim)
+	
+		'Delete the Grids and re add them
+		f.Intrinsic.Control.CallSub(closedatatables)
+		f.Intrinsic.Control.CallSub(freshgrid,"Type","Jacket")
+
+	
+	f.Intrinsic.UI.CloseWaitDialog
+	Gui.F_Job_Jacket..Show
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_JOB_JACKET.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(f_job_jacket_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdFinishPartBrow_Click.End
+
+Program.Sub.cmdQuoteBrow_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdFinishPartBrow_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.iWidth.Declare(long)
+v.Local.sColumn.Declare(string)
+v.Local.sRet.Declare(string)
+v.Local.sAnswer.Declare(string)
+v.Local.sSQL.Declare(string)
+v.Local.sReturn.Declare(string)
+
+f.Intrinsic.String.Split("Estimate Number","*!*",v.Local.sColumn)
+f.Intrinsic.String.Split("400","*!*",v.Local.iWidth)
+F.Intrinsic.Control.If(v.Screen.F_Job_Jacket!txtFINISHPART.Text.Trim,<>,"")
+	f.Intrinsic.String.Build("SELECT EST_NO FROM GCG_3623_EST WHERE FINISH_PART = '{0}' ORDER BY EST_NO ASC",v.Screen.F_Job_Jacket!txtFINISHPART.Text.Trim,v.Local.sSQL)
+F.Intrinsic.Control.Else
+	V.Local.sSQL.Set("SELECT EST_NO FROM GCG_3623_EST ORDER BY EST_NO ASC")
+F.Intrinsic.Control.EndIf
+f.Intrinsic.UI.MiniBrowser("Quote Browser","Con",V.Local.sSQL,V.Local.sColumn,V.Local.iWidth,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"***CANCEL***")
+	'A Finish Part was selected so lets set all the values
+	
+
+	f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	'Ask if they want to load form the quote instead
+	f.Intrinsic.UI.Msgbox("Would you like to load from the selected Estimate/Quote?","Information",4,v.Local.sAnswer)
+	f.Intrinsic.Control.If(v.Local.sAnswer,=,"6")
+		'They clicked Yes so load all fields from the quote number
+		
+		'Invoke Wait dialog and hide screen
+		f.Intrinsic.UI.InvokeWaitDialog("Screen is being populated.","Please Wait")
+		Gui.F_Job_Jacket..Visible(False)
+		
+		'Clear everything exept for the Finish Part and load from the Quote number
+		Gui.F_Job_Jacket..ClearGroup(2)
+		Gui.F_Job_Jacket.chkAirEject.Value(0)
+		Gui.F_Job_Jacket.chkBackCut.Value(0)
+		Gui.F_Job_Jacket.chkSheeted.Value(0)
+		Gui.F_Job_Jacket.chkPinFeed.Value(0)
+		Gui.F_Job_Jacket.chkFaceCut.Value(0)
+		Gui.F_Job_Jacket.chkVacuum.Value(0)
+		Gui.F_Job_Jacket.chkAutoApply.Value(0)
+		Gui.F_Job_Jacket.cboShape.Text("")
+		Gui.F_Job_Jacket.cboUM.Text("")
+		
+		f.Intrinsic.Control.CallSub(closedatatables)
+		f.Intrinsic.Control.CallSub(freshgrid,"Type","Quote","EST",v.Local.sRet(0).Trim)
+		
+		Gui.F_Job_Jacket.txtQuote.Text(v.Local.sRet(0).Trim)
+		
+		f.Intrinsic.UI.CloseWaitDialog
+		Gui.F_Job_Jacket..Show
+		
+	f.Intrinsic.Control.ElseIf(v.Local.sAnswer,=,"7")
+		'They clicked No so only load the quote number
+		Gui.F_Job_Jacket.txtQuote.Text(v.Local.sRet(0).Trim)
+	f.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdFinishPartBrow_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_JOB_JACKET.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(f_job_jacket_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdQuoteBrow_Click.End
+
+Program.Sub.FreshGrid.Start
+F.Intrinsic.Control.SetErrorHandler("FreshGrid_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.sSQL.Declare(string)
+v.Local.iCount.Declare(long)
+v.Local.sTable.Declare(string)
+v.Local.bEmpty.Declare(boolean)
+v.Local.sFilter.Declare(string)
+v.Local.sGrid.Declare(string)
+v.Local.iRandom.Declare(long)
+v.Local.sRow.Declare(string)
+v.Local.sOrg.Declare(string)
+v.Local.iCount2.Declare(long)
+
+'Create the header table and add the section column
+f.Data.DataTable.Create("Header",True)
+f.Data.DataTable.AddColumn("Header","Section","String")
+
+
+'Add each section to the header table
+F.Data.DataTable.AddRow("Header","Section","Tooling")
+F.Data.DataTable.AddRow("Header","Section","Raw Material")
+f.Data.DataTable.AddRow("Header","Section","Press")
+f.Data.DataTable.AddRow("Header","Section","Ink")
+f.Data.DataTable.AddRow("Header","Section","Finish1")
+f.Data.DataTable.AddRow("Header","Section","Packaging")
+f.Data.DataTable.AddRow("Header","Section","Label")
+f.Data.DataTable.AddRow("Header","Section","Variable Imaging")
+'Create Header View
+f.Data.DataView.Create("Header","HeadView")
+'Create a relationship for the grid
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridHead","Header","HeadView")
+gui.F_Job_Jacket.GsGridControl1.mainview("GridHead")		
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridHead","ReadOnly",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridHead","Editable",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridHead","AllowSort",False)
+	
+'Create Table for Tooling
+F.Data.DataTable.CreateFromString("Header$Tooling","Tooling*!*Die@!@Tooling*!*Perf@!@Tooling*!*Butt Cut@!@Tooling*!*Sheeter@!@Tooling*!*Raw@!@Tooling*!*Press@!@Tooling*!*Misc","Section*!*Type","String*!*String","*!*","@!@",True)
+v.Local.sFilter.Set("TYPE NOT IN ('Press','Raw','Misc')")
+F.Data.DataView.Create("Header$Tooling","ToolingView",22,v.Local.sFilter,"")
+'Create a relationship for the grid
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridTooling","Header","ToolingView")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridTooling","ReadOnly",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridTooling","Editable",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridTooling","AllowSort",False)
+
+'Add relations
+F.Data.DataTable.AddRelation("Header","Section","Header$Tooling","Section")
+
+'Creating Part DataTable and Views
+f.Intrinsic.Control.If(v.Args.Type,=,"Jacket")
+	f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(PART) AS PART, RTRIM(DESCRIPTION) AS DESCRIPTION, RTRIM(SORT_CODE) AS SORT_CODE, RTRIM(QTY) AS QTY, RTRIM(ACROSS) AS ACROSS, RTRIM(FINISH_LOC) AS FINISH_LOC, RTRIM(W_GROUP) AS W_GROUP, RTRIM(WORK_CENTER) AS WORK_CENTER, RTRIM(FINISH_REV) AS FINISH_REV FROM GCG_3623_JACKET_PART WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' AND SORT_CODE IN ( 'PERF', 'BUTT', 'SHEET') ",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,V.Local.sSQL)
+f.Intrinsic.Control.Else
+	'We are loading from the Estimator
+	F.Intrinsic.String.Build("SELECT RTRIM(' ') AS FINISH_PART, RTRIM(PART) AS PART, RTRIM(DESCRIPTION) AS DESCRIPTION, RTRIM(SORT_CODE) AS SORT_CODE, RTRIM(QTY) AS QTY, 0 AS ACROSS, RTRIM(' ') AS FINISH_LOC, RTRIM(' ') AS W_GROUP, RTRIM(' ') AS WORK_CENTER, RTRIM(' ') AS FINISH_REV FROM GCG_3623_EST_MAT WHERE EST_NO = '{0}' AND SORT_CODE IN ('PERF','BUTT','SHEET')",v.Args.EST,V.Local.sSQL)
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.CreateFromSQL("Header$Part","Con",v.Local.sSQL,True)
+f.Data.DataTable.AddColumn("Header$Part","Type","String","")
+f.Data.DataTable.AddColumn("Header$Part","Section","String","")
+
+f.Intrinsic.Control.If(v.Args.Type,=,"Jacket")
+	f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(PART) AS PART, RTRIM(DESCRIPTION) AS DESCRIPTION, RTRIM(SORT_CODE) AS SORT_CODE, RTRIM(QTY) AS QTY, RTRIM(ACROSS) AS ACROSS, RTRIM(FINISH_LOC) AS FINISH_LOC, RTRIM(W_GROUP) AS W_GROUP, RTRIM(WORK_CENTER) AS WORK_CENTER, RTRIM(FINISH_REV) AS FINISH_REV FROM GCG_3623_JACKET_PART WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' AND SORT_CODE = 'DIE' ",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,V.Local.sSQL)
+f.Intrinsic.Control.Else
+	'We are loading from the Estimator
+	F.Intrinsic.String.Build("SELECT RTRIM(' ') AS FINISH_PART, RTRIM(PART) AS PART, RTRIM(DESCRIPTION) AS DESCRIPTION, RTRIM(SORT_CODE) AS SORT_CODE, RTRIM(QTY) AS QTY, 0 AS ACROSS, RTRIM(' ') AS FINISH_LOC, RTRIM(' ') AS W_GROUP, RTRIM(' ') AS WORK_CENTER, RTRIM(' ') AS FINISH_REV FROM GCG_3623_EST_MAT WHERE EST_NO = '{0}' AND SORT_CODE = 'DIE'",v.Args.EST,V.Local.sSQL)
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.CreateFromSQL("Header$Tooling$Die","Con",v.Local.sSQL,True)
+f.Data.DataTable.AddColumn("Header$Tooling$Die","Type","String","")
+f.Data.DataTable.AddColumn("Header$Tooling$Die","Section","String","")
+f.Data.DataView.Create("Header$Tooling$Die","PartDie",22,"SORT_CODE = 'DIE'","PART ASC")
+f.Intrinsic.Control.If(v.DataView.Header$Die!PartDie.RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow("Header$Tooling$Die","Type","Die","Sort_Code","DIE","Section","Tooling","Part","","Description","","Qty",0,"Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue("Header$Tooling$Die","PartDie",-1,"Type","Die","Sort_Code","DIE","Section","Tooling","Description","","Qty",0,"Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.EndIf
+
+f.Data.DataView.Create("Header$Part","PartPerf",22,"SORT_CODE = 'PERF'","PART ASC")
+f.Intrinsic.Control.If(v.DataView.Header$Part!PartPerf.RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow("Header$Part","Type","Perf","Sort_Code","PERF","Section","Tooling","Part","","Description","","Qty",0,"Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue("Header$Part","PartPerf",-1,"Type","Perf","Section","Tooling","Description","","Qty",0,"Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.EndIf
+f.Data.DataView.Create("Header$Part","PartButtCut",22,"SORT_CODE = 'BUTT'","PART ASC")
+f.Intrinsic.Control.If(v.DataView.Header$Part!PartButtCut.RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow("Header$Part","Type","Butt Cut","Sort_Code","BUTT","Section","Tooling","Part","","Description","","Qty",0,"Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue("Header$Part","PartButtCut",-1,"Type","Butt Cut","Section","Tooling","Description","","Qty",0,"Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.EndIf
+f.Data.DataView.Create("Header$Part","PartSheeter",22,"SORT_CODE = 'SHEET'","PART ASC")
+f.Intrinsic.Control.If(v.DataView.Header$Part!PartSheeter.RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow("Header$Part","Type","Sheeter","Sort_Code","SHEET","Section","Tooling","Part","","Description","","Qty",0,"Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue("Header$Part","PartSheeter",-1,"Type","Sheeter","Section","Tooling","Description","","Qty",0,"Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Args.Type,=,"Jacket")
+	f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(PART) AS PART, RTRIM(DESCRIPTION) AS DESCRIPTION, RTRIM(SORT_CODE) AS SORT_CODE, RTRIM(QTY) AS QTY, RTRIM(ACROSS) AS ACROSS, RTRIM(FINISH_LOC) AS FINISH_LOC, RTRIM(W_GROUP) AS W_GROUP, RTRIM(WORK_CENTER) AS WORK_CENTER, RTRIM(FINISH_REV) AS FINISH_REV FROM GCG_3623_JACKET_PART WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' AND SORT_CODE = 'RAW' ",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,V.Local.sSQL)
+f.Intrinsic.Control.Else
+	'We are loading from the Estimator
+	F.Intrinsic.String.Build("SELECT RTRIM(' ') AS FINISH_PART, RTRIM(PART) AS PART, RTRIM(DESCRIPTION) AS DESCRIPTION, RTRIM(SORT_CODE) AS SORT_CODE, RTRIM(QTY) AS QTY, 0 AS ACROSS, RTRIM(' ') AS FINISH_LOC, RTRIM(' ') AS W_GROUP, RTRIM(' ') AS WORK_CENTER, RTRIM(' ') AS FINISH_REV FROM GCG_3623_EST_MAT WHERE EST_NO = '{0}' AND SORT_CODE = 'RAW'",v.Args.EST,V.Local.sSQL)
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.CreateFromSQL("Header$Raw","Con",v.Local.sSQL,True)
+f.Data.DataTable.AddColumn("Header$Raw","Type","String","")
+f.Data.DataTable.AddColumn("Header$Raw","Section","String","")
+f.Data.DataView.Create("Header$Raw","PartRaw",22,"SORT_CODE = 'RAW'","PART ASC")
+f.Intrinsic.Control.If(v.DataView.Header$Raw!PartRaw.RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow("Header$Raw","Type","Raw","Sort_Code","RAW","Section","Raw Material","Part","","Description","","Qty",0,"Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue("Header$Raw","PartRaw",-1,"Section","Raw Material","Type","Raw","Description","","Qty",0,"Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.EndIf
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridPartDie","Header","PartDie")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPartDie","ReadOnly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPartDie","Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPartDie","AllowSort",False)
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridPartPerf","Header","PartPerf")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPartPerf","ReadOnly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPartPerf","Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPartPerf","AllowSort",False)
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridPartButt","Header","PartButtCut")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPartButt","ReadOnly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPartButt","Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPartButt","AllowSort",False)
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridPartSheeter","Header","PartSheeter")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPartSheeter","ReadOnly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPartSheeter","Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPartSheeter","AllowSort",False)
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridPartRaw","Header","PartRaw")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPartRaw","ReadOnly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPartRaw","Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPartRaw","AllowSort",False)
+
+'We now have to make a table for Press
+f.Intrinsic.Control.If(v.Args.Type,=,"Jacket")
+	f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(PART) AS PART, RTRIM(DESCRIPTION) AS DESCRIPTION, RTRIM(SORT_CODE) AS SORT_CODE, RTRIM(QTY) AS QTY, RTRIM(ACROSS) AS ACROSS, RTRIM(FINISH_LOC) AS FINISH_LOC, RTRIM(W_GROUP) AS W_GROUP, RTRIM(WORK_CENTER) AS WORK_CENTER, RTRIM(FINISH_REV) AS FINISH_REV FROM GCG_3623_JACKET_PART WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' AND SORT_CODE IN ('PRESS') ",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,V.Local.sSQL)
+f.Intrinsic.Control.Else
+	'We are loading from the Estimator
+	F.Intrinsic.String.Build("SELECT RTRIM(' ') AS FINISH_PART, RTRIM(PART) AS PART, RTRIM(DESCRIPTION) AS DESCRIPTION, RTRIM(SORT_CODE) AS SORT_CODE, RTRIM(QTY) AS QTY, 0 AS ACROSS, RTRIM(' ') AS FINISH_LOC, RTRIM(' ') AS W_GROUP, RTRIM(' ') AS WORK_CENTER, RTRIM(' ') AS FINISH_REV FROM GCG_3623_EST_MAT WHERE EST_NO = '{0}' AND SORT_CODE IN ('PRESS')",v.Args.EST,V.Local.sSQL)
+
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.CreateFromSQL("Header$Press","Con",v.Local.sSQL,True)
+f.Data.DataTable.AddColumn("Header$Press","Type","String","")
+f.Data.DataTable.AddColumn("Header$Press","Section","String","")
+f.Data.DataTable.AddColumn("Header$Press","Press_Notes","String","")
+
+f.Data.DataView.Create("Header$Press","Press",22,"SORT_CODE = 'PRESS'","PART ASC")
+f.Intrinsic.Control.If(v.DataView.Header$Press!Press.RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow("Header$Press","Type","Press","Sort_Code","PRESS","Section","Press","Part","","Description","","Qty",0,"Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue("Header$Press","Press",-1,"Section","Press","Type","Press","Description","","Qty",0,"Across",0)
+f.Intrinsic.Control.EndIf
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridPress","Header","Press")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPress","ReadOnly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPress","Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPress","AllowSort",False)
+'We need to Create Label
+f.Data.DataTable.CreateFromString("Header$Label","Label*!*Labels@!@Label*!*Misc@!@Label*!*Die@!@Label*!*Perf@!@Label*!*Butt Cut@!@Label*!*Sheeter@!@Label*!*Raw@!@Label*!*Press","Section*!*Type","String*!*String","*!*","@!@",True)
+f.Data.DataView.Create("Header$Label","LabelView",22,"Type <> 'Die' or Type <> 'Perf' or Type <> 'Butt Cut' or Type <> 'Sheeter' or Type <> 'Raw' or Type <> 'Press'","")
+F.Data.DataTable.AddRelation("Header","Section","Header$Label","Section")
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridLabel","Header","LabelView")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridLabel","ReadOnly",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridLabel","Editable",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridLabel","AllowSort",False)
+
+'We now have to make a table for label misc
+f.Intrinsic.Control.If(v.Args.Type,=,"Jacket")
+	f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(PART) AS PART, RTRIM(DESCRIPTION) AS DESCRIPTION, RTRIM(SORT_CODE) AS SORT_CODE, RTRIM(QTY) AS QTY, RTRIM(ACROSS) AS ACROSS, RTRIM(FINISH_LOC) AS FINISH_LOC, RTRIM(W_GROUP) AS W_GROUP, RTRIM(WORK_CENTER) AS WORK_CENTER, RTRIM(FINISH_REV) AS FINISH_REV FROM GCG_3623_JACKET_PART WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' AND SORT_CODE IN ('RIB','CARD', 'LMISC') ",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,V.Local.sSQL)
+f.Intrinsic.Control.Else
+	'We are loading from the Estimator
+	F.Intrinsic.String.Build("SELECT RTRIM(' ') AS FINISH_PART, RTRIM(PART) AS PART, RTRIM(DESCRIPTION) AS DESCRIPTION, RTRIM(SORT_CODE) AS SORT_CODE, RTRIM(QTY) AS QTY, 0 AS ACROSS, RTRIM(' ') AS FINISH_LOC, RTRIM(' ') AS W_GROUP, RTRIM(' ') AS WORK_CENTER, RTRIM(' ') AS FINISH_REV FROM GCG_3623_EST_MAT WHERE EST_NO = '{0}' AND SORT_CODE IN ('RIB','CARD','LMISC')",v.Args.EST,V.Local.sSQL)
+
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.CreateFromSQL("Header$Label$Misc","Con",v.Local.sSQL,True)
+f.Data.DataTable.AddColumn("Header$Label$Misc","Type","String","")
+f.Data.DataTable.AddColumn("Header$Label$Misc","Section","String","")
+f.Data.DataTable.AddColumn("Header$Label$Misc","Source","String","")
+f.Data.DataView.Create("Header$Label$Misc","Ribbon",22,"SORT_CODE = 'RIB'","PART ASC")
+f.Intrinsic.Control.If(v.DataView.Header$Label$Misc!Ribbon.RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow("Header$Label$Misc","Type","Misc","Sort_Code","RIB","Section","Label","Source","Ribbon","Part","","Description","","Qty",0,"Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue("Header$Label$Misc","Ribbon",-1,"Type","Misc","Source","Ribbon","Section","Label","Description","","Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.EndIf
+f.Data.DataView.Create("Header$Label$Misc","Card",22,"SORT_CODE = 'CARD'","PART ASC")
+f.Intrinsic.Control.If(v.DataView.Header$Label$Misc!Card.RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow("Header$Label$Misc","Type","Misc","Sort_Code","CARD","Section","Label","Source","CleaningCards","Part","","Description","","Qty",0,"Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue("Header$Label$Misc","Card",-1,"Type","Misc","Source","CleaningCards","Section","Label","Description","","Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.EndIf
+
+f.Data.DataView.Create("Header$Label$Misc","Misc",22,"SORT_CODE = 'LMISC'","PART ASC")
+f.Intrinsic.Control.If(v.DataView.Header$Label$Misc!Misc.RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow("Header$Label$Misc","Type","Misc","Sort_Code","LMISC","Section","Label","Source","Misc","Part","","Description","","Qty",0,"Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue("Header$Label$Misc","Misc",-1,"Type","Misc","Source","Misc","Section","Label","Description","","Across",0,"W_Group","","Work_Center","")
+f.Intrinsic.Control.EndIf
+
+F.Data.DataTable.AddRelation("Header","Section","Header$Raw","Section")
+F.Data.DataTable.AddRelation("Header$Tooling","Type","Header$Tooling$Die","Type")
+F.Data.DataTable.AddRelation("Header","Section","Header$Part","Section")
+F.Data.DataTable.AddRelation("Header","Section","Header$Press","Section")
+F.Data.DataTable.AddRelation("Header$Tooling","Type","Header$Part","Type")
+f.Data.DataTable.AddRelation("Header$Label","Type","Header$Label$Misc","Type")
+
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridRibbon","Header","Ribbon")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridRibbon","ReadOnly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridRibbon","Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridRibbon","AllowSort",False)
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridCard","Header","Card")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridCard","readonly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridCard","Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridCard","AllowSort",False)
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridMisc","Header","Misc")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridMisc","readonly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridMisc","Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridMisc","AllowSort",False)
+
+'Create Label DataTable and views
+f.Intrinsic.Control.If(v.Args.Type,=,"Jacket")
+	f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(LABEL) AS LABEL, RTRIM(FORMAT) AS FORMAT, RTRIM(LBL_LOCATION) AS LBL_LOCATION, RTRIM(FINISH_LOC) AS FINISH_LOC, RTRIM(FINISH_REV) AS FINISH_REV FROM GCG_3623_JACKET_LBL WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' ",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,V.Local.sSQL)
+f.Intrinsic.Control.Else
+	V.Local.sSQL.Set("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(LABEL) AS LABEL, RTRIM(FORMAT) AS FORMAT, RTRIM(LBL_LOCATION) AS LBL_LOCATION, RTRIM(FINISH_LOC) AS FINISH_LOC, RTRIM(FINISH_REV) AS FINISH_REV FROM GCG_3623_JACKET_LBL WHERE FINISH_PART = 'THISISFAMEFROMSTRIDER' AND FINISH_LOC = 'THISISJUSTTOPOPULATE'")
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.CreateFromSQL("Header$Labels","Con",v.Local.sSQL,True)
+f.Data.DataTable.AddColumn("Header$Labels","Type","String","")
+'Creating DataView of Label
+f.Data.DataView.Create("Header$Labels","LabelLabel")
+f.Intrinsic.Control.If(v.DataView.Header$Labels!LabelLabel.RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow("Header$Labels","Type","Labels")
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue("Header$Labels","LabelLabel",-1,"Type","Labels")
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.AddRelation("Header$Label","Type","Header$Labels","Type")
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridLabelLabel","Header","LabelLabel")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridLabelLabel","ReadOnly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridLabelLabel","Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridLabelLabel","AllowSort",False)
+
+'Create DataTable for each Table
+'Creating DataTable for Finish
+v.Local.iRandom.Set(200)
+V.Local.iCount.Set(1)
+v.Global.iFinish.Set(1)
+
+'Creating DataViews for Finish
+f.Intrinsic.Control.DoUntil(v.Local.bEmpty,=,True)
+	'Create Table for Finish
+	f.Intrinsic.String.Build("Header$Finish{0}",v.Local.iCount,v.Local.sOrg)
+	f.Intrinsic.String.Build("Finish{0}*!*Basic*!*Basic@!@Finish{0}*!*Rewind*!*Rewind@!@Finish{0}*!*FanFold*!*FanFold@!@Finish{0}*!*Sheeted*!*Sheeted",v.Local.iCount,v.Local.sFilter)
+
+	f.Data.DataTable.CreateFromString(v.Local.sOrg,v.Local.sFilter,"Section*!*Type*!*Type2","String*!*String*!*String","*!*","@!@",True)
+	f.Intrinsic.String.Build("Finish{0}View",v.Local.iCount,v.Local.sFilter)
+	f.Data.DataView.Create(v.Local.sOrg,v.Local.sFilter)
+	f.Intrinsic.Control.If(v.Local.iCount,>,1)
+		f.Intrinsic.String.Build("Finish{0}",v.Local.iCount,v.Local.sTable)
+		f.Data.DataTable.AddRow("Header","Section",v.Local.sTable)
+	f.Intrinsic.Control.EndIf
+	F.Data.DataTable.AddRelation("Header","Section",v.Local.sOrg,"Section")
+	f.Intrinsic.String.Build("GridFinish{0}",v.Local.iCount,v.Local.sTable)
+	Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView(v.Local.sTable,"Header",v.Local.sFilter)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sTable,"ReadOnly",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sTable,"Editable",True)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sTable,"AllowSort",False)
+	
+	
+
+	'Create Basic Finish
+	f.Intrinsic.Control.If(v.Args.Type,=,"Jacket")
+		f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, RTRIM(CORE_SIZE) AS CORE_SIZE, RTRIM(BOX_SIZE) AS BOX_SIZE, RTRIM(FINISH_NOTES) AS FINISH_NOTES, ROW_NUM, RTRIM(FINISH_REV) AS FINISH_REV, RTRIM(FINISH_TYPE) AS FINISH_TYPE, ROW_ID FROM GCG_3623_JACKET_FIN WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' AND ROW_NUM = '{3}' AND FINISH_TYPE = 'Basic' ",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,v.Local.iCount,V.Local.sSQL)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, RTRIM(CORE_SIZE) AS CORE_SIZE, RTRIM(' ') AS BOX_SIZE, RTRIM(' ') AS FINISH_NOTES, CAST('1' AS INT) AS ROW_NUM, RTRIM(' ') AS FINISH_REV, RTRIM(' ') AS FINISH_TYPE, CAST('' AS IDENTITY) AS ROW_ID FROM GCG_3623_EST WHERE EST_NO = '{0}'  ",v.Args.EST,V.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.String.Build("{0}$Basic",v.Local.sOrg,v.Local.sTable)
+	f.Data.DataTable.CreateFromSQL(v.Local.sTable,"Con",v.Local.sSQL,True)
+	F.Data.DataTable.AddColumn(v.Local.sTable,"Type","String","")
+	f.Data.DataTable.AddColumn(v.Local.sTable,"Type2","String","")
+	f.Intrinsic.String.Build("Finish{0}Basic",v.Local.iCount,v.Local.sFilter)
+	f.Data.DataView.Create(v.Local.sTable,v.Local.sFilter)
+	f.Intrinsic.Control.If(v.DataView.[v.Local.sTable]![v.Local.sFilter].RowCount,=,0)
+		'We don't have anything so add in a default row
+		f.Data.DataTable.AddRow(v.Local.sTable,"Type","Basic","Type2","Basic","Row_Num",v.Local.iCount)
+	f.Intrinsic.Control.Else
+		f.Data.DataView.SetValue(v.Local.sTable,v.Local.sFilter,-1,"Type","Basic","Type2","Basic")
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.String.Build("Grid{0}",v.Local.sFilter,v.Local.sGrid)
+	Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView(v.Local.sGrid,"Header",v.Local.sFilter)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"ReadOnly",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"Editable",True)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"AllowSort",False)
+
+	f.Intrinsic.Control.If(v.Args.Type,=,"Jacket")
+		f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, REWIND, CORE_ID, CORE_WIDTH, CORE_THICK, ROLL_OD, RTRIM(WIND_DIRECTION) AS WIND_DIRECTION, LABELS_ROLL, ROLL_BOX, ROW_NUM, RTRIM(FINISH_REV) AS FINISH_REV, RTRIM(FINISH_TYPE) AS FINISH_TYPE, ROW_ID FROM GCG_3623_JACKET_FIN WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' AND ROW_NUM = '{3}' AND FINISH_TYPE = 'Rewind'",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,v.Local.iCount,V.Local.sSQL)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, ROLLS AS REWIND, CAST('0' AS DOUBLE) AS CORE_ID, CAST('0' AS DOUBLE) AS CORE_WIDTH,CAST('0' AS DOUBLE) AS CORE_THICK, CAST(ROLL_OD AS DOUBLE) AS ROLL_OD, RTRIM(' ') AS WIND_DIRECTION, CAST(LABELS_ROLL AS DOUBLE) AS LABELS_ROLL, ROLLS_BOX AS ROLL_BOX, CAST('1' AS INT) AS ROW_NUM, RTRIM(' ') AS FINISH_REV, RTRIM(' ') AS FINISH_TYPE, CAST('' AS IDENTITY) AS ROW_ID FROM GCG_3623_EST WHERE EST_NO = '{0}' ",v.Args.EST,V.Local.sSQL)
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.String.Build("Finish{0}Rewind",v.Local.iCount,v.Local.sFilter)
+	f.Intrinsic.String.Build("{0}$Rewind",v.Local.sOrg,v.Local.sTable)
+	f.Data.DataTable.CreateFromSQL(v.Local.sTable,"Con",v.Local.sSQL,True)
+	F.Data.DataTable.AddColumn(v.Local.sTable,"Type","String","")
+	f.Data.DataTable.AddColumn(v.Local.sTable,"Type2","String","")
+	f.Data.DataView.Create(v.Local.sTable,v.Local.sFilter)
+	f.Intrinsic.Control.If(v.DataView.[v.Local.sTable]![v.Local.sFilter].RowCount,=,0)
+		'We don't have anything so add in a default row
+		f.Data.DataTable.AddRow(v.Local.sTable,"Type","Rewind","Type2","Rewind","Row_Num",v.Local.iCount)
+	f.Intrinsic.Control.Else
+		f.Data.DataView.SetValue(v.Local.sTable,v.Local.sFilter,-1,"Type","Rewind","Type2","Rewind")
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.String.Build("Grid{0}",v.Local.sFilter,v.Local.sGrid)
+	Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView(v.Local.sGrid,"Header",v.Local.sFilter)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"ReadOnly",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"Editable",True)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"AllowSort",False)
+
+	f.Intrinsic.Control.If(v.Args.Type,=,"Jacket")
+		f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, FANFOLD,LABELS_FOLD, LABELS_STACK, STACK_BOX, AUTO_FANFOLD, FANFOLD_GEAR, ROW_NUM, RTRIM(FINISH_REV) AS FINISH_REV, RTRIM(FINISH_TYPE) AS FINISH_TYPE, ROW_ID FROM GCG_3623_JACKET_FIN WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' AND ROW_NUM = '{3}' AND FINISH_TYPE = 'FanFold'",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,v.Local.iCount,V.Local.sSQL)
+	F.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, FANFOLD, LABELS_FOLD, LABELS_STACK, STACK_BOX, CAST('0' AS BIT) AS AUTO_FANFOLD, CAST('0' AS DOUBLE) AS FANFOLD_GEAR, CAST('1' AS INT) AS ROW_NUM, RTRIM(' ') AS FINISH_REV, RTRIM(' ') AS FINISH_TYPE, CAST('' AS IDENTITY) AS ROW_ID FROM GCG_3623_EST WHERE EST_NO = '{0}' ",v.Args.EST,V.Local.sSQL)	
+	F.Intrinsic.Control.EndIf
+	f.Intrinsic.String.Build("Finish{0}FanFold",v.Local.iCount,v.Local.sFilter)
+	f.Intrinsic.String.Build("{0}$FanFold",v.Local.sOrg,v.Local.sTable)
+	f.Data.DataTable.CreateFromSQL(v.Local.sTable,"Con",v.Local.sSQL,true)
+	F.Data.DataTable.AddColumn(v.Local.sTable,"Type","String","")
+	f.Data.DataTable.AddColumn(v.Local.sTable,"Type2","String","")
+	f.Data.DataView.Create(v.Local.sTable,v.Local.sFilter)
+	f.Intrinsic.Control.If(v.DataView.[v.Local.sTable]![v.Local.sFilter].RowCount,=,0)
+		'We don't have anything so add in a default row
+		f.Data.DataTable.AddRow(v.Local.sTable,"Type","FanFold","Type2","FanFold","Row_Num",v.Local.iCount)
+	f.Intrinsic.Control.Else
+		f.Data.DataView.SetValue(v.Local.sTable,v.Local.sFilter,-1,"Type","FanFold","Type2","FanFold")
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.String.Build("Grid{0}",v.Local.sFilter,v.Local.sGrid)
+	Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView(v.Local.sGrid,"Header",v.Local.sFilter)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"ReadOnly",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"Editable",True)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"AllowSort",False)
+
+	f.Intrinsic.Control.If(v.Args.Type,=,"Jacket")
+		f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, SHEETED, LABELS_SHEET, SHEETS_STACK, STACKS_BOX, ROW_NUM, RTRIM(FINISH_REV) AS FINISH_REV, RTRIM(FINISH_TYPE) AS FINISH_TYPE, ROW_ID FROM GCG_3623_JACKET_FIN WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' AND ROW_NUM = '{3}' AND FINISH_TYPE = 'Sheeted'",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,v.Local.iCount,V.Local.sSQL)
+	F.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, SHEETS AS SHEETED, LABELS_SHEET, SHEETS_STACK, STACKS_BOX, CAST('1' AS INT) AS ROW_NUM, RTRIM(' ') AS FINISH_REV, RTRIM(' ') AS FINISH_TYPE, CAST('' AS IDENTITY) AS ROW_ID FROM GCG_3623_EST WHERE EST_NO = '{0}' ",v.Args.EST,V.Local.sSQL)	
+	F.Intrinsic.Control.EndIf
+	f.Intrinsic.String.Build("Finish{0}Sheeted",v.Local.iCount,v.Local.sFilter)
+	f.Intrinsic.String.Build("{0}$Sheeted",v.Local.sOrg,v.Local.sTable)
+	f.Data.DataTable.CreateFromSQL(v.Local.sTable,"Con",v.Local.sSQL,True)
+	F.Data.DataTable.AddColumn(v.Local.sTable,"Type","String","")
+	f.Data.DataTable.AddColumn(v.Local.sTable,"Type2","String","")
+	f.Data.DataView.Create(v.Local.sTable,v.Local.sFilter)
+	f.Intrinsic.Control.If(v.DataView.[v.Local.sTable]![v.Local.sFilter].RowCount,=,0)
+		'We don't have anything so add in a default row
+		f.Data.DataTable.AddRow(v.Local.sTable,"Type","Sheeted","Type2","Sheeted","Row_Num",v.Local.iCount)
+	f.Intrinsic.Control.Else
+		f.Data.DataView.SetValue(v.Local.sTable,v.Local.sFilter,-1,"Type","Sheeted","Type2","Sheeted")
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.String.Build("Grid{0}",v.Local.sFilter,v.Local.sGrid)
+	Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView(v.Local.sGrid,"Header",v.Local.sFilter)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"ReadOnly",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"Editable",True)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty(v.Local.sGrid,"AllowSort",False)
+	
+	f.Intrinsic.Control.If(v.Args.Type,=,"Jacket")
+		f.Intrinsic.Math.Add(v.Local.iCount,1,v.Local.iCount)
+		f.Intrinsic.String.Build("select * from GCG_3623_JACKET_FIN WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' AND ROW_NUM = '{3}' ",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,v.Local.iCount,V.Local.sSQL)
+		F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstTest",v.Local.sSQL)
+		f.Intrinsic.Control.If(v.ODBC.Con!rstTest.EOF,=,False)
+			v.Local.bEmpty.Set(False)
+		f.Intrinsic.Control.Else
+			v.Local.bEmpty.Set(True)
+		f.Intrinsic.Control.EndIf
+		f.ODBC.Con!rstTest.Close
+	f.Intrinsic.Control.Else
+		v.Local.bEmpty.Set(True)
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.Math.Add(v.Global.iFinish,1,v.Global.iFinish)
+f.Intrinsic.Control.Loop
+
+v.Local.iCount.Set(1)
+f.Intrinsic.Control.DoUntil(v.Local.iCount,=,v.Global.iFinish)
+	f.Intrinsic.String.Build("Header$Finish{0}",v.Local.iCount,v.Local.sOrg)
+	f.Intrinsic.String.Split("$Basic*!*$Rewind*!*$FanFold*!*$Sheeted","*!*",v.Local.sFilter)
+	f.Intrinsic.Control.For(v.Local.iRandom,v.Local.sFilter.LBound,v.Local.sFilter.UBound,1)
+		f.Intrinsic.String.Build("{0}{1}",v.Local.sOrg,v.Local.sFilter(v.Local.iRandom),v.Local.sFilter(v.Local.iRandom))
+		f.Data.DataTable.AddRelation(v.Local.sOrg,"Type",v.Local.sFilter(v.Local.iRandom),"Type")
+		f.Data.DataTable.AddRelation(v.Local.sOrg,"Type",v.Local.sFilter(v.Local.iRandom),"Type2")
+	f.Intrinsic.Control.Next(v.Local.iRandom)
+	f.Intrinsic.Math.Add(v.Local.iCount,1,v.Local.iCount)
+f.Intrinsic.Control.Loop
+'Create Table for Ink
+f.Data.DataTable.CreateFromString("Header$InkHead","Ink*!*Basic@!@Ink*!*Ink","Section*!*Type","String*!*String","*!*","@!@",True)
+f.Data.DataView.Create("Header$InkHead","InkHeadView")
+f.Data.DataTable.AddRelation("Header","Section","Header$InkHead","Section")
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridInkHead","Header","InkHeadView")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridInkHead","ReadOnly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridInkHead","Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridInkHead","AllowSort",False)
+
+
+'Create Ink DataTable and Views
+f.Intrinsic.Control.If(v.Args.Type,=,"Jacket")
+	f.Intrinsic.String.Build("SELECT TOP 1 RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, RTRIM(FINISH_REV) AS FINISH_REV, RTRIM(INK_TYPE) AS INK_TYPE, RTRIM(VARN_TYPE) AS VARN_TYPE, RTRIM(RIBBON_LEN) AS RIBBON_LEN, RTRIM(BLADROLL) AS BLADROLL, RTRIM(CYLSIZE) AS CYLSIZE, ROW_NUM FROM GCG_3623_JACKET_INKS WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' ORDER BY ROW_NUM ASC ",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,V.Local.sSQL)
+f.Intrinsic.Control.Else
+	v.Local.sSQL.Set("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, RTRIM(FINISH_REV) AS FINISH_REV, RTRIM(INK_TYPE) AS INK_TYPE, RTRIM(VARN_TYPE) AS VARN_TYPE, RTRIM(RIBBON_LEN) AS RIBBON_LEN, RTRIM(BLADROLL) AS BLADROLL, RTRIM(CYLSIZE) AS CYLSIZE, ROW_NUM FROM GCG_3623_JACKET_INKS WHERE FINISH_PART = 'THISISFAMEFROMSTRIDER' AND FINISH_LOC = 'THISISJUSTTOPOPULATE'")
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.CreateFromSQL("Header$InkHead$Basic","Con",v.Local.sSQL,True)
+f.Data.DataTable.AddColumn("Header$InkHead$Basic","Type","String","")
+f.Data.DataTable.AddColumn("Header$InkHead$Basic","Turn_Bar","Boolean",False)
+f.Data.DataTable.AddColumn("Header$InkHead$Basic","Relam/Delam","Boolean",False)
+f.Data.DataTable.AddColumn("Header$InkHead$Basic","Printing_Notes","String","")
+
+'Creating DataView for Ink
+f.Data.DataView.Create("Header$InkHead$Basic","InkBasic")
+
+f.Intrinsic.Control.If(v.DataView.Header$InkHead$Basic!InkBasic.RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow("Header$InkHead$Basic","Type","Basic","Row_Num",1)
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue("Header$InkHead$Basic","InkBasic",0,"Type","Basic")
+f.Intrinsic.Control.EndIf
+'Create Ink data table
+F.Intrinsic.Control.If(V.Args.Type,=,"Jacket")
+	F.Intrinsic.String.Build("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, RTRIM(FINISH_REV) AS FINISH_REV, RTRIM(PMS_NO) AS PMS_NO, RTRIM(INKNUM) AS INKNUM, RTRIM(INKCOV) AS INKCOV, RTRIM(WEB_DIREC) AS WEB_DIREC, RTRIM(FPS) AS FPS, RTRIM(FACE_LINER) AS FACE_LINER, RTRIM(STCKBACK) AS STCKBACK, RTRIM(ANILOX) AS ANILOX, ROW_NUM FROM GCG_3623_JACKET_INKS WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' ORDER BY ROW_NUM ASC ",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,V.Local.sSQL)
+f.Intrinsic.Control.Else
+	v.Local.sSQL.Set("SELECT RTRIM(FINISH_PART) AS FINISH_PART, RTRIM(FINISH_LOC) AS FINISH_LOC, RTRIM(FINISH_REV) AS FINISH_REV, RTRIM(PMS_NO) AS PMS_NO, RTRIM(INKNUM) AS INKNUM, RTRIM(INKCOV) AS INKCOV, RTRIM(WEB_DIREC) AS WEB_DIREC, RTRIM(FPS) AS FPS, RTRIM(FACE_LINER) AS FACE_LINER, RTRIM(STCKBACK) AS STCKBACK, RTRIM(ANILOX) AS ANILOX, ROW_NUM FROM GCG_3623_JACKET_INKS WHERE FINISH_PART = 'THISISFAMEFOROMSTRIDER' AND FINISH_LOC = 'THISISJUSTTOPOPULATE' ")
+f.Intrinsic.Control.EndIf
+
+f.Data.DataTable.CreateFromSQL("Header$InkHead$Ink","Con",v.Local.sSQL,True)
+f.Data.DataTable.AddColumn("Header$InkHead$Ink","Type","String","")
+'we need to merge Inks from Material
+f.Intrinsic.Control.If(v.Args.Type,=,"Quote")
+	f.Intrinsic.String.Build("SELECT PART, LOC FROM GCG_3623_EST_MAT WHERE EST_NO = '{0}' AND SORT_CODE = 'INK' ORDER BY POS ASC ",V.Args.EST,V.Local.sSQL)
+	f.ODBC.Connection!Con.OpenLocalRecordsetRO("rstInk",v.Local.sSQL)
+	f.Intrinsic.Control.DoUntil(v.ODBC.Con!rstInk.EOF,=,True)
+		'Populate Ink'TOOK OUT WEB DIRECTION, FACE LINER
+		F.Intrinsic.String.Build("SELECT CAST('{2}' AS INT) AS ROW_NUM, RTRIM(MATERIAL_TYPE) AS PMS_NO, RTRIM(PART) AS INKNUM, CALIPER_THICKNESS AS INKCOV, RTRIM(LINE_SCREEN) AS FPS, RTRIM(ADHESIVE_TYPE) AS STCKBACK, RTRIM(ADHESIVE_CODE) AS ANILOX FROM GCG_3623_INVENTORY WHERE PART = '{0}' AND LOCATION1 = '{1}'  ",V.ODBC.Con!rstInk.FieldValTrim!PART,V.ODBC.Con!rstInk.FieldValTrim!LOC,V.Global.iInk,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("Temp","Con",v.Local.sSQL,True)
+		F.Data.DataTable.Merge("Temp","Header$InkHead$Ink",True,2)
+		F.Data.DataTable.Close("Temp")
+		F.Intrinsic.Math.Add(V.Global.iInk,1,V.Global.iInk)
+		f.ODBC.Con!rstInk.MoveNext
+	f.Intrinsic.Control.Loop
+	f.ODBC.Con!rstInk.Close
+f.Intrinsic.Control.EndIf
+
+f.Data.DataView.Create("Header$InkHead$Ink","InkInk")
+f.Intrinsic.Control.If(v.DataView.Header$InkHead$Ink!InkInk.RowCount,=,0)
+	'We don't have anything so add in a default row
+	f.Data.DataTable.AddRow("Header$InkHead$Ink","Type","Ink","Row_Num",1)
+f.Intrinsic.Control.Else
+	f.Data.DataView.SetValue("Header$InkHead$Ink","InkInk",-1,"Type","Ink")
+f.Intrinsic.Control.EndIf
+f.Data.DataTable.Compute("Header$InkHead$Ink","Count(Row_Num)","",v.Global.iInk)
+f.Intrinsic.Math.Add(v.Global.iInk,1,v.Global.iInk)
+
+
+f.Data.DataTable.AddRelation("Header$InkHead","Type","Header$InkHead$Basic","Type")
+f.Data.DataTable.AddRelation("Header$InkHead","Type","Header$InkHead$Ink","Type")
+
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridInkBasic","Header","InkBasic")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridInkBasic","ReadOnly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridInkBasic","Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridInkBasic","AllowSort",False)
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridInkInk","Header","InkInk")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridInkInk","ReadOnly",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridInkInk","Editable",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridInkInk","AllowSort",False)
+
+'Hide the additional rows of Tooling
+Gui.F_Job_Jacket.GsGridControl1.HideRow("GridTooling",6,True)
+Gui.F_Job_Jacket.GsGridControl1.HideRow("GridTooling",5,True)
+Gui.F_Job_Jacket.GsGridControl1.HideRow("GridTooling",4,True)
+'
+Gui.F_Job_Jacket.GsGridControl1.HideRow("GridLabel",7,True)
+Gui.F_Job_Jacket.GsGridControl1.HideRow("GridLabel",6,True)
+Gui.F_Job_Jacket.GsGridControl1.HideRow("GridLabel",5,True)
+Gui.F_Job_Jacket.GsGridControl1.HideRow("GridLabel",4,True)
+Gui.F_Job_Jacket.GsGridControl1.HideRow("GridLabel",3,True)
+Gui.F_Job_Jacket.GsGridControl1.HideRow("GridLabel",2,True)
+'Create the Additional Grids that are populated from the Jacket table.
+'Create Table for Packaging
+f.Data.DataTable.CreateFromString("Header$Packaging","Packaging*!*Basic@!@Packaging*!*ShrinkWrap@!@Packaging*!*Bagged","Section*!*Type","String*!*String","*!*","@!@",True)
+f.Data.DataView.Create("Header$Packaging","PackagingView")
+f.Data.DataTable.AddRelation("Header","Section","Header$Packaging","Section")
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridPackaging","Header","PackagingView")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPackaging","ReadOnly",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPackaging","Editable",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPackaging","AllowSort",False)
+
+	'Creating Tables for Packaging
+	F.Data.DataTable.CreateFromString("Header$Packaging$Basic","Basic","Type*!*Packaging_Notes*!*Special_Inspection_Notes*!*Pallet_Size_wxlxh*!*Cases/Layer*!*Layers/skid","String*!*String*!*String*!*String*!*String*!*String","*!*","@!@",True)
+	F.Data.DataView.Create("Header$Packaging$Basic","PackagingBasicView")
+	f.Data.DataTable.AddRelation("Header$Packaging","Type","Header$Packaging$Basic","Type")
+	Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridPackagingBasic","Header","PackagingBasicView")
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPackagingBasic","readonly",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPackagingBasic","Editable",True)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPackagingBasic","AllowSort",False)
+
+	
+	F.Data.DataTable.CreateFromString("Header$Packaging$ShrinkWrap","ShrinkWrap","Type*!*ShrinkWrapped*!*Labels/Pack","String*!*Boolean*!*String","*!*","@!@")
+	F.Data.DataView.Create("Header$Packaging$ShrinkWrap","PackagingShrinkWrapView")
+	f.Data.DataTable.AddRelation("Header$Packaging","Type","Header$Packaging$ShrinkWrap","Type")
+	Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridPackagingShrinkWrap","Header","PackagingShrinkWrapView")
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPackagingShrinkWrap","readonly",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPackagingShrinkWrap","Editable",True)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPackagingShrinkWrap","AllowSort",False)
+	
+	F.Data.DataTable.CreateFromString("Header$Packaging$Bagged","Bagged","Type*!*Bagged*!*Labels/Bag*!*Bag_Size/Type","String*!*Boolean*!*String*!*String","*!*","@!@")
+	F.Data.DataView.Create("Header$Packaging$Bagged","PackagingBaggedView")	
+	f.Data.DataTable.AddRelation("Header$Packaging","Type","Header$Packaging$Bagged","Type")
+	Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridPackagingBagged","Header","PackagingBaggedView")
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPackagingBagged","readonly",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPackagingBagged","Editable",True)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridPackagingBagged","AllowSort",False)
+	
+
+'Create Table for Variable Imaging
+f.Data.DataTable.CreateFromString("Header$VarImage","Variable Imaging*!*Basic@!@Variable Imaging*!*Barcode@!@Variable Imaging*!*Labels@!@Variable Imaging*!*Notes","Section*!*Type","String*!*String","*!*","@!@",True)
+f.Data.DataView.Create("Header$VarImage","VarImageView")
+f.Data.DataTable.AddRelation("Header","Section","Header$VarImage","Section")
+Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridVarImage","Header","VarImageView")
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridVarImage","ReadOnly",True)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridVarImage","Editable",False)
+Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridVarImage","AllowSort",False)
+
+	'Create Tables for Variable Imaging section
+	f.Data.DataTable.CreateFromString("Header$VarImage$Basic","Basic","Type*!*Format_Type*!*Copy_Chng*!*Proofs*!*ACR_Frm_Prev*!*FileName*!*Seq_Start*!*Seq_End","String*!*String*!*String*!*String*!*String*!*String*!*String*!*String","*!*","@!@",True)
+	f.Data.DataView.Create("Header$VarImage$Basic","VarImageBasicView")
+	f.Data.DataTable.AddRelation("Header$VarImage","Type","Header$VarImage$Basic","Type")
+	Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridVarImageBasic","Header","VarImageBasicView")
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridVarImageBasic","readonly",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridVarImageBasic","Editable",True)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridVarImageBasic","AllowSort",False)
+	
+	f.Data.DataTable.CreateFromString("Header$VarImage$Barcode","Barcode","Type*!*BarCode_Spec*!*Barcode_Ratio*!*Barcode_Height*!*Bar_Readable*!*Fold_by","String*!*String*!*String*!*String*!*String*!*String","*!*","@!@",True)
+	f.Data.DataView.Create("Header$VarImage$Barcode","VarImageBarcodeView")
+	f.Data.DataTable.AddRelation("Header$VarImage","Type","Header$VarImage$Barcode","Type")
+	Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridVarImageBarcode","Header","VarImageBarcodeView")
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridVarImageBarcode","readonly",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridVarImageBarcode","Editable",True)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridVarImageBarcode","AllowSort",False)
+	
+	f.Data.DataTable.CreateFromString("Header$VarImage$Labels","Labels","Type*!*Label_Source*!*Labels/Number*!*Labels_Roll*!*Labels_Sheeted*!*Labels/Stack*!*Labels_Padded*!*Labels/Pad","String*!*String*!*String*!*String*!*Boolean*!*String*!*Boolean*!*String","*!*","@!@",True)
+	f.Data.DataView.Create("Header$VarImage$Labels","VarImageLabelsView")
+	f.Data.DataTable.AddRelation("Header$VarImage","Type","Header$VarImage$Labels","Type")
+	Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridVarImageLabels","Header","VarImageLabelsView")
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridVarImageLabels","readonly",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridVarImageLabels","Editable",True)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridVarImageLabels","AllowSort",False)
+	
+	f.Data.DataTable.CreateFromString("Header$VarImage$Notes","Notes","Type*!*Variable_Notes","String*!*String","*!*","@!@",True)
+	f.Data.DataView.Create("Header$VarImage$Notes","VarImageNotesView")
+	f.Data.DataTable.AddRelation("Header$VarImage","Type","Header$VarImage$Notes","Type")
+	Gui.F_Job_Jacket.GsGridControl1.AddGridViewFromDataView("GridVarImageNotes","Header","VarImageNotesView")
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridVarImageNotes","readonly",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridVarImageNotes","Editable",True)
+	Gui.F_Job_Jacket.GsGridControl1.SetGridViewProperty("GridVarImageNotes","AllowSort",False)
+'Need to create and populate the fields from the Jacket table
+f.Intrinsic.Control.If(v.Args.Type,=,"Jacket")
+	F.Intrinsic.String.Build("SELECT * FROM GCG_3623_JACKET WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' ",V.Screen.F_Job_Jacket!txtFINISHPART.Text,V.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,V.Local.sSQL)
+f.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("SELECT * FROM GCG_3623_EST WHERE FINISH_PART = '{0}' AND EST_NO = '{1}' ",V.Screen.F_Job_Jacket!txtFINISHPART.Text.Trim,v.Args.EST,V.Local.sSQL)
+f.Intrinsic.Control.EndIf
+F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstJacket",v.Local.sSQL)
+f.Intrinsic.Control.If(v.ODBC.Con!rstJacket.EOF,=,False)
+	'populate the fields
+	'If we have something then lets populate all of the fields
+	F.Intrinsic.Control.If(V.Args.Type,=,"Jacket")
+		GUI.F_Job_Jacket.txtQuote.Text(V.ODBC.Con!rstJacket.FieldValTrim!QUOTE1)
+		GUI.F_Job_Jacket.txtCustomer.Text(V.ODBC.Con!rstJacket.FieldValTrim!CUSTOMER)
+		GUI.F_Job_Jacket.txtWidth.Text(V.ODBC.Con!rstJacket.FieldValTrim!H_WIDTH)
+		GUI.F_Job_Jacket.txtGapAcross.Text(V.ODBC.Con!rstJacket.FieldValTrim!GAP_ACROSS)
+		GUI.F_Job_Jacket.txtACRDie.Text(V.ODBC.Con!rstJacket.FieldValTrim!ACR_DIE)
+		GUI.F_Job_Jacket.txtLength.Text(V.ODBC.Con!rstJacket.FieldValTrim!H_LENGTH)
+		GUI.F_Job_Jacket.txtGAPDown.Text(V.ODBC.Con!rstJacket.FieldValTrim!GAP_DOWN)
+		GUI.F_Job_Jacket.txtAcrPress.Text(V.ODBC.Con!rstJacket.FieldValTrim!ACR_PRESS)
+		GUI.F_Job_Jacket.txtAcrFin.Text(V.ODBC.Con!rstJacket.FieldValTrim!FINISH_ACROSS)
+		GUI.F_Job_Jacket.txtRepeat.Text(V.ODBC.Con!rstJacket.FieldValTrim!REPEAT1)
+		GUI.F_Job_Jacket.txtPerfAt.Text(V.ODBC.Con!rstJacket.FieldValTrim!PERF_AT)
+		GUI.F_Job_Jacket.txtFinCarrierWidth.Text(V.ODBC.Con!rstJacket.FieldValTrim!CARRIER_WIDTH)
+		GUI.F_Job_Jacket.txtWebWidth.Text(V.ODBC.Con!rstJacket.FieldValTrim!WEB_WIDTH)
+		GUI.F_Job_Jacket.cboShape.Text(V.ODBC.Con!rstJacket.FieldValTrim!SHAPE)
+		GUI.F_Job_Jacket.cboUM.Text(V.ODBC.Con!rstJacket.FieldValTrim!SHAPE_UM)
+		GUI.F_Job_Jacket.txtOvrUndr.Text(V.ODBC.Con!rstJacket.FieldValTrim!OVR_UNDR)
+		GUI.F_Job_Jacket.txtSpecialPerf.Text(V.ODBC.Con!rstJacket.FieldValTrim!SPECIAL_PERF)
+		GUI.F_Job_Jacket.chkAirEject.Value(V.ODBC.Con!rstJacket.FieldValTrim!AIR_EJECT)
+		GUI.F_Job_Jacket.chkBackCut.Value(V.ODBC.Con!rstJacket.FieldValTrim!BACK_CUT)
+		GUI.F_Job_Jacket.txtBackCutDesc.Text(V.ODBC.Con!rstJacket.FieldValTrim!BACKCUT_DESC)
+		GUI.F_Job_Jacket.chkSheeted.Value(V.ODBC.Con!rstJacket.FieldValTrim!SHEETED)
+		GUI.F_Job_Jacket.txtSheetedAt.Text(V.ODBC.Con!rstJacket.FieldValTrim!SHEETED_AT)
+		GUI.F_Job_Jacket.chkFaceCut.Value(V.ODBC.Con!rstJacket.FieldValTrim!FACE_CUT)
+		GUI.F_Job_Jacket.txtFaceCutDesc.Text(V.ODBC.Con!rstJacket.FieldValTrim!FACECUT_DESC)
+		GUI.F_Job_Jacket.chkPinFeed.Value(V.ODBC.Con!rstJacket.FieldValTrim!PINFEED)
+		GUI.F_Job_Jacket.chkVacuum.Value(V.ODBC.Con!rstJacket.FieldValTrim!VAC)
+		GUI.F_Job_Jacket.chkAutoApply.Value(V.ODBC.Con!rstJacket.FieldValTrim!AUTO_APPLY)
+		GUI.F_Job_Jacket.txtTPI.Text(V.ODBC.Con!rstJacket.FieldValTrim!TPI)
+		GUI.F_Job_Jacket.txtTurret.Text(V.ODBC.Con!rstJacket.FieldValTrim!TURRET)
+		GUI.F_Job_Jacket.txtBTC.Text(V.ODBC.Con!rstJacket.FieldValTrim!BTC)
+		GUI.F_Job_Jacket.txtBTCSetting.Text(V.ODBC.Con!rstJacket.FieldValTrim!BTC_SETTING)
+		GUI.F_Job_Jacket.mltEstNotes.Text(V.ODBC.Con!rstJacket.FieldValTrim!EST_NOTES)
+		
+	
+		'now we are adding to DataTables
+		F.Data.DataTable.SetValue("Header$InkHead$Basic",0,"Turn_Bar",V.ODBC.Con!rstJacket.FieldValTrim!TURNBAR)
+		F.Data.DataTable.SetValue("Header$InkHead$Basic",0,"Printing_Notes",V.ODBC.Con!rstJacket.FieldValTrim!PRINT_NOTES)
+		F.Data.DataTable.SetValue("Header$InkHead$Basic",0,"Relam/Delam",V.ODBC.Con!rstJacket.FieldValTrim!DE_RELAM)
+	
+		F.Data.DataView.SetValue("Header$Press","Press",0,"Press_Notes",V.ODBC.Con!rstJacket.FieldValTrim!PRESS_NOTES)
+	
+		F.Data.DataTable.SetValue("HEADER$PACKAGING$BAGGED",0,"Bagged",V.ODBC.Con!rstJacket.FieldValTrim!BAGGED)
+		F.Data.DataTable.SetValue("HEADER$PACKAGING$BAGGED",0,"Bag_Size/Type",V.ODBC.Con!rstJacket.FieldValTrim!BAG_SIZE)
+		F.Data.DataTable.SetValue("HEADER$PACKAGING$BAGGED",0,"Labels/Bag",V.ODBC.Con!rstJacket.FieldValTrim!LABELS_BAG)
+		F.Data.DataTable.SetValue("HEADER$PACKAGING$SHRINKWRAP",0,"ShrinkWrapped",V.ODBC.Con!rstJacket.FieldValTrim!SHRINKWRAP)
+		F.Data.DataTable.SetValue("HEADER$PACKAGING$SHRINKWRAP",0,"Labels/Pack",V.ODBC.Con!rstJacket.FieldValTrim!LABEL_PACK)
+		F.Data.DataTable.SetValue("HEADER$PACKAGING$BASIC",0,"Pallet_Size_wxlxh",V.ODBC.Con!rstJacket.FieldValTrim!PALLET_SIZE)
+		F.Data.DataTable.SetValue("HEADER$PACKAGING$BASIC",0,"Cases/Layer",V.ODBC.Con!rstJacket.FieldValTrim!CASES_LAYER)
+		F.Data.DataTable.SetValue("HEADER$PACKAGING$BASIC",0,"Layers/Skid",V.ODBC.Con!rstJacket.FieldValTrim!LAYERS_SKID)
+		F.Data.DataTable.SetValue("HEADER$PACKAGING$BASIC",0,"Packaging_Notes",V.ODBC.Con!rstJacket.FieldValTrim!PACK_NOTES)
+		F.Data.DataTable.SetValue("HEADER$PACKAGING$BASIC",0,"Special_Inspection_Notes",V.ODBC.Con!rstJacket.FieldValTrim!SPEC_NOTES)
+		
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$BASIC",0,"Format_Type",V.ODBC.Con!rstJacket.FieldValTrim!FORMAT_TYPE)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$BASIC",0,"Copy_Chng",V.ODBC.Con!rstJacket.FieldValTrim!COPY_CHNG)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$BASIC",0,"Proofs",V.ODBC.Con!rstJacket.FieldValTrim!PROOFS)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$BASIC",0,"ACR_Frm_Prev",V.ODBC.Con!rstJacket.FieldValTrim!ACR_FRM_PREV)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$BASIC",0,"FileName",V.ODBC.Con!rstJacket.FieldValTrim!FILE_NAME)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$BASIC",0,"Seq_Start",V.ODBC.Con!rstJacket.FieldValTrim!SEQ_START)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$BASIC",0,"Seq_End",V.ODBC.Con!rstJacket.FieldValTrim!SEQ_END)
+
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$NOTES",0,"Variable_Notes",V.ODBC.Con!rstJacket.FieldValTrim!VAR_INST)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$BARCODE",0,"BarCode_Spec",V.ODBC.Con!rstJacket.FieldValTrim!BC_SPEC)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$BARCODE",0,"Barcode_Ratio",V.ODBC.Con!rstJacket.FieldValTrim!BC_RATIO)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$BARCODE",0,"Barcode_Height",V.ODBC.Con!rstJacket.FieldValTrim!BC_HEIGHT)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$BARCODE",0,"Bar_Readable",V.ODBC.Con!rstJacket.FieldValTrim!BC_READ)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$BARCODE",0,"Fold_By",V.ODBC.Con!rstJacket.FieldValTrim!FOLD_BY)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$LABELS",0,"Label_Source",V.ODBC.Con!rstJacket.FieldValTrim!LBL_SRC)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$LABELS",0,"Labels/Number",V.ODBC.Con!rstJacket.FieldValTrim!LBL_NUMBER)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$LABELS",0,"Labels_Roll",V.ODBC.Con!rstJacket.FieldValTrim!LBL_ROLL)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$LABELS",0,"Labels_Sheeted",V.ODBC.Con!rstJacket.FieldValTrim!LBL_SHEETED)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$LABELS",0,"Labels/Stack",V.ODBC.Con!rstJacket.FieldValTrim!LBL_STACK)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$LABELS",0,"Labels_Padded",V.ODBC.Con!rstJacket.FieldValTrim!LBL_PADD)
+		F.Data.DataTable.SetValue("HEADER$VARIMAGE$LABELS",0,"Labels/Pad",V.ODBC.Con!rstJacket.FieldValTrim!LBL_PAD)
+		
+	f.Intrinsic.Control.Else
+		'We are pulling from the Estimate tables
+		GUI.F_Job_Jacket.txtCustomer.Text(V.ODBC.Con!rstJacket.FieldValTrim!CUSTOMER)
+		GUI.F_Job_Jacket.txtWidth.Text(V.ODBC.Con!rstJacket.FieldValTrim!LBL_WIDTH)
+		GUI.F_Job_Jacket.txtLength.Text(V.ODBC.Con!rstJacket.FieldValTrim!LBL_DEPTH)
+		GUI.F_Job_Jacket.txtAcrFin.Text(V.ODBC.Con!rstJacket.FieldValTrim!FIN_LBL_ACROSS)
+		GUI.F_Job_Jacket.txtRepeat.Text(V.ODBC.Con!rstJacket.FieldValTrim!REPEAT_LENGTH)
+		GUI.F_Job_Jacket.mltEstNotes.Text(V.ODBC.Con!rstJacket.FieldValTrim!H_EST_NOTES)
+		
+		
+		'We need to search for information from the Material table for the die
+		f.Intrinsic.String.Build("SELECT TOP 1 PART, LOC FROM GCG_3623_EST_MAT WHERE EST_NO = '{0}' AND SORT_CODE = 'DIE' ",V.Args.EST,V.Local.sSQL)
+		F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstDie",v.Local.sSQL)
+		f.Intrinsic.Control.If(v.ODBC.Con!rstDie.EOF,=,False)
+			'We have a die so lets get the info for it.
+			F.Intrinsic.String.Build("SELECT * FROM GCG_3623_INVENTORY WHERE PART = '{0}' AND LOCATION1 = '{1}' ",V.ODBC.Con!rstDie.FieldValTrim!PART,V.ODBC.Con!rstDie.FieldValTrim!LOC,V.Local.sSQL)
+			F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstInvDie",v.Local.sSQL)
+			f.Intrinsic.Control.If(v.ODBC.Con!rstInvDie.EOF,=,False)
+				GUI.F_Job_Jacket.txtGapAcross.Text(V.ODBC.Con!rstInvDie.FieldValTrim!GAP_ACROSS)
+				GUI.F_Job_Jacket.txtACRDie.Text(V.ODBC.Con!rstInvDie.FieldValTrim!ACR_DIE)
+				GUI.F_Job_Jacket.txtGAPDown.Text(V.ODBC.Con!rstInvDie.FieldValTrim!GAP_DOWN)
+				GUI.F_Job_Jacket.txtAcrPress.Text(V.ODBC.Con!rstInvDie.FieldValTrim!ACR_PRESS)
+				GUI.F_Job_Jacket.cboShape.Text(V.ODBC.Con!rstInvDie.FieldValTrim!SHAPE)
+				'get the UM
+				f.Intrinsic.String.Build("SELECT UM_INVENTORY FROM V_INVENTORY_MSTR WHERE PART = '{0}' AND LOCATION = '{1}' ",V.ODBC.Con!rstInvDie.FieldValTrim!PART,V.ODBC.Con!rstInvDie.FieldValTrim!LOCATION1,V.Local.sSQL)
+				F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstUM",v.Local.sSQL)
+				f.Intrinsic.Control.If(v.ODBC.Con!rstUM.EOF,=,False)
+					'we have um so set it
+					GUI.F_Job_Jacket.cboUM.Text(V.ODBC.Con!rstUM.FieldValTrim!UM_INVENTORY)
+				F.Intrinsic.Control.EndIf
+				F.ODBC.Con!rstUM.Close
+				
+			f.Intrinsic.Control.EndIf
+			f.ODBC.Con!rstInvDie.Close
+		f.Intrinsic.Control.EndIf
+		f.ODBC.Con!rstDie.Close
+	
+	f.Intrinsic.Control.EndIf
+		
+	
+f.Intrinsic.Control.EndIf
+f.ODBC.Con!rstJacket.Close
+'setting all of the grid properties
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridTooling","Section","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridLabel","Section","Visible",False)
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartDie","Finish_Part","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartDie","Description","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartDie","Sort_Code","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartDie","Qty","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartDie","Across","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartDie","Finish_Loc","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartDie","W_Group","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartDie","Work_Center","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartDie","Finish_Rev","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartDie","Type","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartDie","Section","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.AddColumn("GridPartDie","Delete","String")
+Gui.F_Job_Jacket.GsGridControl1.ColumnEdit("GridPartDie","Delete","EditorButton","Delete")
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartDie","Delete","MaxWidth","75")
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartDie","Delete","ReadOnly",True)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartDie","Delete","AllowEdit",False)
+
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartPerf","Finish_Part","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartPerf","Description","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartPerf","Sort_Code","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartPerf","Qty","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartPerf","Across","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartPerf","Finish_Loc","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartPerf","W_Group","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartPerf","Work_Center","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartPerf","Finish_Rev","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartPerf","Type","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartPerf","Section","Visible",False)
+
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartButt","Finish_Part","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartButt","Description","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartButt","Sort_Code","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartButt","Qty","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartButt","Across","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartButt","Finish_Loc","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartButt","W_Group","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartButt","Work_Center","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartButt","Finish_Rev","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartButt","Type","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartButt","Section","Visible",False)
+
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartSheeter","Finish_Part","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartSheeter","Description","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartSheeter","Sort_Code","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartSheeter","Qty","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartSheeter","Across","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartSheeter","Finish_Loc","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartSheeter","W_Group","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartSheeter","Work_Center","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartSheeter","Finish_Rev","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartSheeter","Type","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartSheeter","Section","Visible",False)
+
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartRaw","Finish_Part","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartRaw","Description","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartRaw","Sort_Code","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartRaw","Qty","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartRaw","Across","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartRaw","Finish_Loc","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartRaw","W_Group","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartRaw","Work_Center","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartRaw","Finish_Rev","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartRaw","Type","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartRaw","Section","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.AddColumn("GridPartRaw","Delete","String")
+Gui.F_Job_Jacket.GsGridControl1.ColumnEdit("GridPartRaw","Delete","EditorButton","Delete")
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartRaw","Delete","MaxWidth","75")
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartRaw","Delete","ReadOnly",True)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPartRaw","Delete","AllowEdit",False)
+
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPress","Finish_Part","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPress","Part","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPress","Description","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPress","Sort_Code","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPress","Qty","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPress","Across","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPress","Finish_Loc","Visible",False)
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPress","Finish_Rev","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPress","Type","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPress","Section","Visible",False)
+
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkHead","Section","Visible",False)
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkBasic","Finish_Part","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkBasic","Finish_Loc","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkBasic","Row_Num","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkBasic","Finish_Rev","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkBasic","Type","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkBasic","Ribbon_Len","DisplayFormatType","Numeric")
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkBasic","CylSize","DisplayFormatType","Numeric")
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkInk","Finish_Part","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkInk","Finish_Loc","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkInk","Row_Num","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkInk","Finish_Rev","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkInk","Type","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.AddColumn("GridInkInk","Delete","String")
+Gui.F_Job_Jacket.GsGridControl1.ColumnEdit("GridInkInk","Delete","EditorButton","Delete")
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkInk","Delete","MaxWidth","75")
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkInk","Delete","ReadOnly",True)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkInk","Delete","AllowEdit",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridInkInk","InkCov","DisplayFormatType","Numeric")
+
+f.Intrinsic.Math.sub(v.Global.iFinish,1,v.Local.iCount2)
+f.Intrinsic.Control.For(v.Local.iCount,1,v.Local.iCount2,1)
+	f.Intrinsic.String.Split("Basic*!*Rewind*!*FanFold*!*Sheeted","*!*",v.Local.sFilter)
+	f.Intrinsic.Control.For(v.Local.iRandom,v.Local.sFilter.LBound,v.Local.sFilter.UBound,1)
+		f.Intrinsic.String.Build("GridFinish{0}{1}",v.Local.iCount,v.Local.sFilter(v.Local.iRandom),v.Local.sFilter(v.Local.iRandom))
+		Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Finish_Part","Visible",False)
+		Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Finish_Loc","Visible",False)
+		Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Row_Num","Visible",False)
+		Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Finish_Rev","Visible",False)
+		Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Finish_Type","Visible",False)
+		Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Type","Visible",False)
+		Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Type2","Visible",False)
+		Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sFilter(v.Local.iRandom),"Row_Id","Visible",False)
+	f.Intrinsic.Control.Next(v.Local.iRandom)
+	f.Intrinsic.String.Build("GridFinish{0}",v.Local.iCount,v.Local.sGrid)
+	Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sGrid,"Section","Visible",False)
+	Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty(v.Local.sGrid,"Type2","Visible",False)
+f.Intrinsic.Control.Next(v.Local.iCount)
+		
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPackaging","Section","Visible",False)
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPackagingBasic","Type","Visible",False)
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPackagingShrinkWrap","Type","Visible",False)
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridPackagingBagged","Type","Visible",False)
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridLabelLabel","Type","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridLabelLabel","Finish_Part","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridLabelLabel","Finish_Loc","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridLabelLabel","Finish_Rev","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.AddColumn("GridLabelLabel","Delete","String")
+Gui.F_Job_Jacket.GsGridControl1.ColumnEdit("GridLabelLabel","Delete","EditorButton","Delete")
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridLabelLabel","Delete","MaxWidth","75")
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridLabelLabel","Delete","ReadOnly",True)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridLabelLabel","Delete","AllowEdit",False)
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridMisc","Type","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridMisc","Section","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridMisc","Finish_Part","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridMisc","Description","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridMisc","Sort_Code","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridMisc","Across","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridMisc","Finish_Loc","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridMisc","W_Group","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridMisc","Work_Center","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridMisc","Finish_Rev","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridMisc","Source","ReadOnly",True)
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridMisc","Source","AllowEdit",False)
+
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridVarImage","Section","Visible",False)
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridVarImageBasic","Type","Visible",False)
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridVarImageBarcode","Type","Visible",False)
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridVarImageLabels","Type","Visible",False)
+
+Gui.F_Job_Jacket.GsGridControl1.SetColumnProperty("GridVarImageNotes","Type","Visible",False)
+Gui.F_Job_Jacket.GsGridControl1.MainView("GridHead")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("FreshGrid_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_JOB_JACKET.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_job_jacket_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.FreshGrid.End
+
+Program.Sub.CloseDataTables.Start
+F.Intrinsic.Control.SetErrorHandler("CloseDataTables_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+v.Global.iFinish.Set(0)
+V.Global.iInk.Set(1)
+
+f.Data.DataTable.Close("Header")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CloseDataTables_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_JOB_JACKET.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_job_jacket_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.CloseDataTables.End
+
+Program.Sub.GsGridControl1_RowCellClick.Start
+F.Intrinsic.Control.SetErrorHandler("GsGridControl1_RowCellClick_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.sRet.Declare(string)
+
+Gui.F_Job_Jacket.GsGridControl1.GetFocusedGridView(v.Local.sRet)
+
+f.Intrinsic.Control.If(v.Args.Column,=,"Delete")	
+	'Build the data table name
+	f.Intrinsic.String.Build("Header${0}",v.Local.sRet,v.Local.sRet)
+
+	f.Data.DataTable.DeleteRow(v.Local.sRet,v.Args.RowIndex)
+
+f.Intrinsic.Control.Else
+	'Not deleting so add to the global variable to use for Delete Finish
+	f.Intrinsic.Control.If(v.Local.sRet,=,"HEADER")
+		v.Global.sFinish.Set(v.Args.CELLVALUE)
+		f.Intrinsic.Control.If(v.Global.sFinish.Left6,=,"Finish")
+			Gui.F_Job_Jacket.cmdDeleteFinish.Enabled(True)
+		F.Intrinsic.Control.Else
+			Gui.F_Job_Jacket.cmdDeleteFinish.Enabled(False)
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GsGridControl1_RowCellClick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_JOB_JACKET.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.GsGridControl1_RowCellClick.End
+
+Program.Sub.cmdDeleteFinish_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdDeleteFinish_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.sRet.Declare(string)
+v.Local.sDataTable.Declare(string)
+v.Local.sTables.Declare(string)
+v.Local.iCount.Declare(long)
+v.Local.sSQL.Declare(string)
+
+
+'disable the delete button
+Gui.F_Job_Jacket.cmdDeleteFinish.Enabled(False)
+
+'We need to make sure they actualy want to delete the Finish
+f.Intrinsic.String.Build("Are you sure you want to delete {0}?",v.Global.sFinish,v.Local.sRet)
+f.Intrinsic.UI.Msgbox(v.Local.sRet,"Warning",4,v.Local.sRet)
+f.Intrinsic.Control.If(v.Local.sRet,=,6)
+	'yes they want to delete
+	'We need to delete the lines from each data table and then save it back to the table and close the datatable
+	f.Intrinsic.String.Build("Header${0}$Basic",v.Global.sFinish,v.Local.sDataTable)
+	f.Intrinsic.String.Build("DELETE FROM GCG_3623_JACKET_FIN WHERE FINISH_PART = '{0}' AND FINISH_LOC = '{1}' AND FINISH_REV = '{2}' AND ROW_NUM = '{3}'",v.Screen.F_Job_Jacket!txtFINISHPART.Text,v.Screen.F_Job_Jacket!txtFINISHLOC.Text,v.Screen.F_Job_Jacket!txtFinish_Rev.Text,V.DataTable.[v.Local.sDataTable](0).Row_Num!FieldValTrim,v.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	
+	f.Intrinsic.String.Split("Basic*!*Rewind*!*FanFold*!*Sheeted","*!*",v.Local.sTables)
+	f.Intrinsic.Control.For(v.Local.iCount,v.Local.sTables.LBound,v.Local.sTables.UBound,1)
+		f.Intrinsic.String.Build("Header${0}${1}",v.Global.sFinish,v.Local.sTables(v.Local.iCount),v.Local.sDataTable)
+		f.Data.DataTable.Close(v.Local.sDataTable)
+	f.Intrinsic.Control.Next(v.Local.iCount)
+	'Now we close the data table
+	f.Intrinsic.String.Build("Header${0}",v.Global.sFinish,v.Local.sTables)
+	f.Data.DataTable.Close(v.Local.sTables)
+	'Now we need to delete the Row from Header
+	F.Intrinsic.String.Build("SECTION = '{0}'",V.Global.sFinish,V.Local.sTables)
+	f.Data.DataView.Create("Header","HeadTemp",22,V.Local.sTables,"")
+	f.Data.DataTable.DeleteRow("Header",v.DataView.Header!HeadTemp(0).DataTableIndex)
+	f.Data.Dataview.Close("Header","HeadTemp")
+	
+f.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdDeleteFinish_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_JOB_JACKET.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_job_jacket_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdDeleteFinish_Click.End
+
+Program.Sub.GsGridControl1_CellValueChanged.Start
+F.Intrinsic.Control.SetErrorHandler("GsGridControl1_CellValueChanged_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.sGrid.Declare(string)
+V.Local.bNum.Declare(boolean,True)
+
+Gui.F_Job_Jacket.GsGridControl1.GetFocusedGridView(v.Local.sGrid)
+
+
+f.Intrinsic.Control.SelectCase(v.Local.sGrid.UCase)
+
+	f.Intrinsic.Control.Case("TOOLING$DIE")
+		f.Intrinsic.Control.If(v.Args.Column.UCase,=,"PART")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left20)
+		F.Intrinsic.Control.EndIf
+		
+	f.Intrinsic.Control.Case("PART")
+		f.Intrinsic.Control.If(v.Args.Column.UCase,=,"PART")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left20)
+		F.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.Case("RAW")
+		f.Intrinsic.Control.If(v.Args.Column.UCase,=,"PART")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left20)
+		F.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.Case("PRESS")
+		f.Intrinsic.Control.If(v.Args.Column.UCase,=,"W_GROUP","OR",v.Args.Column.UCase,=,"WORK_CENTER")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left30)
+		f.Intrinsic.Control.ElseIf(v.Args.Column.UCase,=,"PRESS_NOTES")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left500)
+		F.Intrinsic.Control.EndIf
+
+	f.Intrinsic.Control.Case("INKHEAD$BASIC")
+		f.Intrinsic.Control.If(v.Args.Column.UCase,=,"RIBBON_LEN","OR",v.Args.Column.UCase,=,"CYLSIZE")
+			f.Intrinsic.Math.IsNumeric(v.Args.Value,v.Local.bNum)
+		f.Intrinsic.Control.ElseIf(v.Args.Column.UCase,=,"INK_TYPE","OR",v.Args.Column.UCase,=,"VARN_TYPE",v.Args.Column.UCase,=,"BLADROLL")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left50)
+		f.Intrinsic.Control.ElseIf(v.Args.Column.UCase,=,"PRINTING_NOTES")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left500)
+		F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.Case("INKHEAD$INK")
+		f.Intrinsic.Control.If(v.Args.Column.UCase,=,"INKCOV")
+			f.Intrinsic.Math.IsNumeric(v.Args.Value,v.Local.bNum)
+		f.Intrinsic.Control.ElseIf(v.Args.Column.UCase,=,"PMS_NO","OR",v.Args.Column.UCase,=,"INKNUM",v.Args.Column.UCase,=,"WEB_DIREC",v.Args.Column.UCase,=,"FPS",v.Args.Column.UCase,=,"FACE_LINER",v.Args.Column.UCase,=,"STCKBACK"v.Args.Column.UCase,=,"ANILOX")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left50)
+		F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.Case("PACKAGING$BASIC")
+		F.Intrinsic.Control.If(V.Args.Column.UCase,=,"CASES/LAYER","OR",V.Args.Column.UCase,=,"LAYERS/SKID")
+			f.Intrinsic.Math.IsNumeric(v.Args.Value,v.Local.bNum)
+		f.Intrinsic.Control.ElseIf(v.Args.Column.UCase,=,"PACKAGING_NOTES","OR",v.Args.Column.UCase,=,"SPECIAL_INSPECTION_NOTES",v.Args.Column.UCase,=,"PALLET_SIZE_WXLXH")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left500)
+		F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.Case("PACKAGING$SHRINKWRAP")
+		F.Intrinsic.Control.If(V.Args.Column.UCase,=,"LABELS/PACK")
+			f.Intrinsic.Math.IsNumeric(v.Args.Value,v.Local.bNum)
+		F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.Case("PACKAGING$BAGGED")
+		F.Intrinsic.Control.If(V.Args.Column.UCase,=,"LABELS/BAG")
+			f.Intrinsic.Math.IsNumeric(v.Args.Value,v.Local.bNum)
+		f.Intrinsic.Control.ElseIf(v.Args.Column.UCase,=,"BAG_SIZE/TYPE")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left500)
+		F.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.Case("LABEL$LABELS")
+		F.Intrinsic.Control.If(v.Args.Column.UCase,=,"LABEL","OR",v.Args.Column.UCase,=,"FORMAT",v.Args.Column.UCase,=,"LBL_LOCATION")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left50)
+		F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Case("LABEL$MISC")
+		F.Intrinsic.Control.If(V.Args.Column.UCase,=,"QTY")
+			f.Intrinsic.Math.IsNumeric(v.Args.Value,v.Local.bNum)
+		F.Intrinsic.Control.ElseIf(v.Args.Column.UCase,=,"PART")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left20)
+		F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.Case("VARIMAGE$BASIC")
+		F.Intrinsic.Control.If(V.Args.Column.UCase,=,"COPY_CHNG","OR",V.Args.Column.UCase,=,"PROOFS",V.Args.Column.UCase,=,"ACR_FRM_PREV")
+			f.Intrinsic.Math.IsNumeric(v.Args.Value,v.Local.bNum)
+		F.Intrinsic.Control.ElseIf(v.Args.Column.UCase,=,"FORMAT_TYPE","OR",v.Args.Column.UCase,=,"FILENAME",v.Args.Column.UCase,=,"SEQ_START",v.Args.Column.UCase,=,"SEQ_END")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left500)
+		F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.Case("VARIMAGE$BARCODE")
+		F.Intrinsic.Control.If(v.Args.Column.UCase,=,"BARCODE_SPEC","OR",v.Args.Column.UCase,=,"BARCODE_RATIO",v.Args.Column.UCase,=,"BARCODE_HEIGHT",v.Args.Column.UCase,=,"BAR_READABLE",v.Args.Column.UCase,=,"FOLD_BY")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left500)
+		F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.Case("VARIMAGE$LABELS")
+		F.Intrinsic.Control.If(V.Args.Column.UCase,=,"LABELS/NUMBER","OR",V.Args.Column.UCase,=,"LABELS_ROLL",V.Args.Column.UCase,=,"LABELS/STACK",V.Args.Column.UCase,=,"LABELS/PAD")
+			f.Intrinsic.Math.IsNumeric(v.Args.Value,v.Local.bNum)
+		F.Intrinsic.Control.ElseIf(v.Args.Column.UCase,=,"LABEL_SOURCE")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left500)
+		F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Case("VARIMAGE$NOTES")
+		F.Intrinsic.Control.If(v.Args.Column.UCase,=,"VARIABLE_NOTES")
+			f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+			f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left500)
+		F.Intrinsic.Control.EndIf
+		
+	f.Intrinsic.Control.CaseElse
+		f.Intrinsic.String.IsInString(v.Local.sGrid.UCase,"FINISH",True,V.Local.bNum)
+		F.Intrinsic.Control.If(V.Local.bNum,=,True)
+			F.Intrinsic.Control.If(V.Args.Column.UCase,=,"CORE_ID","OR",V.Args.Column.UCase,=,"PROOFS",V.Args.Column.UCase,=,"ACR_FRM_PREV")
+				f.Intrinsic.Math.IsNumeric(v.Args.Value,v.Local.bNum)
+			F.Intrinsic.Control.ElseIf(V.Args.Column.UCase,=,"CORE_SIZE","OR",V.Args.Column.UCase,=,"BOX_SIZE",V.Args.Column.UCase,=,"WIND_DIRECTION")
+				f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+				f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left50)
+			F.Intrinsic.Control.ElseIf(V.Args.Column.UCase,=,"FINISH_NOTES")
+				f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+				f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,V.Args.Value.Left50)
+			F.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.Else
+			v.Local.bNum.Set(True)
+		f.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.EndSelect
+
+f.Intrinsic.Control.If(v.Local.bNum,=,False)
+	f.Intrinsic.String.Build("Header${0}",v.Local.sGrid,v.Local.sGrid)
+	f.Data.DataTable.SetValue(v.Local.sGrid,v.Args.RowIndex,v.Args.Column,"")
+f.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GsGridControl1_CellValueChanged_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_JOB_JACKET.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.GsGridControl1_CellValueChanged.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$Strider$}$8/12/2016 3:31:56 PM$}$False
+${$3$}$0$}$$}$-1$}$-1$}$$}$1/1/1900$}$SN90 transaction loads GSS Inventory into Sigma Nest
+Program.Sub.Comments.End
