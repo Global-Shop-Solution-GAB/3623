@@ -1,0 +1,404 @@
+Program.Sub.ScreenSU.Start
+Gui.SS_Form1..create
+Gui.SS_Form1..caption("Re-Print Quote")
+Gui.SS_Form1..size(4260,4650)
+Gui.SS_Form1..position(0,0)
+Gui.SS_Form1..alwaysontop(False)
+Gui.SS_Form1..fontname("Arial")
+Gui.SS_Form1..fontsize(8)
+Gui.SS_Form1..forecolor(0)
+Gui.SS_Form1..fontstyle(,,,)
+Gui.SS_Form1..BackColor(-2147483633)
+Gui.SS_Form1..controlbox(True)
+Gui.SS_Form1..maxbutton(False)
+Gui.SS_Form1..minbutton(False)
+Gui.SS_Form1..mousepointer(0)
+Gui.SS_Form1..moveable(True)
+Gui.SS_Form1..sizeable(False)
+Gui.SS_Form1..ShowInTaskBar(True)
+Gui.SS_Form1..titlebar(True)
+Gui.SS_Form1..MinX(0)
+Gui.SS_Form1..MinY(0)
+Gui.SS_Form1..Event(UnLoad,SS_Form1_UnLoad)
+Gui.SS_Form1.lbl_txt_Quote.create(label,"Quote",True,1800,200,1,100,135,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl_txt_Quote.LabelStretch(True)
+Gui.SS_Form1.txt_Quote.create(textbox,"",True,2250,300,1,105,330,True,0,Arial,8,16777215,1)
+Gui.SS_Form1.txt_Quote.tabstop(True)
+Gui.SS_Form1.txt_Quote.tabindex(1)
+Gui.SS_Form1.txt_Quote.Event(GotFocus,txt_Quote_GotFocus)
+Gui.SS_Form1.txt_Quote.Event(LostFocus,txt_Quote_LostFocus)
+Gui.SS_Form1.cmd_txt_Quote.create(button)
+Gui.SS_Form1.cmd_txt_Quote.Caption("^")
+Gui.SS_Form1.cmd_txt_Quote.visible(True)
+Gui.SS_Form1.cmd_txt_Quote.size(330,330)
+Gui.SS_Form1.cmd_txt_Quote.position(2430,330)
+Gui.SS_Form1.cmd_txt_Quote.enabled(True)
+Gui.SS_Form1.cmd_txt_Quote.fontname("Arial")
+Gui.SS_Form1.cmd_txt_Quote.fontsize(8)
+Gui.SS_Form1.cmd_txt_Quote.tabstop(True)
+Gui.SS_Form1.cmd_txt_Quote.tabindex(2)
+Gui.SS_Form1.cmd_txt_Quote.Event(Click,cmd_txt_Quote_Click)
+Gui.SS_Form1.lvw_Quote.create(listview)
+Gui.SS_Form1.lvw_Quote.view(3)
+Gui.SS_Form1.lvw_Quote.visible(True)
+Gui.SS_Form1.lvw_Quote.size(3900,1995)
+Gui.SS_Form1.lvw_Quote.position(105,930)
+Gui.SS_Form1.lvw_Quote.enabled(True)
+Gui.SS_Form1.lvw_Quote.fontname("Arial")
+Gui.SS_Form1.lvw_Quote.fontsize(8)
+Gui.SS_Form1.lvw_Quote.addlistviewcolumn("Quote",3505,0)
+Gui.SS_Form1.cmd_lvw_QuoteAdd.create(button)
+Gui.SS_Form1.cmd_lvw_QuoteAdd.Caption("Add")
+Gui.SS_Form1.cmd_lvw_QuoteAdd.visible(True)
+Gui.SS_Form1.cmd_lvw_QuoteAdd.size(1005,330)
+Gui.SS_Form1.cmd_lvw_QuoteAdd.position(2910,330)
+Gui.SS_Form1.cmd_lvw_QuoteAdd.enabled(True)
+Gui.SS_Form1.cmd_lvw_QuoteAdd.fontname("Arial")
+Gui.SS_Form1.cmd_lvw_QuoteAdd.fontsize(8)
+Gui.SS_Form1.cmd_lvw_QuoteAdd.setinternationalid(7600)
+Gui.SS_Form1.cmd_lvw_QuoteAdd.tabstop(True)
+Gui.SS_Form1.cmd_lvw_QuoteAdd.tabindex(3)
+Gui.SS_Form1.cmd_lvw_QuoteAdd.Event(Click,cmd_lvw_QuoteAdd_Click)
+Gui.SS_Form1.cmd_lvw_QuoteDelete.create(button)
+Gui.SS_Form1.cmd_lvw_QuoteDelete.Caption("Delete")
+Gui.SS_Form1.cmd_lvw_QuoteDelete.visible(True)
+Gui.SS_Form1.cmd_lvw_QuoteDelete.size(1005,330)
+Gui.SS_Form1.cmd_lvw_QuoteDelete.position(105,3135)
+Gui.SS_Form1.cmd_lvw_QuoteDelete.enabled(True)
+Gui.SS_Form1.cmd_lvw_QuoteDelete.fontname("Arial")
+Gui.SS_Form1.cmd_lvw_QuoteDelete.fontsize(8)
+Gui.SS_Form1.cmd_lvw_QuoteDelete.setinternationalid(171500)
+Gui.SS_Form1.cmd_lvw_QuoteDelete.tabstop(True)
+Gui.SS_Form1.cmd_lvw_QuoteDelete.tabindex(4)
+Gui.SS_Form1.cmd_lvw_QuoteDelete.Event(Click,cmd_lvw_QuoteDelete_Click)
+Gui.SS_Form1.cmd_lvw_QuoteClear.create(button)
+Gui.SS_Form1.cmd_lvw_QuoteClear.Caption("Clear")
+Gui.SS_Form1.cmd_lvw_QuoteClear.visible(True)
+Gui.SS_Form1.cmd_lvw_QuoteClear.size(1005,330)
+Gui.SS_Form1.cmd_lvw_QuoteClear.position(1185,3135)
+Gui.SS_Form1.cmd_lvw_QuoteClear.enabled(True)
+Gui.SS_Form1.cmd_lvw_QuoteClear.fontname("Arial")
+Gui.SS_Form1.cmd_lvw_QuoteClear.fontsize(8)
+Gui.SS_Form1.cmd_lvw_QuoteClear.setinternationalid(106700)
+Gui.SS_Form1.cmd_lvw_QuoteClear.tabstop(True)
+Gui.SS_Form1.cmd_lvw_QuoteClear.tabindex(5)
+Gui.SS_Form1.cmd_lvw_QuoteClear.Event(Click,cmd_lvw_QuoteClear_Click)
+Gui.SS_Form1.cmd_Print.create(button)
+Gui.SS_Form1.cmd_Print.Caption("Print")
+Gui.SS_Form1.cmd_Print.visible(True)
+Gui.SS_Form1.cmd_Print.size(1005,360)
+Gui.SS_Form1.cmd_Print.position(105,3660)
+Gui.SS_Form1.cmd_Print.enabled(True)
+Gui.SS_Form1.cmd_Print.fontname("Arial")
+Gui.SS_Form1.cmd_Print.fontsize(8)
+Gui.SS_Form1.cmd_Print.tabstop(True)
+Gui.SS_Form1.cmd_Print.tabindex(6)
+Gui.SS_Form1.cmd_Print.Event(Click,cmd_Print_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.Global.iKey.Declare(Long,0)
+Variable.Global.lBIRunID.Declare(Long,0)
+Variable.Global.lLogID.Declare(Long,0)
+v.Global.bExport.Declare(Boolean,False)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+v.Local.sRet.Declare(String)
+
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+V.Local.sSql.Set("Select Distinct Quote_No, Quote_No From GCG_3623_Quote")
+F.Data.Dictionary.CreateFromSQL("Quote","con",V.Local.sSql,16)
+f.Data.Dictionary.SetDefaultReturn("Quote","***NORETURN***")
+
+F.Intrinsic.Control.If(v.Caller.Hook,<>,10940)
+	f.Intrinsic.Control.If(v.Caller.Switches,=,"")
+		Gui.SS_Form1.txt_Quote.AddAutoCompleteItem("Quote","Dictionary")
+		Gui.SS_Form1..Show
+	f.Intrinsic.Control.Else
+		'Split the Switch to get the Quote number and Export Boolean
+		f.Intrinsic.String.Split(v.Caller.Switches,"@!@",v.Local.sRet)
+		f.Intrinsic.Control.If(v.Local.sRet.UBound,>,0)
+			v.Global.bExport.Set(True)
+		f.Intrinsic.Control.EndIf
+'		Gui.SS_Form1.txt_Quote.Text(V.Caller.Switches.Trim)
+		f.Intrinsic.String.LPad(v.Local.sRet.Trim,"0",7,v.Local.sRet)
+		Gui.SS_Form1.txt_Quote.Text(v.Local.sRet.Trim)
+		f.Intrinsic.Control.CallSub(cmd_lvw_quoteadd_click)
+		f.Intrinsic.Control.CallSub(cmd_print_click)
+	f.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	Gui.SS_Form1.lvw_Quote.AddListItem(v.Passed.000003.Format0000000,v.Passed.000003.Format0000000)
+	Gui.SS_Form1.txt_Quote.Text("")
+	f.Intrinsic.Control.If(v.Dictionary.Quote![v.Passed.000003.Format0000000],<>,"***NORETURN***")
+		v.Passed.777777.Set(1)
+		F.Intrinsic.Control.CallSub(cmd_print_click)
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.CallSub(ss_form1_unload)	
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_Quote.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+Program.Sub.txt_Quote_GotFocus.Start
+F.Intrinsic.Control.SetErrorHandler("txt_Quote_GotFocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.SS_Form1.txt_Quote.SelectAll
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txt_Quote_GotFocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_Quote.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txt_Quote_GotFocus.End
+
+Program.Sub.txt_Quote_LostFocus.Start
+F.Intrinsic.Control.SetErrorHandler("txt_Quote_LostFocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.CallSub(cmd_lvw_quoteadd_click)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txt_Quote_LostFocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_Quote.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txt_Quote_LostFocus.End
+
+Program.Sub.cmd_txt_Quote_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_txt_Quote_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+v.Local.sTitle.Declare(string)
+v.Local.iWidth.Declare(long)
+
+f.Intrinsic.String.Split("Quote","*!*",v.Local.sTitle)
+f.Intrinsic.String.Split("1000","*!*",v.Local.iWidth)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+f.Intrinsic.UI.Browser("Quote","Con","SELECT DISTINCT QUOTE_NO FROM GCG_3623_QUOTE ORDER BY QUOTE_NO ASC",v.Local.sTitle,v.Local.iWidth,v.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Form1.txt_Quote.Text(V.Local.sRet.Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txt_Quote_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_Quote.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_txt_Quote_Click.End
+
+Program.Sub.cmd_lvw_QuoteAdd_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvw_QuoteAdd_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.SS_Form1!txt_Quote.Text,=,"")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Math.Add(V.Global.iKey,1,V.Global.iKey)
+Gui.SS_Form1.lvw_Quote.AddListItem(V.Global.iKey,V.Screen.SS_Form1!txt_Quote.Text)
+Gui.SS_Form1.txt_Quote.Text("")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvw_QuoteAdd_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_Quote.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_lvw_QuoteAdd_Click.End
+
+Program.Sub.cmd_lvw_QuoteDelete_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvw_QuoteDelete_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iKey.Declare(Long)
+
+'Listview delete button
+V.Local.iKey.Set(V.Screen.SS_Form1!lvw_Quote.SelectedItemKey)
+Gui.SS_Form1.lvw_Quote.RemoveItem(V.Local.iKey)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvw_QuoteDelete_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_Quote.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_lvw_QuoteDelete_Click.End
+
+Program.Sub.cmd_lvw_QuoteClear_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvw_QuoteClear_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'listview clear
+Gui.SS_Form1.lvw_Quote.ClearItems
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvw_QuoteClear_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_Quote.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_lvw_QuoteClear_Click.End
+
+Program.Sub.cmd_Print_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_Print_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iReportID.Declare(Long)
+V.Local.sRows.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.iOrd.Declare(Long)
+V.Local.sQuote.Declare(String)
+V.Local.sParams.Declare(String)
+V.Local.iRet.Declare(Long)
+v.Local.sFile.Declare(String)
+
+'Disappear the screen
+Gui.SS_Form1..Visible(False)
+
+F.Global.BI.GetIDFromName("GCG_3623_Quote.rpt",V.Local.iReportID)
+
+v.Local.sRows.Set(v.Screen.SS_Form1!lvw_Quote.ListViewContents)
+F.Intrinsic.Control.If(V.Local.sRows,<>,"***NORETURN***")
+	F.Intrinsic.String.Split(V.Local.sRows,"$@$",V.Local.sRows)
+	F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sRows.UBound,1)
+		f.Intrinsic.Control.If(v.Dictionary.Quote![V.Local.sRows(V.Local.iC)],<>,"***NORETURN***")
+			F.Global.BI.GetRunID(V.Global.lBIRunID)
+			F.Global.BI.StartLogging(V.global.lBIRunID,V.Local.iReportID,0,"",V.Global.lLogID)
+			V.Local.sQuote.Set(V.Local.sRows(V.Local.iC))
+			V.Local.sParams.Set("Quote")
+			
+			F.Global.BI.StopLogging(V.Global.lBIRunID)
+		f.Intrinsic.Control.Else
+			v.Local.iReportID.Set(1)
+			F.Global.BI.GetRunID(V.Global.lBIRunID)
+			F.Global.BI.StartLogging(V.global.lBIRunID,V.Local.iReportID,0,"",V.Global.lLogID)
+'			V.Local.sQuote.Set(V.Local.sRows(V.Local.iC))
+			f.Global.General.CallWrapperSyncBio(920000,v.Local.sRows(v.Local.iC))
+			f.Intrinsic.String.Build("{0}*!*{1}*!*Y*!**!**!**!**!**!*",v.Caller.Terminal,"000001",v.Local.sQuote)
+			V.Local.sParams.Set("Terminal*!*reportID*!*Rev*!*QtyDesc*!*PrText*!*PrtTot*!*PrtAll*!*Comments*!*logo")
+			
+			F.Global.BI.StopLogging(V.Global.lBIRunID)
+		f.Intrinsic.Control.EndIf
+		
+		f.Intrinsic.Control.If(v.Global.bExport,=,False)
+			F.Global.BI.RunReportPreProcessor(V.global.lBIrunID,V.global.lLogid,V.Local.sParams,v.Local.sRows(v.Local.iC),"",-1,True,"",-1,"",-1,"","",V.Local.iRet)
+		f.Intrinsic.Control.Else
+			f.Intrinsic.String.Build("{0}\3623_Quotes",v.Caller.FilesDir,v.Local.sFile)
+			f.Intrinsic.File.CreateDir(v.Local.sFile)
+			f.Intrinsic.String.Build("{0}\{1}.PDF",v.Local.sFile,v.Local.sRows(v.Local.iC),v.Local.sFile)
+			F.Global.BI.RunReportPreProcessor(V.global.lBIrunID,V.global.lLogid,V.Local.sParams,V.Local.sQuote,"",4,True,"",1,"",0,v.Local.sFile,"",V.Local.iRet)
+		f.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.CallSub(ss_form1_unload)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_Print_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_Quote.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_Print_Click.End
+
+Program.Sub.SS_Form1_UnLoad.Start
+F.Intrinsic.Control.SetErrorHandler("SS_Form1_UnLoad_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!con.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SS_Form1_UnLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_Quote.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.SS_Form1_UnLoad.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$RLK$}$2/1/2017 10:32:48 AM$}$False
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$This will be a custom project that at time of shipment will, based on the Serial Numbers being shipped, retrieve the document control pdf.  Once the pdf are retrieved each file will be split into individual pages, the page size changed to legal, and a watermark added to the bottom right of the page that includes the Customer PO, Serial Number of Finished Goods, Sales Order Number, and Batch ID.  After the Split files are generated for all the document control PDF the user can then select either print, email, or save the collection to the shipment, and any combination can be selected.
+
+Program.Sub.Comments.End
+
+Program.Sub.ScreenSS.Start
+SS_Form1{{CAPTION::Re-Print Quote
+SS_Form1.CTRL{{NAME::txt_Quote\\TYPE::2\\CAPTION::Quote\\RANGE::lvw_Quote\\TABSTOP::1\\GROUP::1\\BROWSER::1\\SIZE::1.25
+SS_Form1.CTRL{{NAME::lvw_Quote\\TYPE::7\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmd_Print\\TYPE::5\\CAPTION::Print\\TABSTOP::2\\GROUP::-1\\BROWSER::0\\SIZE::1
+
+Program.Sub.ScreenSS.End
