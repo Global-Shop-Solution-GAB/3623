@@ -1,0 +1,525 @@
+Program.Sub.Preflight.Start
+Variable.UDT.ROUTER.Define("Number",String)
+Variable.UDT.ROUTER.Define("Desc",String)
+Variable.UDT.ROUTER.Define("Sequence",String)
+Variable.UDT.ROUTER.Define("LMO",String)
+Variable.UDT.ROUTER.Define("Part",String)
+Variable.UDT.ROUTER.Define("Workcenter",String)
+Variable.UDT.ROUTER.Define("Seq_Desc",String)
+Variable.UDT.ROUTER.Define("Setup",String)
+Variable.UDT.ROUTER.Define("RunTime",String)
+Variable.UDT.ROUTER.Define("Customer",String)
+Variable.UDT.ROUTER.Define("Orig_Date",String)
+Variable.UDT.ROUTER.Define("Operation",String)
+Variable.UDT.ROUTER.Define("Rate",String)
+Variable.UDT.ROUTER.Define("UM",String)
+Variable.UDT.ROUTER.Define("Desc1",String)
+Variable.UDT.ROUTER.Define("Desc2",String)
+Variable.UDT.ROUTER.Define("Desc3",String)
+Variable.UDT.ROUTER.Define("Qty1",String)
+Variable.UDT.ROUTER.Define("Qty2",String)
+Variable.UDT.ROUTER.Define("Qty3",String)
+Variable.UDT.ROUTER.Define("Qty4",String)
+Variable.UDT.ROUTER.Define("Purge",String)
+Variable.UDT.ROUTER.Define("Frequency",String)
+Variable.UDT.ROUTER.Define("Machine",String)
+Variable.UDT.ROUTER.Define("Overlap",String)
+Variable.UDT.ROUTER.Define("WCFact",String)
+Variable.UDT.ROUTER.Define("Min_Flag",String)
+Variable.UDT.ROUTER.Define("Min_Out",String)
+Variable.UDT.ROUTER.Define("Crew",String)
+Variable.UDT.ROUTER.Define("Lead",String)
+Variable.UDT.ROUTER.Define("Locn",String)
+Variable.UDT.ROUTER.Define("Tooling",String)
+Variable.UDT.ROUTER.Define("Sort",String)
+Variable.UDT.ROUTER.Define("Drawing",String)
+Variable.UDT.ROUTER.Define("Misc_Text",String)
+Variable.UDT.ROUTER.Define("Scrap",String)
+Variable.UDT.ROUTER.Define("CUST_Part",String)
+Variable.UDT.ROUTER.Define("Sort1",String)
+Variable.UDT.ROUTER.Define("Sort2",String)
+Variable.UDT.ROUTER.Define("Commission",String)
+Variable.UDT.ROUTER.Define("Qty5",String)
+Variable.UDT.ROUTER.Define("Qty6",String)
+Variable.UDT.ROUTER.Define("Qty7",String)
+Variable.UDT.ROUTER.Define("Qty8",String)
+Variable.UDT.ROUTER.Define("Qty9",String)
+Variable.UDT.ROUTER.Define("Qty10",String)
+Variable.UDT.ROUTER.Define("Signoff_User",String)
+Variable.UDT.ROUTER.Define("Signoff_Type",String)
+Variable.UDT.ROUTER.Define("Prod_Line",String)
+Variable.UDT.ROUTER.Define("No_Reprice",String)
+Variable.UDT.ROUTER.Define("YieldPct",String)
+
+
+'Variable.UDT.ROUTER.Define("Comment",String)
+'Variable.UDT.ROUTER.Define("Multiple",String)
+Variable.uGlobal.uRtr.Declare("ROUTER")
+
+Variable.Global.iLineRTR.Declare(Long,0)
+
+Program.Sub.Preflight.End
+
+Program.Sub.ROUTERAddRecord.Start
+
+'LMO need to be C for comment
+'LMO needs to be L for workcenter
+'LMO needs to be M for material RunTime is quantity when LMO is M
+V.Local.iCt.Declare(Long)
+V.Local.shold.Declare(String)
+V.Local.iPSeq.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.sOp.Declare(String)
+V.Local.sDesc.Declare(String)
+V.Local.sLMO.Declare(String)
+F.intrinsic.control.for(V.global.iLineRTR,V.uglobal.urtr.lbound,V.uglobal.urtr.ubound,1)
+	F.Intrinsic.UI.ChangeWaitStatus("Formatting Router Data",V.Global.iLineRTR,V.uGlobal.uRtr.LBound,V.uGlobal.uRtr.UBound)
+	'Router Number
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Number," ",20,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,20,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Number.set(V.local.shold)
+
+	'Header Desc
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Desc," ",30,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,30,V.Local.sHold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Desc.set(V.local.sHold)
+
+	'Sequence
+	F.Intrinsic.String.LPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Sequence,"0",6,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Sequence.set(V.local.shold)
+
+	'LMO
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!LMO," ",1,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,1,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!LMO.set(V.local.shold)
+	V.Local.sLMO.Set(V.Local.shold)
+
+	'Part
+	'F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Part," ",20,V.Local.shold)
+	'F.Intrinsic.String.Left(V.Local.shold,20,V.Local.shold)
+	'V.uGlobal.uRTR(v.Global.iLineRTR)!Part.set(V.local.shold)
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Part.trim," ",20,V.uGlobal.uRTR(v.Global.iLineRTR)!Part)
+
+	'Workcenter
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!WorkCenter.Trim," ",4,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,4,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!WorkCenter.set(V.local.shold)
+
+	'Seq Desc
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Seq_Desc.trim," ",30,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,30,V.Local.sDesc)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Seq_Desc.set(V.local.sDesc)
+
+	'Setup
+	F.Intrinsic.String.Format(V.uGlobal.uRTR(v.Global.iLineRTR)!Setup.trim,"0.0000",V.Local.shold)
+	F.Intrinsic.String.LPad(V.Local.shold," ",16,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Setup.set(V.local.shold)
+
+	'Runtime/Material
+	F.Intrinsic.Control.If(V.uGlobal.uRTR(v.Global.iLineRTR)!RunTime,<>," ")
+		F.Intrinsic.String.Format(V.uGlobal.uRTR(v.Global.iLineRTR)!RunTime,"0.0000",V.uGlobal.uRTR(v.Global.iLineRTR)!RunTime)
+		F.Intrinsic.String.LPad(V.uGlobal.uRTR(v.Global.iLineRTR)!RunTime,"0",16,V.uGlobal.uRTR(v.Global.iLineRTR)!RunTime)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.LPad("0","0",16,V.uGlobal.uRTR(v.Global.iLineRTR)!RunTime)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.Local.sLMO,=,"M")
+		F.Intrinsic.String.Left(V.uGlobal.uRTR(v.Global.iLineRTR)!RunTime,16,V.Local.shold)
+'		V.uGlobal.uRTR(v.Global.iLineRTR)!Qty1.set(V.Local.shold)
+		V.uGlobal.uRtr(v.Global.iLineRTR)!RunTime.Set(V.Local.shold)
+	F.Intrinsic.Control.Else
+'		F.Intrinsic.String.LPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Qty1,"0",16,V.uGlobal.uRTR(v.Global.iLineRTR)!Qty1)
+		F.Intrinsic.String.LPad(V.uGlobal.uRtr(v.Global.iLineRTR)!RunTime,"0",16,V.uGlobal.uRtr(v.Global.iLineRTR)!RunTime)
+	F.Intrinsic.Control.EndIf
+
+	'Customer
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Customer," ",6,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,6,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Customer.set(V.local.shold)
+
+	'Orig Date
+	F.Intrinsic.String.Format(V.Ambient.Date,"MMDDYY",V.uGlobal.uRtr(v.Global.iLineRtr)!Orig_Date)
+
+	'Op Code
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Operation," ",6,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,6,V.Local.sOp)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Operation.set(V.local.sOp)
+
+	'Rate
+	F.Intrinsic.Control.If(V.uGlobal.uRTR(v.Global.iLineRTR)!Rate,=,"")
+		V.Local.shold.Set("00000000000.0000")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Format(V.uGlobal.uRTR(v.Global.iLineRTR)!Rate,"#.0000",V.Local.shold)
+		F.Intrinsic.String.LPad(V.Local.shold,"0",16,V.Local.shold)
+	F.Intrinsic.Control.EndIf
+	V.uGlobal.uRtr(v.Global.iLineRtr)!Rate.Set(V.Local.shold)
+
+	'UM
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!UM," ",2,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,2,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!UM.set(V.local.shold)
+
+	'Desc 1
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Desc1," ",71,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,71,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Desc1.set(V.local.shold)
+	'Desc 2
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Desc2," ",71,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,71,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Desc2.set(V.local.shold)
+	'Desc 3
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Desc3," ",71,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,71,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Desc3.set(V.local.shold)
+
+	'Quantity 1-4
+'	F.Intrinsic.String.LPad("0.0000","0",16,V.Local.shold)
+'	F.Intrinsic.String.Left(V.Local.shold,16,V.Local.shold)
+	'we need to format qty to 4 decimal places and left pad 16 0's
+	F.Intrinsic.String.Format(V.uGlobal.uRtr(v.Global.iLineRTR)!Qty1.Float,"0.0000",V.Local.shold)
+	F.Intrinsic.String.LPad(V.Local.shold,"0",16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Qty1.set(V.local.shold)
+	F.Intrinsic.String.Format(V.uGlobal.uRtr(v.Global.iLineRTR)!Qty2.Float,"0.0000",V.Local.shold)
+	F.Intrinsic.String.LPad(V.Local.shold,"0",16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Qty2.set(V.local.shold)
+	F.Intrinsic.String.Format(V.uGlobal.uRtr(v.Global.iLineRTR)!Qty3.Float,"0.0000",V.Local.shold)
+	F.Intrinsic.String.LPad(V.Local.shold,"0",16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Qty3.set(V.local.shold)
+	F.Intrinsic.String.Format(V.uGlobal.uRtr(v.Global.iLineRTR)!Qty4.Float,"0.0000",V.Local.shold)
+	F.Intrinsic.String.LPad(V.Local.shold,"0",16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Qty4.set(V.local.shold)
+
+	' Purge
+	V.uGlobal.uRtr(v.Global.iLineRTR)!Purge.Set("N")
+
+	'Frequency
+	F.Intrinsic.String.LPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Frequency," ",16,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Frequency.set(V.Local.shold)
+
+	'Machine
+	F.Intrinsic.String.LPad("0.00","0",16,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Machine.Set(V.local.shold)
+
+	' Overlap
+	F.Intrinsic.String.LPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Overlap," ",16,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Overlap.set(V.local.shold)
+
+	'WC Factor
+	F.Intrinsic.String.LPad(V.uGlobal.uRtr(v.Global.iLineRtr)!WCFact," ",16,V.uGlobal.uRtr(v.Global.iLineRtr)!WCFact)
+
+	'Min Flag
+	V.uGlobal.uRtr(v.Global.iLineRtr)!min_Flag.Set("N")
+
+	'Min Outside
+	F.Intrinsic.String.LPad("0.0000"," ",16,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Min_Out.set(V.local.shold)
+
+	'Crew Size
+'	F.Intrinsic.String.LPad("0.0000"," ",16,V.Local.shold)
+	f.Intrinsic.String.LPad(v.uGlobal.uRtr(v.Global.iLineRTR)!Crew," ",16,v.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Crew.set(V.local.shold)
+
+	'Lead Time
+	F.Intrinsic.String.LPad("0.0000"," ",16,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Lead.set(V.local.shold)
+
+	'Part Loc
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Locn," ",2,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,2,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Locn.set(V.local.shold)
+
+	'Tooling Switch
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Tooling," ",1,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,1,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Tooling.set(V.local.shold)
+
+	'Sort Code
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Sort," ",20,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,20,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Sort.set(V.local.shold)
+
+	'Drawing No
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Drawing," ",20,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,30,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Drawing.set(V.local.shold)
+
+	'Misc Text
+	F.Intrinsic.String.RPad(V.uGlobal.uRtr(v.Global.iLineRTR)!Misc_Text," ",260,V.uGlobal.uRtr(v.Global.iLineRTR)!Misc_Text)
+
+	'Scrap
+	F.Intrinsic.String.LPad("0.0000"," ",16,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Scrap.set(V.local.shold)
+
+	'Cust Part
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!CUST_Part," ",20,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,20,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!CUST_Part.set(V.local.shold)
+
+	'Sort 1
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Sort1," ",20,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,20,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Sort1.set(V.local.shold)
+
+	'Sort 2
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Sort2," ",20,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,20,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Sort2.set(V.local.shold)
+
+	'Commission
+	F.Intrinsic.String.LPad("0.0000"," ",16,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Commission.set(V.local.shold)
+
+	' Quantity 5 -10
+'	F.Intrinsic.String.LPad("0.0000","0",16,V.Local.shold)
+'	F.Intrinsic.String.Left(V.Local.shold,16,V.Local.shold)
+	F.Intrinsic.String.Format(V.uGlobal.uRtr(v.Global.iLineRTR)!Qty5.Float,"0.0000",V.Local.shold)
+	F.Intrinsic.String.LPad(V.Local.shold,"0",16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Qty5.set(V.local.shold)
+	F.Intrinsic.String.Format(V.uGlobal.uRtr(v.Global.iLineRTR)!Qty6.Float,"0.0000",V.Local.shold)
+	F.Intrinsic.String.LPad(V.Local.shold,"0",16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Qty6.set(V.local.shold)
+	F.Intrinsic.String.Format(V.uGlobal.uRtr(v.Global.iLineRTR)!Qty7.Float,"0.0000",V.Local.shold)
+	F.Intrinsic.String.LPad(V.Local.shold,"0",16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Qty7.set(V.local.shold)
+	F.Intrinsic.String.Format(V.uGlobal.uRtr(v.Global.iLineRTR)!Qty8.Float,"0.0000",V.Local.shold)
+	F.Intrinsic.String.LPad(V.Local.shold,"0",16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Qty8.set(V.local.shold)
+	F.Intrinsic.String.Format(V.uGlobal.uRtr(v.Global.iLineRTR)!Qty9.Float,"0.0000",V.Local.shold)
+	F.Intrinsic.String.LPad(V.Local.shold,"0",16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Qty9.set(V.local.shold)
+	F.Intrinsic.String.Format(V.uGlobal.uRtr(v.Global.iLineRTR)!Qty10.Float,"0.0000",V.Local.shold)
+	F.Intrinsic.String.LPad(V.Local.shold,"0",16,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Qty10.set(V.local.shold)
+
+	'Signoff User
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Signoff_User," ",8,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,8,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Signoff_User.set(V.local.shold)
+
+	'Signoff Type
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Signoff_Type," ",1,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,1,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Signoff_Type.set(V.local.shold)
+
+	'Prod Line
+	F.Intrinsic.String.RPad(V.uGlobal.uRTR(v.Global.iLineRTR)!Prod_Line," ",2,V.Local.shold)
+	F.Intrinsic.String.Left(V.Local.shold,2,V.Local.shold)
+	V.uGlobal.uRTR(v.Global.iLineRTR)!Prod_Line.set(V.local.shold)
+
+	' Yield Prct
+	F.Intrinsic.String.LPad(0.00000," ",16,V.uGlobal.uRtr(v.Global.iLineRTR)!YieldPct)
+F.Intrinsic.Control.Next(V.global.iLineRTR)
+
+
+
+Program.Sub.ROUTERAddRecord.End
+
+Program.Sub.ROUTERLine.Start
+V.Local.filedir.Declare(String)
+V.Local.filename.Declare(String)
+V.Local.ROUTERload.Declare(String)
+V.Local.temp.Declare(String)
+V.Local.ROUTER.Declare(String)
+V.Local.sText.Declare(String)
+V.Local.ix.Declare(Long)
+'file layout
+'    '05  EX-RT-NUMBER             PIC X(20).
+'    '05  EX-RT-DESC	PIC X(30).
+'    '05  EX-RT-SEQUENCE		PIC X(6)
+'    '05  EX-RT-LMO                PIC X(01).
+'    '05  EX-RT-PART	PIC X(20)
+'    '05  EX-RT-WORKCENTER         PIC X(04).
+'    '05  EX-RT-SEQ-DESC		PIC X(30)
+'    '05  EX-RT-SET-UP		PIC X(16)
+'    '05  EX-RT-RUN-TIME           PIC X(16).
+'    '05  EX-RT-CUSTOMER           PIC X(06).
+'    '05  EX-RT-ORIG-DATE           PIC X(06).
+'    '05  EX-RT-OPERATION          PIC X(06).
+'    '05  EX-RT-RATE           PIC X(16).
+'    '05  EX-RT-UM           PIC X(02).
+'    '05  EX-RT-DESC-1           PIC X(71).
+'    '05  EX-RT-DESC-2           PIC X(71).
+'    '05  EX-RT-DESC-3          PIC X(71).
+'    '05  EX-RT-QUANTITY-1           PIC X(16).
+'    '05  EX-RT-QUANTITY-2           PIC X(16).
+'    '05  EX-RT-QUANTITY-3           PIC X(16).
+'    '05  EX-RT-QUANTITY-4           PIC X(16).
+'    '05  EX-RT-PURGE-FLAG           PIC X
+'    '05  EX-RT-FREQUENT          PIC X(16).
+'    '05  EX-RT-MULTIPLE           PIC X(16).
+'    '05  EX-RT-OVERLAP           PIC X(16).
+'    '05  EX-RT-WC-FACTOR           PIC X(16).
+'    '05  EX-RT-MINIMUM-FLAG           PIC X(01).
+'    '05  EX-RT-MINIMUM-OUTSIDE           PIC X(16).
+'    '05  EX-RT-CREW-SIZE           PIC X(16).
+'    '05  EX-RT-LEAD-TIME           PIC X(16).
+'    '05  EX-RT-PART-LOCN           PIC X(02).
+'    '05  EX-RT-TOOLING-SWITCH           PIC X(01).
+'    '05  EX-RT-SORT-CODE           PIC X(20).
+'    '05  EX-DRAWING-NO           PIC X(16).
+'RTSCHED?
+'    '05  EX-RT-SCRAP            PIC X(16).
+'    '05  EX-RT-CUST-PART          PIC X(20).
+'    '05  EX-RT-SORT-1           PIC X(20).
+'    '05  EX-RT-QUANTITY-5           PIC X(16).
+'    '05  EX-RT-QUANTITY-6           PIC X(16).
+'    '05  EX-RT-QUANTITY-7           PIC X(16).
+'    '05  EX-RT-QUANTITY-8           PIC X(16).
+'    '05  EX-RT-QUANTITY-9           PIC X(16).
+'    '05  EX-RT-QUANTITY-10           PIC X(16).
+'    '05  EX-RTL-SIGNOFF-GRPUSR            PIC X(08).
+'    '05  EX-RTL-SIGNOFF-TYPE	PIC X(01)
+'    '05  EX-RTH-PROD-LINE               PIC X(02).
+'    '05  EX-RTH-NO-REPRICE                 PIC X(01).
+
+'delete from uRtr where Sequence = '000000'
+F.Intrinsic.Variable.UDTMultiFlag(V.uGlobal.uRtr!Sequence,"000000")
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uRtr)
+'loop through UDT
+F.Intrinsic.Control.For(V.Local.ix,V.uGlobal.uRTR.LBound,V.uglobal.uRTR.UBound,1)
+	F.Intrinsic.UI.ChangeWaitStatus("Adding Router Lines",V.Local.ix,V.uGlobal.uRtr.lbound,V.uGlobal.uRtr.UBound)
+	F.Intrinsic.Control.If(V.uGlobal.uRTR(v.Local.ix)!Number,<>,"")
+			F.Intrinsic.String.RPad(V.uGlobal.uRtr(v.Local.ix)!Part," ",20,V.uGlobal.uRtr(v.Local.ix)!Part)
+			F.Intrinsic.String.RPad(V.uGlobal.uRtr(v.Local.ix)!Desc," ",30,V.uGlobal.uRtr(v.Local.ix)!Desc)
+			F.Intrinsic.String.Concat(V.Local.ROUTER,V.uGlobal.uRTR(v.Local.ix)!Number,V.uGlobal.uRtr(v.Local.ix)!Desc,V.uGlobal.uRtr(v.Local.ix)!Sequence,V.uGlobal.uRTR(v.Local.ix)!LMO,V.uGlobal.uRtr(v.Local.ix)!Part,V.uGlobal.uRTR(v.Local.ix)!WorkCenter,V.local.ROUTER)
+			F.Intrinsic.string.Concat(V.Local.ROUTER,V.uGlobal.uRtr(v.Local.ix)!Seq_Desc,V.uGlobal.uRtr(v.Local.ix)!Setup,V.uGlobal.uRTR(v.Local.ix)!RunTime,V.uGlobal.uRTR(v.Local.ix)!Customer,V.uGlobal.uRTR(v.Local.ix)!orig_date,V.uGlobal.uRtr(v.Local.ix)!Operation,V.uGlobal.uRtr(v.Local.ix)!Rate,V.uGlobal.uRTR(v.Local.ix)!UM,V.Local.ROUTER)
+			F.Intrinsic.string.Concat(V.Local.ROUTER,V.uGlobal.uRtr(v.Local.ix)!Desc1,V.uGlobal.uRtr(v.Local.ix)!Desc2,V.uGlobal.uRTR(v.Local.ix)!Desc3,V.uGlobal.uRTR(v.Local.ix)!Qty1,V.uGlobal.uRTR(v.Local.ix)!Qty2,V.uGlobal.uRtr(v.Local.ix)!Qty3,V.uGlobal.uRtr(v.Local.ix)!Qty4,V.Local.ROUTER)
+			F.Intrinsic.String.Concat(V.Local.ROUTER,"N",V.uGlobal.uRtr(v.Local.ix)!Frequency,V.uGlobal.uRTR(v.Local.ix)!Machine,V.uGlobal.uRTR(v.Local.ix)!Overlap,V.uGlobal.uRTR(v.Local.ix)!WCFact,V.uGlobal.uRtr(v.Local.ix)!Min_Flag,V.uGlobal.uRTR(v.Local.ix)!Min_Out,V.Local.ROUTER)
+			F.Intrinsic.string.Concat(V.Local.ROUTER,V.uGlobal.uRtr(v.Local.ix)!Crew,V.uGlobal.uRTR(v.Local.ix)!Lead,V.uGlobal.uRTR(v.Local.ix)!Locn,V.uGlobal.uRTR(v.Local.ix)!Tooling,V.uGlobal.uRtr(v.Local.ix)!Sort,V.uGlobal.uRTR(v.Local.ix)!Drawing,V.Local.ROUTER)
+			F.Intrinsic.string.Concat(V.Local.ROUTER,V.uGlobal.uRtr(v.Local.ix)!Misc_Text,V.uGlobal.uRtr(v.Local.ix)!Scrap,V.uGlobal.uRTR(v.Local.ix)!Cust_Part,V.uGlobal.uRTR(v.Local.ix)!Sort1,V.uGlobal.uRtr(v.Local.ix)!Sort2,V.uGlobal.uRtr(v.Local.ix)!Commission,V.uGlobal.uRTR(v.Local.ix)!Qty5,V.uGlobal.uRtr(v.Local.ix)!Qty6,V.uGlobal.uRTR(v.Local.ix)!Qty7,V.Local.ROUTER)
+			F.Intrinsic.string.Concat(V.Local.ROUTER,V.uGlobal.uRtr(v.Local.ix)!Qty8,V.uGlobal.uRTR(v.Local.ix)!Qty9,V.uGlobal.uRTR(v.Local.ix)!Qty10,V.uGlobal.uRTR(v.Local.ix)!Signoff_User,V.uGlobal.uRtr(v.Local.ix)!Signoff_Type,V.uGlobal.uRTR(v.Local.ix)!Prod_Line,"N",V.uGlobal.uRtr(v.Local.ix)!YieldPct,V.Ambient.NewLine,V.Local.ROUTER)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.ix)
+
+F.Intrinsic.Control.If(V.Local.ROUTER,<>,"")
+'	V.Local.filename.Set("ROUTERHD.TXT")
+	F.Intrinsic.String.Build("{0}{1}{2}",V.Caller.Terminal,V.Caller.User.Trim,"ROUTERHD.TXT",V.local.filename)
+	'output file
+	F.Intrinsic.String.Concat(V.Caller.FilesDir,"\",V.Local.filename,V.Local.filedir)
+	F.Intrinsic.File.String2File(V.Local.filedir,V.Local.ROUTER)
+'	F.Intrinsic.String.RPad(V.Caller.User," ",8,V.Local.temp)
+'	F.Intrinsic.String.Concat(V.Ambient.DblQuote,V.Caller.CompanyCode,V.Caller.Terminal,V.Local.temp,V.Local.filename,V.Ambient.DblQuote,V.Local.ROUTERLOAD)
+'	F.Global.General.CallWrappersync(50,"UPLRTRH/L/X")
+'	F.Intrinsic.String.Build("{0}{1}","1!*!",V.Local.filename,V.Local.filename)
+	F.Intrinsic.String.Build("{0}{1}{2}",V.Caller.Terminal,V.Caller.User.Trim,"ROUTERHD",V.local.filename)
+	F.Intrinsic.String.build("{0}!*!{1}","1",V.Local.filename,V.Local.filename)
+	F.Global.General.CallWrapperSync(6021,V.Local.filename)
+F.Intrinsic.Control.EndIf
+
+
+
+Program.Sub.ROUTERLine.End
+
+Program.Sub.ROUTERClear.Start
+V.uGlobal.uRTR.Redim(0,0)
+V.Global.iLineRtr.Set(0)
+
+Program.Sub.ROUTERClear.End
+
+Program.Sub.ROUTERHeader.Start
+V.Local.filedir.Declare(String)
+V.Local.filename.Declare(String)
+V.Local.ROUTERload.Declare(String)
+V.Local.temp.Declare(String)
+V.Local.ROUTER.Declare(String)
+V.Local.sText.Declare(String)
+V.Local.ix.Declare(Long)
+'file layout
+'    '05  EX-RT-NUMBER             PIC X(20).
+'    '05  EX-RT-DESC	PIC X(30).
+'    '05  EX-RT-SEQUENCE		PIC X(6)
+'    '05  EX-RT-LMO                PIC X(01).
+'    '05  EX-RT-PART	PIC X(20)
+'    '05  EX-RT-WORKCENTER         PIC X(04).
+'    '05  EX-RT-SEQ-DESC		PIC X(30)
+'    '05  EX-RT-SET-UP		PIC X(16)
+'    '05  EX-RT-RUN-TIME           PIC X(16).
+'    '05  EX-RT-CUSTOMER           PIC X(06).
+'    '05  EX-RT-ORIG-DATE           PIC X(06).
+'    '05  EX-RT-OPERATION          PIC X(06).
+'    '05  EX-RT-RATE           PIC X(16).
+'    '05  EX-RT-UM           PIC X(02).
+'    '05  EX-RT-DESC-1           PIC X(71).
+'    '05  EX-RT-DESC-2           PIC X(71).
+'    '05  EX-RT-DESC-3          PIC X(71).
+'    '05  EX-RT-QUANTITY-1           PIC X(16).
+'    '05  EX-RT-QUANTITY-2           PIC X(16).
+'    '05  EX-RT-QUANTITY-3           PIC X(16).
+'    '05  EX-RT-QUANTITY-4           PIC X(16).
+'    '05  EX-RT-PURGE-FLAG           PIC X
+'    '05  EX-RT-FREQUENT          PIC X(16).
+'    '05  EX-RT-MULTIPLE           PIC X(16).
+'    '05  EX-RT-OVERLAP           PIC X(16).
+'    '05  EX-RT-WC-FACTOR           PIC X(16).
+'    '05  EX-RT-MINIMUM-FLAG           PIC X(01).
+'    '05  EX-RT-MINIMUM-OUTSIDE           PIC X(16).
+'    '05  EX-RT-CREW-SIZE           PIC X(16).
+'    '05  EX-RT-LEAD-TIME           PIC X(16).
+'    '05  EX-RT-PART-LOCN           PIC X(02).
+'    '05  EX-RT-TOOLING-SWITCH           PIC X(01).
+'    '05  EX-RT-SORT-CODE           PIC X(20).
+'    '05  EX-DRAWING-NO           PIC X(16).
+'RTSCHED?
+'    '05  EX-RT-SCRAP            PIC X(16).
+'    '05  EX-RT-CUST-PART          PIC X(20).
+'    '05  EX-RT-SORT-1           PIC X(20).
+'    '05  EX-RT-QUANTITY-5           PIC X(16).
+'    '05  EX-RT-QUANTITY-6           PIC X(16).
+'    '05  EX-RT-QUANTITY-7           PIC X(16).
+'    '05  EX-RT-QUANTITY-8           PIC X(16).
+'    '05  EX-RT-QUANTITY-9           PIC X(16).
+'    '05  EX-RT-QUANTITY-10           PIC X(16).
+'    '05  EX-RTL-SIGNOFF-GRPUSR            PIC X(08).
+'    '05  EX-RTL-SIGNOFF-TYPE	PIC X(01)
+'    '05  EX-RTH-PROD-LINE               PIC X(02).
+'    '05  EX-RTH-NO-REPRICE                 PIC X(01).
+
+'loop through UDT
+F.Intrinsic.Control.For(V.Local.ix,V.uGlobal.uRTR.LBound,V.uglobal.uRTR.UBound,1)
+	F.Intrinsic.UI.ChangeWaitStatus("Adding Router Header",V.Local.ix,V.uGlobal.uRtr.LBound,V.uGlobal.uRtr.UBound)
+	F.Intrinsic.Control.If(V.uGlobal.uRTR(v.Local.ix)!Number,<>,"")
+		F.Intrinsic.String.RPad(V.uGlobal.uRtr(v.Local.ix)!Part," ",20,V.uGlobal.uRtr(v.Local.ix)!Part)
+		F.Intrinsic.String.RPad(V.uGlobal.uRtr(v.Local.ix)!Desc," ",30,V.uGlobal.uRtr(v.Local.ix)!Desc)
+		F.Intrinsic.String.Concat(V.Local.ROUTER,V.uGlobal.uRTR(v.Local.ix)!Number,V.uGlobal.uRtr(v.Local.ix)!Desc,V.uGlobal.uRtr(v.Local.ix)!Sequence,V.uGlobal.uRTR(v.Local.ix)!LMO,V.uGlobal.uRtr(v.Local.ix)!Part,V.uGlobal.uRTR(v.Local.ix)!WorkCenter,V.local.ROUTER)
+		F.Intrinsic.string.Concat(V.Local.ROUTER,V.uGlobal.uRtr(v.Local.ix)!Seq_Desc,V.uGlobal.uRtr(v.Local.ix)!Setup,V.uGlobal.uRTR(v.Local.ix)!RunTime,V.uGlobal.uRTR(v.Local.ix)!Customer,V.uGlobal.uRTR(v.Local.ix)!orig_date,V.uGlobal.uRtr(v.Local.ix)!Operation,V.uGlobal.uRtr(v.Local.ix)!Rate,V.uGlobal.uRTR(v.Local.ix)!UM,V.Local.ROUTER)
+		F.Intrinsic.string.Concat(V.Local.ROUTER,V.uGlobal.uRtr(v.Local.ix)!Desc1,V.uGlobal.uRtr(v.Local.ix)!Desc2,V.uGlobal.uRTR(v.Local.ix)!Desc3,V.uGlobal.uRTR(v.Local.ix)!Qty1,V.uGlobal.uRTR(v.Local.ix)!Qty2,V.uGlobal.uRtr(v.Local.ix)!Qty3,V.uGlobal.uRtr(v.Local.ix)!Qty4,V.Local.ROUTER)
+		F.Intrinsic.String.Concat(V.Local.ROUTER,"N",V.uGlobal.uRtr(v.Local.ix)!Frequency,V.uGlobal.uRTR(v.Local.ix)!Machine,V.uGlobal.uRTR(v.Local.ix)!Overlap,V.uGlobal.uRTR(v.Local.ix)!WCFact,V.uGlobal.uRtr(v.Local.ix)!Min_Flag,V.uGlobal.uRTR(v.Local.ix)!Min_Out,V.Local.ROUTER)
+		F.Intrinsic.string.Concat(V.Local.ROUTER,V.uGlobal.uRtr(v.Local.ix)!Crew,V.uGlobal.uRTR(v.Local.ix)!Lead,V.uGlobal.uRTR(v.Local.ix)!Locn,V.uGlobal.uRTR(v.Local.ix)!Tooling,V.uGlobal.uRtr(v.Local.ix)!Sort,V.uGlobal.uRTR(v.Local.ix)!Drawing,V.Local.ROUTER)
+		F.Intrinsic.string.Concat(V.Local.ROUTER,V.uGlobal.uRtr(v.Local.ix)!Misc_Text,V.uGlobal.uRtr(v.Local.ix)!Scrap,V.uGlobal.uRTR(v.Local.ix)!Cust_Part,V.uGlobal.uRTR(v.Local.ix)!Sort1,V.uGlobal.uRtr(v.Local.ix)!Sort2,V.uGlobal.uRtr(v.Local.ix)!Commission,V.uGlobal.uRTR(v.Local.ix)!Qty5,V.uGlobal.uRtr(v.Local.ix)!Qty6,V.uGlobal.uRTR(v.Local.ix)!Qty7,V.Local.ROUTER)
+		F.Intrinsic.string.Concat(V.Local.ROUTER,V.uGlobal.uRtr(v.Local.ix)!Qty8,V.uGlobal.uRTR(v.Local.ix)!Qty9,V.uGlobal.uRTR(v.Local.ix)!Qty10,V.uGlobal.uRTR(v.Local.ix)!Signoff_User,V.uGlobal.uRtr(v.Local.ix)!Signoff_Type,V.uGlobal.uRTR(v.Local.ix)!Prod_Line,"N",V.uGlobal.uRtr(v.Local.ix)!YieldPct,V.Ambient.NewLine,V.Local.ROUTER)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.ix)
+F.Intrinsic.Debug.Stop
+
+F.Intrinsic.Control.If(V.Local.ROUTER,<>,"")
+
+
+	'change to be user specific - quote number
+'	V.Local.filename.Set("ROUTERHD.TXT")
+	F.Intrinsic.String.Build("{0}{1}{2}",V.Caller.Terminal,V.Caller.User,"ROUTERHD",V.local.filename)
+	'output file
+	F.Intrinsic.String.Concat(V.Caller.FilesDir,"\",V.Local.filename,V.Local.filedir)
+	F.Intrinsic.File.String2File(V.Local.filedir,V.Local.ROUTER)
+	F.Intrinsic.String.RPad(V.Caller.User," ",8,V.Local.temp)
+	F.Intrinsic.String.Concat(V.Ambient.DblQuote,V.Caller.CompanyCode,V.Caller.Terminal,V.Local.temp,V.Local.filename,V.Ambient.DblQuote,V.Local.ROUTERLOAD)
+	'change the upload params
+'	F.Global.General.CallWrapperSync(6020,"UPLRTRH/A/X")
+	F.Intrinsic.String.build("{0}!*!{1}","1",V.Local.filename,V.Local.filename)
+
+	F.Global.General.CallWrapperSync(6021,V.Local.filename)
+
+F.Intrinsic.Control.EndIf
+
+
+
+Program.Sub.ROUTERHeader.End
+
+
