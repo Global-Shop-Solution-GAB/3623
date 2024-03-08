@@ -1,0 +1,101 @@
+Program.Sub.Preflight.Start
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+
+f.Intrinsic.Control.Try
+	v.Local.sFile.Declare(String)
+	v.Local.bExist.Declare(Boolean)
+	
+	f.ODBC.Connection!Con.OpenConnection(v.Ambient.PDSN,v.Ambient.PUser,v.Ambient.PPass)
+	'post online update hook 38130
+	
+'	f.Intrinsic.Control.If(v.Caller.Hook,=,10185,"AND",v.Caller.Switches,=,"O")
+'		'we are on save hook of inventory New
+'		f.Intrinsic.Control.End
+'	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.String.Build("{0}\{1}PartBrowCount.txt",v.Caller.FilesDir,v.Caller.CompanyCode,v.Local.sFile)
+	f.Intrinsic.File.Exists(v.Local.sFile,v.Local.bExist)
+	f.ODBC.Connection!Con.OpenLocalRecordsetRO("rstCount","SELECT COUNT(PART) AS PART FROM V_INVENTORY_MSTR WHERE FLAG_INACTIVE <> 'Y'")
+	f.Intrinsic.Control.If(v.ODBC.Con!rstCount.EOF,=,False)
+		f.Intrinsic.Control.If(v.Local.bExist,=,False)
+			'no file count is created so we need to save it
+			f.Intrinsic.File.String2File(v.Local.sFile,v.ODBC.Con!rstCount.FieldValLong!PART)
+			v.Local.sFile.Set("0")
+		f.Intrinsic.Control.Else
+			'we have one so we need to check the value based on our Db
+			f.Intrinsic.File.File2String(v.Local.sFile,v.Local.sFile)
+		f.Intrinsic.Control.EndIf
+		'Compare count with our count		
+		f.Intrinsic.Control.If(v.Local.sFile.Long,<>,v.ODBC.Con!rstCount.FieldValLong!PART)
+			
+'**********************************************************************************************************************Original Script
+'			
+'			f.Data.DataTable.CreateFromSQL("GCGInv","Con","SELECT PART, LOCATION1 AS LOCATION, WIDTH, LENGTH1 AS LENGTH, ACR_DIE, GAP_ACROSS, GAP_DOWN, LINER_THICK, MAT_USED, TOOL_NUMBER, CORNER_RADII, SHAPE FROM GCG_3623_INVENTORY",True)
+'	
+'			f.Data.DataTable.CreateFromSQL("Inv","Con","SELECT PART, LOCATION, DESCRIPTION, UM_INVENTORY FROM V_INVENTORY_MSTR WHERE FLAG_INACTIVE <> 'Y'",True)
+'			
+'			F.Data.Linq.Join("LeftJoin","datatable","Inv*!*MST","datatable","gcgInv*!*DIE","MST.Part=DIE.Part AND MST.Location = DIE.Location","MST.PART*!*MST.LOCATION*!*DIE.WIDTH*!*DIE.LENGTH*!*DIE.ACR_DIE*!*DIE.GAP_ACROSS*!*DIE.GAP_DOWN*!*DIE.LINER_THICK*!*DIE.MAT_USED*!*DIE.TOOL_NUMBER*!*DIE.CORNER_RADII*!*MST.DESCRIPTION*!*DIE.SHAPE*!*MST.UM_INVENTORY","","","MST.Part","DTBrowser",True)
+'			
+'			f.Data.DataTable.Close("Inv")
+'			f.Data.DataTable.Close("gcgInv")
+'			
+'			f.Intrinsic.String.Build("{0}\{1}PartBrowXML.xml",v.Caller.FilesDir,v.Caller.CompanyCode,v.Local.sFile)
+'			f.Data.DataTable.SaveToXML("DTBrowser",0,False,v.Local.sFile)
+'			
+'			f.Intrinsic.String.Build("{0}\{1}PartBrowCount.txt",v.Caller.FilesDir,v.Caller.CompanyCode,v.Local.sFile)
+'			f.Intrinsic.File.String2File(v.Local.sFile,v.ODBC.Con!rstCount.FieldValLong!PART)
+''*******************************************************************************************************************Original script
+
+			'Modified by FEQ on 5/14/2019 to create a different file for inventory to be used in teh Job Jacket
+			f.Data.DataTable.CreateFromSQL("GCGInv","Con","SELECT PART, LOCATION1 AS LOCATION, WIDTH, LENGTH1 AS LENGTH, ACR_DIE, GAP_ACROSS, GAP_DOWN, LINER_THICK, MAT_USED, TOOL_NUMBER, CORNER_RADII, SHAPE, SHAPE_DESC, ACROSS, TOOTH_SIZE FROM GCG_3623_INVENTORY",True)
+
+			f.Data.DataTable.CreateFromSQL("Inv","Con","SELECT PART, LOCATION, DESCRIPTION, UM_INVENTORY, PRODUCT_LINE, CODE_SORT FROM V_INVENTORY_MSTR WHERE FLAG_INACTIVE <> 'Y'",True)
+			
+			F.Data.Linq.Join("LeftJoin","datatable","Inv*!*MST","datatable","gcgInv*!*DIE","MST.Part=DIE.Part AND MST.Location = DIE.Location","MST.PART*!*MST.LOCATION*!*DIE.WIDTH*!*DIE.LENGTH*!*DIE.ACR_DIE*!*DIE.GAP_ACROSS*!*DIE.GAP_DOWN*!*DIE.LINER_THICK*!*DIE.MAT_USED*!*DIE.TOOL_NUMBER*!*DIE.CORNER_RADII*!*MST.DESCRIPTION*!*DIE.SHAPE*!*MST.UM_INVENTORY*!*DIE.SHAPE_DESC*!*DIE.ACROSS*!*DIE.TOOTH_SIZE*!*MST.PRODUCT_LINE*!*MST.CODE_SORT","","","MST.Part","DTAll",True)			
+			f.Data.DataTable.Close("Inv")
+			f.Data.DataTable.Close("gcgInv")
+			
+			'For the inventory browser being used in the DICE screen, this is the file we will be generating:
+			F.Data.DataView.Create("DTAll", "dvBrowser", 22, "", "")
+			
+			F.Data.DataView.ToDataTable("DTAll", "dvBrowser", "DTBrowser")
+			
+			F.Data.DataTable.RemoveColumn("DTBrowser", "SHAPE_DESC")
+			F.Data.DataTable.RemoveColumn("DTBrowser", "ACROSS")
+			F.Data.DataTable.RemoveColumn("DTBrowser", "TOOTH_SIZE")
+			F.Data.DataTable.RemoveColumn("DTBrowser", "PRODUCT_LINE")
+			F.Data.DataTable.RemoveColumn("DTBrowser", "CODE_SORT")
+			
+			f.Intrinsic.String.Build("{0}\{1}PartBrowXML.xml",v.Caller.FilesDir,v.Caller.CompanyCode,v.Local.sFile)
+			f.Data.DataTable.SaveToXML("DTBrowser",0,False,v.Local.sFile)
+			
+			f.Intrinsic.String.Build("{0}\{1}PartBrowCount.txt",v.Caller.FilesDir,v.Caller.CompanyCode,v.Local.sFile)
+			f.Intrinsic.File.String2File(v.Local.sFile,v.ODBC.Con!rstCount.FieldValLong!PART)
+		
+			
+			'For the inventory browser being used in the Job Jacket screen, this is the file we will be generating:
+			F.Data.DataView.Create("DTAll", "dvJobJacket", 22, "", "")
+			
+			F.Data.DataView.ToDataTable("DTAll", "dvJobJacket", "dtJobJacket")
+						
+			f.Intrinsic.String.Build("{0}\{1}JJPartBrowXML.xml",v.Caller.FilesDir,v.Caller.CompanyCode,v.Local.sFile)
+			f.Data.DataTable.SaveToXML("dtJobJacket",0,False,v.Local.sFile)
+					
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.EndIf
+	f.ODBC.Con!rstCount.Close
+
+	
+	F.ODBC.Connection!Con.Close
+	F.Intrinsic.Control.End
+f.Intrinsic.Control.Catch
+	v.Local.sError.Declare(String)
+	Function.Intrinsic.String.Concat("Project: GCG_3623_XML_Part_Update.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+'		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		f.Intrinsic.Debug.SetLA(v.Local.sError)
+	F.Intrinsic.Control.End
+f.Intrinsic.Control.EndTry
+Program.Sub.Main.End
