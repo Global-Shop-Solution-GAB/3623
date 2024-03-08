@@ -1,0 +1,941 @@
+Program.Sub.Preflight.Start
+Variable.UDT.uORDUPL.Define("Transaction",String)
+Variable.UDT.uORDUPL.Define("Customer",String)
+Variable.UDT.uORDUPL.Define("Order_No",String)
+Variable.UDT.uORDUPL.Define("Freight",String)
+Variable.UDT.uORDUPL.Define("Tax_Freight_Flag",String)
+Variable.UDT.uORDUPL.Define("FreightPerPiece",String)
+Variable.UDT.uORDUPL.Define("DateDue_Order",String)
+Variable.UDT.uORDUPL.Define("Header_User1",String)
+Variable.UDT.uORDUPL.Define("Header_User2",String)
+Variable.UDT.uORDUPL.Define("Header_User3",String)
+Variable.UDT.uORDUPL.Define("Header_User4",String)
+Variable.UDT.uORDUPL.Define("Header_User5",String)
+Variable.UDT.uORDUPL.Define("UserId",String)
+Variable.UDT.uORDUPL.Define("Customer_PO",String)
+Variable.UDT.uORDUPL.Define("Freight_CurrFlag",String)
+Variable.UDT.uORDUPL.Define("Data_Type_Ship",String)
+Variable.UDT.uORDUPL.Define("Ship_Via",String)
+Variable.UDT.uORDUPL.Define("Carrier",String)
+Variable.UDT.uORDUPL.Define("Ship_To_Name",String)
+Variable.UDT.uORDUPL.Define("Ship_To_Address2",String)
+Variable.UDT.uORDUPL.Define("Ship_To_Address3",String)
+Variable.UDT.uORDUPL.Define("Ship_To_City",String)
+Variable.UDT.uORDUPL.Define("Ship_To_State",String)
+Variable.UDT.uORDUPL.Define("Ship_To_Zip",String)
+Variable.UDT.uORDUPL.Define("Ship_To_Country",String)
+Variable.UDT.uORDUPL.Define("Ship_To_Attn",String)
+Variable.UDT.uORDUPL.Define("Order_Type",String)
+Variable.UDT.uORDUPL.Define("Order_Discount_Perc",String)
+Variable.UDT.uORDUPL.Define("Salesman",String)
+Variable.UDT.uORDUPL.Define("Ovrd_Auto_Num",String)
+Variable.UDT.uORDUPL.Define("Ship_To_ID",String)
+Variable.UDT.uORDUPL.Define("Mark_Shipment",String)
+Variable.UDT.uORDUPL.Define("Contact_Name",String)
+Variable.UDT.uORDUPL.Define("Line_No",String)
+Variable.UDT.uORDUPL.Define("Qty_Order",String)
+Variable.UDT.uORDUPL.Define("Weight_Ln",String)
+Variable.UDT.uORDUPL.Define("UM",String)
+Variable.UDT.uORDUPL.Define("Part",String)
+Variable.UDT.uORDUPL.Define("Location",String)
+Variable.UDT.uORDUPL.Define("Quote_Price",String)
+Variable.UDT.uORDUPL.Define("Ovrd_Price",String)
+Variable.UDT.uORDUPL.Define("Cost",String)
+Variable.UDT.uORDUPL.Define("Description",String)
+Variable.UDT.uORDUPL.Define("PL",String)
+Variable.UDT.uORDUPL.Define("Date_Order_Line",String)
+Variable.UDT.uORDUPL.Define("Promise_Date_Line",String)
+Variable.UDT.uORDUPL.Define("Ln_User1",String)
+Variable.UDT.uORDUPL.Define("Ln_User2",String)
+Variable.UDT.uORDUPL.Define("Ln_User3",String)
+Variable.UDT.uORDUPL.Define("Ln_User4",String)
+Variable.UDT.uORDUPL.Define("Ln_User5",String)
+Variable.UDT.uORDUPL.Define("Extention",String)
+Variable.UDT.uORDUPL.Define("Date_NoDeliv_Before",String)
+Variable.UDT.uORDUPL.Define("Date_Must_Deliv_By",String)
+Variable.UDT.uORDUPL.Define("Txt_Data_Type",String)
+Variable.UDT.uORDUPL.Define("Text_Line1",String)
+Variable.UDT.uORDUPL.Define("Text_Line2",String)
+Variable.UDT.uORDUPL.Define("Text_Line3",String)
+Variable.UDT.uORDUPL.Define("Text_Line4",String)
+Variable.UDT.uORDUPL.Define("Text_Line5",String)
+Variable.UDT.uORDUPL.Define("Text_Line6",String)
+Variable.UDT.uORDUPL.Define("Text_Line7",String)
+Variable.UDT.uORDUPL.Define("Text_Line8",String)
+Variable.UDT.uORDUPL.Define("Text_Line9",String)
+Variable.UDT.uORDUPL.Define("Text_Line10",String)
+Variable.UDT.uORDUPL.Define("Tax_Stat_Flag",String)
+Variable.UDT.uORDUPL.Define("Line_Type",String)
+Variable.UDT.uORDUPL.Define("Negative_Flag",String)
+Variable.UDT.uORDUPL.Define("Price_Flag",String)
+Variable.UDT.uORDUPL.Define("Suff_Inv_Check",String)
+Variable.UDT.uORDUPL.Define("Order_Disc_Pct",String)
+Variable.UDT.uORDUPL.Define("Ship_Intl_Flag",String)
+Variable.UDT.uORDUPL.Define("Ship_to_NameExt",String)
+Variable.UDT.uORDUPL.Define("Ship_To_Addr1Ext",String)
+Variable.UDT.uORDUPL.Define("Ship_To_Addr2Ext",String)
+Variable.UDT.uORDUPL.Define("Ship_To_Addr3Ext",String)
+Variable.UDT.uORDUPL.Define("Ship_To_Addr4Ext",String)
+Variable.UDT.uORDUPL.Define("Ship_To_Addr5Ext",String)
+Variable.UDT.uORDUPL.Define("Ship_To_CityExt",String)
+Variable.UDT.uORDUPL.Define("Ship_To_StateExt",String)
+Variable.UDT.uORDUPL.Define("Ship_To_ZipExt",String)
+Variable.UDT.uORDUPL.Define("Ship_To_CtryExt",String)
+Variable.UDT.uORDUPL.Define("Ship_To_AttnExt",String)
+Variable.UDT.uORDUPL.Define("Bill_To_Name",String)
+Variable.UDT.uORDUPL.Define("Bill_To_Address1",String)
+Variable.UDT.uORDUPL.Define("Bill_To_Address2",String)
+Variable.UDT.uORDUPL.Define("Bill_To_Address3",String)
+Variable.UDT.uORDUPL.Define("Bill_To_Address4",String)
+Variable.UDT.uORDUPL.Define("Bill_To_Address5",String)
+Variable.UDT.uORDUPL.Define("Bill_To_City",String)
+Variable.UDT.uORDUPL.Define("Bill_To_State",String)
+Variable.UDT.uORDUPL.Define("Bill_To_Zip",String)
+Variable.UDT.uORDUPL.Define("Bill_To_Country",String)
+Variable.UDT.uORDUPL.Define("Bill_To_Attn",String)
+Variable.UDT.uORDUPL.Define("Contact_Email",String)
+Variable.UDT.uORDUPL.Define("Contact_Phone",String)
+Variable.UDT.uORDUPL.Define("Hdr_Text_1",String)
+Variable.UDT.uORDUPL.Define("Hdr_Text_2",String)
+Variable.UDT.uORDUPL.Define("Hdr_Text_3",String)
+Variable.UDT.uORDUPL.Define("Hdr_Text_4",String)
+Variable.UDT.uORDUPL.Define("Hdr_Text_5",String)
+Variable.UDT.uORDUPL.Define("Hdr_Text_6",String)
+Variable.UDT.uORDUPL.Define("Hdr_Text_7",String)
+Variable.UDT.uORDUPL.Define("Hdr_Text_8",String)
+Variable.UDT.uORDUPL.Define("Hdr_Text_9",String)
+Variable.UDT.uORDUPL.Define("Hdr_Text_10",String)
+Variable.UDT.uORDUPL.Define("Text_Position",String)
+Variable.UDT.uORDUPL.Define("Hdr_Txt_Apply_SO",String)
+Variable.UDT.uORDUPL.Define("Hdr_Txt_Apply_PL",String)
+Variable.UDT.uORDUPL.Define("Hdr_Txt_Apply_Inv",String)
+Variable.UDT.uORDUPL.Define("Hdr_Txt_Apply_Qt",String)
+Variable.UDT.uORDUPL.Define("Hdr_Txt_Apply_Router",String)
+Variable.UDT.uORDUPL.Define("Hdr_Txt_Apply_WO",String)
+Variable.UDT.uORDUPL.Define("Survey_No",String)
+Variable.UDT.uORDUPL.Define("Router_Val_Flag",String)
+Variable.UDT.uORDUPL.Define("Router",String)
+Variable.UDT.uORDUPL.Define("Router_Seq",String)
+Variable.UDT.uORDUPL.Define("Stock_XRef",String)
+Variable.UDT.uORDUPL.Define("Origin_OrderNo",String)
+Variable.UDT.uORDUPL.Define("Origin_Order_Line",String)
+Variable.UDT.uORDUPL.Define("Length",String)
+Variable.UDT.uORDUPL.Define("Width",String)
+Variable.UDT.uORDUPL.Define("Curr_Flag",String)
+Variable.UDT.uORDUPL.Define("PAY_METHOD",String)
+Variable.UDT.uORDUPL.Define("PAY_OWNER_NAME",String)
+Variable.UDT.uORDUPL.Define("PAY_CC_TYPE",String)
+Variable.UDT.uORDUPL.Define("PAY_CC_NO",String)
+Variable.UDT.uORDUPL.Define("PAY_CC_LENGTH",String)
+Variable.UDT.uORDUPL.Define("PAY_CC_EXP_DATE",String)
+Variable.UDT.uORDUPL.Define("PAY_CC_CVV",String)
+Variable.UDT.uORDUPL.Define("PAY_CVV_LENGTH",String)
+Variable.UDT.uORDUPL.Define("Ship_To_Address1",String)
+Variable.uGlobal.uOrders.Declare("uORDUPL")
+
+Program.Sub.Preflight.End
+
+Program.Sub.ORDUPLUpload.Start
+F.Intrinsic.Control.SetErrorHandler("Upload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'Final Formatting of UDT after it has been loaded by another program and then call upload
+'When Calling this SUB, pass the FQP of file(v.args.File used in this Sub) that it will be written to, this should be based on the GSSPARAM.txt file setup for Company.
+'REQUIRED FILEDS ARE NOTED WITH "'***REQUIRED***
+V.Local.i.Declare(Float)
+V.Local.sRet.Declare(String)
+V.Local.sTemp.Declare(String)
+V.Local.sFileContents.Declare(String)
+V.Local.sParams.Declare(String)
+V.Local.sTime.Declare(String)
+V.Local.sDate.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sRet2.Declare(String)
+V.Local.sOrders.Declare(String)
+V.Local.iOrder.Declare(Long)
+'Exit lib file if UDT is NOT loaded
+F.Intrinsic.Control.If(V.uGlobal.uOrders.UBound,<,0)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'Loop through uOrders and format before calling upload
+'One each element , clear sRet first, this is incase that element is not used.
+'When formatting each element of the udt, return the final formatted element to 'v.local.sRet', it is already programmed to use that as the variable when building the file
+
+F.Intrinsic.Control.For(V.Local.i,V.uGlobal.uOrders.LBound,V.uGlobal.uOrders.UBound,1)
+
+	'***FIELD,Length,StartPosition-Description if Availab
+	
+	'Transaction, 1,1 Transaction Code:  ""O"" for sales order or ""Q"" for Quote    '***REQUIRED***
+	V.Local.sTemp.Set("Q")
+	'Customer, 7,2 Customer Number: '***REQUIRED*** unless using ordupmnu to choose customer id.
+	F.Intrinsic.String.RPad(V.uGlobal.uOrders(v.Local.i)!Customer," ",7,V.Local.sRet)
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	'OrderNo, 7,9 If AutoNumbering Turned on can be left blank, otherwise a required field with leading zeros
+	V.Local.sRet.Set("")
+	v.Local.sRet.Set(v.uGlobal.uOrders(v.Local.i)!Order_No)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",15,V.Local.sTemp)
+	'Freight,10,16 Freight amount  8.2  Must enter numeric values with a filler of zeroes- do not use spaces. Example entry of 2.50     0000000250
+	V.Local.sRet.Set("")
+	f.Intrinsic.String.Format(v.uGlobal.uOrders(v.Local.i)!Freight,"0.00",v.uGlobal.uOrders(v.Local.i)!Freight)
+	f.Intrinsic.String.Replace(v.uGlobal.uOrders(v.Local.i)!Freight,".","",v.uGlobal.uOrders(v.Local.i)!Freight)
+	f.Intrinsic.String.LPad(v.uGlobal.uOrders(v.Local.i)!Freight,"0",10,v.Local.sRet)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",25,V.Local.sTemp)
+	'Tax Freight Flag,1,26 Flag Y N or blank
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",26,V.Local.sTemp)
+	'Freight Per Piece,1,27 Flag Y N or blank
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",27,V.Local.sTemp)
+	'Order Date Due,8,28 CCYYMMDD   Example entry of Aug 5 2006     20060806
+	V.Local.sRet.Set("")
+	f.Intrinsic.String.Format(v.uGlobal.uOrders(v.Local.i)!DateDue_Order,"YYYYMMDD",v.Local.sRet)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",35,V.Local.sTemp)
+	'Order Date,8,36 CCYYMMDD   Example entry of Aug 5 2006     20060806
+	V.Local.sRet.Set("")
+	f.Intrinsic.String.Format(v.Ambient.Date,"YYYYMMDD",v.Local.sRet)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",43,V.Local.sTemp)
+	'User 1 Header,30,44 User Field for Header up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,v.uGlobal.uOrders(v.Local.i)!Header_User1,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",73,V.Local.sTemp)
+	'User Field 2 Header,30,74 User Field for Header up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,v.uGlobal.uOrders(v.Local.i)!Header_User2,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",103,V.Local.sTemp)
+	'User Field 3 Header,30,104 User Field for Header up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!Header_User3.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",133,V.Local.sTemp)
+	'User Field 4 Header,30,134 User Field for Header up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!Header_User4.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",163,V.Local.sTemp)
+	'User Field 5 Header,30,164 User Field for Header up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!Header_User5.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",193,V.Local.sTemp)
+	'UserId,8,194 User Field for Header up to 30 characters
+	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!UserID)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,v.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",201,V.Local.sTemp)
+	'CustomerPO,15,202UserFieldforHeaderupto30characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!Customer_PO.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",231,V.Local.sTemp)
+	'Filler_1,15,217,Not Used- Leave Blank
+
+	'Freight_CurrFlag,1,232,Y N or blank
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",232,V.Local.sTemp)
+	'Data Type,1,233,"""S"" for shipping data"
+	V.Local.sRet.Set("S")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",233,V.Local.sTemp)
+	'Ship Via,20,234
+	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!SHIP_VIA)
+	
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,v.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",253,V.Local.sTemp)
+	'Carrier,6,254
+	V.Local.sRet.Set(v.uGlobal.uOrders(v.Local.i)!Carrier)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",259,V.Local.sTemp)
+	'Ship To Name,30,260
+	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_Name)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",289,V.Local.sTemp)
+	'Ship To Address 1,30,290
+	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_Address1)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",319,V.Local.sTemp)
+	'Ship To Address 2,30,320
+	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_Address2)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",349,V.Local.sTemp)
+	'Ship To Address 3,30,350
+	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_Address3)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",379,V.Local.sTemp)
+	'Ship To City,25,380
+	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_City)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",404,V.Local.sTemp)
+	'Ship To State,2,405
+	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_State)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",406,V.Local.sTemp)
+	'Ship To Zip,13,407
+	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_Zip)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",419,V.Local.sTemp)
+	'Ship To Country,3,420
+	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_Country)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",422,V.Local.sTemp)
+	'ShipToAttention,30,423
+	V.Local.sRet.Set(v.uGlobal.uOrders(v.Local.i)!Ship_To_Attn)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",463,V.Local.sTemp)
+	'filler in reusable area,11,453,Not in Use
+
+	'Order type,1,464,"Regular = blank or spaces, Invoice = ""X"
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",464,V.Local.sTemp)
+	'Order Discount Percentage,5,465,1.4 with an implied decimal (example:  45% would show as 04500 in the file
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",469,V.Local.sTemp)
+	''Salesman,3,470,Salesman code within GSS
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",472,V.Local.sTemp)
+	'PAY-METHOD , 2,473
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",474,V.Local.sTemp)
+	'PAY-OWNER-NAME,30,475
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",504,V.Local.sTemp)
+	'PAY-CC-TYPE ,2,505
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",506,V.Local.sTemp)
+	'PAY-CC-NO , 25,507
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",531,V.Local.sTemp)
+	'PAY-CC-LENGTH , 2,532
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",533,V.Local.sTemp)
+	'PAY-CC-EXP-DT , 6,534
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",539,V.Local.sTemp)
+	'PAY-CC-CVV , 7, 540
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",546,V.Local.sTemp)
+	'PAY-CVV-LENGTH 1, 547 Numeric(1 or 0)
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",547,V.Local.sTemp)
+	'Override auto numbering,1,548,"Populate with ""1"" will override the auto ordering number with the number provided in the order number above
+	V.Local.sRet.Set("")
+	f.Intrinsic.Control.If(v.uGlobal.uOrders(v.Local.i)!Order_No,<>,"")
+		f.Intrinsic.Math.Add(v.Local.i,1,v.Local.sRet)
+	f.Intrinsic.Control.EndIf
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",548,V.Local.sTemp)
+	'Ship To Id,6,549,"Optional, must be valid for customer
+	V.Local.sRet.Set(v.uGlobal.uOrders(v.Local.i)!Ship_To_ID)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",554,V.Local.sTemp)
+	'Mark Shipment,30,555
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",584,V.Local.sTemp)
+	'Contact Name,30,585
+	V.Local.sRet.Set(v.uGlobal.uOrders(v.Local.i)!Contact_Name)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",614,V.Local.sTemp)
+	'From Location, 2,615
+	V.Local.sRet.Set(v.uGlobal.uOrders(v.Local.i)!Location)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",701,V.Local.sTemp)
+	'Filler_3,85,617,Not in Use
+
+	'***Line Data***
+	'Line Number,3,702,Not '***REQUIRED*** Valid input is 1 through 999
+	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Line_No)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",705,V.Local.sTemp)
+	'Filler_Line,1,705,Not Used- Leave Blank
+
+	'Qty Ordered,13,706,9.4; REQUIRED  Must enter numeric values with a filler or zeroes- do not enter spaces.  Example entry of 10  0000000100000
+	V.Local.sRet.Set("")
+	f.Intrinsic.String.Format(v.uGlobal.uOrders(v.Local.i)!Qty_Order,"0.0000",v.uGlobal.uOrders(v.Local.i)!Qty_Order)
+	f.Intrinsic.String.Replace(v.uGlobal.uOrders(v.Local.i)!Qty_Order,".","",v.Local.sRet)
+	F.Intrinsic.String.LPad(V.Local.sRet,"0",13,V.Local.sRet)
+	
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",718,V.Local.sTemp)
+	'Weight,10,719,7.3 Must enter numeric values with a filler of zeroes- do not use spaces. Example entry of 2.50 would be 0000002500
+	V.Local.sRet.Set("")
+	f.Intrinsic.String.Format(v.uGlobal.uOrders(v.Local.i)!Weight_Ln,"0.000",v.uGlobal.uOrders(v.Local.i)!Weight_Ln)
+	f.Intrinsic.String.Replace(v.uGlobal.uOrders(v.Local.i)!Weight_Ln,".","",v.Local.sRet)
+	F.Intrinsic.String.LPad(V.Local.sRet,"0",10,V.Local.sRet)
+	
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",728,V.Local.sTemp)
+	'Unit Of Measure,2,729,Unit of Measure
+	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!UM)
+	F.Intrinsic.String.RPad(V.Local.sRet," ",2,V.Local.sRet)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",730,V.Local.sTemp)
+	'*** 20 Char Part# - PART, 20,731'***REQUIRED***
+	'Part Number,17,731,17 character part number
+	'Part Rev,3,748,'***REQUIRED*** if using part rev and a revision exists OR if NOT using part revision and part is longer than 17 characters long.
+	V.Local.sRet.Set(V.uGlobal.uOrders(V.local.i)!Part)
+		
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,v.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",768,V.Local.sTemp)
+	'Filler,18,751,Not in Use - Leave Blank
+
+	'Part Location,2,769,Location code
+	V.Local.sRet.Set(v.uGlobal.uOrders(v.Local.i)!Location)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",770,V.Local.sTemp)
+	'Quoted Price,16,771,10.6; REQUIRED in company currency.
+	'Make sure to fill in discount price even if no discounts apply.
+	'Enter leading zeros - do not enter spaces.   Example of 12.50 0000000012500000
+	V.Local.sRet.Set("")
+	f.Intrinsic.String.Format(v.uGlobal.uOrders(v.Local.i)!Quote_Price,"0.000000",v.uGlobal.uOrders(v.Local.i)!Quote_Price)
+	f.Intrinsic.String.Replace(v.uGlobal.uOrders(v.Local.i)!Quote_Price,".","",v.Local.sRet)
+	F.Intrinsic.String.LPad(V.Local.sRet,"0",16,V.Local.sRet)
+		
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",786,V.Local.sTemp)
+	'OverRidePrice,16,787,10.6; any price over-rides in company currency.
+	'Make sure to fill in discount price even if no discounts apply.
+	'Enter leading zeros - do not enter spaces.   Example of 12.50 0000000012500000
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",802,V.Local.sTemp)
+	'Cost,16,803,10.6; Cost of the Part in company currency.
+	'Enter leading zeros - do not enter spaces.   Example of 12.50  00000012500000
+	V.Local.sRet.Set("")
+	f.Intrinsic.String.Format(v.uGlobal.uOrders(v.Local.i)!Cost,"0.000000",v.uGlobal.uOrders(v.Local.i)!Cost)
+	f.Intrinsic.String.Replace(v.uGlobal.uOrders(v.Local.i)!Cost,".","",v.Local.sRet)
+	F.Intrinsic.String.LPad(V.Local.sRet,"0",16,V.Local.sRet)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",818,V.Local.sTemp)
+	'DescriptionPart,30,819,Description of the Part Number Length of 30
+	V.Local.sRet.Set(v.uGlobal.uOrders(v.Local.i)!Description)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",848,V.Local.sTemp)
+	'Product Line,3,849,Product Line of part number
+	V.Local.sRet.Set(v.uGlobal.uOrders(v.Local.i)!PL)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",851,V.Local.sTemp)
+	'Line Order Date,8,852,CCYYMMDD  Example entry of Aug 5 2006     20060806
+	V.Local.sRet.Set("")
+	f.Intrinsic.String.Format(v.Ambient.Date,"YYYYMMDD",v.Local.sRet)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",859,V.Local.sTemp)
+	'Line Promise Date,8,860,CCYYMMDD  Example entry of Aug 5 2006     20060806
+	V.Local.sRet.Set("")
+	f.Intrinsic.String.Format(v.uGlobal.uOrders(v.Local.iOrder)!DateDue_Order,"YYYYMMDD",v.Local.sRet)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",867,V.Local.sTemp)
+	'User Field 1,30,868,User Field forLine up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",897,V.Local.sTemp)
+	'User Field 2,30,898,User Field forLine up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",927,V.Local.sTemp)
+	'User Field 3,30,928,User Field forLine up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",957,V.Local.sTemp)
+	'User Field 4,30,958,User Field forLine up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",987,V.Local.sTemp)
+	'User Field 5,30,988,User Field forLine up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1017,V.Local.sTemp)
+	'Extention,16,1018,"10.6 in company currency.
+	'Leading zeros - no spaces or commas.  Example of 1,250.21  0000001250210000
+	V.Local.sRet.Set("")
+	f.Intrinsic.String.Format(v.uGlobal.uOrders(v.Local.i)!Extention,"0.000000",v.uGlobal.uOrders(v.Local.i)!Extention)
+	f.Intrinsic.String.Replace(v.uGlobal.uOrders(v.Local.i)!Extention,".","",v.Local.sRet)
+	F.Intrinsic.String.LPad(V.Local.sRet,"0",16,V.Local.sRet)
+	
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1033,V.Local.sTemp)
+	'No Delivery Before Date,8,1034,CCYYMMDD  Example entry of Aug 5 2006     20060806
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1041,V.Local.sTemp)
+	'Must Deliver By Date,8,1042,CCYYMMDD  Example entry of Aug 5 2006     20060806
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1049,V.Local.sTemp)
+	'vvv EXTRA TEXT vvv
+
+	'DataType,1,1050,"""T"" for sales order text
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,"",V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1050,V.Local.sTemp)
+	'Text Line 1,30,1051,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE1.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1080,V.Local.sTemp)
+	'Text Line 2,30,1081,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE2.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1110,V.Local.sTemp)
+	'Text Line 3,30,1111,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE3.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1140,V.Local.sTemp)
+	'Text Line 4,30,1141,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE4.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1170,V.Local.sTemp)
+	'Text Line 5,30,1171,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE5.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1200,V.Local.sTemp)
+	'Text Line 6,30,1201,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE6.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1230,V.Local.sTemp)
+	'Text Line 7,30,1231,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE7.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1260,V.Local.sTemp)
+	'Text Line 8,30,1261,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE8.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1290,V.Local.sTemp)
+	'Text Line 9,30,1291,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE9.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1320,V.Local.sTemp)
+	'Text Line 10,30,1321,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE10.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1350,V.Local.sTemp)
+	'Tax Status Flag,1,1351,"""E"" for exempt, ""T"" for taxable
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1351,V.Local.sTemp)
+	'Line Type,1,1352,"""B"" for buyout, ""D"" for dropship, ""S"" for standard, ""C"" for consignment
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1352,V.Local.sTemp)
+	'Negative Flag,1,1353,"""1"" = The order qty is negative for this line."
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1353,V.Local.sTemp)
+	'Price Flag,1,1354,"""1"" = Accept zero price for this line.
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1354,V.Local.sTemp)
+	'Sufficient Inventory Check,1,1355,"""1"" = Check to make sure inventory level is sufficient for this line.
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1355,V.Local.sTemp)
+	'Survey No ,8,1356
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1363,V.Local.sTemp)
+	'Router Val Flag 1,1364
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1364,V.Local.sTemp)
+	'Router , 20,1365
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1384,V.Local.sTemp)
+	'Router Seq ,6,1385
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1390,V.Local.sTemp)
+	'STOCK-XREF, 1,1391
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1391,V.Local.sTemp)
+	'Origin Order ,7,1392
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1398,V.Local.sTemp)
+	'Origin Line,3,1399
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1401,V.Local.sTemp)
+	'Length ,12,1402 Numeric(8,4)
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1413,V.Local.sTemp)
+	'WIDTH ,12,1414 Numeric(8,4)
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1425,V.Local.sTemp)
+	'CURR-FLAG ,1,1426
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1426,V.Local.sTemp)
+	'Order Discount Percentage,5,1427,Order Line Discount format.
+	'The field contains 1 leading digit and four decimals.  So 00500 would be entered for a 5% discount.
+	V.Local.sRet.Set("")
+		F.Intrinsic.Control.If(V.uGlobal.uOrders(v.Local.i)!Order_Disc_Pct.Trim,<>,"")
+			F.Intrinsic.String.Split(V.uGlobal.uOrders(v.Local.i)!Order_Disc_Pct,".",V.Local.sRet)
+			F.Intrinsic.String.RPad(V.Local.sRet(1),"0",4,V.Local.sRet)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.LPad(V.Local.sRet,"0",5,V.Local.sRet)
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1517,V.Local.sTemp)
+	'Filler,86,1432,Not in Use - Leave Blank
+
+	'***Extended Header Data***
+	'Ship To International Flag,1,1518,"""Y"" for international address, ""N"" or spaces for domestic address
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1518,V.Local.sTemp)
+	'Ship To Name,40,1519
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1558,V.Local.sTemp)
+	'Ship To Address 1,40,1559
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1598,V.Local.sTemp)
+	'Ship To Address 2,40,1599
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1638,V.Local.sTemp)
+	'Ship To Address 3,40,1639
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1678,V.Local.sTemp)
+	'Ship To Address 4,40,1679
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1718,V.Local.sTemp)
+	'Ship To Address 5,40,1719
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1758,V.Local.sTemp)
+	'Ship To City,25,1759
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1783,V.Local.sTemp)
+	'Ship To State,2,1784
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1785,V.Local.sTemp)
+	'Ship To Zip,13,1786
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1798,V.Local.sTemp)
+	''Ship To Country,25,1799
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1823,V.Local.sTemp)
+	'Ship To Attention,40,1824
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1863,V.Local.sTemp)
+	'Bill To International Flag,1,1864,"""Y"" for international address, ""N"" or spaces for domestic address
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1864,V.Local.sTemp)
+	'Bill To Name,40,1865
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1904,V.Local.sTemp)
+	'Bill To Address 1,40,1905
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1943,V.Local.sTemp)
+	'Bill To Address 2,40,1945
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1984,V.Local.sTemp)
+	'Bill To Address 3,40,1985
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2024,V.Local.sTemp)
+	'Bill To Address 4,40,2025
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2064,V.Local.sTemp)
+	'Bill To Address 5,40,2065
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2104,V.Local.sTemp)
+	'Bill To City,25,2105
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2129,V.Local.sTemp)
+	'Bill To State,2,2130
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2131,V.Local.sTemp)
+	'Bill To Zip,13,2132
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2144,V.Local.sTemp)
+	'Bill To Country,25,2145
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2169,V.Local.sTemp)
+	'Bill To Attention,40,2170
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2209,V.Local.sTemp)
+	'Contact's Email Address,100,2210
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,v.uGlobal.uOrders(v.Local.i)!Contact_Email.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2309,V.Local.sTemp)
+	'Contact's Phone,20,2310
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,v.uGlobal.uOrders(v.Local.i)!Contact_Phone.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2329,V.Local.sTemp)
+	'***Sales Order Header Text Data***
+	'Text Line 1,30,2330,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2359,V.Local.sTemp)
+	'Text Line 2,30,2360,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2389,V.Local.sTemp)
+	'Text Line 3,30,2390,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2419,V.Local.sTemp)
+	'Text Line 4,30,2420,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2449,V.Local.sTemp)
+	'Text Line 5,30,2450,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2479,V.Local.sTemp)
+	'Text Line 6,30,2480,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2509,V.Local.sTemp)
+	'Text Line 7,30,2510,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2539,V.Local.sTemp)
+	'Text Line 8,30,2540,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2569,V.Local.sTemp)
+	'Text Line 9,30,2570,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2599,V.Local.sTemp)
+	'Text Line 10,30,2600,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2629,V.Local.sTemp)
+	'Text Position,1,2630,"""H"" for header, ""F"" for footer
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2630,V.Local.sTemp)
+	'Apply Text to Sales Order,1,2631,"""Y"" to apply, ""N"" for do not apply
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2631,V.Local.sTemp)
+	'Apply Text to Packing List,1,2632,"""Y"" to apply, ""N"" for do not apply
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2632,V.Local.sTemp)
+	'Apply Text to Invoice,1,2633,"""Y"" to apply, ""N"" for do not apply
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2633,V.Local.sTemp)
+	'Apply Text to Quote,1,2634,"""Y"" to apply, ""N"" for do not apply
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2634,V.Local.sTemp)
+	'Apply Text to Router,1,2635,"""Y"" to apply, ""N"" for do not apply
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2636,V.Local.sTemp)
+	'Apply Text to Work Order,1,2636,"""Y"" to apply, ""N"" for do not apply
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2637,V.Local.sTemp)
+	'Filler,1000,2637,Not in Use - Leave Blank
+
+	'Filler,1000,3637,Not in Use - Leave Blank
+
+	'***Total Record length of,4565 if all used
+
+	'Build File Contents in Separate Temp Var
+	F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sFileContents,V.Local.sTemp,V.Ambient.NewLine,V.Local.sFileContents)
+F.Intrinsic.Control.Next(V.Local.i)
+
+	f.Intrinsic.String.Build("{0}\WEB_ORDERS",V.Caller.FilesDir,v.Local.sFile)
+	f.Intrinsic.File.CreateDir(v.Local.sFile)
+	F.Intrinsic.String.Build("{0}\WEB_ORDERS\{1}{2}.txt",V.Caller.FilesDir,V.Caller.CompanyCode,V.Ambient.Time.FormatHHNNSS,V.Local.sFile)
+
+	'String to File containing sFileContents to v.Args.File Passed from other Prgrm
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sFileContents)
+	V.Local.sFileContents.Set("")
+
+
+'Below is dependent on GSSPARAM.txt setup
+'Call Upload Web Importer ORDUPL
+F.Global.General.CallWrapperSync(50,"ORDUPL")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Upload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ORDUPL_UPLOAD.lib",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.ORDUPLUpload.End
+
+Program.Sub.Comments.Start
+${$0$}$ORDUPL_UPLOAD$}$SUPERVSR$}$8/3/2015$}$True
+${$3$}$0$}$$}$-1$}$-1$}$$}$1/1/1900$}$ORDUPL FORMATTED UDTS, FILE WRITING, AND CALLING UPLOAD
+
+Program.Sub.Comments.End
+
